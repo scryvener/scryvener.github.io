@@ -257,13 +257,13 @@
 		<Active>1</Active>
 		<Matches>
 			<Match>
-				<matchID>1<matchID>
+				<matchID>1</matchID>
 				<p1>01</p1>
 				<p2>02</p2>
 			</Match>
 			
 			<Match>
-				<matchID>2<matchID>
+				<matchID>2</matchID>
 				<p1>01</p1>
 				<p2>03</p2>
 			</Match>
