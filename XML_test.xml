@@ -1,274 +1,274 @@
 <Tournament_Data>
 
-<Players>
-	<Player>
-		<Name>Neeko</Name>
-		<playerID>01</playerID>
-		<Class>DeathBlade</Class>
-		<ClassID>bl</ClassID>
-		<Bio>Insert Player bio Here</Bio>
-		<Skills>
-			<Skill>
-				<skill_ID>25080</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
+	<Players>
+		<Player>
+			<Name>Neeko</Name>
+			<playerID>01</playerID>
+			<Class>DeathBlade</Class>
+			<ClassID>bl</ClassID>
+			<Bio>Insert Player bio Here</Bio>
+			<Skills>
+				<Skill>
+					<skill_ID>25080</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25090</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25040</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25130</skill_ID>
+					<points>10</points>
+					<tripod_1>3</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25120</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25100</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25200</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>5</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25050</skill_ID>
+					<points>10</points>
+					<tripod_1>3</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>25060</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>6</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
 			
-			<Skill>
-				<skill_ID>25090</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25040</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25130</skill_ID>
-				<points>10</points>
-				<tripod_1>3</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25120</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25100</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25200</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>5</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25050</skill_ID>
-				<points>10</points>
-				<tripod_1>3</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>25060</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>6</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
+			</Skills>
 		
-		</Skills>
-	
-	</Player>
-	
-	<Player>
-		<Name>HesitantAlien</Name>
-		<playerID>02</playerID>
-		<Class>Paladin</Class>
-		<ClassID>hk</ClassID>
-		<Bio>Insert Player bio Here</Bio>
-		<Skills>
-			<Skill>
-				<skill_ID>36030</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36040</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36120</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36060</skill_ID>
-				<points>10</points>
-				<tripod_1>3</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36050</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36200</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36190</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>5</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36130</skill_ID>
-				<points>10</points>
-				<tripod_1>3</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>36110</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>6</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
+		</Player>
 		
-		</Skills>
-	
-	</Player>
-	
-	<Player>
-		<Name>Rush</Name>
-		<playerID>03</playerID>
-		<Class>Scrapper</Class>
-		<ClassID>if</ClassID>
-		<Bio>Insert Player bio Here</Bio>
-		<Skills>
-			<Skill>
-				<skill_ID>23020</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
+		<Player>
+			<Name>HesitantAlien</Name>
+			<playerID>02</playerID>
+			<Class>Paladin</Class>
+			<ClassID>hk</ClassID>
+			<Bio>Insert Player bio Here</Bio>
+			<Skills>
+				<Skill>
+					<skill_ID>36030</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36040</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36120</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36060</skill_ID>
+					<points>10</points>
+					<tripod_1>3</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36050</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36200</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36190</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>5</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36130</skill_ID>
+					<points>10</points>
+					<tripod_1>3</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>36110</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>6</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
 			
-			<Skill>
-				<skill_ID>23050</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23090</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23100</skill_ID>
-				<points>10</points>
-				<tripod_1>3</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23080</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23200</skill_ID>
-				<points>10</points>
-				<tripod_1>2</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23210</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>5</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23220</skill_ID>
-				<points>10</points>
-				<tripod_1>3</tripod_1>
-				<tripod_2>4</tripod_2>
-				<tripod_3>7</tripod_3>
-			</Skill>
-			
-			<Skill>
-				<skill_ID>23260</skill_ID>
-				<points>10</points>
-				<tripod_1>1</tripod_1>
-				<tripod_2>6</tripod_2>
-				<tripod_3>8</tripod_3>
-			</Skill>
+			</Skills>
 		
-		</Skills>
-	
-	</Player>
+		</Player>
+		
+		<Player>
+			<Name>Rush</Name>
+			<playerID>03</playerID>
+			<Class>Scrapper</Class>
+			<ClassID>if</ClassID>
+			<Bio>Insert Player bio Here</Bio>
+			<Skills>
+				<Skill>
+					<skill_ID>23020</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23050</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23090</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23100</skill_ID>
+					<points>10</points>
+					<tripod_1>3</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23080</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23200</skill_ID>
+					<points>10</points>
+					<tripod_1>2</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23210</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>5</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23220</skill_ID>
+					<points>10</points>
+					<tripod_1>3</tripod_1>
+					<tripod_2>4</tripod_2>
+					<tripod_3>7</tripod_3>
+				</Skill>
+				
+				<Skill>
+					<skill_ID>23260</skill_ID>
+					<points>10</points>
+					<tripod_1>1</tripod_1>
+					<tripod_2>6</tripod_2>
+					<tripod_3>8</tripod_3>
+				</Skill>
+			
+			</Skills>
+		
+		</Player>
 
 
-</Players>
+	</Players>
 
-<MatchData>
-	<Active>1</Active>
-	<Matches>
-		<Match>
-			<matchID>1<matchID>
-			<p1>01</p1>
-			<p2>02</p2>
-		</Match>
-		
-		<Match>
-			<matchID>2<matchID>
-			<p1>01</p1>
-			<p2>03</p2>
-		</Match>
-		
-	</Matches>
-</MatchData>
+	<MatchData>
+		<Active>1</Active>
+		<Matches>
+			<Match>
+				<matchID>1<matchID>
+				<p1>01</p1>
+				<p2>02</p2>
+			</Match>
+			
+			<Match>
+				<matchID>2<matchID>
+				<p1>01</p1>
+				<p2>03</p2>
+			</Match>
+			
+		</Matches>
+	</MatchData>
 
 </Tournament_Data>
