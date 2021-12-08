@@ -11,7 +11,7 @@
 				<Skill>
 					<skill_ID>25080</skill_ID>
 					<skill_Name>25080</skill_Name>
-					<skill_Descrip></skill_Descrip>
+					<skill_Descrip>Insert Descrip Here</skill_Descrip>
 					<points>10</points>
 					<tripod_1>1</tripod_1>
 					<tripod_2>4</tripod_2>
@@ -82,78 +82,7 @@
 					<tripod_3>8</tripod_3>
 				</Skill>
 			
-			</Skills>
-				<Skill>
-					<skill_>25080</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25090</skill_ID>
-					<points>10</points>
-					<tripod_1>2</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25040</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25130</skill_ID>
-					<points>10</points>
-					<tripod_1>3</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25120</skill_ID>
-					<points>10</points>
-					<tripod_1>2</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25100</skill_ID>
-					<points>10</points>
-					<tripod_1>2</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25200</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>5</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25050</skill_ID>
-					<points>10</points>
-					<tripod_1>3</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>25060</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>6</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
+			
 			
 			</Skills>
 		
