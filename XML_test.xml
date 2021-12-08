@@ -92,7 +92,7 @@
 			<Name>HesitantAlien</Name>
 			<playerID>02</playerID>
 			<Class>Paladin</Class>
-			<ClassID>hk</ClassID>
+			<Class_Img>Class_Icons\Paladin.png</Class_Img>
 			<Bio>Insert Player bio Here</Bio>
 			<Skills>
 				<Skill>
