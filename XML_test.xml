@@ -8,245 +8,190 @@
 			<Class_Img>Class_Icons\Deathblade.png</Class_Img>
 			<Bio>Insert Player bio Here</Bio>
 			
-			<Skills>
-				<Skill>
-					<skillName>Blade Dance</skillName>
-					<points>7</points>
-					<skillDescrip>Hack at foes for up to 2s and deliver 7 blows, inflicting 1,517.7 Damage, and another 654 Damage with the finishing blow. Pushed foes are launched back in the air.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_2.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Fist of Darkness</tripodName>
-							<tripodDescrip>Element is now [Dark]. Outgoing Damage +40.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_19.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Soul Snatch</tripodName>
-							<tripodDescrip>Charge up the skill for as long as you can to create a 40.0% chance of getting half a Death Orb. This Orb Snatch effect is even applied during Death Trance.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_37.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName></tripodName>
-							<tripodDescrip></tripodDescrip>
-							<tripodIcon></tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+			<Skill_1>
+				<skillName>Blade Dance</skillName>
+				<points>7</points>
+				<skillDescrip>Hack at foes for up to 2s and deliver 7 blows, inflicting 1,517.7 Damage, and another 654 Damage with the finishing blow. Pushed foes are launched back in the air.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_2.png</skillIcon>
 				
-				<Skill>
-					<skillName>Blitz Rush</skillName>
-					<points>10</points>
-					<skillDescrip>Charge to move 5 meters forward before attacking foes. Use the skill uncharged to attack with your dual blades and inflict 1,270.9 Damage, charge to Stage 1 to inflict 2,522.7 Damage, and overcharge to inflict 2,522.7 Damage, followed by a longsword slash that causes 1679 Damage and knocks foes away.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_16.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Excellent Mobility</tripodName>
-							<tripodDescrip>Move Distance +4.0 meter(s).</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_10.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Dark Charge</tripodName>
-							<tripodDescrip>Dark energy lightly pulls surrounding foes every time Charge Level Increases. Inflicts 70.0% of the max skill Damage.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_71.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Shadow Rush</tripodName>
-							<tripodDescrip>Your afterimages attack in your stead when the skill is charged.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_88.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Death Sentence</skillName>
-					<points>7</points>
-					<skillDescrip>Leap 4 meters forward and thrust downward, inflicting 1522 Damage and slamming foes onto the ground.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_4.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Excellent Mobility</tripodName>
-							<tripodDescrip>Move Distance +4.0 meter(s).</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_10.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Cold Zone</tripodName>
-							<tripodDescrip>Element is now [Water]. The last attack creates a Cold Zone. Move Speed -20.0% and 58.4 Damage is inflicted every 1s for 2.0s. Effect lasts for 2.0s. This Frost effect stacks up to 3 times.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_14.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName></tripodName>
-							<tripodDescrip></tripodDescrip>
-							<tripodIcon></tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Fatal Wave</skillName>
-					<points>10</points>
-					<skillDescrip>Perform 3 slashes with your longsword, inflicting 591, 591, and 791 Damage with the energy of the blade.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_15.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Swift Fingers</tripodName>
-							<tripodDescrip>Atk. Speed +27.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_41.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Ice Cold Hands</tripodName>
-							<tripodDescrip>Element is now [Water]. On hit, inflicts Frost for 5.1s. Move Speed -26.6%. At 3 stacks, Freezes foes for 2.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_14.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Double Wave</tripodName>
-							<tripodDescrip>Shoots 2 sword bursts with each swing. Damage +95.0%. Use with Ice Cold Hands to stack Frost once for every 2 hits.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_88.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Head Hunt</skillName>
-					<points>10</points>
-					<skillDescrip>Attack foes with the hilt of your longsword to push them back for 576 Damage, then move 4 meters forward as you strike them on the head, inflicting 576 Damage and stunning them for 1s.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_17.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Magick Control</tripodName>
-							<tripodDescrip>MP Cost -67.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_34.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Enhanced Strike</tripodName>
-							<tripodDescrip>Outgoing Damage +60.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_0.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Enhanced Stun</tripodName>
-							<tripodDescrip>Stun duration +0.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_51.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Maelstrom</skillName>
-					<points>10</points>
-					<skillDescrip>Create a tornado that protects you and inflict 228 Damage. The tornado lasts 6s, inflicting 156 Damage to nearby foes.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_12.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Wide-angle Attack</tripodName>
-							<tripodDescrip>Continuous Damage range +15.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_7.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Dark Order</tripodName>
-							<tripodDescrip>Upon use, Move Speed +19.8% for all party members within 24 meters for 6.1s . Adds the Dark Order buff of Atk. Speed +25%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_6.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Stabilized Energy</tripodName>
-							<tripodDescrip>Grants Paralysis Immunity during the Maelstrom buff. Cooldown +5.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_23.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Moonlight Sonic</skillName>
-					<points>10</points>
-					<skillDescrip>Perform a sweeping slash in front of you to inflict up to 3,646.8 Damage, pulling foes close.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_10.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Fist of Darkness</tripodName>
-							<tripodDescrip>Element is now [Dark]. Outgoing Damage +40.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_19.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Sustain Enhancement</tripodName>
-							<tripodDescrip>Changes to Holding mode. Doubles the attack duration. Total outgoing Damage +80.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_42.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Forward Attack</tripodName>
-							<tripodDescrip>Move 3 meters forward before striking at surrounding foes in each attack. Use with Sustain Enhancement to move up to 2 more times with a 50% Damage bonus.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_10.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Twin Shadows</skillName>
-					<points>10</points>
-					<skillDescrip>Perform a quick vertical slash with your longsword to inflict 632 Damage. You can use this skill 1 more time within 4s.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_5.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Quick Preparation</tripodName>
-							<tripodDescrip>Cooldown -4.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_56.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Wide-angle Attack</tripodName>
-							<tripodDescrip>AoE Radius +20.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_7.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Cross Attack</tripodName>
-							<tripodDescrip>Slash with dual blades and slam a longsword downward. Outgoing Damage +83.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_40.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Void Strike</skillName>
-					<points>10</points>
-					<skillDescrip>Charge and release the skill key midway to perform an upper slash with your longsword to inflict 1769 Damage, launching foes into the air. Overcharge to push foes back as you advance 5 meters forward, inflicting up to 3,561.3 Damage and launching foes higher in the air.</skillDescrip>
-					<skillIcon>LostArkIcons\bl_skill_01_14.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Swift Fingers</tripodName>
-							<tripodDescrip>Atk. Speed +27.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_41.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Void Zone</tripodName>
-							<tripodDescrip>The Overcharged attack creates a void zone on the ground for 5s. inflicting +45.0% Damage. Move Speed -30.0%. Casts Darkness.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_85.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Dark Dimension</tripodName>
-							<tripodDescrip>Changes to Holding mode. Charge up the skill for a max of 1.5s to pull foes to you and deliver the Overcharged attack.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_42.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-
-			</Skills>
+				<Tripod1>
+					<tripodName>Fist of Darkness</tripodName>
+					<tripodDescrip>Element is now [Dark]. Outgoing Damage +40.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_19.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Soul Snatch</tripodName>
+					<tripodDescrip>Charge up the skill for as long as you can to create a 40.0% chance of getting half a Death Orb. This Orb Snatch effect is even applied during Death Trance.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_37.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName></tripodName>
+					<tripodDescrip></tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod3>
+			</Skill_1>
 			
+			<Skill_2>
+				<skillName>Blitz Rush</skillName>
+				<points>10</points>
+				<skillDescrip>Charge to move 5 meters forward before attacking foes. Use the skill uncharged to attack with your dual blades and inflict 1,270.9 Damage, charge to Stage 1 to inflict 2,522.7 Damage, and overcharge to inflict 2,522.7 Damage, followed by a longsword slash that causes 1679 Damage and knocks foes away.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_16.png</skillIcon>
+
+				<Tripod1>
+					<tripodName>Excellent Mobility</tripodName>
+					<tripodDescrip>Move Distance +4.0 meter(s).</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_10.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Dark Charge</tripodName>
+					<tripodDescrip>Dark energy lightly pulls surrounding foes every time Charge Level Increases. Inflicts 70.0% of the max skill Damage.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_71.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Shadow Rush</tripodName>
+					<tripodDescrip>Your afterimages attack in your stead when the skill is charged.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_88.png</tripodIcon>
+				</Tripod3>
+			</Skill_2>
 			
-		
+			<Skill_3>
+				<skillName>Death Sentence</skillName>
+				<points>7</points>
+				<skillDescrip>Leap 4 meters forward and thrust downward, inflicting 1522 Damage and slamming foes onto the ground.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_4.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Excellent Mobility</tripodName>
+					<tripodDescrip>Move Distance +4.0 meter(s).</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_10.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Cold Zone</tripodName>
+					<tripodDescrip>Element is now [Water]. The last attack creates a Cold Zone. Move Speed -20.0% and 58.4 Damage is inflicted every 1s for 2.0s. Effect lasts for 2.0s. This Frost effect stacks up to 3 times.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_14.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName></tripodName>
+					<tripodDescrip></tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod3>
+			</Skill_3>
+			
+			<Skill_4>
+				<skillName>Fatal Wave</skillName>
+				<points>10</points>
+				<skillDescrip>Perform 3 slashes with your longsword, inflicting 591, 591, and 791 Damage with the energy of the blade.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_15.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Swift Fingers</tripodName>
+					<tripodDescrip>Atk. Speed +27.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_41.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Ice Cold Hands</tripodName>
+					<tripodDescrip>Element is now [Water]. On hit, inflicts Frost for 5.1s. Move Speed -26.6%. At 3 stacks, Freezes foes for 2.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_14.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Double Wave</tripodName>
+					<tripodDescrip>Shoots 2 sword bursts with each swing. Damage +95.0%. Use with Ice Cold Hands to stack Frost once for every 2 hits.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_88.png</tripodIcon>
+				</Tripod3>
+			</Skill_4>
+			
+			<Skill_5>
+				<skillName>Head Hunt</skillName>
+				<points>10</points>
+				<skillDescrip>Attack foes with the hilt of your longsword to push them back for 576 Damage, then move 4 meters forward as you strike them on the head, inflicting 576 Damage and stunning them for 1s.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_17.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Magick Control</tripodName>
+					<tripodDescrip>MP Cost -67.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_34.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Enhanced Strike</tripodName>
+					<tripodDescrip>Outgoing Damage +60.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_0.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Enhanced Stun</tripodName>
+					<tripodDescrip>Stun duration +0.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_51.png</tripodIcon>
+				</Tripod3>
+			</Skill_5>
+			
+			<Skill_6>
+				<skillName>Maelstrom</skillName>
+				<points>10</points>
+				<skillDescrip>Create a tornado that protects you and inflict 228 Damage. The tornado lasts 6s, inflicting 156 Damage to nearby foes.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_12.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Wide-angle Attack</tripodName>
+					<tripodDescrip>Continuous Damage range +15.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_7.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Dark Order</tripodName>
+					<tripodDescrip>Upon use, Move Speed +19.8% for all party members within 24 meters for 6.1s . Adds the Dark Order buff of Atk. Speed +25%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_6.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Stabilized Energy</tripodName>
+					<tripodDescrip>Grants Paralysis Immunity during the Maelstrom buff. Cooldown +5.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_23.png</tripodIcon>
+				</Tripod3>
+			</Skill_6>
+			
+			<Skill_7>
+				<skillName>Moonlight Sonic</skillName>
+				<points>10</points>
+				<skillDescrip>Perform a sweeping slash in front of you to inflict up to 3,646.8 Damage, pulling foes close.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_10.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Fist of Darkness</tripodName>
+					<tripodDescrip>Element is now [Dark]. Outgoing Damage +40.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_19.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Sustain Enhancement</tripodName>
+					<tripodDescrip>Changes to Holding mode. Doubles the attack duration. Total outgoing Damage +80.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_42.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Forward Attack</tripodName>
+					<tripodDescrip>Move 3 meters forward before striking at surrounding foes in each attack. Use with Sustain Enhancement to move up to 2 more times with a 50% Damage bonus.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_10.png</tripodIcon>
+				</Tripod3>
+			</Skill_7>
+			
+			<Skill_8>
+				<skillName>Void Strike</skillName>
+				<points>10</points>
+				<skillDescrip>Charge and release the skill key midway to perform an upper slash with your longsword to inflict 1769 Damage, launching foes into the air. Overcharge to push foes back as you advance 5 meters forward, inflicting up to 3,561.3 Damage and launching foes higher in the air.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_14.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Swift Fingers</tripodName>
+					<tripodDescrip>Atk. Speed +27.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_41.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Void Zone</tripodName>
+					<tripodDescrip>The Overcharged attack creates a void zone on the ground for 5s. inflicting +45.0% Damage. Move Speed -30.0%. Casts Darkness.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_85.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Dark Dimension</tripodName>
+					<tripodDescrip>Changes to Holding mode. Charge up the skill for a max of 1.5s to pull foes to you and deliver the Overcharged attack.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_42.png</tripodIcon>
+				</Tripod3>
+			</Skill_8>
+
 		</Player>
 		
 		<Player>
@@ -255,328 +200,192 @@
 			<Class>Paladin</Class>
 			<Class_Img>Class_Icons\Paladin.png</Class_Img>
 			<Bio>Insert Player bio Here</Bio>
-			<Skills>
-				<Skill>
-					<skillName>Charge</skillName>
-					<points>10</points>
-					<skillDescrip>Charge forward 6 meters and stab foes with your sword to inflict 1058 Damage.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_4.png</skillIcon>
+
+			<Skill_1>
+				<skillName>Charge</skillName>
+				<points>10</points>
+				<skillDescrip>Charge forward 6 meters and stab foes with your sword to inflict 1058 Damage.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_4.png</skillIcon>
+				
+				<Tripod1>
+					<tripodName>Quick Preparation</tripodName>
+					<tripodDescrip>Cooldown -4.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_56.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Shining Protection</tripodName>
+					<tripodDescrip>When charging, create a shield for 12.5% of Max HP for 3.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_75.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Ambush Attack</tripodName>
+					<tripodDescrip>The charging stab attack changes into an rising slash. Inflicts +80.0% Damage. Knocks foes into the air.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_9.png</tripodIcon>
+				</Tripod3>
+			</Skill_1>
+				
+			<Skill_2>
+				<skillName>Heavenly Blessings</skillName>
+				<points>10</points>
+				<skillDescrip>Summon the Solar Guardian and inflict 2062 Damage to nearby foes. The guardian blesses all party members within a 24 meter radius. Damage received -20% for 8s.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_17.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Quick Preparation</tripodName>
-							<tripodDescrip>Cooldown -4.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_56.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Shining Protection</tripodName>
-							<tripodDescrip>When charging, create a shield for 12.5% of Max HP for 3.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_75.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Ambush Attack</tripodName>
-							<tripodDescrip>The charging stab attack changes into an rising slash. Inflicts +80.0% Damage. Knocks foes into the air.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_9.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+				<Tripod1>
+					<tripodName>Mind Enhancement</tripodName>
+					<tripodDescrip>MP Cost -67.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_34.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Valor</tripodName>
+					<tripodDescrip>Grants +15.0% of your Atk. Power for all party members within 24 meters for 8.0s. Overall Atk. Power +6%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_96.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Heavenly Requiem</tripodName>
+					<tripodDescrip>AoE Radius +20% . Damage +388.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_7.png</tripodIcon>
+				</Tripod3>
+			</Skill_2>
 				
-				<Skill>
-					<skillName>Heavenly Blessings</skillName>
-					<points>10</points>
-					<skillDescrip>Summon the Solar Guardian and inflict 2062 Damage to nearby foes. The guardian blesses all party members within a 24 meter radius. Damage received -20% for 8s.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_17.png</skillIcon>
+			<Skill_3>
+				<skillName>Godsent Law</skillName>
+				<points>10</points>
+				<skillDescrip>Summon a magick circle of light through holy scriptures. Texts made of infinite light swirl within the magic circle, inflicting 2,116.6 total Damage to foes for 2s.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_12.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Mind Enhancement</tripodName>
-							<tripodDescrip>MP Cost -67.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_34.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Valor</tripodName>
-							<tripodDescrip>Grants +15.0% of your Atk. Power for all party members within 24 meters for 8.0s. Overall Atk. Power +6%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_96.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Heavenly Requiem</tripodName>
-							<tripodDescrip>AoE Radius +20% . Damage +388.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_7.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+				<Tripod1>
+					<tripodName>Shield</tripodName>
+					<tripodDescrip>Creates a shield for 15.0% of Max HP for 5.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_75.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Brilliant Law</tripodName>
+					<tripodDescrip>Element is now [Holy]. On hit, leaves Light's Vestige on foes. Damage from all Party Members +10.0% for 12s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_107.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Light's Guardian</tripodName>
+					<tripodDescrip>If attack is maintained to the end, summons a Light's Guardian that swings its sword and inflicts +205.5% Damage and knocks back foes.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_108.png</tripodIcon>
+				</Tripod3>
+			</Skill_3>
 				
-				<Skill>
-					<skillName>Godsent Law</skillName>
-					<points>10</points>
-					<skillDescrip>Summon a magick circle of light through holy scriptures. Texts made of infinite light swirl within the magic circle, inflicting 2,116.6 total Damage to foes for 2s.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_12.png</skillIcon>
+			<Skill_4>
+				<skillName>Flash Shash</skillName>
+				<points>7</points>
+				<skillDescrip>Slowly move forward and slash your foe 7 times, inflicting 193, 209, 209, 209, 209, 209, and 241 Damage with each slash.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_6.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Shield</tripodName>
-							<tripodDescrip>Creates a shield for 15.0% of Max HP for 5.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_75.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Brilliant Law</tripodName>
-							<tripodDescrip>Element is now [Holy]. On hit, leaves Light's Vestige on foes. Damage from all Party Members +10.0% for 12s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_107.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Light's Guardian</tripodName>
-							<tripodDescrip>If attack is maintained to the end, summons a Light's Guardian that swings its sword and inflicts +205.5% Damage and knocks back foes.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_108.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+				<Tripod1>
+					<tripodName>Vital Point Strike</tripodName>
+					<tripodDescrip>Crit Rate +45.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_4.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Quick Preparation</tripodName>
+					<tripodDescrip>On hit, cooldown is -1.8s per foe up to -9.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_56.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName></tripodName>
+					<tripodDescrip></tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod3>
+			</Skill_4>
 				
-				<Skill>
-					<skillName>Flash Shash</skillName>
-					<points>7</points>
-					<skillDescrip>Slowly move forward and slash your foe 7 times, inflicting 193, 209, 209, 209, 209, 209, and 241 Damage with each slash.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_6.png</skillIcon>
+			<Skill_5>
+				<skillName>Execution of Justice</skillName>
+				<points>10</points>
+				<skillDescrip>Hold the sword with one hand and quickly spin in position to inflict 1,681.2 Damage to your foe, then perform a crushing blow that inflicts 721 Damage.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_15.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Vital Point Strike</tripodName>
-							<tripodDescrip>Crit Rate +45.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_4.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Quick Preparation</tripodName>
-							<tripodDescrip>On hit, cooldown is -1.8s per foe up to -9.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_56.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName></tripodName>
-							<tripodDescrip></tripodDescrip>
-							<tripodIcon></tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+				<Tripod1>
+					<tripodName>Bulwark</tripodName>
+					<tripodDescrip>Creates a shield for 12.5% of Max HP for 4.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_75.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Strength Release</tripodName>
+					<tripodDescrip>Damage +144.0%. Damage +229.4% while in Sacred Executioner status.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_0.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Express Fury</tripodName>
+					<tripodDescrip>Slight increase in spin duration. Spin Attack max Damage +25%. On last attack, stabs ground with a sword and summons 3 Light's Lightning that spread out. Last attack Damage +329.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_39.png</tripodIcon>
+				</Tripod3>
+			</Skill_5>
 				
-				<Skill>
-					<skillName>Execution of Justice</skillName>
-					<points>10</points>
-					<skillDescrip>Hold the sword with one hand and quickly spin in position to inflict 1,681.2 Damage to your foe, then perform a crushing blow that inflicts 721 Damage.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_15.png</skillIcon>
+			<Skill_6>
+				<skillName>Holy Explosion</skillName>
+				<points>10</points>
+				<skillDescrip>Gather divine strength for 2s before having it explode at the target location, inflicting 3843 Damage.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_7.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Bulwark</tripodName>
-							<tripodDescrip>Creates a shield for 12.5% of Max HP for 4.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_75.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Strength Release</tripodName>
-							<tripodDescrip>Damage +144.0%. Damage +229.4% while in Sacred Executioner status.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_0.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Express Fury</tripodName>
-							<tripodDescrip>Slight increase in spin duration. Spin Attack max Damage +25%. On last attack, stabs ground with a sword and summons 3 Light's Lightning that spread out. Last attack Damage +329.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_39.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+				<Tripod1>
+					<tripodName>Enhanced Strike</tripodName>
+					<tripodDescrip>Casting Speed -20.0%. Outgoing Damage +60.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_54.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Light's Vestige</tripodName>
+					<tripodDescrip>On hit, inflict Light's Vestige on the foe. Damage from all Party Members +10.0% for 12.0s.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_107.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Explosion Aftermath</tripodName>
+					<tripodDescrip>Element is now [Lightning]. After Holy Explosion, inflicts up to 170.4% Damage over time for 5s at the location of the explosion.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_17.png</tripodIcon>
+				</Tripod3>
+			</Skill_6>
 				
-				<Skill>
-					<skillName>Holy Explosion</skillName>
-					<points>10</points>
-					<skillDescrip>Gather divine strength for 2s before having it explode at the target location, inflicting 3843 Damage.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_7.png</skillIcon>
+			<Skill_7>
+				<skillName>Holy Land</skillName>
+				<points>7</points>
+				<skillDescrip>Generate a holy area at the target location for 6s and inflict 811.9 total Damage over time.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_9.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Enhanced Strike</tripodName>
-							<tripodDescrip>Casting Speed -20.0%. Outgoing Damage +60.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_54.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Light's Vestige</tripodName>
-							<tripodDescrip>On hit, inflict Light's Vestige on the foe. Damage from all Party Members +10.0% for 12.0s.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_107.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Explosion Aftermath</tripodName>
-							<tripodDescrip>Element is now [Lightning]. After Holy Explosion, inflicts up to 170.4% Damage over time for 5s at the location of the explosion.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_17.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
+				<Tripod1>
+					<tripodName>Naively Honest</tripodName>
+					<tripodDescrip>During skill use, grants Paralysis immunity.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_23.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Law of the Jungle</tripodName>
+					<tripodDescrip>On hit, Damage to Minor and Normal foes +145.0%.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_61.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName></tripodName>
+					<tripodDescrip></tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod3>
+			</Skill_7>
 				
-				<Skill>
-					<skillName>Holy Land</skillName>
-					<points>7</points>
-					<skillDescrip>Generate a holy area at the target location for 6s and inflict 811.9 total Damage over time.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_9.png</skillIcon>
+			<Skill_8>
+				<skillName>Sword of Justice</skillName>
+				<points>10</points>
+				<skillDescrip>Drop a sword made of light at the target location to inflict 1334 Damage to your foe and thrust the sword into the ground.</skillDescrip>
+				<skillIcon>LostArkIcons\hk_skill_01_5.png</skillIcon>
 					
-					<Tripods>
-						<Tripod>
-							<tripodName>Naively Honest</tripodName>
-							<tripodDescrip>During skill use, grants Paralysis immunity.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_23.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Law of the Jungle</tripodName>
-							<tripodDescrip>On hit, Damage to Minor and Normal foes +145.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_61.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName></tripodName>
-							<tripodDescrip></tripodDescrip>
-							<tripodIcon></tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Sword of Justice</skillName>
-					<points>10</points>
-					<skillDescrip>Drop a sword made of light at the target location to inflict 1334 Damage to your foe and thrust the sword into the ground.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_5.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Enhanced Strike</tripodName>
-							<tripodDescrip>Changes to Casting mode. Inflicts +70.0% Damage.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_105.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Explosive Sword</tripodName>
-							<tripodDescrip>The sword explodes after falling, inflicting +70.0% Damage.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_78.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Great Light Sword</tripodName>
-							<tripodDescrip>Drops a huge sword. AoE Radius +20%. Inflicts +80.0% Damage.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_7.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-				
-				<Skill>
-					<skillName>Wrath of God</skillName>
-					<points>10</points>
-					<skillDescrip>Call forth the energy of sacred thunder into your weapon and inflict 2150 Damage to nearby foes.</skillDescrip>
-					<skillIcon>LostArkIcons\hk_skill_01_14.png</skillIcon>
-					
-					<Tripods>
-						<Tripod>
-							<tripodName>Law of the Jungle</tripodName>
-							<tripodDescrip>On hit, Damage to Minor and Normal foes +80.0%.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_1_61.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Tenacity</tripodName>
-							<tripodDescrip>On skill use, grants Push Immunity.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_2_23.png</tripodIcon>
-						</Tripod>
-						<Tripod>
-							<tripodName>Light's Guardian</tripodName>
-							<tripodDescrip>With the energy of holy lightning, a Light's Guardian appears and slashes the surroundings. Inflicts +205.5% Damage and knocks back foes.</tripodDescrip>
-							<tripodIcon>LostArkIcons\tripod_tier_3_108.png</tripodIcon>
-						</Tripod>
-					</Tripods>
-
-				</Skill>
-
-			</Skills>
-		
-		</Player>
-		
-		<Player>
-			<Name>Rush</Name>
-			<playerID>03</playerID>
-			<Class>Scrapper</Class>
-			<ClassID>if</ClassID>
-			<Bio>Insert Player bio Here</Bio>
-			<Skills>
-				<Skill>
-					<skill_ID>23020</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23050</skill_ID>
-					<points>10</points>
-					<tripod_1>2</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23090</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23100</skill_ID>
-					<points>10</points>
-					<tripod_1>3</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23080</skill_ID>
-					<points>10</points>
-					<tripod_1>2</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23200</skill_ID>
-					<points>10</points>
-					<tripod_1>2</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23210</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>5</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23220</skill_ID>
-					<points>10</points>
-					<tripod_1>3</tripod_1>
-					<tripod_2>4</tripod_2>
-					<tripod_3>7</tripod_3>
-				</Skill>
-				
-				<Skill>
-					<skill_ID>23260</skill_ID>
-					<points>10</points>
-					<tripod_1>1</tripod_1>
-					<tripod_2>6</tripod_2>
-					<tripod_3>8</tripod_3>
-				</Skill>
+				<Tripod1>
+					<tripodName>Enhanced Strike</tripodName>
+					<tripodDescrip>Changes to Casting mode. Inflicts +70.0% Damage.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_1_105.png</tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName>Explosive Sword</tripodName>
+					<tripodDescrip>The sword explodes after falling, inflicting +70.0% Damage.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_2_78.png</tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName>Great Light Sword</tripodName>
+					<tripodDescrip>Drops a huge sword. AoE Radius +20%. Inflicts +80.0% Damage.</tripodDescrip>
+					<tripodIcon>LostArkIcons\tripod_tier_3_7.png</tripodIcon>
+				</Tripod3>
+			</Skill_8>
 			
-			</Skills>
-		
 		</Player>
-
 
 	</Players>
 
