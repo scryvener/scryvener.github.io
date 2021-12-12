@@ -2,7 +2,7 @@
 
 	<Players>
 		<Player>
-			<Name>Neeko</Name>
+			<Name>HesitantAlien</Name>
 			<playerID>01</playerID>
 			<Class>Deathblade</Class>
 			<Class_Img>Class_Icons\Deathblade-white.png</Class_Img>
@@ -195,7 +195,7 @@
 		</Player>
 		
 		<Player>
-			<Name>HesitantAlien</Name>
+			<Name>Blink2</Name>
 			<playerID>02</playerID>
 			<Class>Paladin</Class>
 			<Class_Img>Class_Icons\Paladin.png</Class_Img>
