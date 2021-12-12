@@ -4,8 +4,8 @@
 		<Player>
 			<Name>Neeko</Name>
 			<playerID>01</playerID>
-			<Class>DeathBlade</Class>
-			<Class_Img>Class_Icons\Deathblade_1.png</Class_Img>
+			<Class>Wardancer</Class>
+			<Class_Img>Class_Icons\Wardancer-white.png</Class_Img>
 			<Bio>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sem et tortor consequat id porta nibh venenatis cras sed. Amet tellus cras adipiscing enim eu turpis egestas.</Bio>
 			
 			<Skill_1>
