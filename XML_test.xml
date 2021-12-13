@@ -388,7 +388,7 @@
 		</Player>
 		
 		<Player>
-			<Name>Rush</Name>
+			<Name>Kanon</Name>
 			<playerID>03</playerID>
 			<Class>Soulfist</Class>
 			<Class_Img>Class_Icons\Soulfist-icon-white.png</Class_Img>
@@ -581,7 +581,47 @@
 		</Player>
 
 
+		<Player>
+			<Name>DJMontague</Name>
+			<playerID>04</playerID>
+
+		</Player>
+
+		<Player>
+			<Name>Darksma</Name>
+			<playerID>05</playerID>
+
+		</Player>
 		
+		<Player>
+			<Name>Yeager</Name>
+			<playerID>06</playerID>
+
+		</Player>
+		
+		<Player>
+			<Name>KatanaZera</Name>
+			<playerID>07</playerID>
+
+		</Player>
+		
+		<Player>
+			<Name>Shichisu</Name>
+			<playerID>08</playerID>
+
+		</Player>
+		
+		<Player>
+			<Name>Neeko</Name>
+			<playerID>09</playerID>
+
+		</Player>
+		
+		<Player>
+			<Name>Rushed</Name>
+			<playerID>10</playerID>
+
+		</Player>
 
 
 	</Players>
