@@ -192,6 +192,30 @@
 				</Tripod3>
 			</Skill_8>
 
+			<Skill_9>
+				<skillName>Flash Blink</skillName>
+				<points>1</points>
+				<skillDescrip>Dash 12 meters toward the target location, slashing through foes with all your swords. Foes caught in the path receive 1900 Damage at the moment of impact, then get launched in the air moments later for 6,452.6 Damage. This skill allows you to pierce through Guardians as well.</skillDescrip>
+				<skillIcon>LostArkIcons\bl_skill_01_18.png</skillIcon>
+			
+				<Tripod1>
+					<tripodName></tripodName>
+					<tripodDescrip><tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod1>
+				<Tripod2>
+					<tripodName></tripodName>
+					<tripodDescrip></tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod2>
+				<Tripod3>
+					<tripodName></tripodName>
+					<tripodDescrip></tripodDescrip>
+					<tripodIcon></tripodIcon>
+				</Tripod3>
+
+			</Skill_9>
+
 		</Player>
 		
 		<Player>
@@ -590,6 +614,8 @@
 		<Player>
 			<Name>Darksma</Name>
 			<playerID>05</playerID>
+			<Class>Gunslinger</Class>
+			<Class_Img>Class_Icons\Gunslinger-icon-white.png</Class_Img>
 
 		</Player>
 		
