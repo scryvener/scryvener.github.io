@@ -228,9 +228,223 @@
 			</Build_1>
 			
 			<Build_2>
-			
-			
-			
+				<Stats>
+					<Agility>1000</Agility>
+					<Domination>249</Domination>
+					<Specialization></Specialization>
+					<Expertise></Expertise>
+					<Endurance></Endurance>
+					<Crit>1</Crit>
+				</Stats>
+
+				<Skill_1>
+					<skillName>Blade Dance</skillName>
+					<points>7</points>
+					<skillDescrip>Hack at foes for up to 2s and deliver 7 blows, inflicting 1,517.7 Damage, and another 654 Damage with the finishing blow. Pushed foes are launched back in the air.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_2.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Fist of Darkness</tripodName>
+						<tripodDescrip>Element is now [Dark]. Outgoing Damage +40.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_19.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Soul Snatch</tripodName>
+						<tripodDescrip>Charge up the skill for as long as you can to create a 40.0% chance of getting half a Death Orb. This Orb Snatch effect is even applied during Death Trance.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_37.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName></tripodName>
+						<tripodDescrip></tripodDescrip>
+						<tripodIcon></tripodIcon>
+					</Tripod3>
+				</Skill_1>
+				
+				<Skill_2>
+					<skillName>Blitz Rush</skillName>
+					<points>10</points>
+					<skillDescrip>Charge to move 5 meters forward before attacking foes. Use the skill uncharged to attack with your dual blades and inflict 1,270.9 Damage, charge to Stage 1 to inflict 2,522.7 Damage, and overcharge to inflict 2,522.7 Damage, followed by a longsword slash that causes 1679 Damage and knocks foes away.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_16.png</skillIcon>
+
+					<Tripod1>
+						<tripodName>Excellent Mobility</tripodName>
+						<tripodDescrip>Move Distance +4.0 meter(s).</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_10.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Dark Charge</tripodName>
+						<tripodDescrip>Dark energy lightly pulls surrounding foes every time Charge Level Increases. Inflicts 70.0% of the max skill Damage.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_71.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName>Shadow Rush</tripodName>
+						<tripodDescrip>Your afterimages attack in your stead when the skill is charged.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_3_88.png</tripodIcon>
+					</Tripod3>
+				</Skill_2>
+				
+				<Skill_3>
+					<skillName>Death Sentence</skillName>
+					<points>7</points>
+					<skillDescrip>Leap 4 meters forward and thrust downward, inflicting 1522 Damage and slamming foes onto the ground.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_4.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Excellent Mobility</tripodName>
+						<tripodDescrip>Move Distance +4.0 meter(s).</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_10.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Cold Zone</tripodName>
+						<tripodDescrip>Element is now [Water]. The last attack creates a Cold Zone. Move Speed -20.0% and 58.4 Damage is inflicted every 1s for 2.0s. Effect lasts for 2.0s. This Frost effect stacks up to 3 times.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_14.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName></tripodName>
+						<tripodDescrip></tripodDescrip>
+						<tripodIcon></tripodIcon>
+					</Tripod3>
+				</Skill_3>
+				
+				<Skill_4>
+					<skillName>Fatal Wave</skillName>
+					<points>10</points>
+					<skillDescrip>Perform 3 slashes with your longsword, inflicting 591, 591, and 791 Damage with the energy of the blade.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_15.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Swift Fingers</tripodName>
+						<tripodDescrip>Atk. Speed +27.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_41.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Ice Cold Hands</tripodName>
+						<tripodDescrip>Element is now [Water]. On hit, inflicts Frost for 5.1s. Move Speed -26.6%. At 3 stacks, Freezes foes for 2.0s.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_14.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName>Double Wave</tripodName>
+						<tripodDescrip>Shoots 2 sword bursts with each swing. Damage +95.0%. Use with Ice Cold Hands to stack Frost once for every 2 hits.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_3_88.png</tripodIcon>
+					</Tripod3>
+				</Skill_4>
+				
+				<Skill_5>
+					<skillName>Head Hunt</skillName>
+					<points>10</points>
+					<skillDescrip>Attack foes with the hilt of your longsword to push them back for 576 Damage, then move 4 meters forward as you strike them on the head, inflicting 576 Damage and stunning them for 1s.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_17.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Magick Control</tripodName>
+						<tripodDescrip>MP Cost -67.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_34.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Enhanced Strike</tripodName>
+						<tripodDescrip>Outgoing Damage +60.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_0.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName>Enhanced Stun</tripodName>
+						<tripodDescrip>Stun duration +0.0s.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_3_51.png</tripodIcon>
+					</Tripod3>
+				</Skill_5>
+				
+				<Skill_6>
+					<skillName>Maelstrom</skillName>
+					<points>10</points>
+					<skillDescrip>Create a tornado that protects you and inflict 228 Damage. The tornado lasts 6s, inflicting 156 Damage to nearby foes.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_12.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Wide-angle Attack</tripodName>
+						<tripodDescrip>Continuous Damage range +15.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_7.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Dark Order</tripodName>
+						<tripodDescrip>Upon use, Move Speed +19.8% for all party members within 24 meters for 6.1s . Adds the Dark Order buff of Atk. Speed +25%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_6.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName>Stabilized Energy</tripodName>
+						<tripodDescrip>Grants Paralysis Immunity during the Maelstrom buff. Cooldown +5.0s.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_3_23.png</tripodIcon>
+					</Tripod3>
+				</Skill_6>
+				
+				<Skill_7>
+					<skillName>Moonlight Sonic</skillName>
+					<points>10</points>
+					<skillDescrip>Perform a sweeping slash in front of you to inflict up to 3,646.8 Damage, pulling foes close.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_10.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Fist of Darkness</tripodName>
+						<tripodDescrip>Element is now [Dark]. Outgoing Damage +40.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_19.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Sustain Enhancement</tripodName>
+						<tripodDescrip>Changes to Holding mode. Doubles the attack duration. Total outgoing Damage +80.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_42.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName>Forward Attack</tripodName>
+						<tripodDescrip>Move 3 meters forward before striking at surrounding foes in each attack. Use with Sustain Enhancement to move up to 2 more times with a 50% Damage bonus.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_3_10.png</tripodIcon>
+					</Tripod3>
+				</Skill_7>
+				
+				<Skill_8>
+					<skillName>Void Strike</skillName>
+					<points>10</points>
+					<skillDescrip>Charge and release the skill key midway to perform an upper slash with your longsword to inflict 1769 Damage, launching foes into the air. Overcharge to push foes back as you advance 5 meters forward, inflicting up to 3,561.3 Damage and launching foes higher in the air.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_14.png</skillIcon>
+					
+					<Tripod1>
+						<tripodName>Swift Fingers</tripodName>
+						<tripodDescrip>Atk. Speed +27.0%.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_1_41.png</tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName>Void Zone</tripodName>
+						<tripodDescrip>The Overcharged attack creates a void zone on the ground for 5s. inflicting +45.0% Damage. Move Speed -30.0%. Casts Darkness.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_2_85.png</tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName>Dark Dimension</tripodName>
+						<tripodDescrip>Changes to Holding mode. Charge up the skill for a max of 1.5s to pull foes to you and deliver the Overcharged attack.</tripodDescrip>
+						<tripodIcon>LostArkIcons\tripod_tier_3_42.png</tripodIcon>
+					</Tripod3>
+				</Skill_8>
+
+				<Skill_9>
+					<skillName>Flash Blink</skillName>
+					<points>1</points>
+					<skillDescrip>Dash 12 meters toward the target location, slashing through foes with all your swords. Foes caught in the path receive 1900 Damage at the moment of impact, then get launched in the air moments later for 6,452.6 Damage. This skill allows you to pierce through Guardians as well.</skillDescrip>
+					<skillIcon>LostArkIcons\bl_skill_01_18.png</skillIcon>
+				
+					<Tripod1>
+						<tripodName></tripodName>
+						<tripodDescrip></tripodDescrip>
+						<tripodIcon></tripodIcon>
+					</Tripod1>
+					<Tripod2>
+						<tripodName></tripodName>
+						<tripodDescrip></tripodDescrip>
+						<tripodIcon></tripodIcon>
+					</Tripod2>
+					<Tripod3>
+						<tripodName></tripodName>
+						<tripodDescrip></tripodDescrip>
+						<tripodIcon></tripodIcon>
+					</Tripod3>
+
+				</Skill_9>
+
 			</Build_2>
 			
 			<Build_3>
