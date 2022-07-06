@@ -1,9 +1,0 @@
-# Jekyll-specific ignores
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-
-# Ignore specifically for hosting on GitHub Pages
-Gemfile.lock
