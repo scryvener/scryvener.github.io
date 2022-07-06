@@ -1,0 +1,12 @@
+# Navbar setup
+main      :
+  - title : "Home"
+    url   : /
+  - title : "Projects"
+    url   : /projects/
+  - title : "Teaching"
+    url   : /teaching/
+  - title : "Resume"
+    url   : /resume/
+  - title : "Contact"
+    url   : /contact/
