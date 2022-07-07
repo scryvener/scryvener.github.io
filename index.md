@@ -8,7 +8,12 @@
 
 <h1>Test Test</h1>
 
-<div><img src= "\Pictures\Flowers_White_2.png"></img></div>
+<div><img src= "\Pictures\WhiteFlowerBloom.gif"></img> This is my flower animation that I did. How does it look? I am quite proud of it. Particularly since I was never good at artistic endeavors</div>
+
+
+<div>this is another test paragraph to catalogue my thoughts. Like how trading time would get really weird really fast. LIke if it got securitized and everything</div>
+
+<div style="background-color: coral"> I wonder if we'll be okay.</div>
 
 <table id="detail_table" class="detail">  
 	    <thead>  
