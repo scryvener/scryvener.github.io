@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 
-
+<html>
 <div>testing things hosting things</div>
 
 
 
 
 <h1>Test Test</h1>
+
+<div><img src= "\Pictures\Flowers_White_2.png"></img></div>
 
 <table id="detail_table" class="detail">  
 	    <thead>  
