@@ -14,7 +14,7 @@
     {% include navigation.yml %}
 </nav>
  -->
-<nav>
+<!-- <nav>
   <a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}>
     Home
   </a>
@@ -30,5 +30,5 @@ In my spare time, I am an amateur data analyst/scientist, with my current intere
 
 Feel free to [contact me on LinkedIn](https://www.linkedin.com/in/kennethcchang/) if you want to talk.
 
-![My helpful screenshot](/assets/WhiteFlowerBloom.gif)
+![My helpful screenshot](/assets/WhiteFlowerBloom.gif) -->
 
