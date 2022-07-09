@@ -12,7 +12,7 @@ Hello there! I am a biomedical engineer currently living and working the in San 
 
 
 
-In my spare time, I am an amateur data analyst/scientist, with my current interest in researching how ideas spread, how those ideas might influence behavior, and the practical applications of such models in fields such as marketing. My other interests include  machine learning, investing, video games, and tinkering to create artsy projects. /n
+In my spare time, I am an amateur data analyst/scientist, with my current interest in researching how ideas spread, how those ideas might influence behavior, and the practical applications of such models in fields such as marketing. My other interests include  machine learning, investing, video games, and tinkering to create artsy projects.
 
 
 
