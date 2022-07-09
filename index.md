@@ -1,8 +1,10 @@
 ---
 title               : "Home"
 permalink           : /
-header              : /Pictures/Banner_Test.jpg 
-
+header              : 
+  overlay_image     : /images/Banner_Test.jpg 
+  caption           : "Welcome!"
+  image_description : "The sky?"
 ---
 
 
