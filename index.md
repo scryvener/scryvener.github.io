@@ -16,7 +16,7 @@
 </div>
 
 
-<table id="detail_table" class="detail">  
+<!-- <table id="detail_table" class="detail">  
 	    <thead>  
 	    <tr>  
  
@@ -95,7 +95,7 @@
         
         
 	</tbody>  
-	</table>  
+	</table>   -->
 
 
 
