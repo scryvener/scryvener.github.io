@@ -8,12 +8,13 @@
 
 <h1>Test Test</h1>
 
-<div><img src= "\Pictures\WhiteFlowerBloom.gif"></img> This is my flower animation that I did. How does it look? I am quite proud of it. Particularly since I was never good at artistic endeavors</div>
+<div>Hello there! I am a biomedical engineer currently living and working the in San Francisco Bay Area. I am currently working at Prodeon Medical as an Research and Development Engineer, focused on designing and developing nitinol implants, associated catheter systems, and test methods. </div>
 
+<div>In my spare time, I am an amateur data analyst/scientist, with my current interest in researching how ideas spread, how those ideas might influence behavior, and the practical applications of such models in fields such as marketing. My other interests include  machine learning, investing, video games, and tinkering to create artsy projects. </div>
 
-<div>this is another test paragraph to catalogue my thoughts. Like how trading time would get really weird really fast. LIke if it got securitized and everything</div>
+<div>Feel free to message me here!
+</div>
 
-<div style="background-color: coral"> I wonder if we'll be okay.</div>
 
 <table id="detail_table" class="detail">  
 	    <thead>  

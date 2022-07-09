@@ -3,8 +3,7 @@ title                 : "Kenneth Chang"
 title_separator       : "|"
 description           : >-
                         My personal website, blog and depository of random thoughts.
-                        Biomedical Engineer, amateur data analyst and financial trader.
-                        Based in the San Francisco Bay Area. 
+                        
 logo                  : "/assets/images/site/masthead.png"
 url                   : "https://scryvener.github.io/"
 repository            : "scryvener/scryvener.github.io"
