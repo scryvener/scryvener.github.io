@@ -1,3 +1,13 @@
+---
+title               : "Home"
+permalink           : /
+header              :
+  overlay_image     : 
+  caption           : "Test Caption"
+  image_description : "Test Descrip"
+---
+
+
 
 <html>
 
