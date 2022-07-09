@@ -10,9 +10,19 @@
   </body>
 </html> -->
 
-<nav style="background-color:coral">
+<!-- <nav style="background-color:coral">
     {% include navigation.yml %}
 </nav>
+ -->
+<nav>
+  <a href="/" {% if page.url == "/" %}style="color: red;"{% endif %}>
+    Home
+  </a>
+  <a href="/about" {% if page.url == "/about" %}style="color: red;"{% endif %}>
+    About
+  </a>
+</nav>
+
 
 Hello there! I am a biomedical engineer currently living and working the in San Francisco Bay Area. I am currently working at Prodeon Medical as an Research and Development Engineer, focused on designing and developing nitinol implants, associated catheter systems, and test methods. 
 
