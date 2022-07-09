@@ -2,7 +2,7 @@
 title               : "Home"
 permalink           : /
 header              : 
-  overlay_image     : /images/Banner_Test.jpg 
+  overlay_image     : /assets/Banner_Test.jpg 
   caption           : "Welcome!"
   image_description : "The sky?"
 ---
