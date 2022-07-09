@@ -10,7 +10,7 @@
   </body>
 </html> -->
 
-<nav>
+<nav style="background-color:coral">
     {% include navigation.html %}
 </nav>
 
