@@ -11,6 +11,8 @@ site.locale           : "en-US"
 timezone              : "America/Los_Angeles"
 
 theme: jekyll-theme-slate
+include               :
+                        - _pages
 
 defaults              :
   # _pages
@@ -25,5 +27,3 @@ defaults              :
       related         : false
 
 
-include               :
-                        - _pages
