@@ -1,14 +1,9 @@
 ---
 title               : "Home"
 permalink           : /
-header              :
-  overlay_image     : /Pictures/Banner_Test.jpg 
-  caption           : "Welcome!"
-  image_description : "The sky?"
+header              : /Pictures/Banner_Test.jpg 
+
 ---
-
-
-
 
 
 Hello there! I am a biomedical engineer currently living and working the in San Francisco Bay Area. I am currently working at Prodeon Medical as an Research and Development Engineer, focused on designing and developing nitinol implants, associated catheter systems, and test methods. 
