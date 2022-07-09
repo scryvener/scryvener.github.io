@@ -5,17 +5,13 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {% include navigation.html %}
+    
     {{ content }}
   </body>
 </html> -->
 
 <nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}style="color: red;"{% endif %}>
-      {{ item.name }}
-    </a>
-  {% endfor %}
+    {% include navigation.html %}
 </nav>
 
 Hello there! I am a biomedical engineer currently living and working the in San Francisco Bay Area. I am currently working at Prodeon Medical as an Research and Development Engineer, focused on designing and developing nitinol implants, associated catheter systems, and test methods. 
