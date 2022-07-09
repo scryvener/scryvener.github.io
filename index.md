@@ -19,5 +19,5 @@ In my spare time, I am an amateur data analyst/scientist, with my current intere
 Feel free to message me here!
 
 
-
+![My helpful screenshot](/assets/WhiteFlowerBloom.gif)
 
