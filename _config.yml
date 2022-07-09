@@ -4,7 +4,7 @@ title_separator       : "|"
 description           : >-
                         My personal website, blog and depository of random thoughts.
                         
-logo                  : "/assets/Banner_Test.png"
+logo                  : "/assets/Banner_Test.jpg"
 url                   : "https://scryvener.github.io/"
 repository            : "scryvener/scryvener.github.io"
 site.locale           : "en-US"
