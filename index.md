@@ -4,7 +4,7 @@ permalink           : /
 header              :
   overlay_image     : /Pictures/Banner_Test.jpg 
   caption           : "Welcome!"
-  image_description : "Panorama of a Hawaiian Beach"
+  image_description : "The sky?"
 ---
 
 
