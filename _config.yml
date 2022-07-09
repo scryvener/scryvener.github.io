@@ -11,3 +11,20 @@ site.locale           : "en-US"
 timezone              : "America/Los_Angeles"
 
 theme: jekyll-theme-slate
+
+defaults              :
+  # _pages
+  - scope             :
+      path            : ""
+      type            : "pages"
+    values            :
+      layout          : single
+      author_profile  : true
+      read_time       : false
+      comments        : false
+      share           : false
+      related         : false
+
+
+include               :
+                        - _pages
