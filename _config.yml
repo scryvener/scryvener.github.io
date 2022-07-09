@@ -10,4 +10,4 @@ repository            : "scryvener/scryvener.github.io"
 site.locale           : "en-US"
 timezone              : "America/Los_Angeles"
 
-theme: jekyll-theme-minimal 
+theme: jekyll-theme-slate 
