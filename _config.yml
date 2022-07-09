@@ -19,12 +19,13 @@ defaults              :
   - scope             :
       path            : ""
       type            : "pages"
-      layout          : default
+      
     values            :
       author_profile  : true
       read_time       : false
       comments        : false
       share           : false
       related         : false
+      layout          : default
 
 
