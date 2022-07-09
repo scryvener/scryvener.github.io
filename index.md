@@ -2,9 +2,9 @@
 title               : "Home"
 permalink           : /
 header              :
-  overlay_image     : 
-  caption           : "Test Caption"
-  image_description : "Test Descrip"
+  overlay_image     : /Pictures/Banner_Test.jpg 
+  caption           : "Welcome!"
+  image_description : "Panorama of a Hawaiian Beach"
 ---
 
 
