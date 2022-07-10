@@ -206,6 +206,22 @@ bt {
 	font-size: 12px;
 }
 
+/*Images*/
+
+img.folio_icon{
+	width: 300px;
+	height: 300px;
+	
+}
+
+img.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+
+
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
 .zoom { 

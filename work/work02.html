@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Kenneth Chang | Work | SAGE </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+
+
+    <!-- Custom styles for this template -->
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="../assets/js/hover.zoom.js"></script>
+    <script src="../assets/js/hover.zoom.conf.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Static navbar -->
+    <div class="navbar navbar-inverse navbar-static-top" >
+      <div class="container">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">Kenneth Chang</a>
+        </div>
+        <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="contact.html">Projects</a></li>
+          <li><a href="testing.html">Travel</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+    
+        </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+      </div>
+	
+	
+	<!-- +++++ Projects Section +++++ -->
+	
+	<div class="container pt">
+		<div class="row mt">
+			<div class="col-lg-6 col-lg-offset-3 centered">
+				<h1>SAGE</h1>
+				<hr>
+				<p>
+          SAGE was a side project with a few other friends, focused around building and strenghening the gaming community through innovation, entertainment, and tournament organization. 
+          Our main focus was <a href="https://www.playlostark.com/en-us">Lost Ark</a>, released in February 2022.
+        </p>
+        <P>
+          Technically, I was CTO, Chief Technical Officer, responsible for building tools that improved the live-stream and competitive experience, 
+          tournament analytics, SEO efforts, and technical collaborations. But since there was only ever five people, lots of hats were worn, from stream moderating to creating clips for social media posts.</P>
+        <p>
+          The title was fancy, but that wasn't really the point. The proudest moments were the messages of thanks from competitors, and the awe of viewers.
+          The best memories were from working with my friends. Getting to combine my passion for analytics with my hobby of video games was a dream come true. 
+          I had a lot of fun working on this, even if circumstances outside our control led to its early end.</p>
+        <p>
+          I picked out some highlights of my work with SAGE below.
+
+          for easy navigation, insert TOC links, this is going to get long
+        </p>
+      </div>
+		</div>
+    <hr>
+		<div class="row mt left">	
+			<div class="col-lg-8 col-lg-offset-2">
+        <h3>Twitch Extension</h3>
+				<p>
+          The highlight of my time at SAGE. <a href="https://www.twitch.tv/p/en/extensions/">Twitch Extensions</a> allow for a next level of interactive experiences with the audience,
+          beyond just chat. I developed an extension for use with one of our tournaments, allowing viewers to see competitors builds, stats, and other game info that normally wouldn't be accessible.
+        </p>
+        <p>
+          This was a major undertaking for two reasons:
+          <br>
+          <b>First:</b>
+          The game developer had no public api available, and Twitch required all files, 
+          including media, to be submitted as part of the publishing review process, which had to be done days ahead of time.
+          Which then ran into the problem that the competitors themseles wouldn't finalize their in-game stats and info until the day of.
+          Normally, you could query the api to pull a competitors real time, in-game data, and all this wouldn't be a problem. But there wasn't, and so I had to think of a way to feed the extension information.
+          My solution was to create essentially our own psuedo-api, taking the form of an xml page hosted on github that the extension could query to know what data to display. 
+          <br>
+
+          <b>Second:</b>
+          This was my first time coding in html/css/javascript. Small problem I know. I was essentially crash coursing my way through this, learning the languages as I built it.
+        </p>
+        <p>Despite the challenges, I got it done, in about a month and a half. The extension was successfully used for our tournament, improving the viewing experience of the over 3k people that watched.  </p>
+
+        <p>
+          It wasn't all perfect though, I made a lot of mistakes and learned alot as I built my way through this. The most important lesson was the value of testing. 
+          Certain bugs compatibility issues could have been detected earlier, a lot of work could have been saved had I tested properly. The bug that stood out was related to displaying a certain number of skills.
+          Due to how I wrote the js, essentially an overflow would happen after the skill count went to 10 or more, and skills wouldn't display properly. I was furious with myself when I found the bug, the day before the tournament, and all files 
+          essentially frozen. "Test Early, Test Often, and Test Accurately" is now the maxim I repeat to myself. 
+        </p>
+        
+        <p>Lot of words, but wouldn't it be cool if you could play with it yourself? Since Twitch Extensions are built like web pages, I can insert an iframe so you can! Sizing is a bit small, since it was designed for a full screen, but 
+          you should be able to see the full functionality. 
+          The extension was designed to be draggable, so that viewers could place it wherever worked best for them in the window, and a show/hide functionality so they could hide it when they wanted to focus on the match.
+          You can check out the code on github! <i>insert github link</i>
+        </p>
+      </div>
+
+      <div class="col-lg-8">
+        <iframe title="Extension playground" height="600" width="1200" src="../assets/iframe_ext/video_overlay_v3.html"></iframe> <!-- move to css page later-->
+      </div>
+      
+    </div><!-- /row -->
+    
+    
+
+    <div class="row mt centered">
+      <div class="col-lg-8 col-lg-offset-2">
+        <h3>SEO</h3>
+				<p>
+          <img class="img-responsive" src="assets/img/portfolio/2.jpg" alt="">
+          look at our website please
+        </p>
+        <hr>
+
+        <h3>Competitor Experience Improvement</h3>
+				<p>
+          <img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="">
+          Turns out some of the more impactful things you can do are also sometimes the simplest.
+        </p>
+        <hr>
+
+        <h3>Training Ark</h3>
+				<p>
+          <img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="">
+          Pun time
+        </p>
+        <hr>
+
+        <h3>Prizes</h3>
+        <p>
+          <img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="">
+          Excuse to use lasers
+        </p>
+
+      </div>
+    </div>
+
+
+
+	</div><!-- /container -->
+  
+
+
+        
+
+        
+				
+			
+		
+	
+	
+	<!-- +++++ Footer Section +++++ -->
+	
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4">
+					<h4>Living at</h4>
+					<p>
+						San Francisco Bay Area,<br/>
+						California, USA.
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+				<div class="col-lg-4">
+					<h4>My Links</h4>
+					<p>
+						<a href="#">LinkedIn</a><br/>
+						<a href="#">GitHub</a>
+					</p>
+				</div><!-- /col-lg-4 -->
+				
+			
+			</div>
+		
+		</div>
+	</div>
+	
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
