@@ -65,7 +65,8 @@
 				<hr>
 				<p>
           SAGE was a side gig with some friends, focused around building and strenghening the gaming community through innovation, entertainment, and tournament organization. 
-          Our main focus was <a href="https://www.playlostark.com/en-us">Lost Ark</a>, released in February 2022.
+          Our main focus was <a href="https://www.playlostark.com/en-us">Lost Ark</a>, released in February 2022. We held and live-streamed exhibition tournaments, and organized a tournament league, Arkives Arena,
+          where teams of 3 competed against each other for cash prizes. You can check out our website <a href="https://www.arkives.info/">here</a>.
         </p>
         <P>
           Technically, I was CTO, Chief Technology Officer. I was responsible for all of our technical projects: building tools that improved the live-stream and competitive experience, 
@@ -79,11 +80,11 @@
         </p>
       </div>
       <div >
-        <h4>For easy Navigation of the work I did:</h4>
+        <h4>For easy Navigation of my work at SAGE:</h4>
         <a href="#sec1">1. Twitch Extension</a><br>
-        <a href="#sec2">2. SEO</a><br>
-        <a href="#sec3">3. Competitor Experience Improvement</a><br>
-        <a href="#sec4">4. Training Ark Companion App</a><br>
+        <a href="#sec2">2. Search Engine Optimization</a><br>
+        <a href="#sec3">3. Tournament Analytics and Companion App</a><br>
+        <a href="#sec4">4. Competitor Experience Improvement</a><br>
         <a href="#sec5">5. Self Made Prizes</a>
       </div>
       
@@ -109,8 +110,11 @@
           Which then ran into the problem that the competitors themseles wouldn't finalize their in-game stats and info until the day of.
           Normally, you could query the api to pull a competitors real time, in-game data, and all this wouldn't be a problem. But there wasn't, and so I had to think of a way to feed the extension information.
           My solution was to create essentially our own psuedo-api, taking the form of an xml page hosted on github that the extension could query to know what data to display. 
-          
-
+          <b>Third:</b>
+          Not having an api meant that I also had to have all of the potential assets needed on hand. I got partially lucky here, since the image assets and descriptions were readily scrapable,
+          and I was able to do so with a basic <a href="https://pypi.org/project/requests/">requests</a> script. You can see the script here <i>github link here</i> My luck didn't last throughout though, particularly in regards to the skill descriptions. For whatever
+          reason, certain descriptions were either incomplete, or featured errors, ie a skill was listed as doing 0 damage. I tried to cross reference between sites, but this wasn't foolproof, since the information could be sometimes universally missing,
+          or two sites would have different information. Ultimately, the best and most conssitent information I found was on the korean sites, particulaly Inven, which made sense since the game was first released in South Korea.   
           
         </p>
         <p>Despite the challenges, I was able to succesfully code a working extension with all of our desired functionality in about a month and a half.
@@ -118,7 +122,7 @@
 
         <p>
           It wasn't all perfect though, I made a lot of mistakes and learned alot as I built my way through this. The most important lesson was the value of testing. 
-          Certain bugs compatibility issues could have been detected earlier, a lot of work could have been saved had I tested properly. The bug that stood out was related to displaying a certain number of skills.
+          Certain bugs and compatibility issues could have been detected earlier, a lot of work could have been saved had I tested properly. The bug that stood out was related to displaying a certain number of skills.
           Due to how I wrote the js, essentially an overflow would happen after the skill count went to 10 or more, and skills wouldn't display properly. I was furious with myself when I found the bug, the day before the tournament, and all files 
           essentially frozen. "Test Early, Test Often, and Test Accurately" is now the maxim I repeat to myself. 
         </p>
@@ -131,7 +135,7 @@
       </div>
 
       <div class="col-lg-8 centered ">
-        <iframe title="Extension playground" height="600" width="1100" src="../assets/iframe_ext/video_overlay_v3.html"></iframe> <!-- move to css page later-->
+        <iframe title="Extension playground" height="600" width="1200" src="../assets/iframe_ext/video_overlay_v3.html"></iframe> <!-- move to css page later-->
       </div>
       
     </div><!-- /row -->
@@ -139,7 +143,7 @@
     <div class="row mt">
       <div >
         
-        <h3 id=sec2>SEO</h3>
+        <h3 id=sec2>Search Engine Optimization</h3>
 				<p>
           One of my other responsibilities was to research and explore ways of driving traffic to our content, primarily our website and Youtube videos. We were after all, essentially a content creation company, and attention would be how we could eventually monetize.
           I learned a lot about the importance of backlinking, using tags, and other tricks of the trade in order to try and drive more traffic to our content. 
@@ -153,7 +157,7 @@
            Smash.gg, now <a href="https://www.start.gg/">start.gg</a>, so this would have helped boost our numbers by centering all the user interaction on our pages rather the be split in different locations.
           </p>
         <p>
-            I would say I was pretty successful on the search front. From late April, when I started implementing SEO, I pushed us from rank 6-8 in to 1-2 for some of the most relevant keywords, which you can see below.
+            I would say I was pretty successful on the search front. From late April, when I started implementing SEO, I pushed us from rank 6-8 in to 1-2 for one of the most relevant keywords, "lost ark pvp tournaments", which you can see below.
           </p>
 
       </div>
@@ -163,7 +167,7 @@
 
       <div>
         <p>
-          Unfortunately though, this is where I learned another important lesson. SEO only works if you have the potential audience in the first place. Put another way,
+          Unfortunately though, this is where I learned another important lesson. SEO works best when you have the potential audience in the first place. Put another way,
           It doesn't matter if you're rank 1 on the search query, if only a few people search for that query. Your traffic won't improve dramatically. And that is 
           ultimately the problem we ran into. The competitive PVP aspects of the game just weren't that popular. It had a dedicated fan base that loved what we did, but it was a tiny fraction
           of the overall game population, and with very little support from the game developer themselves. 
@@ -177,24 +181,144 @@
     </div>
     <hr>
     <div class="row mt">
-        <h3 id=sec3>Competitor Experience Improvement</h3>
-				<p>
-          <img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="">
-          It turns out some of the more impactful things you can do are also sometimes the simplest. We did a lot of watching of other Tournament Organizers, and one of the common issues we saw was the difficulty
-          in coordinating and ensuring communications between all the competitors. Most just gave a discord channel, which quickly turned into a cacophony as people tried to ping each other in a general chat. 
-          Enter our simple solution, a google form that competitors had to fill out with their contact information,
-          This also had a side effect in allowing us to collect tournament data on competitor team compositions, a great boon from the analytical perspective.
-        </p>
+
+      <h3 id=sec3>Tournmant Analytics and Companion App</h3>
+      <p>
+        One of the initial draws for me to get involved at SAGE was the opportunity to perform analytics work on tournament data. Our plans were for a league-like tournament series, which would allow us to collect
+        quite a lot of tournament data that could be analyzed. In addition, there were plans to create a companion app in the same vein as fitness trackers, that would be used by players to better track, analyze, and 
+        improve their performance. The app would offer both basic data tracking, and analytics services. This would have the side function of allowing us to collect large amounts of individual player match data, which could then be analyzed as well. This was a major initiative for us, 
+        especially since one of our sponsors was interested in the companion app as well, and were interested in cooperating on its development.  
+      </p>
+      <p>
+        My first steps were to explore what sort of technologies we would need to build out for the companion app. Just like with the <a href="#sec1">Twitch Extension</a>, the lack of any sort of API would make things much more difficult.
+        Not only did we need to develop an app, we would likely need new technology to pull the data. As CTO, I quickly jumped in to exploring what we would need, possible technologies we could use, and planning out a development timeline.
+        This was incorporated into a project plan that mapped out resource estimates and a detailed proposed architecture of the app, and also into a project slide deck that went over each phase of development. I got quite ambitious with this,
+        my goal was to eventually be able to collect video data of each match, and use it to construct an "engine", similar to chess engines like <a href="'https://stockfishchess.org/">Stockfish</a>, where each player move could be scored and evaluated.
+        Chess engines are an invaluable way for players to improve their game, pointing out not only mistakes but also missed opportunities. I wanted to build something like that for Lost Ark.
+        
+        In addition to the project planning work, I also began work prototyping out some of the potential technology we would need. We settled on using an image recognition system to pull data from the post-match scoreboard that would appear after every game.
+      </p>
+      <p>
+        Unfortunately, about the time this was finished is also when we began to suffer from the effects of the hype dropoff mentioned in the <a href="#sec2">SEO</a> section. The dropoff in participants was particularly a problem, since 
+        without them we wouldn't be able to even hold a tournament. This was an existential problem, since our entire operation was based on holding tournaments. As such, work on the companion app was put on hold so we could
+        focus all of our efforts on boosting participation. 
+      </p>
+      <p>
+        My prototyping efforts weren't completely for nothing though. One of the initiatives we decided on to try and boost our brand recognition, and then hopefully our participation, was to publish a series of post-tournament analysis reports. 
+        In these, we would go over topics like the meta for a tournament, interesting team compositions, etc. In order to pull data efficiently from the scoreboards, I re-used the two pieces of tech I prototyped initially for the training app:
+        a script that leveraged Tesseract OCR for text detection, and a custom Convolutional Neural Network Classifier to take care of unique icons.
+      </p>
+      <p> 
+        The need for both OCR and an image classifier was due to two different types of data showing up on the scoreboard, as can be seen in the sample scoreboard below. 
+        <img src="../assets/img/work/work02-SAGE/scoreboard_example.png" style="max-height:800px; max-width:1200px">
+        The class icons, seen next to each player's name, were the only way to tell what class each player was playing. This was vital for further analysis of team compositions and the like, so this needed to be pulled and converted into data.
+        At the same time, there exists a lot of text data, in the Kill, Deaths and Assists and Damage stats. You can find the final script <a><i>final OCR script link here</i></a>, and I go over my efforts below.
+        
+        
+        
+      </p>
+      <h4>Optical Character Recognition</h4>
+      <p>
+        
+        I didn't want to re-invent the wheel for Optical Character recognition, so I settled on using an off the shelf model that my research had identified as promising, <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>, to pull the text data.
+        I quickly located a guide going over how to setup Tesseract and using <a hre="https://opencv.org/">OpenCV</a> to pre-process the images.
+        I also found a package to utilize <a href="https://github.com/madmaze/pytesseract">tesseract in Python, </a> which made things a lot easier since I was most familiar with Python. Some quick testing on the scoreboards was fruitful,
+        as I immediately identified the main challenges.
+        
+        <br>
+        <b>First:</b>
+        The first challenge was related to character recognition. I quickly realized that proper pre-processing the text was vital here. Tesseract worked best with text at a certain size, and with minimal background noise. The first was easy to take care of, using OpenCV to resize the images,
+        but the second required some experimentation with filters in order to get optimal and consistent recognition of the text. The scoreboard's gradient like background didn't help in this regard, but thresholding was able to take care of it sufficiently.
+        <br>
+        <b>Second:</b>
+        The second challenge was text detection on the image itself. That is, Tessearct would often not consistently find all the text on a given image, would find a lot of miscellaneous artifacts that weren't actually text, and would not output
+        the detected text in a consistent format. Some research on Tessearct's limitations confirmed this, since it apparently was designed to work best with things like scanned book pages. The solution to this was to manually
+        define locations on the image for Tessearct to search for. The clips could then be pre-processed like above, and I could then control which values got outputed where. This created a further challenge though, since manually specifying where on the page to detect text 
+        made the system very brittle. All it would take was somebody playing the game at a different aspect ratio, or resolution to mess up the recognition. This wasn't an issue for scoreboard detection for our tournaments, since I could control the screenshot outputs. However,
+        when I was planning to use this for our companion app, I had to implement additional pre-processing, such as a function that would check and crop out black bars if the player was playing with a forced aspect ratio.
+        <br>
+        <b>Third:</b>
+        The final challenge was relatively minor compared to the others, but still a pain to deal with. And that was with player names. Tesseract struggled the most here, with multiple instances of mistakes due to things like special characters. Tesseract would also struggle with how consistently confident it was here,
+        which made thresholding a value to get rid of artifacts difficult. Too low and an occasional blip would get interpreted as text and throw off the results, too high and it would miss names it pulled correctly. Ultimately, I veered toward caution, which meant that I occasionally had to  
+        manually correct or enter names.
+        
+        <br>
+        Ultimately though, these challenges were relatively straightforward to overcome, and the Tesseract portion of the system worked quite well. It had some occasional mistakes, such as reporting 1's as 7's, and the aforementioned issues with names,
+        but it saved me a bunch of time from having to do manual data entry for the text portion of the scoreboard.
+      </p>
+      
+      <h4>Class Icon Classifier</h4>
+      
+      <p>The next step would be a custom Class Icon Classifier. For this, I decided on using a basic Convolutional Neural Network, which I had learned about from my previous Coursera Machine Learning courses. I chose to use <a href="'https://keras.io/">Keras</a>, 
+        being the library I was most familiar with, and also because how simple it was to setup and tweak architecture. Getting an initial dataset was a relatively easy affair, since my friend was already screen capturing
+        his own scoreboards for tracking his own pvp journey. This made things easy to start out, but also proved to be the beginnings of my fight with data problems.
+        
+        The first problem was with the number of classes. Lost Ark released in the global market without all of its classes, and at the same time, was also releasing more classes over time. This meant that I had to essentially re-train the model every time 
+        a new class came out. 
+
+        The second problem, and the major headache, was aspect ratios and resolutions. The base dataset I got from my friend was all in one ratio, and all at one resolution. However, first, not everybody played with the same resolution,
+        so the sample images would have require resizing to accomodate a set sample width and height. The issue with aspect ratios was also thorny. The meta for PvP was to force a 21:9 widescreen ratio, since that improved in-game Field of View, but that meant for many players
+        they were playing with black bars on the screen. Resizing from there would distort the class icon images, throwing off the classifier. I found this out the hard way when I tried to use my initially trained model on our first tournament data captures. It just completely failed,
+        often identifying nothing correctly, or only by random chance. 
+        
+        
+        
+        Compared to 
+ 
+        I would still like to 
+
+      </p>
+        
+      
+      
+      <h4>Analytics</h4>
+      <p>
+        Analytical Product/link in how we could still potentially use the stuff we developed
+
+        After successfully extracting the data from the scoreboards, I was able to compile the data into some general analysis, including looking for stand out players, and how the meta was shaping up.
+
+        <i>analytical process script here</i>
+      </p>
+
     </div>
     <hr>
     <div class="row mt">
+      <h3 id=sec4>Competitor Experience Improvement</h3>
 
-        <h3 id=sec4>Training Ark Companion App and Tournmant Analytics</h3>
-				<p>
-          <img class="img-responsive" src="assets/img/portfolio/3.jpg" alt="">
-          Our planned app that would help track pvp performance
-        </p>
+      <p>
+        Not all the work I did were big projects. Sometimes, some of the more impactful things you can work on are also the simplest. That was the case here, where I leveraged some basic api's and existing, common
+        tech in order to improve the experience for those competing in the tournaments we hosted. It's hard to quantify how "smooth" a tournament is, but I can leave off with we received nothing but compliments from 
+        competitors for how we ran things, and how we were told multiple times we were the best run tournament scene.
+      </p>
 
+      <h4>Tournament Communications</h4>
+      <p>
+        We did a lot of scouting of how other Tournament Organizers ran their competitions, so we could hopefully both learn from their mistakes, and adopt their good ideas.
+        One of the most common issues we saw was the difficulty in coordinating and ensuring communications between all the competitors. Just like us, most  used third party organization apps like Start.gg,
+        but there was no method to easily translate out of game contact information into in-game character names. The end result was usually clogged discord channels filled with people trying to ping one another.
+      </p>
+      <p>
+        The solution I came up with was relatively simple, and consisted of two parts. The first would be a google form that would be sent out to all team captains to fill out before the match. The form would ask
+        for their teams contact information, and in-game character names. The results for the survey would then be put on a publicly available, locked, google sheet, allowing all the competitors an easy, searchable way
+        to find and contact their opponents.
+      </p>
+
+      <p>
+        This worked amazingly well. Every tournament we ran was incredibly smooth, with next to no instances of competitors being unreachable. We occasionally had to hunt down team's that didn't respond to the form,
+        but the extra prep work would pay off into essentially self-running tournament, where the most we had to do was be on hand to answer questions.
+        We were also able to expand the forms into a mode for data collection by adding a section about team composition. This allowed us to perform <a href="#sec3">tournament analytics</a>
+        on the data, and get insight into the most commonly played classes, stand-out players, and how the meta shifted between tournaments. 
+      </p>
+
+      <h4>Tournament Scheduling Analysis</h4>
+      <p>
+        One of the most important things for organizing a tournament is scheduling. A properly scheduled tournament will run extremely smoothly, a poorly scheduled one will be painful for everyone involved. For example,
+        I went to a tournament once to support my friend competing, only to find out that they had managed to misestimate the time needed. The end result? They were two hours behind schedule, and my friend wouldn't end up playing 
+        his games until 9 o'clock at night. At Sage, we were very cognizant of this, and did a lot of planning to make sure the competitors didn't have to wait too long, and wouldn't be stuck playing late into the night.
+        As part of this, one of the analyses I worked on was to estimate average match times. I did this by leveraging the fact that Start.gg, the tournament organization app our events ran on, had an 
+        <a href="https://developer.smash.gg/docs/intro/">api</a> that you could query match information. After writing a <a>script <i>github link here</i></a> to pull that information,
+        it was easy to estimate an upper limit using the match time statistics, and we were able to schedule accordingly. 
+      </p>
 
     </div>
     <hr>
@@ -223,13 +347,13 @@
             <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/etch4_Velganos.jpg" /></a>
             <h3>Velganos</h3>
             <h4>Laser Etched on 0.025" Black Malamine MDF</h4>
-            <p>Lost Ark Raid Boss</p>
+            <p>Lost Ark Raid Boss. The boss's theme was light and shadow, so I thought the black/light contrast was appropriate.</p>
           </div>
           <div class="col-lg-6">
             <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/etch2_ArkivesLogo.jpg" /></a>
             <h3>Arkives Arena Logo</h3>
             <h4>Laser Etched on 0.02" Silver on Black Magnet</h4>
-            <p>The Logo for the tournament series we organized, Arkives Arena</p>
+            <p>The Logo for the tournament series we organized, Arkives Arena. The magnet wasn't super strong, but stuck to fridges fine.</p>
           </div>
         </div><!-- /row -->
         <div class="row centered">	
