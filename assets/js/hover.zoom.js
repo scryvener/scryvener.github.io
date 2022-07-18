@@ -50,8 +50,8 @@
                         }, function() {
                             $('img', this).stop().animate({
                                 height: height,
-                                marginLeft: 0,
-                                marginTop: 0
+                                marginLeft: +(s.zoom),
+                                marginTop: +(s.zoom)
                             }, s.speed);
                             if(s.overlay === true) {
                                 $(this).parent().find('.zoomOverlay').stop().animate({
