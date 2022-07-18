@@ -64,7 +64,7 @@
 				<h1>SAGE</h1>
 				<hr>
 				<p>
-          SAGE was a side gig with some friends, focused around building and strenghening the gaming community through innovation, entertainment, and tournament organization. 
+          SAGE was a side gig with some friends, focused around building and strengthening the gaming community through innovation, entertainment, and tournament organization. 
           Our main focus was <a href="https://www.playlostark.com/en-us">Lost Ark</a>, released in February 2022. We held and live-streamed exhibition tournaments, and organized a tournament league, Arkives Arena,
           where teams of 3 competed against each other for cash prizes. You can check out our website <a href="https://www.arkives.info/">here</a>.
         </p>
@@ -93,7 +93,7 @@
 
 		<div class="row mt">	
 			<div>
-        <h3 id=sec1 alt="">Twitch Extension</h3>
+        <h2 id=sec1 alt="">Twitch Extension</h2>
 				<p>
           The highlight of my time at SAGE. <a href="https://www.twitch.tv/p/en/extensions/">Twitch Extensions</a> allow for a next level of interactive experiences with the audience,
           beyond just chat. I developed an extension for use with one of our tournaments, allowing viewers to see competitors builds, stats, and other game info that normally wouldn't be accessible.
@@ -110,11 +110,12 @@
           Which then ran into the problem that the competitors themseles wouldn't finalize their in-game stats and info until the day of.
           Normally, you could query the api to pull a competitors real time, in-game data, and all this wouldn't be a problem. But there wasn't, and so I had to think of a way to feed the extension information.
           My solution was to create essentially our own psuedo-api, taking the form of an xml page hosted on github that the extension could query to know what data to display. 
+          <br>
           <b>Third:</b>
           Not having an api meant that I also had to have all of the potential assets needed on hand. I got partially lucky here, since the image assets and descriptions were readily scrapable,
-          and I was able to do so with a basic <a href="https://pypi.org/project/requests/">requests</a> script. You can see the script here <i>github link here</i> My luck didn't last throughout though, particularly in regards to the skill descriptions. For whatever
+          and I was able to do so with a basic <a href="https://pypi.org/project/requests/">requests</a> script. You can see the script here <a><i>github link here</i></a> My luck didn't last throughout though, particularly in regards to the skill descriptions. For whatever
           reason, certain descriptions were either incomplete, or featured errors, ie a skill was listed as doing 0 damage. I tried to cross reference between sites, but this wasn't foolproof, since the information could be sometimes universally missing,
-          or two sites would have different information. Ultimately, the best and most conssitent information I found was on the korean sites, particulaly Inven, which made sense since the game was first released in South Korea.   
+          or two sites would have conflicting information. Ultimately, the best and most consistent information I found was on the korean sites, particulaly Inven, which made sense since the game was first released in South Korea.   
           
         </p>
         <p>Despite the challenges, I was able to succesfully code a working extension with all of our desired functionality in about a month and a half.
@@ -127,8 +128,8 @@
           essentially frozen. "Test Early, Test Often, and Test Accurately" is now the maxim I repeat to myself. 
         </p>
         
-        <p>Lot of words, but wouldn't it be cool if you could play with it yourself? Since Twitch Extensions are built like web pages, I can insert an iframe so you can! Sizing is a bit small, since it was designed for a full screen, but 
-          you should be able to see the full functionality. 
+        <p>I thought it would be cool for other to be able to play with the extension, particularly since it would only ever be available during a stream. The nice thing is that Twitch Extensions are built like webpages, so I can insert an iframe here to demo it.
+          Sizing is a bit small, since it was designed for a full screen, but you should be able to see the full functionality. 
           The extension was designed to be draggable, so that viewers could place it wherever worked best for them in the window, and a show/hide functionality so they could hide it when they wanted to focus on the match.
           You can check out the code on github! <i>insert github link</i>
         </p>
@@ -143,7 +144,7 @@
     <div class="row mt">
       <div >
         
-        <h3 id=sec2>Search Engine Optimization</h3>
+        <h2 id=sec2>Search Engine Optimization</h2>
 				<p>
           One of my other responsibilities was to research and explore ways of driving traffic to our content, primarily our website and Youtube videos. We were after all, essentially a content creation company, and attention would be how we could eventually monetize.
           I learned a lot about the importance of backlinking, using tags, and other tricks of the trade in order to try and drive more traffic to our content. 
@@ -182,7 +183,7 @@
     <hr>
     <div class="row mt">
 
-      <h3 id=sec3>Tournmant Analytics and Companion App</h3>
+      <h2 id=sec3>Tournmant Analytics and Companion App</h2>
       <p>
         One of the initial draws for me to get involved at SAGE was the opportunity to perform analytics work on tournament data. Our plans were for a league-like tournament series, which would allow us to collect
         quite a lot of tournament data that could be analyzed. In addition, there were plans to create a companion app in the same vein as fitness trackers, that would be used by players to better track, analyze, and 
@@ -192,7 +193,7 @@
       <p>
         My first steps were to explore what sort of technologies we would need to build out for the companion app. Just like with the <a href="#sec1">Twitch Extension</a>, the lack of any sort of API would make things much more difficult.
         Not only did we need to develop an app, we would likely need new technology to pull the data. As CTO, I quickly jumped in to exploring what we would need, possible technologies we could use, and planning out a development timeline.
-        This was incorporated into a project plan that mapped out resource estimates and a detailed proposed architecture of the app, and also into a project slide deck that went over each phase of development. I got quite ambitious with this,
+        This was incorporated into a project plan that mapped out resource estimates and a detailed proposed architecture of the app, and also a pitch deck that went over each phase of development. I got quite ambitious with this,
         my goal was to eventually be able to collect video data of each match, and use it to construct an "engine", similar to chess engines like <a href="'https://stockfishchess.org/">Stockfish</a>, where each player move could be scored and evaluated.
         Chess engines are an invaluable way for players to improve their game, pointing out not only mistakes but also missed opportunities. I wanted to build something like that for Lost Ark.
         
@@ -205,8 +206,8 @@
       </p>
       <p>
         My prototyping efforts weren't completely for nothing though. One of the initiatives we decided on to try and boost our brand recognition, and then hopefully our participation, was to publish a series of post-tournament analysis reports. 
-        In these, we would go over topics like the meta for a tournament, interesting team compositions, etc. In order to pull data efficiently from the scoreboards, I re-used the two pieces of tech I prototyped initially for the training app:
-        a script that leveraged Tesseract OCR for text detection, and a custom Convolutional Neural Network Classifier to take care of unique icons.
+        In these, we would go over topics like the meta for a tournament, interesting team compositions, etc. In order to pull data efficiently from the scoreboards, I re-used the two pieces of tech I prototyped for the training app:
+        a script that leveraged Tesseract OCR for text detection, and a Convolutional Neural Network to classify the unique class icons.
       </p>
       <p> 
         The need for both OCR and an image classifier was due to two different types of data showing up on the scoreboard, as can be seen in the sample scoreboard below. 
@@ -217,7 +218,7 @@
         
         
       </p>
-      <h4>Optical Character Recognition</h4>
+      <h3>Optical Character Recognition</h3>
       <p>
         
         I didn't want to re-invent the wheel for Optical Character recognition, so I settled on using an off the shelf model that my research had identified as promising, <a href="https://github.com/tesseract-ocr/tesseract">Tesseract</a>, to pull the text data.
@@ -247,13 +248,15 @@
         but it saved me a bunch of time from having to do manual data entry for the text portion of the scoreboard.
       </p>
       
-      <h4>Class Icon Classifier</h4>
+      <h3>Class Icon Classifier</h3>
       
       <p>The next step would be a custom Class Icon Classifier. For this, I decided on using a basic Convolutional Neural Network, which I had learned about from my previous Coursera Machine Learning courses. I chose to use <a href="'https://keras.io/">Keras</a>, 
         being the library I was most familiar with, and also because how simple it was to setup and tweak architecture. Getting an initial dataset was a relatively easy affair, since my friend was already screen capturing
-        his own scoreboards for tracking his own pvp journey. This made things easy to start out, but also proved to be the beginnings of my fight with data problems.
-        
-        The first problem was with the number of classes. Lost Ark released in the global market without all of its classes, and at the same time, was also releasing more classes over time. This meant that I had to essentially re-train the model every time 
+        his own scoreboards for tracking his own pvp journey. This made things easy to start out, but also proved to be the beginnings of my non-stop fight with data problems.
+      </p>
+
+      <p>
+        The first problem I encountered was with the number of classes. Lost Ark released in the global market without all of its classes, and at the same time, was also releasing more classes over time. This meant that I had to essentially re-train the model every time 
         a new class came out. 
 
         The second problem, and the major headache, was aspect ratios and resolutions. The base dataset I got from my friend was all in one ratio, and all at one resolution. However, first, not everybody played with the same resolution,
@@ -261,29 +264,52 @@
         they were playing with black bars on the screen. Resizing from there would distort the class icon images, throwing off the classifier. I found this out the hard way when I tried to use my initially trained model on our first tournament data captures. It just completely failed,
         often identifying nothing correctly, or only by random chance. 
         
-        
-        
-        Compared to 
- 
-        I would still like to 
-
+        Unfortunately here, the issue of time popped up. There was pressure to get analytics out quickly, and so as an interim solution, I went ahead and just did the data entry for class icons by hand. It wasn't my first choice,
+        but given the need to balance how much potential time it would have taken to debug and re-train the model, versus getting analytical product out quickly, it was the best solution I had at the time. 
+      </p>
+      
+      <p>
+        While work was since stopped, it still bothers me to this day that the classifier failed so badly, and I would like to return to this again. 
+        My main plan of attack would be a to first do a sample-by-sample dive, to see how the weights looked through training and prediction, and a detailed look into the effect of resizing the images. After that,
+        I would introduce a more comprehensive, and representative sample expansion into the training images that reflected the distortions. In parallel, I would also solicit more data. 
       </p>
         
-      
-      
-      <h4>Analytics</h4>
+      <h3>Analytics</h3>
       <p>
         Analytical Product/link in how we could still potentially use the stuff we developed
 
-        After successfully extracting the data from the scoreboards, I was able to compile the data into some general analysis, including looking for stand out players, and how the meta was shaping up.
-
-        <i>analytical process script here</i>
+        After succesfully extracting data from the scoreboards, whether by script or by hand, I was able to perform analysis on our tournaments data. I primarily leveraged the <a href="https://pandas.pydata.org/">pandas</a> library for this,
+        and you can see the main script I used to group and process the data <a><i>analytical process script here</i></a>. Graphics wise, I mainly stuck with just using excel.
+        While using something like matplotlib was a possibility, I prioritized speed at this point more than customization. 
       </p>
+
+      <p>
+        The main points of focus were on team compositions, performance of each of the classes, and also player performances. Player performance was a relatively straightforward task, ie look for the player with the best 
+        damage stats, the best Kill Death Assist Ratio, etc. For team composition and class picks I could play a bit more with visualizations. You can see some of the example graphs that I generated below.
+
+        <div class="row centered">	
+          <div class="col-lg-6">
+            <img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/PickRateChange.jpg" style="width:100%;height:100%"/>
+            <h4>Pick Rate Change</h4>
+            <p>A quick representation for how player pick priority changed between our March and April Tournaments and between two regions. Using the graph, you can easily see how both regions began heavily
+              prioritizing certain classes, contributing to what some viewers commented as "same comp every game".
+            </p>
+          </div>
+          <div class="col-lg-6">
+            <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/RegionPickPriority.jpg" style="width:100%;height:100%"/></a>
+            <h4>Region Pick Priority</h4>
+            <p>A graph showed how each of our regions had different priorities when it came to picking classes. For example, the Shadowhunter class was overwhelmingly popular in South America, but was rarely picked elsewhere. You can also see that certain classes
+              were unique for each region, such as how only in the NA West region would you see the Berserker class.
+            </p>
+          </div>
+        </div><!-- /row -->
+      </p>
+      
 
     </div>
     <hr>
     <div class="row mt">
-      <h3 id=sec4>Competitor Experience Improvement</h3>
+      <h2 id=sec4>Competitor Experience Improvement</h2>
 
       <p>
         Not all the work I did were big projects. Sometimes, some of the more impactful things you can work on are also the simplest. That was the case here, where I leveraged some basic api's and existing, common
@@ -291,7 +317,7 @@
         competitors for how we ran things, and how we were told multiple times we were the best run tournament scene.
       </p>
 
-      <h4>Tournament Communications</h4>
+      <h3>Tournament Communications</h3>
       <p>
         We did a lot of scouting of how other Tournament Organizers ran their competitions, so we could hopefully both learn from their mistakes, and adopt their good ideas.
         One of the most common issues we saw was the difficulty in coordinating and ensuring communications between all the competitors. Just like us, most  used third party organization apps like Start.gg,
@@ -310,7 +336,7 @@
         on the data, and get insight into the most commonly played classes, stand-out players, and how the meta shifted between tournaments. 
       </p>
 
-      <h4>Tournament Scheduling Analysis</h4>
+      <h3>Tournament Scheduling Analysis</h3>
       <p>
         One of the most important things for organizing a tournament is scheduling. A properly scheduled tournament will run extremely smoothly, a poorly scheduled one will be painful for everyone involved. For example,
         I went to a tournament once to support my friend competing, only to find out that they had managed to misestimate the time needed. The end result? They were two hours behind schedule, and my friend wouldn't end up playing 
@@ -324,7 +350,7 @@
     <hr>
     <div class="row mt">
 
-        <h3 id=sec5>Self Made Prizes</h3>
+        <h2 id=sec5>Self Made Prizes</h2>
 
         <p>My excuse to use get to play with lasers. One of the major expenses we ran into was the cost of prize money, and this was a challenge not only financially but also from a marketing perspective.
           After all, if every tournament is offering money, it becomes hard to stand out unless you drop huge sums. We didn't huge amounts of funds, so effort was put into exploring potential alternatives that we could offer as prizes.  
@@ -339,38 +365,38 @@
           I would then clean up the vector, getting rid of things like small details below the feature size limit, overlapping paths, and in general trying to simplify complicated curves without losing the main 
           artistic elements. This was where the majority of the work was. After the vector was completed, I could submit it through Ponoko's site and receive the part in a few days. I showcase some of the prototype etches I worked on below:
         </p>
-        
-        <!--insert link to Here Be dragons after that part is up-->
 
         <div class="row centered">
           <div class="col-lg-6">
             <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/etch4_Velganos.jpg" /></a>
-            <h3>Velganos</h3>
-            <h4>Laser Etched on 0.025" Black Malamine MDF</h4>
+            <h4>Velganos</h4>
+            <h5>Laser Etched on 0.025" Black Malamine MDF</h5>
             <p>Lost Ark Raid Boss. The boss's theme was light and shadow, so I thought the black/light contrast was appropriate.</p>
           </div>
           <div class="col-lg-6">
             <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/etch2_ArkivesLogo.jpg" /></a>
-            <h3>Arkives Arena Logo</h3>
-            <h4>Laser Etched on 0.02" Silver on Black Magnet</h4>
+            <h4>Arkives Arena Logo</h4>
+            <h5>Laser Etched on 0.02" Silver on Black Magnet</h5>
             <p>The Logo for the tournament series we organized, Arkives Arena. The magnet wasn't super strong, but stuck to fridges fine.</p>
           </div>
         </div><!-- /row -->
         <div class="row centered">	
           <div class="col-lg-6">
             <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/etch3_DestroyerLogo.jpg" /></a>
-            <h3>Destroyer Class Logo</h3>
-            <h4>Laser Etched on 0.22" White Oak Veneer MDF </h4>
+            <h4>Destroyer Class Logo</h4>
+            <h5>Laser Etched on 0.22" White Oak Veneer MDF </h5>
             <p>The Class icon for Destroyer, one of the many classes you could play as for Lost Ark.</p>
           </div>
           <div class="col-lg-6">
             <a><img class="img-responsive folio_icon center" src="../assets/img/work/work02-SAGE/etch_1_valtan_2.jpg" title="" /></a>
-            <h3>Demon Commander Valtan</h3>
-            <h4>Laser Etched on 0.12" Glass Green Acryllic </h4>
+            <h4>Demon Commander Valtan</h4>
+            <h5>Laser Etched on 0.12" Glass Green Acryllic </h5>
             <p>Lost Ark Villain and Raid Boss. Due to the green acryllic used, shining a light through the glass resulted in a pretty cool green glow of the etch.</p>
           </div>
     
         </div><!-- /row -->
+
+        <p>My work here also inspired one of my other projects, <a><i>Here Be Dragons Link after that page is up</i></a></p>
 
     </div>
 	
