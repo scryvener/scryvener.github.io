@@ -16,11 +16,12 @@ function loadData(xml){
 
 	 
 	let headerNode=xmlDoc.evaluate("//Header",xmlDoc,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
-    let footerNode=xmlDoc.evaluate("//Footer",xmlDoc,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
-    
     let headerNodeValue=headerNode.singleNodeValue;
-
     let headerContent=headerNodeValue.children;
+
+    let footerNode=xmlDoc.evaluate("//Footer",xmlDoc,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
+    let footerNodeValue=footerNode.singleNodeValue;
+    let footerContent=footerNodeValue.children;
 
     for (let i=0;i<headerContent.length;i++){
         let sectionContent=headerContent[i].children;
@@ -46,6 +47,34 @@ function loadData(xml){
         document.getElementById('headernavbar').appendChild(newElem)
 
     };
+
+    for (let i=0;i<footerContent.length;i++){
+        let subContent=footerContent[i].children;
+
+        if (subContent[i].tagName=="Links"){
+            let subChildren=subContent.children;
+
+            for (let j=0;j<subChildren.length;j++){
+
+                if (subChildren[j].tagName=="text"){
+                    var section_text=subChildren[j].textContent
+                };
+                if (subChildren[j].tagName=="url"){
+                    
+                    var section_url=subChildren[j].textContent
+                };
+                console.log(section_url)
+            }
+
+        }
+
+        if (subContent[i].tagName=="Address"){
+
+        }
+        
+
+
+    }
 
     
 	

@@ -30,25 +30,19 @@
     <Footer>
         <Links>
             <Link>
-                <text>
-                    LinkedIn
-                </text>
-                <url>
-                    https://www.linkedin.com/in/kennethcchang/
-                </url>
+                <text>LinkedIn</text>
+                <url>https://www.linkedin.com/in/kennethcchang/</url>
             </Link>
-
             <Link>
-                <text>
-                    Github
-                </text>
-                <url>
-                    #
-                </url>
+                <text>Github</text>
+                <url></url>
             </Link>
-
-
         </Links>
+
+        <Address>
+            <Line1>San Francisco Bay Area,</Line1>
+            <Line2>California, USA.<Line2>
+        </Address>
     </Footer>
     
 
