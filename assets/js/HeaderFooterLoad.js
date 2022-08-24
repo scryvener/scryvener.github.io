@@ -26,11 +26,13 @@ function loadData(xml){
         let sectionContent=headerContent[i].children;
 
         for (let j=0;j<sectionContent.length;j++) {
-            console.log([j].tagName)
+            console.log(sectionContent[j].tagName)
+
             if (sectionContent[j].tagName=="text"){
                 var section_text=sectionContent[j].textContent
             };
             if (sectionContent[j].tagName=="url"){
+                console.log(sectionContent[j].textContent)
                 var section_url=sectionContent[j].textcontent
             }
         };
