@@ -65,8 +65,15 @@ function loadData(xml){
                         var section_url=subLink[k].textContent
                     }
 
+                    const newElem=document.createElement('li');
+			
+                    newElem.className='LinkListing';
 
-                    console.log(subLink[k].textContent)
+                    newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
+
+                    document.getElementById('footerLinks').appendChild(newElem)
+
+                    
                 }
 
             }
@@ -76,10 +83,22 @@ function loadData(xml){
         if (footerContent[i].tagName=="Address"){
             let subContent=footerContent[i].children;
 
-            if (subContent.tagName=="Line1"){
+            if (subContent[i].tagName=="Line1"){
                 var line1=subContent.textContent
-                console.log(line1)
             }
+
+            if (subContent[i].tagName=="Line2"){
+                var line2=subContent.textContent
+            }
+
+            const newElem=document.createElement('li');
+			
+            newElem.className='LinkListing';
+
+            newElem.innerHTML='<p>'+line1+',<br/>'+line2+'</p>'
+
+            document.getElementById('addressLine').appendChild(newElem)
+
 
         }
 
