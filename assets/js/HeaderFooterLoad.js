@@ -41,7 +41,7 @@ function loadData(xml){
 
             newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
 
-            console.log(newElem.innerHTML)
+            console.log(sectionContent)
 
             document.getElementById('headernavbar').appendChild(newElem)
 
