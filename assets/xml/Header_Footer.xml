@@ -1,0 +1,31 @@
+<Base>
+    <Header>
+        
+    </Header>
+
+    <Footer>
+        <Links>
+            <Link>
+                <text>
+                    LinkedIn
+                </text>
+                <url>
+                    https://www.linkedin.com/in/kennethcchang/
+                </url>
+            </Link>
+
+            <Link>
+                <text>
+                    Github
+                </text>
+                <url>
+                    #
+                </url>
+            </Link>
+
+
+        </Links>
+    </Footer>
+    
+
+</Base>
