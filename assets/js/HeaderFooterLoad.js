@@ -53,12 +53,12 @@ function loadData(xml){
         if (footerContent[i].tagName=="Links"){
             let subContent=footerContent[i].children;
             for (let j=0;j<subContent.length;j++){
-                console.log(subContent[j].textContent)
+                console.log(subContent[j].tagName)
             }
 
         }
 
-        if (subContent[i].tagName=="Address"){
+        if (footerContent[i].tagName=="Address"){
 
         }
 
@@ -66,26 +66,7 @@ function loadData(xml){
 
         
         
-        if (subContent[i].tagName=="Links"){
-            let subChildren=subContent.children;
-
-
-            for (let j=0;j<subChildren.length;j++){
-
-                if (subChildren[j].tagName=="text"){
-                    var section_text=subChildren[j].textContent
-                };
-                if (subChildren[j].tagName=="url"){
-                    
-                    var section_url=subChildren[j].textContent
-                };
-            }
-
-        }
-
-        if (subContent[i].tagName=="Address"){
-
-        }
+        
         
 
 
