@@ -23,9 +23,13 @@ function loadData(xml){
     let headerContent=headerNodeValue.children;
 
     for (let i=0;i<headerContent.length;i++){
-        console.log(headerContent[i])
+        let sectionContent=headerContent[i].children;
 
-    }
+        for (let j=0;j<sectionContent.length;j++) {
+            console.log(sectionContent[j]);
+        };
+
+    };
 
     
 	
