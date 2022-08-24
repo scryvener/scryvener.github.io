@@ -48,7 +48,6 @@ function loadData(xml){
     };
 
     for (let i=0;i<footerContent.length;i++){
-        console.log(footerContent[i].tagName)
 
         if (footerContent[i].tagName=="Links"){
             let subContent=footerContent[i].children;
@@ -64,17 +63,15 @@ function loadData(xml){
                     if (subLink[k].tagName=="url"){
                         var section_url=subLink[k].textContent
                     }
-
-                    const newElem=document.createElement('li');
-			
-                    newElem.className='LinkListing';
-
-                    newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
-
-                    document.getElementById('footerLinks').appendChild(newElem)
-
-                    
                 }
+
+                const newElem=document.createElement('li');
+        
+                newElem.className='LinkListing';
+
+                newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
+
+                document.getElementById('footerLinks').appendChild(newElem)
 
             }
 
@@ -83,13 +80,17 @@ function loadData(xml){
         if (footerContent[i].tagName=="Address"){
             let subContent=footerContent[i].children;
 
-            if (subContent[i].tagName=="Line1"){
-                var line1=subContent.textContent
-            }
 
-            if (subContent[i].tagName=="Line2"){
-                var line2=subContent.textContent
-            }
+            for (let j=0;j<subContent.length;j++) {
+
+                if (subContent[i].tagName=="Line1"){
+                    var line1=subContent.textContent
+                }
+    
+                if (subContent[i].tagName=="Line2"){
+                    var line2=subContent.textContent
+                }
+            };
 
             const newElem=document.createElement('li');
 			
