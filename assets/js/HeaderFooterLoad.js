@@ -23,4 +23,4 @@ function loadData(xml){
 
 };
 
-pullData("https://scryvener.github.io./Header_Footer.xml",loadData)
+pullData("https://scryvener.github.io/assets/xml/Header_Footer.xml",loadData)
