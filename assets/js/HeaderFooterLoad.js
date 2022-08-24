@@ -49,7 +49,7 @@ function loadData(xml){
 
     for (let i=0;i<footerContent.length;i++){
         let subContent=footerContent[i].children;
-        console.log(subContent)
+        console.log(subContent[i].tagName)
         
         if (subContent[i].tagName=="Links"){
             let subChildren=subContent.children;
