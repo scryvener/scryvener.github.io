@@ -48,12 +48,22 @@ function loadData(xml){
     };
 
     for (let i=0;i<footerContent.length;i++){
-        let subContent=footerContent[i].children;
-        console.log(footerContent[i].tagName)
 
-        for (let j=0;j<subContent.length;j++){
+        if (subContent[i].tagName=="Links"){
+            let subContent=footerContent[i].children;
+            for (let j=0;j<subContent.length;j++){
+                console.log(subContent[j].textContent)
+            }
 
         }
+
+        if (subContent[i].tagName=="Address"){
+
+        }
+
+
+
+        
         
         if (subContent[i].tagName=="Links"){
             let subChildren=subContent.children;
