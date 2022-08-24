@@ -28,10 +28,10 @@ function loadData(xml){
         for (let j=0;j<sectionContent.length;j++) {
 
             if (sectionContent[j].tagName=="text"){
-                var section_text=sectionContent.textContent
+                var section_text=sectionContent[j].textContent
             };
             if (sectionContent[j].tagName=="url"){
-                var section_url=sectionContent.textcontent
+                var section_url=sectionContent[j].textcontent
             }
         };
 
