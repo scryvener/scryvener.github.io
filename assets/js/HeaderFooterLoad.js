@@ -34,7 +34,6 @@ function loadData(xml){
             if (sectionContent[j].tagName=="url"){
                 
                 var section_url=sectionContent[j].textContent
-                console.log(section_url)
             }
         };
 
@@ -54,6 +53,8 @@ function loadData(xml){
         if (subContent[i].tagName=="Links"){
             let subChildren=subContent.children;
 
+            console.log(sub_Children)
+
             for (let j=0;j<subChildren.length;j++){
 
                 if (subChildren[j].tagName=="text"){
@@ -63,7 +64,6 @@ function loadData(xml){
                     
                     var section_url=subChildren[j].textContent
                 };
-                console.log(section_url)
             }
 
         }
