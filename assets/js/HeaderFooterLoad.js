@@ -32,8 +32,9 @@ function loadData(xml){
                 var section_text=sectionContent[j].textContent
             };
             if (sectionContent[j].tagName=="url"){
-                console.log(sectionContent[j].textContent)
+                
                 var section_url=sectionContent[j].textcontent
+                console.log(section_url)
             }
         };
 
