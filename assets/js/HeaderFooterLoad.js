@@ -26,7 +26,7 @@ function loadData(xml){
         let sectionContent=headerContent[i].children;
 
         for (let j=0;j<sectionContent.length;j++) {
-
+            console.log([j].tagName)
             if (sectionContent[j].tagName=="text"){
                 var section_text=sectionContent[j].textContent
             };
@@ -41,7 +41,7 @@ function loadData(xml){
 
         newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
 
-        console.log(sectionContent)
+        
 
         document.getElementById('headernavbar').appendChild(newElem)
 
