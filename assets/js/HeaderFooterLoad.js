@@ -43,8 +43,6 @@ function loadData(xml){
 
         newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
 
-        
-
         document.getElementById('headernavbar').appendChild(newElem)
 
     };
