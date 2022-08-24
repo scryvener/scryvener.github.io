@@ -21,6 +21,9 @@
     <script src="../assets/js/hover.zoom.js"></script>
     <script src="../assets/js/hover.zoom.conf.js"></script>
 
+    <!--headerfooterscript-->
+    <script src="/assets/js/HeaderFooterLoad.js"></script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -42,18 +45,11 @@
         <a class="navbar-brand" href="../index.html">Kenneth Chang</a>
         </div>
         <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="../about.html">About</a></li>
-          <li><a href="../work.html">Work</a></li>
-          <li><a href="../projects.html">Projects</a></li>
-          <li><a href="../travel.html">Travel</a></li>
-          <li><a href="../blog.html">Blog</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-    
+        <ul id="headernavbar" class="nav navbar-nav navbar-right">
         </ul>
         </div><!--/.nav-collapse -->
       </div>
-      </div>
+    </div>
 	
 	
 	<!-- +++++ Projects Section +++++ -->
@@ -222,33 +218,23 @@
 	</div><!-- /container -->
 	
 	
-	<!-- +++++ Footer Section +++++ -->
+		<!-- +++++ Footer Section +++++ -->
 	
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-4">
-					<h4>Living at</h4>
-					<p>
-						San Francisco Bay Area,<br/>
-						California, USA.
-					</p>
-				</div><!-- /col-lg-4 -->
-				
-				<div class="col-lg-4">
-					<h4>My Links</h4>
-					<p>
-						<a href="#">LinkedIn</a><br/>
-						<a href="#">GitHub</a>
-					</p>
-				</div><!-- /col-lg-4 -->
-				
-			
-			</div>
-		
-		</div>
-	</div>
-	
+    <div id="footer">
+      <div class="container">
+        <div class="row">
+          <div id="addressLine" class="col-lg-4">
+            <h4>Living at</h4>
+          </div><!-- /col-lg-4 -->
+          
+          <div  class="col-lg-4">
+            <h4>My Links</h4>
+            <ul id="footerLinks">
+            </ul>
+          </div><!-- /col-lg-4 -->
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -96,7 +96,7 @@ function loadData(xml){
 			
             newElem.className='addressListing';
 
-            newElem.innerHTML='<p>'+line1+',<br/>'+line2+'</p>'
+            newElem.innerHTML='<p>'+line1+'<br/>'+line2+'</p>'
 
             document.getElementById('addressLine').appendChild(newElem)
 
