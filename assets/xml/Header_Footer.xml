@@ -1,5 +1,53 @@
 <Base>
     <Header>
+        <Section>
+            <text>
+                About
+            </text>
+            <url>
+                /about.html
+            </url>
+        </Section>
+        <Section>
+            <text>
+                Work
+            </text>
+            <url>
+                /work.html
+            </url>
+        </Section>
+        <Section>
+            <text>
+                Projects
+            </text>
+            <url>
+                /Projects.html
+            </url>
+        </Section>
+        <Section>
+            <text>
+                Travel
+            </text>
+            <url>
+                /travel.html
+            </url>
+        </Section>
+        <Section>
+            <text>
+                Blog
+            </text>
+            <url>
+                /blog.html
+            </url>
+        </Section>
+        <Section>
+            <text>
+                Contact
+            </text>
+            <url>
+                /contact.html
+            </url>
+        </Section>
         
     </Header>
 
