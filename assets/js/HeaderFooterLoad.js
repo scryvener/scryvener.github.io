@@ -26,7 +26,23 @@ function loadData(xml){
         let sectionContent=headerContent[i].children;
 
         for (let j=0;j<sectionContent.length;j++) {
-            console.log(sectionContent[j]);
+
+            if (sectionContent.tagName=="text"){
+                let section_text=sectionContent.textContent
+            };
+            if (sectionContent.tagName=="url"){
+                let section_url=sectionContent.textcontent
+            }
+
+            const newElem=document.createElement('li');
+			
+            newElem.className='SectionListing';
+            newElem.id='section'+temp_id;
+
+            newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
+
+            document.getElementById('headernavbar').appendChild(newElem)
+
         };
 
     };
