@@ -70,6 +70,7 @@ function loadData(xml){
                 newElem.className='LinkListing';
 
                 newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
+                console.log(newElem.innerHTML)
 
                 document.getElementById('footerLinks').appendChild(newElem)
 
