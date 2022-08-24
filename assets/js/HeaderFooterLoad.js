@@ -38,7 +38,6 @@ function loadData(xml){
         const newElem=document.createElement('li');
 			
         newElem.className='SectionListing';
-        newElem.id='section'+String(j);
 
         newElem.innerHTML='<a href="'+section_url+'">'+section_text+'</a>'
 
