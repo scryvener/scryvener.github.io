@@ -18,7 +18,16 @@ function loadData(xml){
 	let headerNode=xmlDoc.evaluate("//Header",xmlDoc,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
     let footerNode=xmlDoc.evaluate("//Footer",xmlDoc,null,XPathResult.FIRST_ORDERED_NODE_TYPE,null);
     
-    console.log(headerNode.singleNodeValue)
+    let headerNodeValue=headerNode.singleNodeValue;
+
+    let headerContent=headerNodeValue.children;
+
+    for (let i=0;i<headerContent.length;i++){
+        console.log(headercontent[i])
+
+    }
+
+    
 	
 
 };
