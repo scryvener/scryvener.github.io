@@ -83,23 +83,22 @@ function loadData(xml){
 
             for (let j=0;j<subContent.length;j++) {
 
-                if (subContent[i].tagName=="Line1"){
-                    var line1=subContent.textContent
+                if (subContent[j].tagName=="Line1"){
+                    var line1=subContent[j].textContent
                 }
     
-                if (subContent[i].tagName=="Line2"){
-                    var line2=subContent.textContent
+                if (subContent[j].tagName=="Line2"){
+                    var line2=subContent[j].textContent
                 }
             };
 
-            const newElem=document.createElement('li');
+            const newElem=document.createElement('p');
 			
-            newElem.className='LinkListing';
+            newElem.className='addressListing';
 
             newElem.innerHTML='<p>'+line1+',<br/>'+line2+'</p>'
 
             document.getElementById('addressLine').appendChild(newElem)
-
 
         }
 
