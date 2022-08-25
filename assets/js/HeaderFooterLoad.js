@@ -103,14 +103,6 @@ function loadData(xml){
 
         }
 
-
-
-        
-        
-        
-        
-
-
     }
 
     
