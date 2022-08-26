@@ -92,13 +92,18 @@
         <h2 id=sec2 alt="">Pulling Data</h2>
 				<p>
           pulling data and struggles
-          Lot of hats were worn at Prodeon, one of which was manufacturing. 
-          My responsibilities here mainly focused on authoring the process instructions needed to manufacture our device, working on the assembly line itself, and training new operators. 
-          During my time at Prodeon, we successfully completed over half a dozen builds, supporting Design Verification, Validation activities, and clinical trials.
+          The first major effort was pulling data to construct the relational database. My initial thought was to try pulling data from google scholar, since they looked like to had the most comprehensive listing 
+          of publications. But here I ran into my first problem, namely that the data I was looking for wasn't always available. Google Scholar had no available api, so I had to resort to writing a selenium webdriver script to scrape the website. 
+          But google was very aggressive in weeding out scraping scripts. I tried several solutions to evade this, including having the script randomly perform actions, and routing the connection through TOR, but I ultimately concluded that it wasn't worth the time and effort I was putting in. 
+          I was spending more time fighting Google then actually building the database.<a> script here </a> And so I went looking for other solutions. 
+          
         </p>
         <p>
-          I also successfully led and closed NCR-triggered investigations, to ensure the quality of the product.
-          These ran the gamut, from dimensions being out of tolerance during incoming inspection to assembly issues discovered on the manufacturing line. 
+           This turned out to be the correct decision, as more searching revelaed the presence of data sources WITH API's, namely Pubmed and Crossref. Both had api's that importantly not only listed an article's references, but also citations from other articles. 
+           I was able to use those api's to write a script to pull articles. I initially structured to script to pull recursively from a single "seed" article, that is it would pull the seed's citations and references, and then use those pull their own citations and references, and so on and so forth.
+           However, I quickly discovered it was a lot easier to just use Pubmed's term search function simulating a keyword search to pull an entire list first and go from there. To start out, I used the keyword "Urology", since I was already familiar with the space from work and could use that as sort of a validation that I was pulling 
+           relevant articles. I quickly discovered that within one recursion, I was already starting to get non-urology related articles, and the number of articles was also starting to inrease exponentially, so I cut if off at 1 (confirm) recursion. The final article count pulled for the initial test case was 
+           approximately 100k. <a>clean up script and put it here </a>
         </p>
 
         
@@ -110,25 +115,23 @@
 
     <div class="row mt">	
 			<div>
-        <h2 id=sec3 alt="">Creating the Graph</h2>
+        <h2 id=sec3 alt="">Creating the Graph Database</h2>
 				<p>
-          using neo4j to create an relation database
-          Medical Device development would not be complete without documentation. My work here could be divided into two main categories, R&D Design Control related work and product testing related work. 
+          using neo4j to create an relation database, including the insertion scripts, 
+          For creating the graph relation database, I went with using neo4j. 
+          Neo4j was my first introduction to graph relation databases, and rather than try and re-learn an entirely different system, I decided to go with what I was familiar with.
+          Setup of the database wasquite simple, with nodes created for authors, publications, and journals. I also made the decision to  
+          
+        </p>
+        <p>figureing out faster ways of doing things (indexing, load csv, etc. )
+          One of those improvements was to drastically reduce the time needed to insert new nodes into the db. 
         </p>
         <p>
-          My Design Control work included authoring the technical drawings for components I was responsible for, and also associated specs in our Product Specification document.
-          Risk documentation was also a significant portion of my work here.
-          I was responsible for authoring Hazard Analyses, and various Failure Mode Effects Analyses cover the design and use of our various devices.
-          Finally, I also provided support for design reviews, authoring everything from memos to powerpoint slides to gap analyses.
-        </p>
-        <p>
-          Testing work encompassed all the documentation that came with both in-house testing we did, such as functional deployment, and testing performed with outside partners, such as for biocompatibility, corrosion resistance, MRI safety, or Finite Element Analyses.
-          I was responsible for authoring Test Protocols and Reports, as well as Standard Test Methods(STM).
-          For many STMs, I also was responsible for executing a Gauge R&R Study on our test methods.
-          I was in charge of setting up the design of the study, executing it, and then analyzing the data in <a href="https://www.minitab.com/en-us/">Minitab</a>, looking at the variance components and the ANOVA report. 
-          In certain cases, some test methods had unacceptabily high variance, and so I was also responsible for coming up with solutions to reduce it. 
-          Most methods could be improved by simply using more precise equipment, ie swapping a ruler for caliper.
-          However, for certain methods, especially those unique to our device, this entailed having to rethink how the test was executed, or having to implement changes to the test fixture. 
+          Things to improve on -dates needed preprocessing, not helped by the fact that they came in many different formats. Probably an entire script needed to be implemented to sort this out. Held off on it since this was the intial prototype run. 
+          Author disambiguation. This is apparently a major issue, with some major research effort put into it. The main challenge came from the different ways people 
+
+
+          Address disambiguation- I had an article where each author put in the same address three different ways. How the hell are you supposed to deal with this? no idea. Iexplroed a number of ideas, like looking at cosine simularity between them and then if they were similar enough, to combine them .
         </p>
         
       </div>
@@ -139,7 +142,7 @@
 			<div>
         <h2 id=sec4 alt="">Analytics</h2>
 				<p>
-          using the db, ie running Pagerank, etc. 
+          using the db, ie running Pagerank, etc. link our sample analytical product 
           Probably the most interesting part of my work was related to supporting Pre-Clinical and Clinical Trials, and not just because I got to travel.
           Any medical device development is always accompanied by testing both in-vivo and in-vitro.
           At Prodeon Medical, I had the opportunity to be directly involved in cadaver, animal, and First-in-Human clinical trials.
@@ -168,26 +171,19 @@
     <hr>
     <div class="row mt">	
 			<div>
-        <h2 id=sec5 alt="">remove</h2>
+        <h2 id=sec5 alt="">future efforts and things to improve on </h2>
 
-        <P> Getting feedback from end-users of the product you develop is important, and at Prodeon, I regularly interfaced with Physicians to get their feedback on design decisions. Through local physicians,
-          we were able to drive a rapid prototype schedule. We would frequently develop using a shotgun approach of 3-4 different concpets or variations, and then bring them to evaluate. Through this rapid pace, 
-          we were able to go from concept to a First-in-Human trial in around 2 years. 
+        <P>
+          talking with actual marketing friends-actaul way to expand this to non citations? ie maybe mentions in publichsed articles? from the db perspective this is easy, from the dat agathering perspective Im not sure how I would go about doing this, besides a mass scrape. 
+          
+          talking with marketing experienced- very valuable for initial starting out and for larger marketing teams, less so for middle ground(know the space already). Thinking about adding more features, such as more info on the articles, ie pulling topics from the abstracts,
+          better implmementing keywords(maybe lemmatized) to allow better segmentation. 
+          
         </P>
-        <p>One highlight was when I got to attend the 2018 American Urology Association meeting in San Francisco . It was an invaluable experience, where we were able to demo to both 
-          potential partners and active collaborators our next generation designs. I was also able to take the chance to familiarize myself with the state of the art in Urology, such as new surgical robotics, which helped 
-          build a better understanding of the strength's of our product's approach. 
+        <p>better preprocessing mentioned above
           </p>
 				<p>
-          Marketing is also how I began becoming interested in data analytics work.
-          Our marketing manager was developing financial models to project future growth, and model the current market state, ie which procedures were used most often.
-          The problem sounded interesting enough to me, and so I independently embarked on a hunt to see what I could put together on my own.
-          You can see the result of my little side adventure <a>here</a>. <!-- link out to project section  -->
-
-          Another problem that came up was how to identify Key Opinion Leaders.
-          From my R&D point of view, the process seemed a bit daunting, ie how would you be able to compare hundreds to thousands of different physicians, with any degree of nuance or specificity?
-          Talking with marketing, they confirmed to me that the entire process was indeed very manual, and mostly boiled down to networking.
-          This seemed like a sufficient unmet need to devote some effort to, you can see the project that came from this here <a>link to cartographer</a>
+          pull way more articles, not just from a single seed. will need to be scaled up, since was already taking ahot minute 
           
         </p>
          

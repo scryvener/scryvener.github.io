@@ -59,27 +59,36 @@
 			<div class="">
 				<h1>Video Game Development</h1>
 				<hr>
-				<p>Cartographer is a project that I started after becoming interested in the marketing aspects of a business, particularly in regards to Key Opinion Leaders, Community Leaders, and Influencers.
-          A big portion of marketing nowdays is related to identifying and marketing through these individuals as opposed to things like ads. However, when I inquired about a quantitative method of identifying 
-        people like this at my work, it became apparent that much of this is still manually done. Rather then any quantitative approach, it more boiled down into a networking excecise then an analytical one. </p>
-        <p>Seeing this as a potential avenue for improvement, or even just an alternative way to do things, this project was borne. The goal of this project was to explore quantitative methods for finding Key Opinion Leaders
-          ,map their influence across a topic space, and granularly explore a certain KOL's sphere of influence. These methods could then be hopefully translated into a tool that marketing and market research analysts could then use. 
+				<p>Video games have always been one of my passions, and so I thought I would try my hand at making one.
+           I downloaded Unity, and after working my way through one of their tutorials, I will admit I was hooked.
+           Something about building something that you could then play seemed to scratch an itch. 
+           I had plenty of ideas for games that I wanted to make and game mechanics I wanted to explore, so I thought I would give it a shot, and try building out some of them.
+           But before 
+        </p>
+        <p>
+          The one month challenge was something that I saw on youtube (link), and it seemed like a good solution to a common problem I faced whenever I tried working on side project. 
+          Whenever I worked on a side project, I would always have this burst of enthusiasm, as I learned new things and began putting together a prototype. 
+          However, after awhile, I would hit what I call the "Wall of Apathy". 
+          I would lose most if not all of my motivation for this project, and working on anything related to it felt like a chore. 
+          And then because of this, everything else all of a sudden looked more interesting. 
+          The end result being a lot of unfinished side projects, all in various half-built states. 
+          The one month challenge idea seemed like it would help mitigate this. 
+          By holding myself to a shorter schedule, I would be constantly exposed to new ideas, constantly resetting when the Wall would hit.
+          In addition, it would also force me to prioritize which key features I would need to build out, rather then get lost in feature creep as I thought up new distractions and ideas. 
+          So with all that in mind, I embarked on my journey into video game development. 
         </p>
 			</div>
 		</div>
     <hr>
     <div class="row mt">	
 			<div>
-        <h2 id=sec1 alt="">Starting Out</h2>
+        <h2 id=sec1 alt="">Dev Diary, Game 1, Chimera</h2>
 				<p>
-          the planning part
-          The first challenge was to figure out what exactly to measure. Influence is a fickle and weird thing to measure. In social media contexts, raw numbers are often used as a substitute, the more followers you have,
-          the more influence you have. However, that ran anti-thetical to what I wanted to build. I wanted granualar analysis, not just reducing people down to a metric. Besides, my initial research into this already revealed 
-          that something like this existed, the h-index. The h-index can be understood as a measure of how many citations an author received relative to how many articles they published. Many companies like thompson reuters also had their own
-          propetary measures. (maybe expande more here)
-
-          And it was here that the first idea struck me. I could implement all the citation relations into a relational database, and then once completed graph algorithms looking at centrality, pathing, etc could then be run to 
-          give insights on the community and the individual in it. 
+          My main goal for the first game was to explore the idea of procedural generation. I played alot of looter type games, such as Diablo, Path of Exile, and Borderlands, and I became fascinated with the variety that procedural generation could provide to the player. 
+          I wanted to play with that myself, and hence the idea for my first game was born. The intent was to create basic top-down shooter, ala something like Geometry wars, but to incporate procedural generation into the enemy variety. 
+          I was hoping to have something like a trait system, which certain enemies would spawn with, and which would then change their behaviors. 
+        </p>
+        <p>
           
         </p>
 
@@ -89,16 +98,31 @@
 
     <div class="row mt">	
 			<div>
-        <h2 id=sec2 alt="">Pulling Data</h2>
+        <h2 id=sec2 alt="">Dev Diary, Game 2</h2>
 				<p>
-          pulling data and struggles
-          Lot of hats were worn at Prodeon, one of which was manufacturing. 
-          My responsibilities here mainly focused on authoring the process instructions needed to manufacture our device, working on the assembly line itself, and training new operators. 
-          During my time at Prodeon, we successfully completed over half a dozen builds, supporting Design Verification, Validation activities, and clinical trials.
+          The next game idea I had game to me after seeing the motif of flowers, particularly, the imagery of a field of white flowers. 
+          Something about that image was intensely striking to me and stuck with me. 
+          
+          This idea then mutated into flowers in general, and how their bloom is often associated with life and reneweal.
+          I decided I wanted to turn that on its head, and instead make a game around the flower bloom bringing death. 
+
+          From a game mechanics standpoint, I was in the mood to create something with more puzzle elements in it.
+          I am a big fan of brain teasers and puzzles, and I was eager to try my hand from the other side.
+
         </p>
         <p>
-          I also successfully led and closed NCR-triggered investigations, to ensure the quality of the product.
-          These ran the gamut, from dimensions being out of tolerance during incoming inspection to assembly issues discovered on the manufacturing line. 
+          Unlike the first game, where I could get away with using geometric shapes for art, I had to create actual art assets for this one. The player character, the environments, and most importantly, the flowers.
+          On one hand, I was reasonably impressed with what I pulled off, particularly with the flowers. 
+          I am terribly artistically, which is why I resorted to using a pixel art style versus anything with actual textures. 
+          I also got to play with the animation functions in Unity, which resulted in the flower bloom/wilt animations that you can see around here.
+          The other assets, such as the ground tiles I also posted here, so you can see what I was going for. 
+          I honestly didn't expect anything remotely good looking, so the fact they looked like flowers and they looked like they were actually blooming/wilting was like a slam dunk for me.
+          Unfortunately, it was here that the "Wall of Apathy" returned, and hard. 
+          Just getting the assets seen here was an exhausting endeavour for me, eating up close to a week and a half of time. 
+          During this, there was no coding, no planning of game mechanics, nothing but opening up Inkscape to work on art assets. 
+          And that grind is what I think ultimately triggered the wall, and a lot of frustration.
+          I felt like I was wasting time, since I had to put in a ton of work just to get started.
+          
         </p>
 
         
@@ -110,90 +134,31 @@
 
     <div class="row mt">	
 			<div>
-        <h2 id=sec3 alt="">Creating the Graph</h2>
+        <h2 id=sec3 alt="">Looking back</h2>
 				<p>
-          using neo4j to create an relation database
-          Medical Device development would not be complete without documentation. My work here could be divided into two main categories, R&D Design Control related work and product testing related work. 
+          I think overall I enjoyed my time trying to make video games, even if I managed to burn myself out in seemingly record time.
+          Looking back, the artificial 1 month schedule I tried to hold myself to didn't really help either.
+          I never really got a break, and the original intent of "resetting" my attention by switching to different games didn't quite work out like I intended. 
+          The wall of apathay still arrived, and combined with a task that I didn't enjoy doing, the entire effort ground to a halt.
         </p>
         <p>
-          My Design Control work included authoring the technical drawings for components I was responsible for, and also associated specs in our Product Specification document.
-          Risk documentation was also a significant portion of my work here.
-          I was responsible for authoring Hazard Analyses, and various Failure Mode Effects Analyses cover the design and use of our various devices.
-          Finally, I also provided support for design reviews, authoring everything from memos to powerpoint slides to gap analyses.
+          In terms of what I would do differently, I think the biggest change would be to just bite the bullet and use some pre-made asset packs. 
+          I was aware these existed, but I had stubbornly clung to the idea that I could do everything myself. 
+          But as my cousin who worked in game design pointed out, the amount of time that I spent on trying to create artistic content would have been better served actually working on game mechanics, writing the story, ie anything else.
+          I think that would have helped stymie the wall of apathy, since I would have actually enjoyed doing those tasks. 
+          The other change I would have made was to lengthen the time period I gave myself. 
+          1 month was far too ambitious, especialy since I was just starting out and getting a feel of the basics. 
+          Something longer, like say 3 months, would have allowed me to go more in depth with each game, apply way more polish, and have a better, finished product overall. 
         </p>
         <p>
-          Testing work encompassed all the documentation that came with both in-house testing we did, such as functional deployment, and testing performed with outside partners, such as for biocompatibility, corrosion resistance, MRI safety, or Finite Element Analyses.
-          I was responsible for authoring Test Protocols and Reports, as well as Standard Test Methods(STM).
-          For many STMs, I also was responsible for executing a Gauge R&R Study on our test methods.
-          I was in charge of setting up the design of the study, executing it, and then analyzing the data in <a href="https://www.minitab.com/en-us/">Minitab</a>, looking at the variance components and the ANOVA report. 
-          In certain cases, some test methods had unacceptabily high variance, and so I was also responsible for coming up with solutions to reduce it. 
-          Most methods could be improved by simply using more precise equipment, ie swapping a ruler for caliper.
-          However, for certain methods, especially those unique to our device, this entailed having to rethink how the test was executed, or having to implement changes to the test fixture. 
+
         </p>
         
       </div>
       
     </div><!-- /row -->
-    <hr>
-    <div class="row mt">	
-			<div>
-        <h2 id=sec4 alt="">Analytics</h2>
-				<p>
-          using the db, ie running Pagerank, etc. 
-          Probably the most interesting part of my work was related to supporting Pre-Clinical and Clinical Trials, and not just because I got to travel.
-          Any medical device development is always accompanied by testing both in-vivo and in-vitro.
-          At Prodeon Medical, I had the opportunity to be directly involved in cadaver, animal, and First-in-Human clinical trials.
-        </p>
-        <p>
-          Organ cadavers were my first exposure to testing outside the bench, and was an invaluable tool in evaluating early designs.
-          Even the best bench models had limitations, and so these tests allowed us to rapidly screen out designs and test the feasibility of our proposed procedure.
-          Our extensive cadaver studies helped immensely in allowing us to succesfully start a longer term animal study within a year or so of the project start.
-        </p>
-
-        <P>
-          I was extensively involved our animal trials, using the knowledge gained to evaluate potential designs, and to test the long-term efficacy of the implant. Here I manufactured and prepared devices to be used, 
-          worked with the vetinary surgeon to implant the devices, and analyzed the collected data such as x-rays. I was also responsible for defining and executing our post-retrieval testing for the implants, which included 
-          mechanical testing, and SEM imaging of the surface.
-          
-        </P>
-        <p>
-          When the time came for clinical trials, I was on the ground in Europe, Asia, and Australia training the first physicians for the First in Human <a href="https://clinicaltrials.gov/ct2/show/NCT03758222">EXPANDER-1 Trial</a>.
-          I also provided remote technical support and helped execute device deficiency investigations.
-        </p>
-
-        
-      </div>
-      
-    </div><!-- /row -->
-    <hr>
-    <div class="row mt">	
-			<div>
-        <h2 id=sec5 alt="">remove</h2>
-
-        <P> Getting feedback from end-users of the product you develop is important, and at Prodeon, I regularly interfaced with Physicians to get their feedback on design decisions. Through local physicians,
-          we were able to drive a rapid prototype schedule. We would frequently develop using a shotgun approach of 3-4 different concpets or variations, and then bring them to evaluate. Through this rapid pace, 
-          we were able to go from concept to a First-in-Human trial in around 2 years. 
-        </P>
-        <p>One highlight was when I got to attend the 2018 American Urology Association meeting in San Francisco . It was an invaluable experience, where we were able to demo to both 
-          potential partners and active collaborators our next generation designs. I was also able to take the chance to familiarize myself with the state of the art in Urology, such as new surgical robotics, which helped 
-          build a better understanding of the strength's of our product's approach. 
-          </p>
-				<p>
-          Marketing is also how I began becoming interested in data analytics work.
-          Our marketing manager was developing financial models to project future growth, and model the current market state, ie which procedures were used most often.
-          The problem sounded interesting enough to me, and so I independently embarked on a hunt to see what I could put together on my own.
-          You can see the result of my little side adventure <a>here</a>. <!-- link out to project section  -->
-
-          Another problem that came up was how to identify Key Opinion Leaders.
-          From my R&D point of view, the process seemed a bit daunting, ie how would you be able to compare hundreds to thousands of different physicians, with any degree of nuance or specificity?
-          Talking with marketing, they confirmed to me that the entire process was indeed very manual, and mostly boiled down to networking.
-          This seemed like a sufficient unmet need to devote some effort to, you can see the project that came from this here <a>link to cartographer</a>
-          
-        </p>
-         
-      </div>
-      
-    </div><!-- /row -->
+    
+    
 		
 	</div><!-- /container -->
 	
