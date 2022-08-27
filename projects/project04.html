@@ -59,28 +59,40 @@
 			<div class="">
 				<h1>Here be Dragons</h1>
 				<hr>
-				<p>Cartographer is a project that I started after becoming interested in the marketing aspects of a business, particularly in regards to Key Opinion Leaders, Community Leaders, and Influencers.
-          A big portion of marketing nowdays is related to identifying and marketing through these individuals as opposed to things like ads. However, when I inquired about a quantitative method of identifying 
-        people like this at my work, it became apparent that much of this is still manually done. Rather then any quantitative approach, it more boiled down into a networking excecise then an analytical one. </p>
-        <p>Seeing this as a potential avenue for improvement, or even just an alternative way to do things, this project was borne. The goal of this project was to explore quantitative methods for finding Key Opinion Leaders
-          ,map their influence across a topic space, and granularly explore a certain KOL's sphere of influence. These methods could then be hopefully translated into a tool that marketing and market research analysts could then use. 
-        </p>
+				<p>I really enjoyed playing with laser etching during the time at SAGE, so I thought I would try and make something on my own.
+           My initial idea was to create something like a shadowbox, using etched clear material in order to create a shadow affect when a light was shown behind it.
+          However, I soon discovered that on of the material types available to etch/cut was textile based materials, like suede.
+          My curiosity took off, and after some initial experimentation, I decided that I would try to make a custom notebook cover.</p>
 			</div>
 		</div>
     <hr>
     <div class="row mt">	
 			<div>
-        <h2 id=sec1 alt="">Starting Out</h2>
+        <h2 id=sec1 alt="">Design and Experimentation</h2>
 				<p>
-          the planning part
-          The first challenge was to figure out what exactly to measure. Influence is a fickle and weird thing to measure. In social media contexts, raw numbers are often used as a substitute, the more followers you have,
-          the more influence you have. However, that ran anti-thetical to what I wanted to build. I wanted granualar analysis, not just reducing people down to a metric. Besides, my initial research into this already revealed 
-          that something like this existed, the h-index. The h-index can be understood as a measure of how many citations an author received relative to how many articles they published. Many companies like thompson reuters also had their own
-          propetary measures. (maybe expande more here)
-
-          And it was here that the first idea struck me. I could implement all the citation relations into a relational database, and then once completed graph algorithms looking at centrality, pathing, etc could then be run to 
-          give insights on the community and the individual in it. 
-          
+          The first order of business was to figure out a design. 
+          Given my predeliction toward mapping, one idea that struck me was the phrase "Here be Dragons". Originally, the term was used to mark unknown or unexplored areas on a map.
+          Thematically, I thought this would be quite cool.
+          Here be dragons, says the notebook, filled with unknown wonders or dangers.
+          Given my limited artistic skills, I decided to try and use imagery from some video games I was a fan of online.
+          The first thought was Game of thrones, with its heavy dragon imagery, particularly the sigil of House Targaryen.
+          However, after playing around with the potential design, it felt too much like I was creating branded fan-merch for Game of Thrones, especially with how recognizable the sigil would be.
+          I therefore decided to search for a more obscure symbol to use.
+          I eventually settled on pulling the dragon design from another mobile game I followed, Arknights. 
+          They had a variety of dragon related assets in game, particularly in the character portrait backgrounds.
+          The downside to using character portrait backgrounds was that I couldn't always get a clean image, and it required some cropping in order to get something usable. 
+          The second challenge then came when converting the images to a usable vector image.
+          There was a lot of complex detail that needed to be reduced down, and differing art styles between images meant I needed to constantly tweak how I did the conversion. 
+          I finally settled on a design though, and had a number of prototypes made in differing colors, which you can see here. (pics)
+          After that, I needed to test how much material I would need in order to effectively create the book cover flaps. 
+          Rather then waste money, I figured I could just cut out some paper and use that as an alternative. 
+        </p>
+        <p>
+          In addition to the design, I also had to do some other experimentation with how I would assemble it onto a notebook. 
+          Many of the designs I saw online used some 
+          Ultimately, to keep it simple, I decided to stick with adhesive instead. 
+          I would leave addition material, almost like a book flap on each end to be folded over and glued, creating a sleeve that the front/back of the notebook could be inserted into.
+          I had some gorilla glue laying around, and some experimentation proved that it held quite well on the suede. 
         </p>
 
       </div>
@@ -89,111 +101,16 @@
 
     <div class="row mt">	
 			<div>
-        <h2 id=sec2 alt="">Pulling Data</h2>
+        <h2 id=sec2 alt="">Final Product</h2>
 				<p>
-          pulling data and struggles
-          Lot of hats were worn at Prodeon, one of which was manufacturing. 
-          My responsibilities here mainly focused on authoring the process instructions needed to manufacture our device, working on the assembly line itself, and training new operators. 
-          During my time at Prodeon, we successfully completed over half a dozen builds, supporting Design Verification, Validation activities, and clinical trials.
-        </p>
-        <p>
-          I also successfully led and closed NCR-triggered investigations, to ensure the quality of the product.
-          These ran the gamut, from dimensions being out of tolerance during incoming inspection to assembly issues discovered on the manufacturing line. 
+          It's still a WIP. 
         </p>
 
-        
       </div>
       
     </div><!-- /row -->
 
-    <hr>
-
-    <div class="row mt">	
-			<div>
-        <h2 id=sec3 alt="">Creating the Graph</h2>
-				<p>
-          using neo4j to create an relation database
-          Medical Device development would not be complete without documentation. My work here could be divided into two main categories, R&D Design Control related work and product testing related work. 
-        </p>
-        <p>
-          My Design Control work included authoring the technical drawings for components I was responsible for, and also associated specs in our Product Specification document.
-          Risk documentation was also a significant portion of my work here.
-          I was responsible for authoring Hazard Analyses, and various Failure Mode Effects Analyses cover the design and use of our various devices.
-          Finally, I also provided support for design reviews, authoring everything from memos to powerpoint slides to gap analyses.
-        </p>
-        <p>
-          Testing work encompassed all the documentation that came with both in-house testing we did, such as functional deployment, and testing performed with outside partners, such as for biocompatibility, corrosion resistance, MRI safety, or Finite Element Analyses.
-          I was responsible for authoring Test Protocols and Reports, as well as Standard Test Methods(STM).
-          For many STMs, I also was responsible for executing a Gauge R&R Study on our test methods.
-          I was in charge of setting up the design of the study, executing it, and then analyzing the data in <a href="https://www.minitab.com/en-us/">Minitab</a>, looking at the variance components and the ANOVA report. 
-          In certain cases, some test methods had unacceptabily high variance, and so I was also responsible for coming up with solutions to reduce it. 
-          Most methods could be improved by simply using more precise equipment, ie swapping a ruler for caliper.
-          However, for certain methods, especially those unique to our device, this entailed having to rethink how the test was executed, or having to implement changes to the test fixture. 
-        </p>
-        
-      </div>
-      
-    </div><!-- /row -->
-    <hr>
-    <div class="row mt">	
-			<div>
-        <h2 id=sec4 alt="">Analytics</h2>
-				<p>
-          using the db, ie running Pagerank, etc. 
-          Probably the most interesting part of my work was related to supporting Pre-Clinical and Clinical Trials, and not just because I got to travel.
-          Any medical device development is always accompanied by testing both in-vivo and in-vitro.
-          At Prodeon Medical, I had the opportunity to be directly involved in cadaver, animal, and First-in-Human clinical trials.
-        </p>
-        <p>
-          Organ cadavers were my first exposure to testing outside the bench, and was an invaluable tool in evaluating early designs.
-          Even the best bench models had limitations, and so these tests allowed us to rapidly screen out designs and test the feasibility of our proposed procedure.
-          Our extensive cadaver studies helped immensely in allowing us to succesfully start a longer term animal study within a year or so of the project start.
-        </p>
-
-        <P>
-          I was extensively involved our animal trials, using the knowledge gained to evaluate potential designs, and to test the long-term efficacy of the implant. Here I manufactured and prepared devices to be used, 
-          worked with the vetinary surgeon to implant the devices, and analyzed the collected data such as x-rays. I was also responsible for defining and executing our post-retrieval testing for the implants, which included 
-          mechanical testing, and SEM imaging of the surface.
-          
-        </P>
-        <p>
-          When the time came for clinical trials, I was on the ground in Europe, Asia, and Australia training the first physicians for the First in Human <a href="https://clinicaltrials.gov/ct2/show/NCT03758222">EXPANDER-1 Trial</a>.
-          I also provided remote technical support and helped execute device deficiency investigations.
-        </p>
-
-        
-      </div>
-      
-    </div><!-- /row -->
-    <hr>
-    <div class="row mt">	
-			<div>
-        <h2 id=sec5 alt="">remove</h2>
-
-        <P> Getting feedback from end-users of the product you develop is important, and at Prodeon, I regularly interfaced with Physicians to get their feedback on design decisions. Through local physicians,
-          we were able to drive a rapid prototype schedule. We would frequently develop using a shotgun approach of 3-4 different concpets or variations, and then bring them to evaluate. Through this rapid pace, 
-          we were able to go from concept to a First-in-Human trial in around 2 years. 
-        </P>
-        <p>One highlight was when I got to attend the 2018 American Urology Association meeting in San Francisco . It was an invaluable experience, where we were able to demo to both 
-          potential partners and active collaborators our next generation designs. I was also able to take the chance to familiarize myself with the state of the art in Urology, such as new surgical robotics, which helped 
-          build a better understanding of the strength's of our product's approach. 
-          </p>
-				<p>
-          Marketing is also how I began becoming interested in data analytics work.
-          Our marketing manager was developing financial models to project future growth, and model the current market state, ie which procedures were used most often.
-          The problem sounded interesting enough to me, and so I independently embarked on a hunt to see what I could put together on my own.
-          You can see the result of my little side adventure <a>here</a>. <!-- link out to project section  -->
-
-          Another problem that came up was how to identify Key Opinion Leaders.
-          From my R&D point of view, the process seemed a bit daunting, ie how would you be able to compare hundreds to thousands of different physicians, with any degree of nuance or specificity?
-          Talking with marketing, they confirmed to me that the entire process was indeed very manual, and mostly boiled down to networking.
-          This seemed like a sufficient unmet need to devote some effort to, you can see the project that came from this here <a>link to cartographer</a>
-          
-        </p>
-         
-      </div>
-      
-    </div><!-- /row -->
+    
 		
 	</div><!-- /container -->
 	
