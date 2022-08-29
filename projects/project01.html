@@ -73,14 +73,19 @@
         <h2 id=sec1 alt="">Starting Out</h2>
 				<p>
           the planning part
-          The first challenge was to figure out what exactly to measure. Influence is a fickle and weird thing to measure. In social media contexts, raw numbers are often used as a substitute, the more followers you have,
-          the more influence you have. However, that ran anti-thetical to what I wanted to build. I wanted granualar analysis, not just reducing people down to a metric. Besides, my initial research into this already revealed 
-          that something like this existed, the h-index. The h-index can be understood as a measure of how many citations an author received relative to how many articles they published. Many companies like thompson reuters also had their own
-          propetary measures. (maybe expande more here)
-
-          And it was here that the first idea struck me. I could implement all the citation relations into a relational database, and then once completed graph algorithms looking at centrality, pathing, etc could then be run to 
-          give insights on the community and the individual in it. 
-          
+          The first challenge was to figure out what exactly to measure.
+          Influence is a fickle and weird thing to measure.
+          Many methods are very manual, such as sending out surveys to a representative sample.
+          In social media contexts, raw numbers are often used as a substitute, the more followers you have, the more influence you have.
+          However, that ran anti-thetical to what I wanted to build.
+          I wanted granualar analysis, not just reducing people down to a metric.
+          Besides, my initial research into this already revealed that something like this existed, the h-index.
+          The h-index can be understood as a measure of how many citations an author received relative to how many articles they published.
+          And it was here that an idea struck me.
+          I could implement all the citation relations into a graph database, with each citation representing a link and each publication a node.
+          Then, I could do what Google does with their webpages, and use PageRank (or another centrality algorithm) to find which articles have the highest weights.
+          The higher the weight, the more central, and therefore the more important and influential the author is.
+          As an added bonus, the graph database would allow me to look for things like pathing, community grouping, etc. 
         </p>
 
       </div>
@@ -91,12 +96,10 @@
 			<div>
         <h2 id=sec2 alt="">Pulling Data</h2>
 				<p>
-          pulling data and struggles
           The first major effort was pulling data to construct the relational database. My initial thought was to try pulling data from google scholar, since they looked like to had the most comprehensive listing 
           of publications. But here I ran into my first problem, namely that the data I was looking for wasn't always available. Google Scholar had no available api, so I had to resort to writing a selenium webdriver script to scrape the website. 
           But google was very aggressive in weeding out scraping scripts. I tried several solutions to evade this, including having the script randomly perform actions, and routing the connection through TOR, but I ultimately concluded that it wasn't worth the time and effort I was putting in. 
           I was spending more time fighting Google then actually building the database.<a> script here </a> And so I went looking for other solutions. 
-          
         </p>
         <p>
            This turned out to be the correct decision, as more searching revelaed the presence of data sources WITH API's, namely Pubmed and Crossref. Both had api's that importantly not only listed an article's references, but also citations from other articles. 
@@ -120,19 +123,45 @@
           using neo4j to create an relation database, including the insertion scripts, 
           For creating the graph relation database, I went with using neo4j. 
           Neo4j was my first introduction to graph relation databases, and rather than try and re-learn an entirely different system, I decided to go with what I was familiar with.
-          Setup of the database wasquite simple, with nodes created for authors, publications, and journals. I also made the decision to use separate nodes for associated keywords and the publication type, rather then just 
+          Setup of the database wasquite simple, with nodes created for authors, publications, and journals.
+          I also made the decision to use separate nodes for associated keywords and the publication type, rather then just implementing it as a property of the node. 
           
         </p>
         <p>figureing out faster ways of doing things (indexing, load csv, etc. )
           One of those improvements was to drastically reduce the time needed to insert new nodes into the db. 
+          The first improvement was to implement indexing on the database. 
+          The next was to simplify the insertion process. 
+          I had previously written it as an insertion script, but looking through the neo4j documentation, it seemed like at a large enough scale, it was much easier to just use the Load CSV function.
+          This reduced many lines of code down to a line of Cypher, and helped greatly simplify the process. 
         </p>
         <p>
-          Things to improve on -dates needed preprocessing, not helped by the fact that they came in many different formats. Probably an entire script needed to be implemented to sort this out. Held off on it since this was the intial prototype run. 
-          Author disambiguation. This is apparently a major issue, with some major research effort put into it. The main challenge came from the different ways people 
+          Since I had intended this as a prototype run, I implemented certain prepcoressing/data cleaning steps but had to skip others. 
+          This ultimately came down to a prioritization effort. Some were relatively easy to do, some required a lot more effort. 
+          There was also differing importance. Some would be vital to this prototype, others were more nice to have. 
 
+          The main cleaning step I did was to combine author names together where I could.
+          Author names were not always presented in the same format. 
+          Some used Full First name, last name, some had middle initials, some abbreviated the first name, etc. 
+          I implemented the most basic clean, combining if their first and last names matched. (expand)
+          This took care of most of authors, but especially for those with abbreviated first names, which would require a more detailed disambiguation effort, I skipped for now. 
+          This is also apparently a major issue, with some major research effort using ML put into it (link)
 
-          Address disambiguation- I had an article where each author put in the same address three different ways. How the hell are you supposed to deal with this? no idea. Iexplroed a number of ideas, like looking at cosine simularity between them and then if they were similar enough, to combine them .
-        </p>
+          Date disambiguation was relatively straightforward to do, but I purposefully deprioritized. 
+          While it was relatively simple, there was a wide variety of date formats used, and some more precise, going down to the exact day rather then month. 
+          Looking at graph changes over a time series was something that I was interested in, but I thought that it was important to get the basic graph db structure implemented to test it out.
+          Time series analysis could be done later. 
+
+          The final piece of cleaning that could have been done was address/institution disambiguation. 
+          I had originally inteded to use this to allow association of influence with certain hospitals, universities, etc. 
+          However this turned out to be far more difficult than anticipated.
+          Just like authors and dates, there was a wide variety of formats and precision that were detailed.
+          In one case, I had an article with three authors, and despite all belonging to the same institution, listed it three different ways. 
+          This became nightmare to disambiguate. 
+          I explored some different methods of doing so, including by looking at things like cosine similarity between the different listed, and combining them if they met a threshold, but there was no way that consistently worked for all edge cases.
+          Given the rickety state of this, I ultimately decided to skip it for the prototype phase. 
+          I really wanted to implement this though, and this is probably the first additional feature that I would want to go back and work on. 
+
+          </p>
         
       </div>
       
