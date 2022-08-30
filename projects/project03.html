@@ -70,50 +70,73 @@
     <hr>
     <div class="row mt">	
 			<div>
-        <h2 id=sec1 alt="">The initial foray-2019 Benign Prostatic Hyperplasia Market</h2>
+        <h2 id=sec1 alt="">The initial foray-2019 Benign Prostatic Hyperplasia(BPH) Market</h2>
 				<p>
           My first foray into market research came as a bit of an accident. You can read the background here (link back to work section).
           The Marketing department at my workplace was looking into developing market models, and needed better data on things like procedure volume.
           That work seemed interesting enough, so I thought I would take a stab at it in my own time. 
-          The first thing I thought of was an article written about how data from medicare cms was used to compare drug prices between US states.
-          I decided to start digging down that route as a start. 
-          This led me to the first data source I used. 
-          <a>Medicare CMS</a> publishes yearly reimbursement data for procedures.
-          While it didn't cover the entire US market, it would allow for a solid starting point. 
-          Some follow up research for reimbursement data showed that private coverers closely guard their data, so any further data on this wouldn't be helpful.
-          While this would be the main source of data, I also found other sources that I could combine to create a fuller picture.
-          The first was <a>Open Payments</a>.
-          Due to US Transparency laws, physicians are required to report on payments they receive from companies, and this datais publicly available.
-          I figured I could comb through this to find those with high payments 
-          
-          I also found Open payments. and also decided to use google trneds, and also clinical trials.gov
-          I also took the opportunity to download a trial version of <a>Tableau</a> to use for this.
-          I figured that I may as well use this as an opporunity to learn about some of the tools that people often use for this.
-          In addition, I also decided to try my hand with using my recently(at the time) learned python skills to data analysis and visualization. 
-          While I wasn't able to do as much as I was hoping, I was able to use the opportunity to learn the Plotly library to create several of the graphs in the final report.
+          In addition to finding data sources, I also wanted to take the time to do my own analyses of the market.
+          This would be my chance to try out some basic data analytical work, and see if it was for me.
         </p>
         <p>
-          After I found all that data, I did analysis. 
-          There wasn't a main goal here, since I was doing this more for my own interest. 
-          I just kind of went with the flow with what I found in the data.
+          For data sources, the first thing I thought of was an article written about how data from Medicaid was used to compare drug prices between US states.
+          This led me to the first and main data source. 
+          One way to tell the procedure volume is to look at reimbursement data, ie what insurance companies are paying for.
+          Private insurers closely guard their data, but <a href="https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service">Medicare CMS</a> publishes yearly reimbursement data, on a time delay.
+          Medicare covers mainly older Americans, age 65+, so this wouldn't be a perfect representation of the entire US market, it would skew towards what the older population needed.
+          However, the disease I was primarily focused on, BPH, primarily affects older men, so I felt that this was not as big of a limitation, and this would make a suitable source for my needs.
+          I also three other public sources of data that I could combine to create a more detailed market picture.
+          <ul>
+            <li>The first was <a href="https://www.cms.gov/openpayments">Open Payments</a>.
+              Due to US Transparency laws, physicians are required to report on payments they receive from companies, and this datails publicly available.
+              I figured I could comb through this to find physicians that were very important to companies, ie they were reimbursed heavily, had lots of travel expenses, royalty payments, etc.</li>
+            <li>The next source was <a href="https://clinicaltrials.gov/">Clinical Trials.gov</a>, a US goverment database of clinical trials, that per regulations, companies must list on. This would give me insight into a companies clinical activities</li>
+            <li>Finally, I also realized I could use <a>google search trends</a> as well. This would serve as a proxy for patient interest in the company.</li>
+          </ul>
+        </p>
+
+        <p>
+          After finding these multiple sources of data, it was time to do my analysis.
           My analysis ended up focusing on a few main areas:
           <ul>
-            <li>Use drug and procedure data to find market composition, and more granular analysis such as where procedures are performed</li>
+            <li>Use drug and procedure data to create a rough market composition, and more granular analysis such as where procedures are performed</li>
             <li>Find competitor Very Important Persons (VIP) based on procedure volume and payment data.</li>
             <li>Use publicly available information to calculate and compare competitor market performance and growth.</li>
           </ul>
 
-          
+          I also took the opportunity to experiment with some data visualization/analysis tools. 
+          Software wise, I downloaded and use a free trial version of <a href="https://www.tableau.com/">Tableau</a>, to help create some of the charts.
+          I also took the opportunity to try and use my recently learned python skills.
+          I found a python library, <a href="https://plotly.com/">plotly</a>, that could be used to create interactive data graphs.
+          I used plotly for a few of the graphs, particularly the market composition charts.   
         </p>
 
         <p>
-          You can see the final "product" that I put together here. 
+          You can see the final "product" in pdf form that I put together here. 
           <a href="https://drive.google.com/file/d/11_SMqinOPoI5P8vKEDl4WJXgGpOuJOOm/view?usp=sharing">BPH Market Research Report</a>
         </p>
         <p>
-          Looking back/improvements
-          things I wanted to do-Open payments also allows a listing for products. Could potentially use this to do a more detailed analysis. For example, I had a hypothesis that you could use this to back calculate a companies marketing priorities, and therefore gain intelligence on a companies business strategy.
+          Looking back, there were quite a few opportunities that I didn't have the time or know how to do, particularly in the visualization tools.
+          For both tableau and plotly, I only really scratched the surface in terms of what they could do.
+          The most I did was use it to make some basic graphs.
+          For example, I would have liked to figure out a better way to graph the payments composition over time and geography. 
+          One of the ideas I had was that you could correlate travel payments of physicians with other events, ie you could correlate a burst of travel payments to a certain city as them being paid to go to a conference.
+          You could also look and see if there were "anomalous" payments, such as as travel to an out-of-the way city.
+          These were all ideas that I wanted to explore, and I think a better visualization could have helped bring that idea to life better.
+        
+          On the data side of things, one of the biggest issues was correlating physicians between Open Payments and the Medicare Reimbursement. 
+          There was not a common id between them, with Medicare using National Provider Identification (NPI) numbers, and Open Payments using their own IDs. 
+          I resorted to just matching by first name/last name matching, but this could have resulted in some missed payments/procedures, especially if things like middle initials were present.
+          Some digging revealed that ProPublica had a CrossWalk available, but cost way too much for just an independent project.
+          If I pursued this in the future, I would have liked to use this to cross-reference the datasets.
 
+          From an analytical standpoint, I felt like there was a lot of potential threads that I could have gone down too. 
+          One of the biggest and most interesting to me was regarding the Open Payments Data.
+          Each payment entry allows the submitter to list what product/products the payment is in relation to.
+          I figured that one could use this to do some pretty interesting analysis, in the "follow the money" vein.
+          For example, I had a hypothesis that you could use this to back calculate a companies marketing priorities, and therefore gain intelligence on a companies business strategy.
+          If I ever return to this, this would definitely be something I would want to look into.
+ 
         </p>
 
       </div>
