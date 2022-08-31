@@ -231,6 +231,9 @@ img.center{
 
 }
 
+div.portfolio{
+	height:450px
+}
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
 /* Effects also are controled by hover.zoom.js */
