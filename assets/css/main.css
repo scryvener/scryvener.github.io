@@ -232,7 +232,8 @@ img.center{
 }
 
 div.portfolio{
-	height:40vh
+	height:40vh;
+	padding-bottom:10px;
 }
 
 /* ================== PORTFOLIO IMAGES HOVER EFFECT ================== */
