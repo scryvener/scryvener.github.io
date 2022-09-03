@@ -175,15 +175,14 @@
           
           After 
           after the database prototype was set up, next came time to run analysis and use the database.
-
-
-
-          Using the database, I was able to put together a sample author profile, similar to what I envisioned an analyst would be able to do using the tool.
-          You can check it out <a>here</a>. Google Drive link.
-          
-          
           using the db, ie running Pagerank, etc. link our sample analytical product 
 
+        </p>
+        <p>
+          To better simulate a use case, I approached from the perspective of an analyst tasked with putting together a profile of an author.
+          I purposfully chose one that we already worked with at my day job, since this would allow me to validate my findings.
+          You can see the final report that I put together at the Google Drive link below: <br>
+          <a href="https://drive.google.com/file/d/1bb5DIm9BjjmYwgM7HVslVs5ZhpzzUwRn/view?usp=sharing">Sample Profile</a>
         </p>
         
 
@@ -197,17 +196,54 @@
         <h2 id=sec5 alt="">future efforts and things to improve on </h2>
 
         <P>
-          talking with actual marketing friends-actaul way to expand this to non citations? ie maybe mentions in publichsed articles? from the db perspective this is easy, from the dat agathering perspective Im not sure how I would go about doing this, besides a mass scrape. 
-          
-          talking with marketing experienced- very valuable for initial starting out and for larger marketing teams, less so for middle ground(know the space already). Thinking about adding more features, such as more info on the articles, ie pulling topics from the abstracts,
-          better implmementing keywords(maybe lemmatized) to allow better segmentation. 
+          After finishing up the prototype, I looked to try and get validation on my idea from marketing professionals I knew. 
           
         </P>
-        <p>better preprocessing mentioned above
-          </p>
-				<p>
-          pull way more articles, not just from a single seed. will need to be scaled up, since was already taking ahot minute 
+        <p>Overall, the feedback was positive, with them remarking that they could see the value-add in the tool.
+          Particularly, they remarked that it would allow for a more analytical and quantitative method of going about doing their market research, particularly where it would usually be a networking exercise.
+          They also mentioned it would also be a useful tool when planning and executing a publication strategy.
           
+        </p>
+				<p>
+          There were however improvements and limitations that they mentioned, that I took to heart, and am planning improvements for.  
+        </p>
+        <p>
+          The first issue was that scientific research publications are often not the main focus in Marketing.
+          Much more commonly used are things like syndicated reports talking about market trends, pricing and financials info, and mergers and acquisitions news.
+          In hindsight, this makes sense because a lot of marketing activity can be boiled down to looking for new opportunities.
+          Cartographer's focus on a person's influence means that it does not contribute as much there. 
+        </p>
+        <p>
+          The other limitation is on when the tool could be useful.
+          Talking with professionals, there would be two useful periods of time.
+          The first is early on, when a team needs to get the lay of the land they are working in.
+          The second is later on when the project is scaled up, and when there are enough marketing resources, like a full department, to spare to do precision targeting of publications and physicians.
+          This meant that there was a "middle" point, where Cartographer wouldn't be as useful. 
+        </p>
+        <p>
+          However, this gave me new ideas on improvements that I could make that could allow it to be helpful in this regard. 
+        </p>
+        <p>
+          To address the first limitation, I would expand the articles used beyond just scientific publications.
+          This would be the most straightforward improvement, though the most technically challenging, particularly from a data collection standpoint.
+          A dedicated web crawler would have to be created, that constantly looked for new articles, reports, etc in a desired topic space, which would then feed into the database.
+          Citation links would be replaced instead by topic references.
+          Analysis would focus less on authors, and more on topics, ie which terms are showing up more. 
+        </p>
+        <p>
+          The other improvements would be from an analytical perspective, which would help address the two limitations.
+          The date cleaning that I skipped would have to be implemented, to allow for the graph to be observed from a time series perspective.
+          This would allow an analyst to watch how the graph changes over time, including what topics are seeing more interest.
+          Combining this with slicing the graph by keywords, and term mentions in the abstracts, would allow for modeling of interest over time.
+          Better organization and cleaning of keywords and topics, including better preprocessing like lemmatization would also be implemented.
+          The graph structure would also allow better analysis of how ideas spread: looking for originators of ideas, and looking at how they spread between authors. 
+        </p>
+        <p>
+          These changes would ultimately allow an analyst to easily pick up on new trends, or analyze historical ones to gain insight on how the market might change, or neglected spaces.
+          This would be useful no matter where in the life cycle of the project. 
+        </p>
+        <p>
+          Ultimately, I hope to implement the improvements to address the feedback and improve Cartographer.
         </p>
          
       </div>
