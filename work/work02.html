@@ -108,7 +108,7 @@
           <br>
           <b>Third:</b>
           Not having an api meant that I also had to have all of the potential assets needed on hand. I got partially lucky here, since the image assets and descriptions were readily scrapable,
-          and I was able to do so with a basic <a href="https://pypi.org/project/requests/">requests</a> script. You can see the script here <a><i>github link here</i></a> My luck didn't last throughout though, particularly in regards to the skill descriptions. For whatever
+          and I was able to do so with a basic <a href="https://pypi.org/project/requests/">requests</a> script. You can see the script <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/LostArkDetailScrape.py">here</a> My luck didn't last throughout though, particularly in regards to the skill descriptions. For whatever
           reason, certain descriptions were either incomplete, or featured errors, ie a skill was listed as doing 0 damage. I tried to cross reference between sites, but this wasn't foolproof, since the information could be sometimes universally missing,
           or two sites would have conflicting information. Ultimately, the best and most consistent information I found was on the Korean sites, particulaly Inven, which made sense since the game was first released in South Korea.   
           
@@ -126,7 +126,7 @@
         <p>I thought it would be cool for other to be able to play with the extension, particularly since it would only ever be available during a stream. The nice thing is that Twitch Extensions are built like webpages, so I can insert an iframe here to demo it.
           Sizing is a bit small, since it was designed for a full screen, but you should be able to see the full functionality. 
           The extension was designed to be draggable, so that viewers could place it wherever worked best for them in the window, and a show/hide functionality so they could hide it when they wanted to focus on the match.
-          You can check out the code on github here <i>insert github link</i>
+          You can check out the code on github <a href="https://github.com/scryvener/SAGE_Tech/tree/main/VideoOverlay"></a>.
         </p>
       </div>
 
@@ -274,7 +274,7 @@
         Analytical Product/link in how we could still potentially use the stuff we developed
 
         After succesfully extracting data from the scoreboards, whether by script or by hand, I was able to perform analysis on our tournaments data. I primarily leveraged the <a href="https://pandas.pydata.org/">pandas</a> library for this,
-        and you can see the main script I used to group and process the data <a><i>analytical process script here</i></a>. Graphics wise, I mainly stuck with just using excel.
+        and you can see the main script I used to group and process the data <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/QualifierStatsCalc.py">here</a>. Graphics wise, I mainly stuck with just using excel.
         While using something like matplotlib was a possibility, I prioritized speed at this point more than customization. 
       </p>
 
@@ -337,7 +337,7 @@
         I went to a tournament once to support my friend competing, only to find out that they had managed to misestimate the time needed. The end result? They were two hours behind schedule, and my friend wouldn't end up playing 
         his games until 9 o'clock at night. At Sage, we were very cognizant of this, and did a lot of planning to make sure the competitors didn't have to wait too long, and wouldn't be stuck playing late into the night.
         As part of this, one of the analyses I worked on was to estimate average match times. I did this by leveraging the fact that Start.gg, the tournament organization app our events ran on, had an 
-        <a href="https://developer.smash.gg/docs/intro/">api</a> that you could query match information. After writing a <a>script <i>github link here</i></a> to pull that information,
+        <a href="https://developer.smash.gg/docs/intro/">api</a> that you could query match information. After writing a <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/smash.gg_api_pull.py">script</a> to pull that information,
         it was easy to estimate an upper limit using the match time statistics, and we were able to schedule accordingly. 
       </p>
 
