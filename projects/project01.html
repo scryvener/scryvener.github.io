@@ -64,6 +64,7 @@
         people like this at my work, it became apparent that much of this is still manually done. Rather then any quantitative approach, it more boiled down into a networking excecise then an analytical one. </p>
         <p>Seeing this as a potential avenue for improvement, or even just an alternative way to do things, this project was borne. The goal of this project was to explore quantitative methods for finding Key Opinion Leaders
           ,map their influence across a topic space, and granularly explore a certain KOL's sphere of influence. These methods could then be hopefully translated into a tool that marketing and market research analysts could then use. 
+          You can find the script files I used for this project <a href="https://github.com/scryvener/Cartographer">here</a>.
         </p>
 			</div>
 		</div>
@@ -106,7 +107,7 @@
            I was able to use those api's to write a script to pull articles. I initially structured to script to pull recursively from a single "seed" article, that is it would pull the seed's citations and references, and then use those pull their own citations and references, and so on and so forth.
            However, I quickly discovered it was a lot easier to just use Pubmed's term search function simulating a keyword search to pull an entire list first and go from there. To start out, I used the keyword "Urology", since I was already familiar with the space from work and could use that as sort of a validation that I was pulling 
            relevant articles. I quickly discovered that within one recursion, I was already starting to get non-urology related articles, and the number of articles was also starting to inrease exponentially, so I cut if off at 1 (confirm) recursion. The final article count pulled for the initial test case was 
-           approximately 100k. <a>clean up script and put it here </a>
+           approximately 100k.
         </p>
 
         
@@ -121,7 +122,6 @@
 			<div>
         <h2 id=sec3 alt="">Creating the Graph Database</h2>
 				<p>
-          using neo4j to create an relation database, including the insertion scripts, 
           For creating the graph relation database, I went with using neo4j. 
           Neo4j was my first introduction to graph relation databases, and rather than try and re-learn an entirely different system, I decided to go with what I was familiar with.
           Setup of the database wasquite simple, with nodes created for authors, publications, and journals.
