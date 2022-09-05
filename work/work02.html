@@ -126,7 +126,7 @@
         <p>I thought it would be cool for other to be able to play with the extension, particularly since it would only ever be available during a stream. The nice thing is that Twitch Extensions are built like webpages, so I can insert an iframe here to demo it.
           Sizing is a bit small, since it was designed for a full screen, but you should be able to see the full functionality. 
           The extension was designed to be draggable, so that viewers could place it wherever worked best for them in the window, and a show/hide functionality so they could hide it when they wanted to focus on the match.
-          You can check out the code on github <a href="https://github.com/scryvener/SAGE_Tech/tree/main/VideoOverlay"></a>.
+          You can check out the code on github <a href="https://github.com/scryvener/SAGE_Tech/tree/main/VideoOverlay">here</a>.
         </p>
       </div>
 
@@ -208,9 +208,7 @@
         The need for both OCR and an image classifier was due to two different types of data showing up on the scoreboard, as can be seen in the sample scoreboard below. 
         <img src="/assets/img/work/work02-SAGE/scoreboard_example-min.png" style="max-height:800px; max-width:1200px">
         The class icons, seen next to each player's name, were the only way to tell what class each player was playing. This was vital for further analysis of team compositions and the like, so this needed to be pulled and converted into data.
-        At the same time, there exists a lot of text data, in the Kill, Deaths and Assists and Damage stats. You can find the final script <a><i>final OCR script link here</i></a>, and I go over my efforts below.
-        
-        
+        At the same time, there exists a lot of text data, in the Kill, Deaths and Assists and Damage stats. 
         
       </p>
       <h3>Optical Character Recognition</h3>
@@ -240,7 +238,7 @@
         
         <br>
         Ultimately though, these challenges were relatively straightforward to overcome, and the Tesseract portion of the system worked quite well. It had some occasional mistakes, such as reporting 1's as 7's, and the aforementioned issues with names,
-        but it saved me a bunch of time from having to do manual data entry for the text portion of the scoreboard. You can see the script I used <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/TrainingArk_OCR.py">here</a>.
+        but it saved me a bunch of time from having to do manual data entry for the text portion of the scoreboard. You can see the final script <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/TrainingArk_OCR.py">here</a>.
       </p>
       
       <h3>Class Icon Classifier</h3>
