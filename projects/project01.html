@@ -144,9 +144,10 @@
           The main cleaning step I did was to combine author names together where I could.
           Author names were not always presented in the same format. 
           Some used Full First name, last name, some had middle initials, some abbreviated the first name, etc. 
-          I implemented the most basic clean, combining if their first and last names matched. (expand)
+          I implemented the most basic clean, combining if their first and last names matched.
           This took care of most of authors, but especially for those with abbreviated first names, which would require a more detailed disambiguation effort, I skipped for now. 
-          This is also apparently a major issue, with some major research effort using ML put into it (link)
+          Some further research showed that this is apparently a <a href="https://en.wikipedia.org/wiki/Author_name_disambiguation">major issue</a>, with some major research effort using ML put into it.
+          I made a note to myself to come back to this later.
 
           Date disambiguation was relatively straightforward to do, but I purposefully deprioritized. 
           While it was relatively simple, there was a wide variety of date formats used, and some more precise, going down to the exact day rather then month. 
