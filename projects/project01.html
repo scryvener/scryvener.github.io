@@ -98,7 +98,8 @@
           The first major effort was pulling data to construct the relational database. My initial thought was to try pulling data from google scholar, since they looked like to had the most comprehensive listing 
           of publications. But here I ran into my first problem, namely that the data I was looking for wasn't always available. Google Scholar had no available api, so I had to resort to writing a selenium webdriver script to scrape the website. 
           But google was very aggressive in weeding out scraping scripts. I tried several solutions to evade this, including having the script randomly perform actions, and routing the connection through TOR, but I ultimately concluded that it wasn't worth the time and effort I was putting in. 
-          I was spending more time fighting Google then actually building the database.<a> script here </a> And so I went looking for other solutions. 
+          I was spending more time fighting Google then actually building the database. I decided to cut my losses and went looking for other solutions instead.
+          I published the script <a href="https://github.com/scryvener/Google-Scholar-Scraper">here</a> for records purposes. 
         </p>
         <p>
            This turned out to be the correct decision, as more searching revelaed the presence of data sources WITH API's, namely Pubmed and Crossref. Both had api's that importantly not only listed an article's references, but also citations from other articles. 
@@ -132,7 +133,7 @@
           The first improvement was to implement indexing on the database. 
           The next was to simplify the insertion process. 
           I had previously written it as an insertion script, but looking through the neo4j documentation, it seemed like at a large enough scale, it was much easier to just use the Load CSV function.
-          This reduced many lines of code down to a line of Cypher, and helped greatly simplify the process. 
+          This reduced many lines of code down to a few lines of Cypher, and helped greatly simplify the process. 
         </p>
         <p>
           Since I had intended this as a prototype run, I implemented certain prepcoressing/data cleaning steps but had to skip others. 
