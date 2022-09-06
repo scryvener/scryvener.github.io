@@ -60,10 +60,10 @@
 				<h1>Cartographer</h1>
 				<hr>
 				<p>Cartographer is a project that I started after becoming interested in the marketing aspects of a business, particularly in regards to Key Opinion Leaders, Community Leaders, and Influencers.
-          A big portion of marketing nowdays is related to identifying and marketing through these individuals as opposed to things like ads. However, when I inquired about a quantitative method of identifying 
-        people like this at my work, it became apparent that much of this is still manually done. Rather then any quantitative approach, it more boiled down into a networking excecise then an analytical one. </p>
-        <p>Seeing this as a potential avenue for improvement, or even just an alternative way to do things, this project was borne. The goal of this project was to explore quantitative methods for finding Key Opinion Leaders
-          ,map their influence across a topic space, and granularly explore a certain KOL's sphere of influence. These methods could then be hopefully translated into a tool that marketing and market research analysts could then use. 
+          A big portion of marketing nowadays is related to identifying and marketing through these individuals as opposed to things like ads. However, when I inquired about a quantitative method of identifying 
+        people like this at my work, it became apparent that much of this is still manually done. Rather than any quantitative approach, it more boiled down into a networking exercise rather then an analytical one. </p>
+        <p>Seeing this as a potential avenue for improvement, or even just an alternative way to do things, this project was born. The goal of this project was to explore quantitative methods for finding Key Opinion 
+          Leaders, map their influence across a topic space, and granularly explore a certain KOL's sphere of influence. These methods could then be hopefully translated into a tool that marketing and market research analysts could then use. 
           You can find the script files I used for this project <a href="https://github.com/scryvener/Cartographer">here</a>.
         </p>
 			</div>
@@ -77,8 +77,8 @@
           Influence is a fickle and weird thing to measure.
           Many methods are very manual, such as sending out surveys to a representative sample.
           In social media contexts, raw numbers are often used as a substitute, the more followers you have, the more influence you have.
-          However, that ran anti-thetical to what I wanted to build.
-          I wanted granualar analysis, not just reducing people down to a metric.
+          However, that ran against what I wanted to build.
+          I wanted granular analysis, not just reducing people down to a metric.
           Besides, my initial research into this already revealed that something like this existed, the h-index.
           The h-index can be understood as a measure of how many citations an author received relative to how many articles they published.
           And it was here that an idea struck me.
@@ -97,16 +97,16 @@
         <h2 id=sec2 alt="">Pulling Data</h2>
 				<p>
           The first major effort was pulling data to construct the relational database. My initial thought was to try pulling data from google scholar, since they looked like to had the most comprehensive listing 
-          of publications. But here I ran into my first problem, namely that the data I was looking for wasn't always available. Google Scholar had no available api, so I had to resort to writing a selenium webdriver script to scrape the website. 
+          of publications. But here I ran into my first problem, namely that the data I was looking for wasn't always available. Google Scholar had no available API, so I had to resort to writing a Selenium Webdriver script to scrape the website. 
           But google was very aggressive in weeding out scraping scripts. I tried several solutions to evade this, including having the script randomly perform actions, and routing the connection through TOR, but I ultimately concluded that it wasn't worth the time and effort I was putting in. 
           I was spending more time fighting Google then actually building the database. I decided to cut my losses and went looking for other solutions instead.
           I published the script <a href="https://github.com/scryvener/Google-Scholar-Scraper">here</a> for records purposes. 
         </p>
         <p>
-           This turned out to be the correct decision, as more searching revelaed the presence of data sources WITH API's, namely Pubmed and Crossref. Both had api's that importantly not only listed an article's references, but also citations from other articles. 
-           I was able to use those api's to write a script to pull articles. I initially structured to script to pull recursively from a single "seed" article, that is it would pull the seed's citations and references, and then use those pull their own citations and references, and so on and so forth.
+           This turned out to be the correct decision, as more searching revealed the presence of data sources WITH API's, namely <a href="https://www.ncbi.nlm.nih.gov/home/develop/api/">Pubmed</a> and <a href="https://www.crossref.org/documentation/retrieve-metadata/rest-api/">Crossref</a>. Both had api's that importantly not only listed an article's references, but also citations from other articles. 
+           I was able to use those API's to write a script to pull articles. I initially structured to script to pull recursively from a single "seed" article, that is it would pull the seed's citations and references, and then use those pull their own citations and references, and so on and so forth.
            However, I quickly discovered it was a lot easier to just use Pubmed's term search function simulating a keyword search to pull an entire list first and go from there. To start out, I used the keyword "Urology", since I was already familiar with the space from work and could use that as sort of a validation that I was pulling 
-           relevant articles. I quickly discovered that within one recursion, I was already starting to get non-urology related articles, and the number of articles was also starting to inrease exponentially, so I cut if off at 1 (confirm) recursion. The final article count pulled for the initial test case was 
+           relevant articles. I quickly discovered that within one recursion, I was already starting to get non-urology related articles, and the number of articles was also starting to increase exponentially, so I cut if off. The final article count pulled for the initial test case was 
            approximately 100k.
         </p>
 
@@ -124,8 +124,8 @@
 				<p>
           For creating the graph relation database, I went with using neo4j. 
           Neo4j was my first introduction to graph relation databases, and rather than try and re-learn an entirely different system, I decided to go with what I was familiar with.
-          Setup of the database wasquite simple, with nodes created for authors, publications, and journals.
-          I also made the decision to use separate nodes for associated keywords and the publication type, rather then just implementing it as a property of the node. 
+          Setup of the database was quite simple, with nodes created for authors, publications, and journals.
+          I also made the decision to use separate nodes for associated keywords and the publication type, rather than just implementing it as a property of the node. 
           
         </p>
         <p>
@@ -137,9 +137,9 @@
           You can see some of the cypher queries I wrote <a href="https://github.com/scryvener/Cartographer/blob/main/Cypher/PubmedCartographer%20neo4j.py">here</a>.
         </p>
         <p>
-          Since I had intended this as a prototype run, I implemented certain prepcoressing/data cleaning steps but had to skip others. 
+          Since I had intended this as a prototype run, I implemented certain preprocessing/data cleaning steps but had to skip others. 
           This ultimately came down to a prioritization effort. Some were relatively easy to do, some required a lot more effort. 
-          There was also differing importance. Some would be vital to this prototype, others were more nice to have. 
+          There was also differing importance. Some would be vital to this prototype, others were more nice-to-have. 
 
           The main cleaning step I did was to combine author names together where I could.
           Author names were not always presented in the same format. 
@@ -149,14 +149,14 @@
           Some further research showed that this is apparently a <a href="https://en.wikipedia.org/wiki/Author_name_disambiguation">major issue</a>, with some major research effort using ML put into it.
           I made a note to myself to come back to this later.
 
-          Date disambiguation was relatively straightforward to do, but I purposefully deprioritized. 
-          While it was relatively simple, there was a wide variety of date formats used, and some more precise, going down to the exact day rather then month. 
-          Looking at graph changes over a time series was something that I was interested in, but I thought that it was important to get the basic graph db structure implemented to test it out.
+          Date disambiguation was relatively straightforward to do, but I purposefully deprioritized it for the prototype effort. 
+          While it was relatively simple, there was a wide variety of date formats used, and some more precise than others, going down to the exact day rather than month. 
+          Looking at graph changes over a time series was something that I was interested in, but I thought that it was more important to get the basic graph db structure implemented to test it out.
           Time series analysis could be done later. 
 
           The final piece of cleaning that could have been done was address/institution disambiguation. 
-          I had originally inteded to use this to allow association of influence with certain hospitals, universities, etc. 
-          However this turned out to be far more difficult than anticipated.
+          I had originally intended to use this to allow association of influence with certain hospitals, universities, etc. 
+          However, this turned out to be far more difficult than anticipated.
           Just like authors and dates, there was a wide variety of formats and precision that were detailed.
           In one case, I had an article with three authors, and despite all belonging to the same institution, listed the institution three different ways. 
           This became nightmare to disambiguate. 
@@ -177,15 +177,15 @@
           
           After the database prototype was set up, next came time to run analysis and use the database.
           The first effort consisted of running PageRank on the graph.
-          The second consisted of creating pre-set cypher queries that could be used, ie find all articles by a single author related to a certain topic.
-          In programming terms, this was relatively straightforward, mainly consited of creating different queries.
+          The second consisted of creating pre-set cypher queries that could be used, i.e. find all articles by a single author related to a certain topic.
+          In programming terms, this was relatively straightforward, mainly consisting of creating different queries.
           
         </p>
         <p>
           To better simulate a use case, I approached from the perspective of an analyst tasked with putting together a profile of an author.
-          I purposfully chose one that we already worked with at my day job, since this would allow me to validate my findings.
+          I purposely chose one that we already worked with at my day job, since this would allow me to validate my findings.
 
-          Here the graph allowed for some interesting analysis that would be alot more difficult to do otherwise.
+          Here the graph allowed for some interesting analysis that would be a lot more difficult to do otherwise.
           The first was looking at the collaboration graph.
           This let me see not only just who collaborated with who, but also allowed for identifying communities around the author.
           The graph also allowed me to more easily analyze influence: who an author cited, who cited them, and on what topics.   
@@ -234,9 +234,9 @@
         <p>
           To address the first limitation, I would expand the articles used beyond just scientific publications.
           This would be the most straightforward improvement, though the most technically challenging, particularly from a data collection standpoint.
-          A dedicated web crawler would have to be created, that constantly looked for new articles, reports, etc in a desired topic space, which would then feed into the database.
+          A dedicated web crawler would have to be created, that constantly looked for new articles, reports, etc. in a desired topic space, which would then feed into the database.
           Citation links would be replaced instead by topic references.
-          Analysis would focus less on authors, and more on topics, ie which terms are showing up more. 
+          Analysis would focus less on authors, and more on topics, i.e. which terms are showing up more. 
         </p>
         <p>
           The other improvements would be from an analytical perspective, which would help address the two limitations.

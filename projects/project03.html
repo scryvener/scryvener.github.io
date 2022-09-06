@@ -59,7 +59,7 @@
 			<div class="">
 				<h1>Market Research</h1>
 				<hr>
-				<p>Despite working as an engineer as my day job, I have always have an interest in Market Research. I think a lot of it drives from my desire to figure out how things tick.
+				<p>Despite working as an engineer as my day job, I have always had an interest in Market Research. I think a lot of it drives from my desire to figure out how things tick.
           Just like how taking apart a machine can help you figure out the mechanics, I liked looking at data to see what it told me about the world. Here you can see my various adventures in doing 
           Market research on my own. 
         
@@ -71,9 +71,9 @@
     <div class="row mt">	
 			<div>
         <h2 id=sec1 alt="">The initial foray - 2019 </h2>
-        <h3>Benign Prostatic Hyperplasia(BPH) Market</h3>
+        <h3>Benign Prostatic Hyperplasia (BPH) Market</h3>
 				<p>
-          My first foray into market research came as a bit of an accident. You can read the background here (link back to work section).
+          My first foray into market research came as a bit of an accident.
           The Marketing department at my workplace was looking into developing market models, and needed better data on things like procedure volume.
           That work seemed interesting enough, so I thought I would take a stab at it in my own time. 
           In addition to finding data sources, I also wanted to take the time to do my own analyses of the market.
@@ -82,16 +82,16 @@
         <p>
           For data sources, the first thing I thought of was an article written about how data from Medicaid was used to compare drug prices between US states.
           This led me to the first and main data source. 
-          One way to tell the procedure volume is to look at reimbursement data, ie what insurance companies are paying for.
+          One way to tell the procedure volume is to look at reimbursement data, i.e. what insurance is paying for.
           Private insurers closely guard their data, but <a href="https://data.cms.gov/provider-summary-by-type-of-service/medicare-physician-other-practitioners/medicare-physician-other-practitioners-by-provider-and-service">Medicare CMS</a> publishes yearly reimbursement data, on a time delay.
           Medicare covers mainly older Americans, age 65+, so this wouldn't be a perfect representation of the entire US market, it would skew towards what the older population needed.
           However, the disease I was primarily focused on, BPH, primarily affects older men, so I felt that this was not as big of a limitation, and this would make a suitable source for my needs.
           I also found three other public sources of data that I could combine to create a more detailed market picture.
           <ul>
             <li>The first was <a href="https://www.cms.gov/openpayments">Open Payments</a>.
-              Due to US Transparency laws, physicians are required to report on payments they receive from companies, and this datails publicly available.
-              I figured I could comb through this to find physicians that were very important to companies, ie they were reimbursed heavily, had lots of travel expenses, royalty payments, etc.</li>
-            <li>The next source was <a href="https://clinicaltrials.gov/">Clinical Trials.gov</a>, a US goverment database of clinical trials, that per regulations, companies must list on. This would give me insight into a companies clinical activities</li>
+              Due to US Transparency laws, physicians are required to report on payments they receive from companies, and these details are publicly available.
+              I figured I could comb through this to find physicians that were very important to companies, i.e. they were reimbursed heavily, had lots of travel expenses, royalty payments, etc.</li>
+            <li>The next source was <a href="https://clinicaltrials.gov/">Clinical Trials.gov</a>, a US government database of clinical trials, that per regulations, companies must list on. This would give me insight into a companies clinical activities</li>
             <li>Finally, I also realized I could use <a href="https://trends.google.com/trends/?geo=US">Google search trends</a> as well. This would serve as a proxy for patient interest in the company.</li>
           </ul>
         </p>
@@ -121,8 +121,8 @@
           For both tableau and plotly, I only really scratched the surface in terms of what they could do.
           The most I did was use it to make some basic graphs.
           For example, I would have liked to figure out a better way to graph the payments composition over time and geography. 
-          One of the ideas I had was that you could correlate travel payments of physicians with other events, ie you could correlate a burst of travel payments to a certain city as them being paid to go to a conference.
-          You could also look and see if there were "anomalous" payments, such as as travel to an out-of-the way city.
+          One of the ideas I had was that you could correlate travel payments of physicians with other events, i.e. you could correlate a burst of travel payments to a certain city as them being paid to go to a conference.
+          You could also look and see if there were "anomalous" payments, such as travel to an out-of-the way city.
           These were all ideas that I wanted to explore, and I think a better visualization could have helped bring that idea to life better.
         
           On the data side of things, one of the biggest issues that I would have liked to improve on was correlating physicians between Open Payments and the Medicare Reimbursement. 
@@ -135,7 +135,7 @@
           One of the biggest and most interesting to me was regarding the Open Payments Data.
           Each payment entry allows the submitter to list what product/products the payment is in relation to.
           I figured that one could use this to do some pretty interesting analysis, in the "follow the money" vein.
-          For example, I had a hypothesis that you could use this to back calculate a companies marketing priorities, and therefore gain intelligence on a companies business strategy.
+          For example, I had a hypothesis that you could use this to back calculate a company's marketing priorities, and therefore gain intelligence on a company's business strategy.
           If I ever return to this, this would definitely be something I would want to look into.
           I wrote up a project proposal for this before, which you can see <a href="/assets/pdf/Project Proposal-PaymentFlow.pdf">here</a>.
  
@@ -150,10 +150,10 @@
         <h2 id=sec2 alt="">Endovine - 2021</h2>
         <h3>Gastroenterology Market Size Research</h3>
 				<p>
-          Like many ideas, Endovine came to me after watching a youtube video on <a href="https://www.youtube.com/watch?v=qevIIQHrJZg&t=205s">soft robotics and vine robots</a>.
+          Like many ideas, Endovine came to me after watching a YouTube video on <a href="https://www.youtube.com/watch?v=qevIIQHrJZg&t=205s">soft robotics and vine robots</a>.
           I struck upon the idea of potentially using them as a replacement for endoscopes and cystoscopes (hence the EndoVine name), taking advantage of their soft nature to reduce the overall risks to the patients.
-          After talking with some of my mentors, they advised me that before embarking on any techncial development, I should go about looking for dealbreakers.
-          One of the main focuses of thie effort was in the potential Market Size. 
+          After talking with some of my mentors, they advised me that before embarking on any technical development, I should go about looking for dealbreakers.
+          One of the main focuses of this effort was in the potential Market Size estimate. 
           This would be an important part of any potential pitch I would do for investors, so it was vital that I dig in and create an accurate picture.
           If this was an officially backed effort, I could have just purchased a market report from a reputable market research firm, and interviewed some doctors.
           But this was an independent project, so I had to do the research myself. 
@@ -174,13 +174,13 @@
         </p>
         <p>
           I am quite proud of the data sleuthing I had to do for this report, but there were still areas of improvement that I thought could be done.
-          After reviewing all the different sources, one that I didn't tap into alot was looking at conferences, particularly relevant GI ones. 
+          After reviewing all the different sources, one that I didn't tap into a lot was looking at conferences, particularly relevant GI ones. 
           For example, I never looked into professional societies like the <a href="https://gi.org/">American College of Gastroenterology</a>.
           Looking at what they were publishing would have given me a good idea of both professional interest and opinions in the space, and would be a valuable addition to the report.
           After all, if I had developed this into a medical device, they would have been the end-users.
           It would have also helped with what I believed to be the second improvement I could have made.
           The second improvement I felt could have been made was on the non-data side of things.
-          I believe that one or two interviews with physicians would have helped greatly to flesh out the the report and validate some the findings.
+          I believe that one or two interviews with physicians would have helped greatly to flesh out the report and validate some the findings.
           One of the issues with approaching things from a data only standpoint is that there are a lot of subtle factors and nuance that often get lost when a situation is simplified down to numbers. 
           Interviews with actual physicians in the field would have been greatly helpful in this regard. 
           I didn't put much effort into this front when doing this report. 
