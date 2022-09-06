@@ -67,9 +67,9 @@
           Since this started as a side project with friends, we didn't technically have official job titles.
           The closest descriptor of my work would probably be CTO, Chief Technology Officer. 
           I was responsible for all of our technical projects: building tools that improved the live-stream and competitive experience, 
-          tournament analytics, SEO efforts, and technical collaborations. But since there was only ever five people, I wore a lot more hats then just purely tech development, from stream moderating to creating video clips for social media posts.</P>
+          tournament analytics, SEO efforts, and technical collaborations. But since there was only ever five people, I wore a lot more hats than just purely tech development, from stream moderating to creating video clips for social media posts.</P>
         <p>
-          The title was fancy, but that wasn't really the point. The proudest moments were the messages of thanks from competitors and the viewers.
+          Looking back, the proudest moments were the messages of thanks from competitors and the viewers.
           The best memories were from working with my friends. Getting to combine my passion for analytics with my hobby of video games was a dream come true. 
           I had a lot of fun working on this, even if issues with the game outside our control led to its early end, and many projects unfinished.</p>
         <p>
@@ -102,25 +102,25 @@
           This was my first time coding in html/css/javascript. Minor problem, I know. I was essentially crash coursing my way through this, learning the language(s) as I built it.
           <br>
           <b>Second:</b>
-          The game developer had no public api available, and Twitch required all files, 
+          The game developer had no public API available, and Twitch required all files, 
           including media, to be submitted as part of the publishing review process, which had to be done days ahead of time.
-          Which then ran into the problem that the competitors themseles wouldn't finalize their in-game stats and info until the day of.
-          Normally, you could query the api to pull a competitors real time, in-game data, and all this wouldn't be a problem. But there wasn't, and so I had to think of a way to feed the extension information.
-          My solution was to create essentially our own psuedo-api, taking the form of an xml page hosted on github that the extension could query to know what data to display. 
+          Which then ran into the problem that the competitors themselves wouldn't finalize their in-game stats and info until the day of.
+          Normally, you could query the API to pull a competitors real time, in-game data, and all this wouldn't be a problem. But there wasn't, and so I had to think of a way to feed the extension information.
+          My solution was to create essentially our own psuedo-API, taking the form of an xml page hosted on github that the extension could query to know what data to display. 
           <br>
           <b>Third:</b>
-          Not having an api meant that I also had to have all of the potential assets needed on hand. I got partially lucky here, since the image assets and descriptions were readily scrapable,
+          Not having an API meant that I also had to have all of the potential assets needed on hand. I got partially lucky here, since the image assets and descriptions were readily scrapable,
           and I was able to do so with a basic <a href="https://pypi.org/project/requests/">requests</a> script. You can see the script <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/LostArkDetailScrape.py">here</a> My luck didn't last throughout though, particularly in regards to the skill descriptions. For whatever
-          reason, certain descriptions were either incomplete, or featured errors, ie a skill was listed as doing 0 damage. I tried to cross reference between sites, but this wasn't foolproof, since the information could be sometimes universally missing,
-          or two sites would have conflicting information. Ultimately, the best and most consistent information I found was on the Korean sites, particulaly Inven, which made sense since the game was first released in South Korea.   
+          reason, certain descriptions were either incomplete, or featured errors, i.e. a skill was listed as doing 0 damage. I tried to cross reference between sites, but this wasn't foolproof, since the information could be sometimes universally missing,
+          or two sites would have conflicting information. Ultimately, the best and most consistent information I found was on the Korean sites, particularly Inven, which made sense since the game was first released in South Korea.   
           
         </p>
-        <p>Despite the challenges, I was able to succesfully code a working extension with all of our desired functionality in about a month and a half.
+        <p>Despite the challenges, I was able to successfully code a working extension with all of our desired functionality in about a month and a half.
            The extension was successfully used for our tournament, improving the viewing experience of the over 3k people that watched.  </p>
 
         <p>
-          It wasn't all perfect though, I made a lot of mistakes and learned alot as I built my way through this. The most important lesson was the value of testing. 
-          Certain bugs and compatibility issues could have been detected earlier, a lot of work could have been saved had I tested properly. The bug that stood out was related to displaying a certain number of skills.
+          It wasn't all perfect though, I made a lot of mistakes and learned a lot as I built my way through this. The most important lesson was the value of testing. 
+          Certain bugs and compatibility issues could have been detected earlier; a lot of work could have been saved had I tested properly. The bug that stood out was related to displaying a certain number of skills.
           Due to how I wrote the js, essentially an overflow would happen after the skill count went to 10 or more, and skills wouldn't display properly. I was furious with myself when I found the bug, the day before the tournament, and all files 
           essentially frozen. "Test Early, Test Often, and Test Accurately" is now the maxim I repeat to myself. 
         </p>
@@ -128,7 +128,7 @@
         <p>I thought it would be cool for other to be able to play with the extension, particularly since it would only ever be available during a stream. The nice thing is that Twitch Extensions are built like webpages, so I can insert an iframe here to demo it.
           Sizing is a bit small, since it was designed for a full screen, but you should be able to see the full functionality. 
           The extension was designed to be draggable, so that viewers could place it wherever worked best for them in the window, and a show/hide functionality so they could hide it when they wanted to focus on the match.
-          You can check out the code on github <a href="https://github.com/scryvener/SAGE_Tech/tree/main/VideoOverlay">here</a>.
+          You can check out the code on GitHub <a href="https://github.com/scryvener/SAGE_Tech/tree/main/VideoOverlay">here</a>.
         </p>
       </div>
 
@@ -143,11 +143,11 @@
         
         <h2 id=sec2>Search Engine Optimization</h2>
 				<p>
-          One of my other responsibilities was to research and explore ways of driving traffic to our content, primarily our website and Youtube videos. We were after all, essentially a content creation company, and attention would be how we could eventually monetize.
+          One of my other responsibilities was to research and explore ways of driving traffic to our content, primarily our website and YouTube videos. We were after all, essentially a content creation company, and attention would be how we could eventually monetize.
           I learned a lot about the importance of backlinking, using tags, and other tricks of the trade in order to try and drive more traffic to our content. 
         </p>
         <p>
-           Youtube wise my effort was on researching hash tags and video tags, adding channel descriptions and links, and strategizing on how to promote the videos through our other social media, like Twitter.
+          YouTube wise my effort was on researching hash tags and video tags, adding channel descriptions and links, and strategizing on how to promote the videos through our other social media, like Twitter.
            The video front was rough, we started our SEO and promotion efforts late, after the initial hype period of release, so we got hurt with the drop in attention as the hype faded. 
         </p>
         <p>In terms of search, my efforts mainly focused on curating the titles, descriptions, and search appearances of our web pages, and thinking of different ways
@@ -165,14 +165,14 @@
 
       <div>
         <p>
-          Unfortunately though, this is where I learned another important lesson. SEO works best when you have the potential audience in the first place. Put another way,
-          It doesn't matter if you're rank 1 on the search query, if only a few people search for that query. Your traffic won't improve dramatically. And that is 
+          Unfortunately, this is where I learned another important lesson. SEO works best when you have the potential audience in the first place. Put another way,
+          it doesn't matter if you're rank 1 on the search query, if only a few people search for that query. Your traffic won't improve dramatically. And that is 
           ultimately the problem we ran into. The competitive PVP aspects of the game just weren't that popular. It had a dedicated fan base that loved what we did, but it was a tiny fraction
           of the overall game population, and with very little support from the game developer themselves. 
-          So in the end, i could SEO all I wanted, but it wasn't solving the core issue of how to bring in fresh blood to the competitive scene.
+          In the end, I could SEO all I wanted, but it wasn't solving the core issue of how to bring in fresh blood to the competitive scene.
         </p>
         <p>
-          My main takeaway is that SEO is just one tool in the Marketing playbook. Like it's name says, it optimizes. It can help amplify interest, but it can't create interest out of nowhere. You still have to put in the legwork and build a customer base.
+          My main takeaway is that SEO is just one tool in the Marketing playbook. Like its name says, it optimizes. It can help amplify interest, but it can't create interest out of nowhere. You still have to put in the legwork and build a customer base.
         </p>
 
       </div>
@@ -180,7 +180,7 @@
     <hr>
     <div class="row mt">
 
-      <h2 id=sec3>Tournmant Analytics and Companion App</h2>
+      <h2 id=sec3>Tournament Analytics and Companion App</h2>
       <p>
         One of the initial draws for me to get involved at SAGE was the opportunity to perform analytics work on tournament data. Our plans were for a league-like tournament series, which would allow us to collect
         quite a lot of tournament data that could be analyzed. In addition, there were plans to create a companion app in the same vein as fitness trackers, that would be used by players to better track, analyze, and 
@@ -197,7 +197,7 @@
         In addition to the project planning work, I also began work prototyping out some of the potential technology we would need. We settled on using an image recognition system to pull data from the post-match scoreboard that would appear after every game.
       </p>
       <p>
-        Unfortunately, about the time this was finished is also when we began to suffer from the effects of the hype dropoff mentioned in the <a href="#sec2">SEO</a> section. The dropoff in participants was particularly a problem, since 
+        Unfortunately, about the time this was finished is also when we began to suffer from the effects of the hype drop-off mentioned in the <a href="#sec2">SEO</a> section. The drop-off in participants was particularly a problem, since 
         without them we wouldn't be able to even hold a tournament. This was an existential problem, since our entire operation was based on holding tournaments. As such, work on the companion app was put on hold so we could
         focus all of our efforts on boosting participation. 
       </p>
@@ -227,9 +227,9 @@
         but the second required some experimentation with filters in order to get optimal and consistent recognition of the text. The scoreboard's gradient like background didn't help in this regard, but thresholding was able to take care of it sufficiently.
         <br>
         <b>Second:</b>
-        The second challenge was text detection on the image itself. That is, Tessearct would often not consistently find all the text on a given image, would find a lot of miscellaneous artifacts that weren't actually text, and would not output
-        the detected text in a consistent format. Some research on Tessearct's limitations confirmed this, since it apparently was designed to work best with things like scanned book pages. The solution to this was to manually
-        define locations on the image for Tessearct to search for. The clips could then be pre-processed like above, and I could then control which values got outputed where. This created a further challenge though, since manually specifying where on the page to detect text 
+        The second challenge was text detection on the image itself. That is, Tesseract would often not consistently find all the text on a given image, would find a lot of miscellaneous artifacts that weren't actually text, and would not output
+        the detected text in a consistent format. Some research on Tesseract's limitations confirmed this, since it apparently was designed to work best with things like scanned book pages. The solution to this was to manually
+        define locations on the image for Tesseract to search for. The clips could then be pre-processed like above, and I could then control which values got outputed where. This created a further challenge though, since manually specifying where on the page to detect text 
         made the system very brittle. All it would take was somebody playing the game at a different aspect ratio, or resolution to mess up the recognition. This wasn't an issue for scoreboard detection for our tournaments, since I could control the screenshot outputs. However,
         when I was planning to use this for our companion app, I had to implement additional pre-processing, such as a function that would check and crop out black bars if the player was playing with a forced aspect ratio.
         <br>
@@ -255,11 +255,11 @@
         a new class came out. 
 
         The second problem, and the major headache, was aspect ratios and resolutions. The base dataset I got from my friend was all in one ratio, and all at one resolution. However, first, not everybody played with the same resolution,
-        so the sample images would have require resizing to accomodate a set sample width and height. The issue with aspect ratios was also thorny. The meta for PvP was to force a 21:9 widescreen ratio, since that improved in-game Field of View, but that meant for many players
+        so the sample images would have require resizing to accommodate a set sample width and height. The issue with aspect ratios was also thorny. The meta for PvP was to force a 21:9 widescreen ratio, since that improved in-game Field of View, but that meant for many players
         they were playing with black bars on the screen. Resizing from there would distort the class icon images, throwing off the classifier. I found this out the hard way when I tried to use my initially trained model on our first tournament data captures. It just completely failed,
         often identifying nothing correctly, or only by random chance. 
         
-        Unfortunately here, the issue of time popped up. There was pressure to get analytics out quickly, and so as an interim solution, I went ahead and just did the data entry for class icons by hand. It wasn't my first choice,
+        Unfortunately, the issue of time popped up. There was pressure to get analytics out quickly, and so as an interim solution, I went ahead and just did the data entry for class icons by hand. It wasn't my first choice,
         but given the need to balance how much potential time it would have taken to debug and re-train the model, versus getting analytical product out quickly, it was the best solution I had at the time. 
       </p>
       
@@ -273,13 +273,13 @@
       <p>
         Analytical Product/link in how we could still potentially use the stuff we developed
 
-        After succesfully extracting data from the scoreboards, whether by script or by hand, I was able to perform analysis on our tournaments data. I primarily leveraged the <a href="https://pandas.pydata.org/">pandas</a> library for this,
+        After successfully extracting data from the scoreboards, whether by script or by hand, I was able to perform analysis on our tournaments data. I primarily leveraged the <a href="https://pandas.pydata.org/">pandas</a> library for this,
         and you can see the main script I used to group and process the data <a href="https://github.com/scryvener/SAGE_Tech/blob/main/Scripts/QualifierStatsCalc.py">here</a>. Graphics wise, I mainly stuck with just using excel.
         While using something like matplotlib was a possibility, I prioritized speed at this point more than customization. 
       </p>
 
       <p>
-        The main points of focus were on team compositions, performance of each of the classes, and also player performances. Player performance was a relatively straightforward task, ie look for the player with the best 
+        The main points of focus were on team compositions, performance of each of the classes, and also player performances. Player performance was a relatively straightforward task, i.e. look for the player with the best 
         damage stats, the best Kill Death Assist Ratio, etc. For team composition and class picks I could play a bit more with visualizations. You can see some of the example graphs that I generated below.
 
         <div class="row centered">	
@@ -307,7 +307,7 @@
       <h2 id=sec4>Competitor Experience Improvement</h2>
 
       <p>
-        Not all the work I did were big projects. Sometimes, some of the more impactful things you can work on are also the simplest. That was the case here, where I leveraged some basic api's and existing, common
+        Not all the work I did were big projects. Sometimes, some of the more impactful things you can work on are also the simplest. That was the case here, where I leveraged some basic API's and existing, common
         tech in order to improve the experience for those competing in the tournaments we hosted. It's hard to quantify how "smooth" a tournament is, but I can leave off with we received nothing but compliments from 
         competitors for how we ran things, and how we were told multiple times we were the best run tournament scene.
       </p>
@@ -315,7 +315,7 @@
       <h3>Tournament Communications</h3>
       <p>
         We did a lot of scouting of how other Tournament Organizers ran their competitions, so we could hopefully both learn from their mistakes, and adopt their good ideas.
-        One of the most common issues we saw was the difficulty in coordinating and ensuring communications between all the competitors. Just like us, most  used third party organization apps like Start.gg,
+        One of the most common issues we saw was the difficulty in coordinating and ensuring communications between all the competitors. Just like us, most  used third-party organization apps like Start.gg,
         but there was no method to easily translate out of game contact information into in-game character names. The end result was usually clogged discord channels filled with people trying to ping one another.
       </p>
       <p>
@@ -345,17 +345,17 @@
     <hr>
     <div class="row mt">
 
-        <h2 id=sec5>Self Made Prizes</h2>
+        <h2 id=sec5>Self-Made Prizes</h2>
 
         <p>My excuse to use get to play with lasers. One of the major expenses we ran into was the cost of prize money, and this was a challenge not only financially but also from a marketing perspective.
           After all, if every tournament is offering money, it becomes hard to stand out unless you drop huge sums. We didn't huge amounts of funds, so effort was put into exploring potential alternatives that we could offer as prizes.  
           Based on my experience with laser work at my actual job at <a href="/work/work01.html">Prodeon</a>, I struck upon the idea of getting laser etches made based off of the game assets. Some quick searching of laser etching services confirmed 
-          that this would solve both of our issues. Costs from laser etching were primarily in setup, so we could be pretty generouse with prizing without breaking the bank. As a rough calculation, using the Velganos etch below as 
-          an assumption, we could award every member of the first place team for each region we held tournaments in, a plaque like it, would only cost around $200. This was over 80% cheaper compared to our original cash prizing structure, and 
+          that this would solve both of our issues. Costs from laser etching were primarily in setup, so we could be pretty generous with prizing without breaking the bank. As a rough calculation, using the Velganos etch below as 
+          an assumption, we could award every member of the first-place team for each region we held tournaments in, a plaque like it, would only cost around $200. This was over 80% cheaper compared to our original cash prize structure, and 
           would put us on the map as the tournament that had the most unique prizes. A win on both fronts.
         </p>
 
-        <p>I ended up going with a service named <a href="https://www.ponoko.com/">Ponoko</a>, who were awesome to work with. They helped guide me through alot of the initial issues I faced in preparing the designs for etching, which was vital since I was a complete 
+        <p>I ended up going with a service named <a href="https://www.ponoko.com/">Ponoko</a>, who were awesome to work with. They helped guide me through a lot of the initial issues I faced in preparing the designs for etching, which was vital since I was a complete 
           novice when it game to vector image editing. The general workflow consisted of me importing a game screenshot into <a href="https://inkscape.org/">Inkscape</a>, and then experimenting with the trace bitmap function until I could get a reasonable vector image. 
           I would then clean up the vector, getting rid of things like small details below the feature size limit, overlapping paths, and in general trying to simplify complicated curves without losing the main 
           artistic elements. This was where the majority of the work was. After the vector was completed, I could submit it through Ponoko's site and receive the part in a few days. I showcase some of the prototype etches I worked on below:
