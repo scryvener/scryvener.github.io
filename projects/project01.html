@@ -98,12 +98,12 @@
 				<p>
           The first major effort was pulling data to construct the relational database. My initial thought was to try pulling data from google scholar, since they looked like to had the most comprehensive listing 
           of publications. But here I ran into my first problem, namely that the data I was looking for wasn't always available. Google Scholar had no available API, so I had to resort to writing a Selenium Webdriver script to scrape the website. 
-          But google was very aggressive in weeding out scraping scripts. I tried several solutions to evade this, including having the script randomly perform actions, and routing the connection through TOR, but I ultimately concluded that it wasn't worth the time and effort I was putting in. 
+          But Google was very aggressive in weeding out scraping scripts. I tried several solutions to evade this, including having the script randomly perform actions, and routing the connection through TOR, but I ultimately concluded that it wasn't worth the time and effort I was putting in. 
           I was spending more time fighting Google then actually building the database. I decided to cut my losses and went looking for other solutions instead.
           I published the script <a href="https://github.com/scryvener/Google-Scholar-Scraper">here</a> for records purposes. 
         </p>
         <p>
-           This turned out to be the correct decision, as more searching revealed the presence of data sources WITH API's, namely <a href="https://www.ncbi.nlm.nih.gov/home/develop/api/">Pubmed</a> and <a href="https://www.crossref.org/documentation/retrieve-metadata/rest-api/">Crossref</a>. Both had api's that importantly not only listed an article's references, but also citations from other articles. 
+           This turned out to be the correct decision, as more searching revealed the presence of data sources with API's, namely <a href="https://www.ncbi.nlm.nih.gov/home/develop/api/">Pubmed</a> and <a href="https://www.crossref.org/documentation/retrieve-metadata/rest-api/">Crossref</a>. Both had API's that importantly not only listed an article's references, but also citations from other articles. 
            I was able to use those API's to write a script to pull articles. I initially structured to script to pull recursively from a single "seed" article, that is it would pull the seed's citations and references, and then use those pull their own citations and references, and so on and so forth.
            However, I quickly discovered it was a lot easier to just use Pubmed's term search function simulating a keyword search to pull an entire list first and go from there. To start out, I used the keyword "Urology", since I was already familiar with the space from work and could use that as sort of a validation that I was pulling 
            relevant articles. I quickly discovered that within one recursion, I was already starting to get non-urology related articles, and the number of articles was also starting to increase exponentially, so I cut if off. The final article count pulled for the initial test case was 
@@ -122,35 +122,37 @@
 			<div>
         <h2 id=sec3 alt="">Creating the Graph Database</h2>
 				<p>
-          For creating the graph relation database, I went with using neo4j. 
+          For creating the graph relation database, I went with using Neo4j. 
           Neo4j was my first introduction to graph relation databases, and rather than try and re-learn an entirely different system, I decided to go with what I was familiar with.
           Setup of the database was quite simple, with nodes created for authors, publications, and journals.
-          I also made the decision to use separate nodes for associated keywords and the publication type, rather than just implementing it as a property of the node. 
+          I also made the decision to use separate nodes for associated keywords and the publication type, rather than just implementing it as a property of the node.
+          Citations would be represented by a directional relation between the cited article and the citing article. 
+          I explored certain methods of weighting the citation, but ultimately decided to keep it simple for now.
           
         </p>
         <p>
-          One of those improvements was to drastically reduce the time needed to insert new nodes into the db. 
-          The first improvement was to implement indexing on the database. 
-          The next was to simplify the insertion process. 
-          I had previously written it as an insertion script, but looking through the neo4j documentation, it seemed like at a large enough scale, it was much easier to just use the Load CSV function.
+          Almost all of my Neo4j knowledge and general database knowledge is self-taught, so I often realize various improvements while I'm in the process of building, or realize that implementing certain features are vital to performance.
+          One of those features was to implement indexing on the unique keys in the database to dramatically speed up the process of creating relationships.
+          The other improvement was me discovering a better way to load in large amounts of data using the Load CSV command.
+          I had previously written it as an insertion script in Python, Load CSV allowed me to reduce that down to a few lines of Cypher.
           This reduced many lines of code down to a few lines of Cypher, and helped greatly simplify the process. 
           You can see some of the cypher queries I wrote <a href="https://github.com/scryvener/Cartographer/blob/main/Cypher/PubmedCartographer%20neo4j.py">here</a>.
         </p>
         <p>
-          Since I had intended this as a prototype run, I implemented certain preprocessing/data cleaning steps but had to skip others. 
+          Since I had intended this as a prototype run, I implemented certain preprocessing/data cleaning steps but skipped others in the interest of time. 
           This ultimately came down to a prioritization effort. Some were relatively easy to do, some required a lot more effort. 
           There was also differing importance. Some would be vital to this prototype, others were more nice-to-have. 
 
-          The main cleaning step I did was to combine author names together where I could.
-          Author names were not always presented in the same format. 
-          Some used Full First name, last name, some had middle initials, some abbreviated the first name, etc. 
+          The main cleaning step I did was to combine author names together where I could, ie combining "John H Harvey" with "John Harvey"
+          This was challenging enough, because author names were not always presented in the same format. 
+          Some used full first name, last name, some had middle initials, some abbreviated the first name, etc. 
           I implemented the most basic clean, combining if their first and last names matched.
-          This took care of most of authors, but especially for those with abbreviated first names, which would require a more detailed disambiguation effort, I skipped for now. 
+          This took care of most of authors, but for those with abbreviated first names, which would require a more detailed disambiguation effort, I skipped for now. 
           Some further research showed that this is apparently a <a href="https://en.wikipedia.org/wiki/Author_name_disambiguation">major issue</a>, with some major research effort using ML put into it.
           I made a note to myself to come back to this later.
 
           Date disambiguation was relatively straightforward to do, but I purposefully deprioritized it for the prototype effort. 
-          While it was relatively simple, there was a wide variety of date formats used, and some more precise than others, going down to the exact day rather than month. 
+          While it was relatively simple, there was a wide variety of date formats used with varying levels of precision, some going down to the exact day, some just had a year. 
           Looking at graph changes over a time series was something that I was interested in, but I thought that it was more important to get the basic graph db structure implemented to test it out.
           Time series analysis could be done later. 
 
@@ -160,9 +162,9 @@
           Just like authors and dates, there was a wide variety of formats and precision that were detailed.
           In one case, I had an article with three authors, and despite all belonging to the same institution, listed the institution three different ways. 
           This became nightmare to disambiguate. 
-          I explored some different methods of doing so, including by looking at things like cosine similarity between the different listed, and combining them if they met a threshold, but there was no way that consistently worked for all edge cases.
+          I explored some different methods of doing so, including by looking at things like cosine similarity between the different listed institutions, and combining them if they met a threshold, but there was no method that consistently worked for all edge cases.
           Given the rickety state of this, I ultimately decided to skip it for the prototype phase. 
-          I really wanted to implement this though, and this is probably the first additional feature that I would want to go back and work on. 
+          I really wanted to implement this though, and this is probably one of the first additional feature that I would want to go back and work on. 
 
           </p>
         
@@ -179,6 +181,7 @@
           The first effort consisted of running PageRank on the graph.
           The second consisted of creating pre-set cypher queries that could be used, i.e. find all articles by a single author related to a certain topic.
           In programming terms, this was relatively straightforward, mainly consisting of creating different queries.
+          You can see the queries <a href="https://github.com/scryvener/Cartographer/blob/main/Cypher/PubmedCartographer%20neo4j.py">here</a>.
           
         </p>
         <p>
