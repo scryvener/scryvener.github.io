@@ -235,12 +235,14 @@
 
         <p>
           This same analysis can also be applied to get the “lay of the land” of a topic space.
-          Below shows the graph network structure where all publications related to a certain topic, and then their authors, were pulled.
-          Each author node in the illustration is then colored by scale to show how high their average published PageRank score is.
+          Below shows the graph network structure where all publications related to "Laser Therapy", and then their authors, were pulled.
+          Each author node is blue, while publication nodes are red.
+          Publication nodes are also color scaled relatively, with full red being highest PageRank weight, and lowest being a faint red(almost invisible in this case)
           <!-- cluster graph  -->
           <img style="max-width: 60vw;" class="centered" src="../assets/img/projects/Cartographer/Author_CoAuthor_Cluster.PNG">
-          You can easily see the large “collaboration community” in the center, representing authors that often work together.
-          Combining with the PageRank weights confirms that this cluster represents high-weight authors, so this group is the highly involved in publishing, highly cited and respected community of this topic.
+          You can easily see the large “collaboration community” in the top center, where a lot of representing authors that often work together.
+          You can also see through the color scaling that this cluster also encompasses almost all the dark red nodes indicating high PageRank weight.
+          An analyst could then conclude this group is the highly involved in publishing, highly cited, and highly respected community of this topic.
           If you wanted to develop a new product in this space, these would be the community you would want to get into. 
         </p>
 
@@ -252,6 +254,9 @@
 
         <p>
           Finally, I wanted to take advantage of the graph network to do path finding.
+          You can see an example of this below, with the graph instructed to find the shortest path between two authors.
+          <!-- cluster graph  -->
+          <img style="max-width: 60vw;" class="centered" src="../assets/img/projects/Cartographer/PathTrace.PNG">
           My first ideas would be to take advantage of path finding algorithms to find the shortest path between two authors.
           This could be used in a number of ways.
           One example could be if you had a “target” author you were trying to influence.
