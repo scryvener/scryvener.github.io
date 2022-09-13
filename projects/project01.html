@@ -177,13 +177,23 @@
         <h2 id=sec4 alt="">Analytics</h2>
 				<p>
           
-          After the database prototype was set up, next came time to run analysis and use the database.
-          The first effort consisted of running PageRank on the graph.
-          The second consisted of creating pre-set cypher queries that could be used, i.e. find all articles by a single author related to a certain topic.
-          In programming terms, this was relatively straightforward, mainly consisting of creating different queries.
-          You can see the queries <a href="https://github.com/scryvener/Cartographer/blob/main/Cypher/PubmedCartographer%20neo4j.py">here</a>.
-          
+          After the database prototype was set up, next came time to run analysis and use the database. 
+          This was probably the most exciting moment for me.
+          I had started this project partially because I was excited for the possibilities of analysis afforded by a graph database.
+          Now, with the prototype database set up, I could dive in.
         </p>
+
+        
+        <p>
+          In programming terms, this was relatively straightforward, mainly consisting of creating different queries in Cypher, the query language that Neo4j uses.
+          The first effort consisted of running PageRank on the graph, which could be done using the Graph Data Science librarys that came with Neo4j.
+          The second consisted of creating pre-set cypher queries that could be used, i.e. find all articles by a single author related to a certain topic.
+          You can see the queries <a href="https://github.com/scryvener/Cartographer/blob/main/Cypher/PubmedCartographer%20neo4j.py">here</a>.
+        </p>
+
+
+
+
         <p>
           To better simulate a use case, I approached from the perspective of an analyst tasked with putting together a profile of an author.
           I purposely chose one that we already worked with at my day job, since this would allow me to validate my findings.
@@ -197,11 +207,61 @@
         </p>
 
         <p>
-          While running the analysis, I also came upon the idea of running community detection, i.e. using something like the <a href="https://en.wikipedia.org/wiki/Louvain_method">Louvain Method</a>.
-          However, this turned out to be a bit more difficult than I had initially realized, and would require some pre-processing to collapse the citation relations onto the author nodes. 
-          This was technically possible, but I wanted to do more research into clustering and other community detection methods before implementation, so I decided to leave it as a nice-to-have for now.
+          While working on the product, it also gave me a chance to catalogue other analyses that I would want to work on in the future to take full advantage of the graph network. 
+          I was eager to dive deeper during the making of the Sample Author Profile, but I was also wary of going too overboard. 
+          I didn't wan't to get into a situation where I never finished because I just kept finding more "cool" things to play with. 
+          So I made the concious decision to give myself a time limit of a few days, and to make note of the other potential analyses I wanted to do but couldn't.
+          I go over some of them below.
         </p>
-        
+        <p>
+          The first was I wanted to take a look at other centrality measures as well. 
+          PageRank was useful to see where influence converged, but other measures, like <a href="https://en.wikipedia.org/wiki/Betweenness_centrality">Betweeness Centrality</a>, held value as well. 
+          For example, suppose you are trying to find a “bridging” author like the one below, one that is involved in two different communities that don't often interact with each other, and can act as a connector.
+          <!-- bridging node  -->
+          <img style="max-width: 60vw;" class="centered" src="/assets/img/projects/Cartographer/Community Bridge Node Sample.PNG">
+          This could be for a number of reasons, i.e., you are trying to expand your reach into a different community and need a toehold using their personal introduction.
+          The graph network would allow you do to do so, by measuring and looking for high betweenness centrality. 
+        </p>
+        <p>
+          Another was more advanced community detection. 
+          Basic community detection could already be done just by observation of the graph network.
+          For example, below you can see the graph of an author's publications, and all co-authors they worked with for those publications.
+          <!-- gange graph  -->
+          <img style="max-width: 60vw;" class="centered" src="/assets/img/projects/Cartographer/Author_CoAuthor_Indiv.PNG">
+          You can easily see that this author's collaborators fall into two distinct categories, each associated with a cluster of articles.
+          An analyst would easily be able to follow up on this to discern where this author's primary interests lie.
+
+        </p>
+
+        <p>
+          This same analysis can also be applied to get the “lay of the land” of a topic space.
+          Below shows the graph network structure where all publications related to a certain topic, and then their authors, were pulled.
+          Each author node in the illustration is then colored by scale to show how high their average published PageRank score is.
+          <!-- cluster graph  -->
+          <img style="max-width: 60vw;" class="centered" src="../assets/img/projects/Cartographer/Author_CoAuthor_Cluster_Export.png">
+          You can easily see the large “collaboration community” in the center, representing authors that often work together.
+          Combining with the PageRank weights confirms that this cluster represents high-weight authors, so this group is the highly involved in publishing, highly cited and respected community of this topic.
+          If you wanted to develop a new product in this space, these would be the community you would want to get into. 
+        </p>
+
+        <p>
+          In addition to just observing the graph, more sophisticated methods such as the <a href="https://en.wikipedia.org/wiki/Louvain_method">Louvain Method</a> could be implemented as well.
+          These groupings could then be analyzed and compared to the graph structure, and also sliced by topic/keyword.
+        </p>
+
+
+        <p>
+          Finally, I wanted to take advantage of the graph network to do path finding.
+          My first ideas would be to take advantage of path finding algorithms to find the shortest path between two authors.
+          This could be used in a number of ways.
+          One example could be if you had a “target” author you were trying to influence.
+          You could then find the shortest path between an author already favorable to you and the target, and use it to map out how to bring them on board, by common topic, people, etc.
+          The other potential analysis would be to map the closest paths between publications, in order to see how their associated keywords/topics are related to each other. 
+        </p>
+
+        <p>
+          Many of these ideas were straightforward to implement, and I hope to be able to create a more advanced analytical product showing off the graph database's capability.
+        </p>
 
         
       </div>
@@ -213,7 +273,7 @@
         <h2 id=sec5 alt="">Feedback and Future Improvements</h2>
 
         <P>
-          After finishing up the prototype, I looked to try and get validation on my idea from marketing professionals I knew. 
+          After finishing up the prototype and a sample product, I looked to try and get validation on my idea from marketing professionals I knew. 
           
         </P>
         <p>Overall, the feedback was positive, with them remarking that they could see the value-add in the tool.
