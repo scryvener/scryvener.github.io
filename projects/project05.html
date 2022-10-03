@@ -60,17 +60,34 @@
 				<h1>Google Trends Analytics</h1>
 				<hr>
 				<p>
-          This idea came about after a friend casually mentioned the business intelligence potential of Google Trends. 
-
+          My interest in search trends started from an unlikely source, public polling.
+          I have always been fascinated with the roll of public polling, but I have always personally found it vulnerable to sampling biases.
+          This was apparent in the 2020 and 2016 US presidential elections.
+          I therefore wanted to see if there was a way to better measure public sentiment. 
+          The idea that I came upon was by using search engine data.
+          After all, as the saying goes, “You are never more honest than with your search engine”.
+          Theres even jokes about deleting searching history when you are on your deathbed.
+          This seemed like a perfect measure of revealed preference.
+          People can decide not to respond to polls; they can be hesitant to respond truthfully depending on both the political (i.e., an authoritarian state where dissenting views can get you in trouble) or social environment (i.e., you hold conservative views in a highly liberal area or vice versa).
+          But they would be honest when they do their internet searches.
+          Since Google helpfully allows searches using Google Trends, I decided that this was a perfect opportunity to explore. 
         </p>
 			</div>
 		</div>
     <hr>
     <div class="row mt">	
 			<div>
-        <h2 id=sec1 alt="">Playing with "Near Me", and its potential relation to Covid Vaccinations</h2>
+        <h2 id=sec1 alt="">Covid-19 vaccination and "Near Me"</h2>
 				<p>
-          (WIP)
+          My first search was centered on the “near me” search, where I noticed that covid related terms were showing up, including those related to vaccination.
+          I also noticed that they were showing up in different frequencies between US states.
+          This formed a hypothesis in my head: States with more Covid related searches should have more vaccinations.
+          This made sense intuitively: those skeptical of Covid should be less likely to get vaccinated.
+          Even more helpfully, vaccination data and search trend data could be broken out per state, allowing differentiation to be made.
+          Timewise, I decided to split out the analysis by year.
+          This was mainly from a convenience perspective.
+          I initially wanted to do month by month, but Google Trends doesn't have an API, so this would mean I would have to manually pull 600 csv's per year.
+          Given my past experience fighting Google's anti-botting measures, I decided to simplify this down to a yearly pull, one for 2020 and one for 2021. 
         </p>
 
       </div>
