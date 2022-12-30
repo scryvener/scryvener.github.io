@@ -1,0 +1,7 @@
+<!-- Begin: HubSpot Academy - SEO Badge -->
+<div class='academy-badge'>
+<a href='https://app.hubspot.com/academy/achievements/zzqs0w3j/en/1/kenneth-chang/seo' title='SEO'>
+<img src='https://hubspot-credentials-na1.s3.amazonaws.com/prod/badges/user/083568efdee54fb1930f23c9c2b524d3.png' />
+</a>
+</div>
+<!-- End: HubSpot Academy - SEO Badge -->
