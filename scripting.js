@@ -1,7 +1,11 @@
 
 function submitThings(){
     var subject = $('#subject').val();
-    var body = $('#body').val();
+    var open = $('#open').val();
 
-    console.log("mailto:test@example.com?subject=" + subject + "&body=" + body)
+    var rate = $('#rateChoice1').val();
+
+    console.log("Subject: "+subject)
+    console.log("Open Response: "+open)
+    console.log(rate)
 }
