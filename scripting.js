@@ -31,5 +31,5 @@ function submitThings(){
     console.log("Rating: "+rate_value)
     console.log("Recommend: "+rec_value)
 
-    location.href='/form_test_2.html'
+    window.location.href='/form_test_2.html'
 }
