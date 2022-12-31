@@ -25,13 +25,10 @@ function submitThings(){
     var rate_value= findSelect('rateChoice',5)
     var rec_value= findSelect('recChoice',5)
 
-
-    console.log("Subject: "+subject)
-    console.log("Open Response: "+open)
-    console.log("Rating: "+rate_value)
-    console.log("Recommend: "+rec_value)
-
     localStorage.setItem('subject',subject)
+    localStorage.setItem('openResponse',open)
+    localStorage.setItem('rating',rate_value)
+    localStorage.setItem('rec',rec_value)
 
     window.location.href='/form_test_2.html'
 
