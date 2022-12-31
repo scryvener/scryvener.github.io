@@ -15,6 +15,19 @@ function genPrompt(){
 }
 
 
+//call the openAI API using the generated prompt
+function callAPI(){
+
+}
+
+
+// generate the new questions
+
+
+
+
+//export/show all the data collected
+
 
 let newdoc=document.getElementById('test')
 
