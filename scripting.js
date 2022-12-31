@@ -35,8 +35,5 @@ function submitThings(){
 
     window.location.href='/form_test_2.html'
 
-    newdoc=document.getElementById('qField')
-    newdoc.innerHTML=localStorage.getItem('subject')
-
 
 }
