@@ -32,4 +32,9 @@ function submitThings(){
     console.log("Recommend: "+rec_value)
 
     window.location.href='/form_test_2.html'
+
+    newdoc=document.getElementById('qField')
+    newdoc.innerHTML=subject
+
+
 }
