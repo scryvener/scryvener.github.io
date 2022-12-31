@@ -1,4 +1,3 @@
-newdoc=document.getElementById('qField')
+let newdoc=document.getElementById('qField')
 
-console.log(localStorage.getItem('subject'))
-
+newdoc.innerHTML=localStorage.getItem('subject')
