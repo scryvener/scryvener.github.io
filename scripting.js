@@ -10,7 +10,7 @@ function submitThings(){
         temp_bool=temp_node.getAttribute("checked")
         console.log(temp_bool)
 
-        if (temp_bool==True){
+        if (temp_bool==true){
             rate_value=r_id
         }
     }
