@@ -8,7 +8,6 @@ function submitThings(){
         let temp_node=document.getElementById('rateChoice'+String(r_id))
 
         temp_bool=temp_node.checked
-        console.log(temp_bool)
 
         if (temp_bool==true){
             rate_value=r_id
