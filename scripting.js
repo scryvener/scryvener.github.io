@@ -30,4 +30,6 @@ function submitThings(){
     console.log("Open Response: "+open)
     console.log("Rating: "+rate_value)
     console.log("Recommend: "+rec_value)
+
+    location.href='/form_test_2.html'
 }
