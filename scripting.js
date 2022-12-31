@@ -31,10 +31,12 @@ function submitThings(){
     console.log("Rating: "+rate_value)
     console.log("Recommend: "+rec_value)
 
+    localStorage.setItem('subject',subject)
+
     window.location.href='/form_test_2.html'
 
     newdoc=document.getElementById('qField')
-    newdoc.innerHTML=subject
+    newdoc.innerHTML=localStorage.getItem('subject')
 
 
 }
