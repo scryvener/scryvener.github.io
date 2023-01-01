@@ -38,7 +38,7 @@ for (let i=1;i<=re_array.length;i++){
 
     let newQ=document.getElementById('dynQ'+String(i))
 
-    newQ.innerHTML=re_array[i][1]
+    newQ.innerHTML=re_array[i-1][1]
 
     //console.log(re_array[i][1])//1 is the actual capture group?
 }
