@@ -31,9 +31,9 @@ AI:
 3. What do you mean by "pop" in regards to the sound quality?
 Human: `
 
-const re= new RegExp('\d{1}.\s(\w.*)')
+let reg= RegExp('\d{1}.\s(\w.*)')
 
-const re_array=[...temp_resp.matchAll(re)]
+let re_array=[...temp_resp.matchAll(reg)]
 
 for (let i=0;i<re_array.length;i++){
     console.log(re_array[i])
