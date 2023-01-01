@@ -47,7 +47,7 @@ const reg= /\d{1}.\s(\w.*)/g;
 let re_array=[...temp_resp.matchAll(reg)];
 
 for (let i=0;i<re_array.length;i++){
-    console.log(re_array[i])
+    console.log(re_array[i][1])//1 is the actual capture group?
 }
 
 
