@@ -34,7 +34,7 @@ const reg= /\d{1}.\s(\w.*)/g;
 
 let re_array=[...temp_resp.matchAll(reg)];
 
-for (let i=0;i<re_array.length;i++){
+for (let i=1;i<=re_array.length;i++){
 
     let newQ=document.getElementById('dynQ'+String(i))
 
