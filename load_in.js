@@ -7,6 +7,7 @@ function genPrompt(){
     let rec=localStorage.getItem('rec')
 
     //need to do cleaning, becauses theres no validation rn
+    //need to also do prompt adjustments due to blanks.
 
     let prompt=`A user is giving feedback on: `+String(subject)+`. The user has given a rating of `+String(rating)+` out of 5 for the question "How would you rate this product", with 5 being the best and 1 being the worst.
      The user has also given a rating of `+String(rec)+` out of 5 for the question "How likely would you recommend this product to a friend?", with 1 being "unlikely" and 5 being "likely".
@@ -43,7 +44,7 @@ for (let i=1;i<=re_array.length;i++){
     //console.log(re_array[i][1])//1 is the actual capture group?
 }
 
-console.log(genPrompt())
+//console.log(genPrompt())
 
 //export/show all the data collected
 
