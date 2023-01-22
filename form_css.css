@@ -28,9 +28,9 @@ p {
     border: 0 none;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    width: 80%;
-    margin: 20px;
-    padding: 20px;
+    width: 100%;
+    margin: 0;
+    padding-bottom: 20px;
     position: relative
 }
 
@@ -106,9 +106,7 @@ p {
 .card {
     z-index: 0;
     border: none;
-    position: relative;
-    margin: 50px;
-    padding: 50px;
+    position: relative
 }
 
 .fs-title {
