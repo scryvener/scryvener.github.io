@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<script src="/assets/iframe_ext/jquery_mostRecent.js"></script>
-  <script src="/form_funct.js"></script>
-  <link href="./form_css.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
-	
+    <script src="/assets/iframe_ext/jquery_mostRecent.js"></script>
+    <script src="/form_funct.js"></script>
+    <script src="/submit_init.js"></script>
+    <link href="./form_css.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css">
+    
   </head>
 
   <body>
@@ -32,8 +33,6 @@
                           <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                       </div> <br> <!-- fieldsets -->
 
-                      <div style="text-align:left; padding-left: 20px;">testing things here</div>
-
                       <fieldset>
                           <div class="form-card">
                             <div class="row">
@@ -46,14 +45,14 @@
                             </div>
 
                             <label class="fieldlabels">Please enter what product you are providing feedback for: </label> 
-                            <input type="text" name="product" placeholder="Type Here" /> 
+                            <input type="text" name="product" id="productQ" placeholder="Type Here" /> 
                             
                             <label class="fieldlabels">Please type your review here. Please list areas of improvement, or features that worked well. You can also leave general comments.</label> 
-                            <textarea type="textarea" name="openR" placeholder="Type Here"></textarea> 
+                            <textarea type="textarea" name="openR" id="openRQ" placeholder="Type Here"></textarea> 
                             
                           </div> 
 
-                          <input type="button" name="next" class="next action-button" value="Next" />
+                          <input type="button" name="next" class="next action-button" value="Next" onclick="submit_init()"/>
                       </fieldset>
                       <fieldset>
                           <div class="form-card">
