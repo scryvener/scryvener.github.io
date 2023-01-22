@@ -5,14 +5,17 @@ function submit_init(){
     let product=$('#productQ').val()
     let openR=$('#openRQ').val()
 
-    console.log(product)
-    console.log(openR)
+    let data={
+        'product':product,
+        'openR':openR
+    }
+    
+    //pass to server side
 
-    //Submit to openAI API
+    
+    //Generate new questions using the response, update 2nd part of the form
 
-    //Generate new questions, update 2nd part of the form
-
-    //for debug/testing
+    //for debug/testing, replace with the actual response.
     let temp_resp=`A user is giving feedback on headphones. The user has given a rating of 4 out of 5 for the question "How would you rate this product", with 5 being the best and 1 being the worst. The user has also given a rating of 4 out of 5 for the question "How likely would you recommend this product to a friend?", with 1 being "unlikely" and 5 being "likely". The user has provided the following open ended feedback: " I really liked it but it's a bit expensive. The sound quality can pop sometimes.". Generate a set of up to 3 questions asking for elaboration on their opinion.
     
     1. How would you compare the sound quality with other similar headphones? 
@@ -30,7 +33,6 @@ function submit_init(){
 
         newQ.innerHTML=re_array[i-1][1]
 
-        //console.log(re_array[i][1])//1 is the actual capture group?
     }
 
 
