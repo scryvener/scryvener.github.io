@@ -28,7 +28,7 @@ p {
     border: 0 none;
     border-radius: 0.5rem;
     box-sizing: border-box;
-    width: 100%;
+    width: 80%;
     margin: 5;
     padding-bottom: 20px;
     position: relative
@@ -49,7 +49,7 @@ p {
     border-radius: 0px;
     margin-bottom: 25px;
     margin-top: 2px;
-    width: 100%;
+    width: 80%;
     box-sizing: border-box;
     font-family: montserrat;
     color: #2C3E50;
