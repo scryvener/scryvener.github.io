@@ -12,6 +12,7 @@ function submit_init(){
     
     //pass to server side
 
+    console.log(data)
     
     //Generate new questions using the response, update 2nd part of the form
 
