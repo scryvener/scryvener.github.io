@@ -35,7 +35,8 @@ p {
 }
 
 .form-card {
-    text-align: left
+    text-align: left;
+    padding-left: 20px
 }
 
 #msform fieldset:not(:first-of-type) {
