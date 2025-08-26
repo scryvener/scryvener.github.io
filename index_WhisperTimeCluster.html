@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Cluster Explorer (Cluster-level hover)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    :root { --panel-w: 360px; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    header { display:flex; align-items:center; gap:12px; padding:10px 12px; border-bottom:1px solid #eee; position:sticky; top:0; background:#fff; z-index:2; }
+    #wrap { display:grid; grid-template-columns: 1fr var(--panel-w); height: calc(100vh - 56px); }
+    #plot { width: 100%; height: 100%; }
+    #side { border-left:1px solid #eee; padding:10px; display:flex; flex-direction:column; gap:10px; overflow:hidden; }
+    #legendSearch { width:100%; padding:8px; border:1px solid #ddd; border-radius:8px; }
+    #legend { overflow-y:auto; flex:1; padding-right:4px; }
+    .legend-item { display:flex; align-items:center; gap:8px; padding:6px 4px; border-radius:6px; cursor:pointer; user-select:none; }
+    .legend-item:hover { background:#f6f6f6; }
+    .muted { opacity:0.45; }
+    .chip { width:12px; height:12px; border-radius:3px; display:inline-block; flex:0 0 12px; }
+    .meta { display:flex; flex-direction:column; line-height:1.1; }
+    .title { font-size:14px; font-weight:600; }
+    .subtitle { font-size:12px; color:#666; }
+    #info { border:1px solid #eee; border-radius:8px; padding:10px; background:#fafafa; }
+    #info h3 { margin:0 0 6px 0; font-size:16px; }
+    #info .count { color:#666; font-size:12px; margin-bottom:8px; }
+    #info .example { font-size:13px; background:#fff; border:1px solid #eee; border-radius:6px; padding:8px; }
+    footer { padding:8px 12px; border-top:1px solid #eee; font-size:12px; color:#666; }
+    @media (max-width: 900px) { :root { --panel-w: 300px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <strong>Cluster Explorer</strong>
+    <span style="color:#999;">t‑SNE / UMAP (cluster‑level hover)</span>
+  </header>
+
+  <div id="wrap">
+    <div id="plot"></div>
+
+    <aside id="side">
+      <input id="legendSearch" placeholder="Search clusters…" autocomplete="off" />
+      <div id="legend" aria-label="Cluster legend list"></div>
+
+      <div id="info" aria-live="polite">
+        <h3>Hover a cluster</h3>
+        <div class="count">Cluster size and example will appear here.</div>
+        <div class="example" style="display:none;"></div>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    Privacy mode: no per‑point text. Hover highlights entire cluster; details show at right. Click legend items to toggle visibility.
+  </footer>
+
+  <script>
+    // --------------------------- SAMPLE DATA ---------------------------
+    // Replace with loadData('data.json') for real data (see shape below).
+    const sample = {
+      points: [
+        { x: -12.3, y:  4.5, cluster: "C3" },
+        { x: -11.1, y:  4.8, cluster: "C3" },
+        { x:   5.6, y: -3.2, cluster: "C1" },
+        { x:   6.1, y: -2.7, cluster: "C1" },
+        { x:   2.0, y:  7.8, cluster: "C2" },
+        { x:   2.2, y:  7.5, cluster: "C2" },
+        { x:   2.4, y:  7.6, cluster: "C2" },
+      ],
+      clusters: {
+        C1: { title: "Praise for Artist",       color: "#0072B2", example: "Personal messages praising the exhibit" },
+        C2: { title: "Greetings",        color: "#E69F00", example: "Different Variants of Hello" },
+        C3: { title: "Key Word: Record", color: "#009E73", example: "Talk about recording, questions about recording, etc" }
+      }
+    };
+
+
+    let plotDiv = null;
+    let clusterIds = [];
+    let clusterMeta = {};
+    let clusterToTraceIndex = {};
+    let baseOpacity = 0.85;
+    let dimOpacity  = 0.12;
+    let baseSize = 7;
+    let highlightSize = 10;
+    // Use real data? comment init(sample); and uncomment loadData('data.json');
+    //init(sample);
+    loadData('data.json');
+
+    // Expected data.json shape:
+    // {
+    //   "points": [ { "x": number, "y": number, "cluster": "C7" }, ... ],
+    //   "clusters": {
+    //     "C7": { "title": "Topic Name", "color": "#hex", "example": "Cluster-level safe example text" },
+    //     ...
+    //   }
+    // }
+
+    async function loadData(url) {
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        init(data);
+      } catch (err) {
+        console.error('Error loading data.json:', err);
+        init(sample);
+      }
+    }
+
+    // --------------------------- RENDERING ---------------------------
+    //let plotDiv = null;
+    //let clusterIds = [];
+    //let clusterMeta = {};
+    //let clusterToTraceIndex = {};
+    //let baseOpacity = 0.85;
+    //let dimOpacity  = 0.12;
+    //let baseSize = 7;
+    //let highlightSize = 10;
+
+    function init({ points, clusters }) {
+      clusterMeta = fillClusterMeta(points, clusters);
+      const grouped = groupByCluster(points);
+
+      const traces = [];
+      clusterIds = Object.keys(grouped).sort((a,b) => (clusterMeta[b].size - clusterMeta[a].size));
+
+      const symbols=['circle','square','diamond','triangle-up']
+
+      clusterIds.forEach((cid, idx) => {
+        clusterToTraceIndex[cid] = idx;
+        const arr = grouped[cid];
+        const meta = clusterMeta[cid];
+        traces.push({
+          name: meta.title || cid,
+          x: arr.map(d => d.hour),
+          y: arr.map(d => d.duration),
+          mode: 'markers',
+          type: 'scattergl',
+          marker: { 
+            size: baseSize, 
+            color: meta.color || '#666', 
+            opacity: baseOpacity,
+            symbol: symbols[idx%symbols.length] 
+            },
+          // Suppress per‑point hover text completely
+          hoverinfo: 'skip'
+        });
+      });
+
+      const layout = {
+        hovermode: 'closest',
+        margin: { l: 40, r: 10, t: 10, b: 40 },
+        xaxis: { zeroline:false, showgrid:false, title:'' },
+        yaxis: { zeroline:false, showgrid:false, title:'' }
+      };
+
+      Plotly.newPlot('plot', traces, layout, { displaylogo:false, responsive:true }).then(div => {
+        plotDiv = div;
+
+        // Hover highlights entire cluster & updates side panel
+        plotDiv.on('plotly_hover', ev => {
+          const traceIndex = ev.points?.[0]?.curveNumber;
+          if (traceIndex == null) return;
+          const cid = clusterIds[traceIndex];
+          highlightCluster(traceIndex);
+          showClusterInfo(cid);
+        });
+
+        plotDiv.on('plotly_unhover', () => {
+          clearHighlight();
+          clearClusterInfo();
+        });
+      });
+
+      buildLegend();
+      wireLegendSearch();
+      clearClusterInfo(); // initial panel state
+    }
+
+    function groupByCluster(points) {
+      const map = {};
+      for (const p of points) (map[p.cluster] ||= []).push(p);
+      return map;
+    }
+
+    // Ensure every cluster has color/title/size/example; fill defaults
+    function fillClusterMeta(points, clusters = {}) {
+      const meta = { ...clusters };
+      const counts = {};
+      for (const p of points) counts[p.cluster] = (counts[p.cluster] || 0) + 1;
+      for (const cid of Object.keys(counts)) {
+        meta[cid] ||= {};
+        meta[cid].size = counts[cid];
+        meta[cid].title ||= cid;
+        meta[cid].color ||= colorFromClusterId(cid);
+        meta[cid].example ||= "(No example provided)";
+      }
+      return meta;
+    }
+
+    // Deterministic color fallback (HSL)
+    function colorFromClusterId(id) {
+      let h=0; for (let i=0;i<id.length;i++) h = (h*31 + id.charCodeAt(i)) % 360;
+      return `hsl(${h}, 65%, 55%)`;
+    }
+
+    // --------------------------- HIGHLIGHTING ---------------------------
+    function highlightCluster(traceIndex) {
+      if (!plotDiv) return;
+      const n = plotDiv.data.length;
+      const opacities = Array(n).fill(dimOpacity);
+      const sizes = Array(n).fill(baseSize);
+      opacities[traceIndex] = baseOpacity;
+      sizes[traceIndex] = highlightSize;
+
+      // One shot restyle for all traces
+      Plotly.restyle('plot', { 'marker.opacity': opacities, 'marker.size': sizes });
+    }
+
+    function clearHighlight() {
+      if (!plotDiv) return;
+      const n = plotDiv.data.length;
+      Plotly.restyle('plot', {
+        'marker.opacity': Array(n).fill(baseOpacity),
+        'marker.size': Array(n).fill(baseSize)
+      });
+    }
+
+    // --------------------------- SIDE PANEL INFO ---------------------------
+    function showClusterInfo(cid) {
+      const info = document.getElementById('info');
+      const meta = clusterMeta[cid] || {};
+      info.querySelector('h3').textContent = meta.title || cid;
+      info.querySelector('.count').textContent = `${cid} • ${meta.size} item${meta.size!==1?'s':''}`;
+      const ex = info.querySelector('.example');
+      ex.style.display = 'block';
+      ex.textContent = meta.example;
+    }
+
+    function clearClusterInfo() {
+      const info = document.getElementById('info');
+      info.querySelector('h3').textContent = 'Hover a cluster';
+      info.querySelector('.count').textContent = 'Cluster size and example will appear here.';
+      const ex = info.querySelector('.example');
+      ex.style.display = 'none';
+      ex.textContent = '';
+    }
+
+    // --------------------------- LEGEND ---------------------------
+    function buildLegend() {
+      const legend = document.getElementById('legend');
+      legend.innerHTML = '';
+      clusterIds.forEach(cid => {
+        const meta = clusterMeta[cid];
+        const div = document.createElement('div');
+        div.className = 'legend-item';
+        div.dataset.cluster = cid;
+        div.innerHTML = `
+          <span class="chip" style="background:${meta.color}"></span>
+          <div class="meta">
+            <span class="title">${escapeHtml(meta.title || cid)}</span>
+            <span class="subtitle">${cid} • ${meta.size} item${meta.size!==1?'s':''}</span>
+          </div>
+        `;
+        // Click: toggle visibility
+        div.addEventListener('click', () => toggleCluster(cid, div));
+        // Hovering legend entry also previews highlight (optional)
+        div.addEventListener('mouseenter', () => {
+          const idx = clusterToTraceIndex[cid];
+          if (plotDiv && plotDiv.data[idx]?.visible !== 'legendonly') {
+            highlightCluster(idx);
+            showClusterInfo(cid);
+          }
+        });
+        div.addEventListener('mouseleave', () => {
+          clearHighlight();
+          clearClusterInfo();
+        });
+        legend.appendChild(div);
+      });
+    }
+
+    function toggleCluster(cid, el) {
+      if (!plotDiv) return;
+      const idx = clusterToTraceIndex[cid];
+      const current = plotDiv.data[idx].visible;
+      const next = (current === 'legendonly') ? true : 'legendonly';
+      Plotly.restyle('plot', { visible: next }, [idx]);
+      el.classList.toggle('muted', next === 'legendonly');
+    }
+
+    function wireLegendSearch() {
+      const input = document.getElementById('legendSearch');
+      input.addEventListener('input', e => {
+        const q = e.target.value.trim().toLowerCase();
+        const items = document.querySelectorAll('#legend .legend-item');
+        items.forEach(el => {
+          const cid = el.dataset.cluster;
+          const title = (clusterMeta[cid].title || cid).toLowerCase();
+          el.style.display = (title.includes(q) || cid.toLowerCase().includes(q)) ? '' : 'none';
+        });
+      });
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    }
+  </script>
+</body>
+</html>
