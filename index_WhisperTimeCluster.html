@@ -32,7 +32,7 @@
 <body>
   <header>
     <strong>Cluster Explorer</strong>
-    <span style="color:#999;">t‑SNE / UMAP (cluster‑level hover)</span>
+    <span style="color:#999;">Activity over Time with Cluster Grouping (cluster‑level hover)</span>
   </header>
 
   <div id="wrap">
@@ -48,6 +48,10 @@
         <div class="example" style="display:none;"></div>
       </div>
     </aside>
+  </div>
+
+  <div>
+  <span style="display:inline-block;width:12px;height:12px;background:black;clip-path:circle();"></span> Station 1
   </div>
 
   <footer>
@@ -124,7 +128,12 @@
       const traces = [];
       clusterIds = Object.keys(grouped).sort((a,b) => (clusterMeta[b].size - clusterMeta[a].size));
 
-      const symbols=['circle','square','diamond','triangle-up']
+      const stationSymbols = {
+            1: 'circle',
+            2: 'square',
+            3: 'diamond',
+            4: 'triangle-up'
+            };
 
       clusterIds.forEach((cid, idx) => {
         clusterToTraceIndex[cid] = idx;
@@ -140,7 +149,7 @@
             size: baseSize, 
             color: meta.color || '#666', 
             opacity: baseOpacity,
-            symbol: symbols[idx%symbols.length] 
+            symbol: arr.map(d => stationSymbols[d.station])
             },
           // Suppress per‑point hover text completely
           hoverinfo: 'skip'
