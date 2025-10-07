@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debate Data Visualization</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        #container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            margin-bottom: 30px;
+        }
+        
+        #controls {
+            background-color: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #b0b0b0;
+        }
+        
+        select {
+            padding: 8px 12px;
+            background-color: #3a3a3a;
+            color: #e0e0e0;
+            border: 1px solid #4a4a4a;
+            border-radius: 4px;
+            font-size: 14px;
+            min-width: 200px;
+        }
+        
+        select option {
+            background-color: #3a3a3a;
+            color: #e0e0e0;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+        }
+        
+        #date-control {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        #date-slider {
+            width: 100%;
+            height: 6px;
+            background: #3a3a3a;
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        #date-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 18px;
+            height: 18px;
+            background: #4a90e2;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        #date-slider::-moz-range-thumb {
+            width: 18px;
+            height: 18px;
+            background: #4a90e2;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        
+        #date-display {
+            text-align: center;
+            font-size: 16px;
+            font-weight: 600;
+            color: #4a90e2;
+            margin-top: 8px;
+        }
+        
+        #chart-container {
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        #chart {
+            width: 100%;
+            height: 700px;
+        }
+        
+        .point {
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+        
+        .point.dimmed {
+            opacity: 0.15;
+        }
+        
+        .point.highlighted {
+            stroke: #ffffff;
+            stroke-width: 2px;
+        }
+        
+        .centroid {
+            cursor: pointer;
+            stroke: #ffffff;
+            stroke-width: 2px;
+        }
+        
+        #tooltip {
+            position: absolute;
+            background-color: rgba(42, 42, 42, 0.95);
+            border: 1px solid #4a4a4a;
+            border-radius: 6px;
+            padding: 12px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+        
+        #tooltip.visible {
+            opacity: 1;
+        }
+        
+        .tooltip-label {
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 4px;
+        }
+        
+        .tooltip-content {
+            color: #e0e0e0;
+            line-height: 1.5;
+        }
+        
+        #detail-panel {
+            position: fixed;
+            right: -400px;
+            top: 0;
+            width: 380px;
+            height: 100%;
+            background-color: #2a2a2a;
+            border-left: 2px solid #4a4a4a;
+            padding: 20px;
+            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+            transition: right 0.3s ease;
+            overflow-y: auto;
+            z-index: 1000;
+        }
+        
+        #detail-panel.visible {
+            right: 0;
+        }
+        
+        #detail-close {
+            float: right;
+            background: none;
+            border: none;
+            color: #e0e0e0;
+            font-size: 24px;
+            cursor: pointer;
+            padding: 0;
+            line-height: 1;
+        }
+        
+        #detail-close:hover {
+            color: #4a90e2;
+        }
+        
+        .detail-section {
+            margin-bottom: 20px;
+        }
+        
+        .detail-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #4a90e2;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        
+        .detail-value {
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Interactive Debate Data Visualization</h1>
+        
+        <div id="controls">
+            <div class="control-group">
+                <label>Topic Filter</label>
+                <select id="topic-select">
+                    <option value="all">All Topics</option>
+                </select>
+            </div>
+            
+            <div class="control-group checkbox-group">
+                <input type="checkbox" id="show-centroids">
+                <label for="show-centroids">Show Centroids</label>
+            </div>
+            
+            <div class="control-group checkbox-group">
+                <input type="checkbox" id="show-all-dates" checked>
+                <label for="show-all-dates">Show All Dates</label>
+            </div>
+            
+            <div class="control-group" id="date-control">
+                <label>Date Filter</label>
+                <input type="range" id="date-slider" min="0" max="0" value="0" disabled>
+                <div id="date-display">All Dates</div>
+            </div>
+        </div>
+        
+        <div id="chart-container">
+            <svg id="chart"></svg>
+        </div>
+    </div>
+    
+    <div id="tooltip"></div>
+    
+    <div id="detail-panel">
+        <button id="detail-close">&times;</button>
+        <h2 style="margin-top: 0; color: #ffffff;">Point Details</h2>
+        <div id="detail-content"></div>
+    </div>
+    
+    <script>
+        // Configuration
+        const POINT_CSV = 'political_narrative_output.csv';
+        const CENTROID_CSV = 'centroid_viz.csv';
+        const GREY_COLOR = '#666666';
+        
+        // Global state
+        let state = {
+            pointData: [],
+            centroidData: [],
+            dates: [],
+            currentDate: 'all',
+            selectedTopic: 'all',
+            showCentroids: false,
+            colorScale: null,
+            hierarchyMap: {},
+            svg: null,
+            xScale: null,
+            yScale: null,
+            zoom: null
+        };
+        
+        // Initialize
+        async function init() {
+            try {
+                // Load data
+                const [points, centroids] = await Promise.all([
+                    d3.csv(POINT_CSV),
+                    d3.csv(CENTROID_CSV)
+                ]);
+                
+                // Process data
+                state.pointData = points.map(d => ({
+                    ...d,
+                    x: +d.x,
+                    y: +d.y,
+                    Line: d.Line.trim(),
+                    Speaker: d.Speaker.trim(),
+                    Debate: d.Debate.trim(),
+                    Date: d.Date.trim(),
+                    BroadTopic: d.BroadTopic.trim(),
+                    Topic: d.Topic.trim(),
+                    SubTopic: d.SubTopic.trim(),
+                    category_id: d.category_id.trim()
+                }));
+                
+                state.centroidData = centroids.map(d => ({
+                    ...d,
+                    x: +d.x,
+                    y: +d.y,
+                    Date: d.Date.trim(),
+                    BroadTopic: d.BroadTopic.trim(),
+                    Topic: d.Topic.trim(),
+                    SubTopic: d.SubTopic.trim(),
+                    category_id: d.category_id.trim()
+                }));
+                
+                // Build hierarchy
+                buildHierarchy();
+                
+                // Get unique dates and sort
+                state.dates = Array.from(new Set(state.pointData.map(d => d.Date))).sort();
+                
+                // Setup color scale
+                const broadTopics = Array.from(new Set(state.pointData.map(d => d.BroadTopic)));
+                state.colorScale = d3.scaleOrdinal()
+                    .domain(broadTopics)
+                    .range(d3.schemeTableau10);
+                
+                // Setup UI
+                setupTopicDropdown();
+                setupDateSlider();
+                setupChart();
+                setupEventListeners();
+                
+                // Initial render
+                render();
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Error loading CSV files. Please ensure the files are in the same directory.');
+            }
+        }
+        
+        function buildHierarchy() {
+            state.hierarchyMap = {};
+            
+            state.pointData.forEach(d => {
+                if (!state.hierarchyMap[d.BroadTopic]) {
+                    state.hierarchyMap[d.BroadTopic] = {
+                        topics: {}
+                    };
+                }
+                
+                if (!state.hierarchyMap[d.BroadTopic].topics[d.Topic]) {
+                    state.hierarchyMap[d.BroadTopic].topics[d.Topic] = {
+                        subTopics: new Set()
+                    };
+                }
+                
+                state.hierarchyMap[d.BroadTopic].topics[d.Topic].subTopics.add(d.SubTopic);
+            });
+        }
+        
+        function setupTopicDropdown() {
+            const select = d3.select('#topic-select');
+            
+            // Add BroadTopic options
+            Object.keys(state.hierarchyMap).sort().forEach(broadTopic => {
+                select.append('optgroup')
+                    .attr('label', broadTopic);
+                
+                select.append('option')
+                    .attr('value', `broad:${broadTopic}`)
+                    .text(`├─ ${broadTopic} (All)`);
+                
+                // Add Topic options
+                const topics = Object.keys(state.hierarchyMap[broadTopic].topics).sort();
+                topics.forEach(topic => {
+                    select.append('option')
+                        .attr('value', `topic:${broadTopic}|${topic}`)
+                        .text(`│  ├─ ${topic} (All)`);
+                    
+                    // Add SubTopic options
+                    const subTopics = Array.from(state.hierarchyMap[broadTopic].topics[topic].subTopics).sort();
+                    subTopics.forEach(subTopic => {
+                        select.append('option')
+                            .attr('value', `subtopic:${broadTopic}|${topic}|${subTopic}`)
+                            .text(`│  │  └─ ${subTopic}`);
+                    });
+                });
+            });
+        }
+        
+        function setupDateSlider() {
+            const slider = d3.select('#date-slider');
+            slider.attr('max', state.dates.length - 1);
+        }
+        
+        function setupChart() {
+            const container = document.getElementById('chart');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+            
+            const margin = {top: 20, right: 20, bottom: 40, left: 50};
+            const innerWidth = width - margin.left - margin.right;
+            const innerHeight = height - margin.top - margin.bottom;
+            
+            // Create SVG
+            const svg = d3.select('#chart')
+                .attr('width', width)
+                .attr('height', height);
+            
+            svg.selectAll('*').remove();
+            
+            // Add clipPath
+            svg.append('defs').append('clipPath')
+                .attr('id', 'clip')
+                .append('rect')
+                .attr('width', innerWidth)
+                .attr('height', innerHeight);
+            
+            // Create scales
+            const xExtent = d3.extent(state.pointData, d => d.x);
+            const yExtent = d3.extent(state.pointData, d => d.y);
+            
+            state.xScale = d3.scaleLinear()
+                .domain(xExtent)
+                .range([0, innerWidth])
+                .nice();
+            
+            state.yScale = d3.scaleLinear()
+                .domain(yExtent)
+                .range([innerHeight, 0])
+                .nice();
+            
+            // Create zoom behavior
+            state.zoom = d3.zoom()
+                .scaleExtent([0.5, 10])
+                .on('zoom', (event) => {
+                    const transform = event.transform;
+                    
+                    const newXScale = transform.rescaleX(state.xScale);
+                    const newYScale = transform.rescaleY(state.yScale);
+                    
+                    gX.call(d3.axisBottom(newXScale));
+                    gY.call(d3.axisLeft(newYScale));
+                    
+                    plotArea.selectAll('.point')
+                        .attr('cx', d => newXScale(d.x))
+                        .attr('cy', d => newYScale(d.y));
+                    
+                    plotArea.selectAll('.centroid')
+                        .attr('cx', d => newXScale(d.x))
+                        .attr('cy', d => newYScale(d.y));
+                });
+            
+            svg.call(state.zoom);
+            
+            const g = svg.append('g')
+                .attr('transform', `translate(${margin.left},${margin.top})`);
+            
+            // Add axes
+            const gX = g.append('g')
+                .attr('class', 'x-axis')
+                .attr('transform', `translate(0,${innerHeight})`)
+                .call(d3.axisBottom(state.xScale));
+            
+            const gY = g.append('g')
+                .attr('class', 'y-axis')
+                .call(d3.axisLeft(state.yScale));
+            
+            // Style axes
+            g.selectAll('.domain, .tick line')
+                .attr('stroke', '#666666');
+            
+            g.selectAll('.tick text')
+                .attr('fill', '#b0b0b0');
+            
+            // Create plot area
+            const plotArea = g.append('g')
+                .attr('class', 'plot-area')
+                .attr('clip-path', 'url(#clip)');
+            
+            state.svg = svg;
+            state.plotArea = plotArea;
+            state.gX = gX;
+            state.gY = gY;
+        }
+        
+        function setupEventListeners() {
+            d3.select('#topic-select').on('change', function() {
+                state.selectedTopic = this.value;
+                render();
+            });
+            
+            d3.select('#show-centroids').on('change', function() {
+                state.showCentroids = this.checked;
+                render();
+            });
+            
+            d3.select('#show-all-dates').on('change', function() {
+                const showAll = this.checked;
+                const slider = document.getElementById('date-slider');
+                const dateDisplay = document.getElementById('date-display');
+                
+                slider.disabled = showAll;
+                
+                if (showAll) {
+                    state.currentDate = 'all';
+                    dateDisplay.textContent = 'All Dates';
+                } else {
+                    const index = +slider.value;
+                    state.currentDate = state.dates[index];
+                    dateDisplay.textContent = state.currentDate;
+                }
+                
+                render();
+            });
+            
+            d3.select('#date-slider').on('input', function() {
+                const index = +this.value;
+                state.currentDate = state.dates[index];
+                document.getElementById('date-display').textContent = state.currentDate;
+                render();
+            });
+            
+            d3.select('#detail-close').on('click', () => {
+                d3.select('#detail-panel').classed('visible', false);
+            });
+        }
+        
+        function render() {
+            const filteredData = getFilteredData();
+            const currentHierarchyLevel = getHierarchyLevel();
+            
+            if (state.showCentroids) {
+                renderCentroids(filteredData.centroids, currentHierarchyLevel);
+            } else {
+                renderPoints(filteredData.points, currentHierarchyLevel);
+            }
+        }
+        
+        function getFilteredData() {
+            let points = state.pointData;
+            let centroids = state.centroidData;
+            
+            // Filter by date
+            if (state.currentDate !== 'all') {
+                points = points.filter(d => d.Date === state.currentDate);
+                centroids = centroids.filter(d => d.Date === state.currentDate);
+            }
+            
+            return { points, centroids };
+        }
+        
+        function getHierarchyLevel() {
+            if (state.selectedTopic === 'all') {
+                return 'broad';
+            } else if (state.selectedTopic.startsWith('broad:')) {
+                return 'topic';
+            } else if (state.selectedTopic.startsWith('topic:')) {
+                return 'subtopic';
+            } else {
+                return 'subtopic';
+            }
+        }
+        
+        function getPointColor(d) {
+            const [type, value] = state.selectedTopic.split(':');
+            
+            if (type === 'all') {
+                return state.colorScale(d.BroadTopic);
+            } else if (type === 'broad') {
+                const selectedBroad = value;
+                return d.BroadTopic === selectedBroad ? state.colorScale(d.BroadTopic) : GREY_COLOR;
+            } else if (type === 'topic') {
+                const [selectedBroad, selectedTopic] = value.split('|');
+                return (d.BroadTopic === selectedBroad && d.Topic === selectedTopic) ? 
+                    state.colorScale(d.BroadTopic) : GREY_COLOR;
+            } else if (type === 'subtopic') {
+                const [selectedBroad, selectedTopic, selectedSubTopic] = value.split('|');
+                return (d.BroadTopic === selectedBroad && d.Topic === selectedTopic && d.SubTopic === selectedSubTopic) ? 
+                    state.colorScale(d.BroadTopic) : GREY_COLOR;
+            }
+            
+            return GREY_COLOR;
+        }
+        
+        function getGroupKey(d, level) {
+            if (level === 'broad') return d.BroadTopic;
+            if (level === 'topic') return `${d.BroadTopic}|${d.Topic}`;
+            if (level === 'subtopic') return `${d.BroadTopic}|${d.Topic}|${d.SubTopic}`;
+            return d.BroadTopic;
+        }
+        
+        function renderPoints(points, hierarchyLevel) {
+            const transform = d3.zoomTransform(state.svg.node());
+            const xScale = transform.rescaleX(state.xScale);
+            const yScale = transform.rescaleY(state.yScale);
+            
+            const circles = state.plotArea.selectAll('.point')
+                .data(points, d => d.Line);
+            
+            circles.exit().remove();
+            
+            const enter = circles.enter()
+                .append('circle')
+                .attr('class', 'point')
+                .attr('r', 4);
+            
+            circles.merge(enter)
+                .attr('cx', d => xScale(d.x))
+                .attr('cy', d => yScale(d.y))
+                .attr('fill', getPointColor)
+                .on('mouseover', function(event, d) {
+                    const groupKey = getGroupKey(d, hierarchyLevel);
+                    highlightGroup(groupKey, hierarchyLevel);
+                    showTooltip(event, d, hierarchyLevel);
+                })
+                .on('mouseout', function() {
+                    clearHighlight();
+                    hideTooltip();
+                })
+                .on('click', function(event, d) {
+                    showDetailPanel(d);
+                });
+            
+            // Remove centroids
+            state.plotArea.selectAll('.centroid').remove();
+        }
+        
+        function renderCentroids(centroids, hierarchyLevel) {
+            const transform = d3.zoomTransform(state.svg.node());
+            const xScale = transform.rescaleX(state.xScale);
+            const yScale = transform.rescaleY(state.yScale);
+            
+            const circles = state.plotArea.selectAll('.centroid')
+                .data(centroids, d => d.category_id + d.Date);
+            
+            circles.exit().remove();
+            
+            const enter = circles.enter()
+                .append('circle')
+                .attr('class', 'centroid')
+                .attr('r', 8);
+            
+            circles.merge(enter)
+                .attr('cx', d => xScale(d.x))
+                .attr('cy', d => yScale(d.y))
+                .attr('fill', d => {
+                    const [type, value] = state.selectedTopic.split(':');
+                    
+                    if (type === 'all') {
+                        return state.colorScale(d.BroadTopic);
+                    } else if (type === 'broad') {
+                        const selectedBroad = value;
+                        return d.BroadTopic === selectedBroad ? state.colorScale(d.BroadTopic) : GREY_COLOR;
+                    } else if (type === 'topic') {
+                        const [selectedBroad, selectedTopic] = value.split('|');
+                        return (d.BroadTopic === selectedBroad && d.Topic === selectedTopic) ? 
+                            state.colorScale(d.BroadTopic) : GREY_COLOR;
+                    } else if (type === 'subtopic') {
+                        const [selectedBroad, selectedTopic, selectedSubTopic] = value.split('|');
+                        return (d.BroadTopic === selectedBroad && d.Topic === selectedTopic && d.SubTopic === selectedSubTopic) ? 
+                            state.colorScale(d.BroadTopic) : GREY_COLOR;
+                    }
+                    
+                    return GREY_COLOR;
+                })
+                .on('mouseover', function(event, d) {
+                    showCentroidTooltip(event, d);
+                })
+                .on('mouseout', function() {
+                    hideTooltip();
+                });
+            
+            // Remove points
+            state.plotArea.selectAll('.point').remove();
+        }
+        
+        function highlightGroup(groupKey, level) {
+            state.plotArea.selectAll('.point')
+                .classed('dimmed', d => getGroupKey(d, level) !== groupKey)
+                .classed('highlighted', d => getGroupKey(d, level) === groupKey);
+        }
+        
+        function clearHighlight() {
+            state.plotArea.selectAll('.point')
+                .classed('dimmed', false)
+                .classed('highlighted', false);
+        }
+        
+        function showTooltip(event, d, level) {
+            const tooltip = d3.select('#tooltip');
+            
+            let groupLabel = '';
+            if (level === 'broad') groupLabel = `BroadTopic: ${d.BroadTopic}`;
+            if (level === 'topic') groupLabel = `Topic: ${d.Topic}`;
+            if (level === 'subtopic') groupLabel = `SubTopic: ${d.SubTopic}`;
+            
+            tooltip.html(`
+                <div class="tooltip-label">${groupLabel}</div>
+                <div class="tooltip-content">
+                    <strong>Speaker:</strong> ${d.Speaker}<br>
+                    <strong>Date:</strong> ${d.Date}
+                </div>
+            `)
+            .style('left', (event.pageX + 15) + 'px')
+            .style('top', (event.pageY + 15) + 'px')
+            .classed('visible', true);
+        }
+        
+        function showCentroidTooltip(event, d) {
+            const tooltip = d3.select('#tooltip');
+            
+            let label = `BroadTopic: ${d.BroadTopic}`;
+            if (d.Topic) label += `<br>Topic: ${d.Topic}`;
+            if (d.SubTopic) label += `<br>SubTopic: ${d.SubTopic}`;
+            
+            tooltip.html(`
+                <div class="tooltip-label">Centroid</div>
+                <div class="tooltip-content">
+                    ${label}<br>
+                    <strong>Date:</strong> ${d.Date}
+                </div>
+            `)
+            .style('left', (event.pageX + 15) + 'px')
+            .style('top', (event.pageY + 15) + 'px')
+            .classed('visible', true);
+        }
+        
+        function hideTooltip() {
+            d3.select('#tooltip').classed('visible', false);
+        }
+        
+        function showDetailPanel(d) {
+            const panel = d3.select('#detail-panel');
+            const content = d3.select('#detail-content');
+            
+            content.html(`
+                <div class="detail-section">
+                    <div class="detail-title">Speaker</div>
+                    <div class="detail-value">${d.Speaker}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">Debate</div>
+                    <div class="detail-value">${d.Debate}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">Date</div>
+                    <div class="detail-value">${d.Date}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">Line</div>
+                    <div class="detail-value">${d.Line}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">BroadTopic</div>
+                    <div class="detail-value">${d.BroadTopic}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">Topic</div>
+                    <div class="detail-value">${d.Topic}</div>
+                </div>
+                <div class="detail-section">
+                    <div class="detail-title">SubTopic</div>
+                    <div class="detail-value">${d.SubTopic}</div>
+                </div>
+            `);
+            
+            panel.classed('visible', true);
+        }
+        
+        // Start the application
+        init();
+    </script>
+</body>
+</html>
