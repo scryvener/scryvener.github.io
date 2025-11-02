@@ -105,12 +105,18 @@
     <svg id="viz"></svg>
 
     <script>
-        const width = 1200;
-        const height = 700;
+        function getDimensions() {
+            const container = document.querySelector('.controls');
+            const containerHeight = container ? container.offsetHeight : 150;
+            return {
+                width: Math.max(800, window.innerWidth - 40),
+                height: Math.max(500, window.innerHeight - containerHeight - 60)
+            };
+        }
         
-        const svg = d3.select("#viz")
-            .attr("width", width)
-            .attr("height", height);
+        let width, height;
+        
+        const svg = d3.select("#viz");
 
         // Category positions (corners and center)
         const categoryPositions = {
