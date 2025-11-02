@@ -85,7 +85,7 @@
     <svg id="viz"></svg>
 
     <script>
-        // Sample data structure
+        // Sample data structure - replace with your data or load from JSON
         /* const sampleWords = [
             // Category 1 only (Technology)
             { word: "algorithm", categories: [1], frequency: 15 },
@@ -140,7 +140,12 @@
             { word: "concept", categories: [2, 3, 4], frequency: 13 },
         ]; */
 
-        const sampleWords = d3.json('word_cloud_data.json')
+        //To load from external JSON file, use this instead:
+        d3.json('word_cloud_data.json').then(data => {
+            initVisualization(data);
+        }).catch(error => {
+            console.error('Error loading data:', error);
+        });
 
         const width = 1200;
         const height = 700;
