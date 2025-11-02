@@ -105,6 +105,7 @@
     <svg id="viz"></svg>
 
     <script>
+        // Get dynamic dimensions based on window size
         function getDimensions() {
             const container = document.querySelector('.controls');
             const containerHeight = container ? container.offsetHeight : 150;
@@ -166,6 +167,24 @@
         }
 
         function initSimulation() {
+            // Update dimensions
+            const dims = getDimensions();
+            width = dims.width;
+            height = dims.height;
+            
+            svg.attr("width", width).attr("height", height);
+            
+            // Recalculate category positions with new dimensions
+            categoryPositions[1] = { x: width * 0.2, y: height * 0.2 };
+            categoryPositions[2] = { x: width * 0.8, y: height * 0.2 };
+            categoryPositions[3] = { x: width * 0.2, y: height * 0.8 };
+            categoryPositions[4] = { x: width * 0.8, y: height * 0.8 };
+            
+            // Recalculate targets for all nodes
+            nodes.forEach(node => {
+                node.target = calculateTarget(node.categories);
+            });
+            
             // Clear existing elements
             svg.selectAll("*").remove();
 
@@ -294,6 +313,17 @@
 
         // Start loading when page loads
         loadAndVisualize();
+        
+        // Handle window resize
+        let resizeTimeout;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(() => {
+                if (nodes.length > 0) {
+                    restartSimulation();
+                }
+            }, 250);
+        });
     </script>
 </body>
 </html>
