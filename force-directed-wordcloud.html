@@ -83,7 +83,7 @@
         <p>Words are attracted to category positions based on their membership. Hover over words to see details. Use mouse wheel to zoom, click and drag to pan.</p>
         <button onclick="restartSimulation()" id="restartBtn" disabled>Restart Animation</button>
         <button onclick="resetZoom()" id="resetZoomBtn" disabled>Reset Zoom</button>
-        <div id="status" class="status loading">Loading data...</div>
+        <!-- <div id="status" class="status loading">Loading data...</div> -->
         <div class="legend">
             <div class="legend-item">
                 <div class="legend-color" style="background: #ff6b6b;"></div>
@@ -216,9 +216,9 @@
             // Create force simulation - remove bounds force to allow natural spread
             simulation = d3.forceSimulation(nodes)
                 .force("charge", d3.forceManyBody().strength(-100))
-                .force("collision", d3.forceCollide().radius(d => d.radius + 3))
-                .force("x", d3.forceX(d => d.target.x).strength(0.1))
-                .force("y", d3.forceY(d => d.target.y).strength(0.1));
+                .force("collision", d3.forceCollide().radius(d => d.radius + 2))
+                .force("x", d3.forceX(d => d.target.x).strength(0.2))
+                .force("y", d3.forceY(d => d.target.y).strength(0.2));
 
             // Draw category indicators
             const categoryGroup = g.append("g").attr("class", "categories");
@@ -293,7 +293,7 @@
         // Load data and initialize visualization
         async function loadAndVisualize() {
             try {
-                updateStatus('Loading data from word_cloud_data.json...', 'loading');
+                //updateStatus('Loading data from word_cloud_data.json...', 'loading');
                 
                 // Load data from JSON file
                 const data = await d3.json('word_cloud_data.json');
@@ -303,7 +303,7 @@
                     throw new Error('Invalid data format or empty dataset');
                 }
                 
-                updateStatus(`Loaded ${data.length} words. Initializing visualization...`, 'loading');
+                //updateStatus(`Loaded ${data.length} words. Initializing visualization...`, 'loading');
                 
                 // Prepare nodes with calculated properties
                 nodes = data.map(d => ({
@@ -320,11 +320,11 @@
                 document.getElementById('restartBtn').disabled = false;
                 document.getElementById('resetZoomBtn').disabled = false;
                 
-                updateStatus(`Visualization ready! Showing ${nodes.length} words.`, 'success');
+                //updateStatus(`Visualization ready! Showing ${nodes.length} words.`, 'success');
                 
             } catch (error) {
                 console.error('Error loading data:', error);
-                updateStatus(`Error: ${error.message}. Please ensure word_cloud_data.json exists and is valid JSON.`, 'error');
+                //updateStatus(`Error: ${error.message}. Please ensure word_cloud_data.json exists and is valid JSON.`, 'error');
                 
                 // Show helpful message in SVG
                 svg.append("text")
