@@ -175,10 +175,10 @@
             svg.attr("width", width).attr("height", height);
             
             // Recalculate category positions with new dimensions
-            categoryPositions[1] = { x: width * 0.3, y: height * 0.3 };
-            categoryPositions[2] = { x: width * 0.7, y: height * 0.3 };
-            categoryPositions[3] = { x: width * 0.3, y: height * 0.7 };
-            categoryPositions[4] = { x: width * 0.7, y: height * 0.7 };
+            categoryPositions[1] = { x: width * 0.2, y: height * 0.2 };
+            categoryPositions[2] = { x: width * 0.8, y: height * 0.2 };
+            categoryPositions[3] = { x: width * 0.2, y: height * 0.8 };
+            categoryPositions[4] = { x: width * 0.8, y: height * 0.8 };
             
             // Recalculate targets for all nodes
             nodes.forEach(node => {
@@ -188,12 +188,19 @@
             // Clear existing elements
             svg.selectAll("*").remove();
 
-            // Create force simulation
+            // Create force simulation with boundaries
             simulation = d3.forceSimulation(nodes)
                 .force("charge", d3.forceManyBody().strength(-100))
                 .force("collision", d3.forceCollide().radius(d => d.radius + 2))
                 .force("x", d3.forceX(d => d.target.x).strength(0.3))
-                .force("y", d3.forceY(d => d.target.y).strength(0.3));
+                .force("y", d3.forceY(d => d.target.y).strength(0.3))
+                .force("bounds", () => {
+                    nodes.forEach(d => {
+                        const padding = d.radius + 5;
+                        d.x = Math.max(padding, Math.min(width - padding, d.x));
+                        d.y = Math.max(padding, Math.min(height - padding, d.y));
+                    });
+                });
 
             // Draw category indicators
             const categoryGroup = svg.append("g").attr("class", "categories");
@@ -294,7 +301,7 @@
                 // Enable restart button
                 document.getElementById('restartBtn').disabled = false;
                 
-                updateStatus(`Visualization ready! Showing ${nodes.length} words.`, 'success');
+                updateStatus(`Showing ${nodes.length} words.`, 'success');
                 
             } catch (error) {
                 console.error('Error loading data:', error);
