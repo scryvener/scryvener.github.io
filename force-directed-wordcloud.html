@@ -253,7 +253,7 @@
                 .attr("text-anchor", "middle")
                 .attr("dy", "0.3em")
                 .attr("font-size", d => Math.max(10, d.radius * 0.8))
-                .attr("fill", categoryColors[cat])
+                .attr("fill", d => d.color)
                 .attr("pointer-events", "none");
 
             // Create tooltip if it doesn't exist
