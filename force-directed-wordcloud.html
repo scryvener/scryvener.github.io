@@ -80,7 +80,7 @@
 <body>
     <div class="controls">
         <h2>Multi-Category Force-Directed Word Cloud</h2>
-        <p>Words are attracted to category positions based on their membership. Hover over words to see details.</p>
+        <p>Words are attracted to category positions based on their membership. Hover over words to see details. Use mouse wheel to zoom, click and drag to pan.</p>
         <button onclick="restartSimulation()" id="restartBtn" disabled>Restart Animation</button>
         <button onclick="resetZoom()" id="resetZoomBtn" disabled>Reset Zoom</button>
         <div id="status" class="status loading">Loading data...</div>
@@ -143,6 +143,8 @@
         let nodes = [];
         let simulation;
         let tooltip;
+        let zoom;
+        let g; // Container group for zoom/pan
 
         // Calculate target position for each word based on category membership
         function calculateTarget(categories) {
@@ -171,6 +173,12 @@
             statusEl.className = `status ${type}`;
         }
 
+        function resetZoom() {
+            svg.transition()
+                .duration(750)
+                .call(zoom.transform, d3.zoomIdentity);
+        }
+
         function initSimulation() {
             // Update dimensions
             const dims = getDimensions();
@@ -193,22 +201,27 @@
             // Clear existing elements
             svg.selectAll("*").remove();
 
-            // Create force simulation with boundaries
+            // Create a group for zoom/pan
+            g = svg.append("g");
+
+            // Set up zoom behavior
+            zoom = d3.zoom()
+                .scaleExtent([0.5, 5])  // Allow zoom from 50% to 500%
+                .on("zoom", (event) => {
+                    g.attr("transform", event.transform);
+                });
+
+            svg.call(zoom);
+
+            // Create force simulation - remove bounds force to allow natural spread
             simulation = d3.forceSimulation(nodes)
                 .force("charge", d3.forceManyBody().strength(-100))
                 .force("collision", d3.forceCollide().radius(d => d.radius + 2))
-                .force("x", d3.forceX(d => d.target.x).strength(0.15))
-                .force("y", d3.forceY(d => d.target.y).strength(0.15))
-                .force("bounds", () => {
-                    nodes.forEach(d => {
-                        const padding = d.radius + 5;
-                        d.x = Math.max(padding, Math.min(width - padding, d.x));
-                        d.y = Math.max(padding, Math.min(height - padding, d.y));
-                    });
-                });
+                .force("x", d3.forceX(d => d.target.x).strength(0.3))
+                .force("y", d3.forceY(d => d.target.y).strength(0.3));
 
             // Draw category indicators
-            const categoryGroup = svg.append("g").attr("class", "categories");
+            const categoryGroup = g.append("g").attr("class", "categories");
             
             Object.entries(categoryPositions).forEach(([cat, pos]) => {
                 categoryGroup.append("circle")
@@ -220,7 +233,7 @@
             });
 
             // Create word elements
-            const node = svg.append("g")
+            const node = g.append("g")
                 .selectAll("g")
                 .data(nodes)
                 .join("g")
@@ -305,8 +318,9 @@
                 
                 // Enable restart button
                 document.getElementById('restartBtn').disabled = false;
+                document.getElementById('resetZoomBtn').disabled = false;
                 
-                updateStatus(`Showing ${nodes.length} words.`, 'success');
+                updateStatus(`Visualization ready! Showing ${nodes.length} words.`, 'success');
                 
             } catch (error) {
                 console.error('Error loading data:', error);
