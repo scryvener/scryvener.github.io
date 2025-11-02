@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Force-Directed Word Cloud</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #1a1a2e;
+            color: #eee;
+        }
+        #viz {
+            background: #16213e;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #16213e;
+            border-radius: 8px;
+        }
+        .legend {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        button {
+            background: #0f3460;
+            color: #eee;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #16425b;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <h2>Multi-Category Force-Directed Word Cloud</h2>
+        <p>Words are attracted to category positions based on their membership. Hover over words to see details.</p>
+        <button onclick="restartSimulation()">Restart Animation</button>
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ff6b6b;"></div>
+                <span>Category 1 (Top-Left)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #4ecdc4;"></div>
+                <span>Category 2 (Top-Right)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #ffe66d;"></div>
+                <span>Category 3 (Bottom-Left)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #a8dadc;"></div>
+                <span>Category 4 (Bottom-Right)</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background: #b8b8b8;"></div>
+                <span>Multiple Categories</span>
+            </div>
+        </div>
+    </div>
+    <svg id="viz"></svg>
+
+    <script>
+        // Sample data structure
+        /* const sampleWords = [
+            // Category 1 only (Technology)
+            { word: "algorithm", categories: [1], frequency: 15 },
+            { word: "software", categories: [1], frequency: 12 },
+            { word: "coding", categories: [1], frequency: 10 },
+            { word: "debug", categories: [1], frequency: 8 },
+            
+            // Category 2 only (Business)
+            { word: "revenue", categories: [2], frequency: 14 },
+            { word: "strategy", categories: [2], frequency: 11 },
+            { word: "market", categories: [2], frequency: 13 },
+            { word: "profit", categories: [2], frequency: 9 },
+            
+            // Category 3 only (Science)
+            { word: "hypothesis", categories: [3], frequency: 12 },
+            { word: "experiment", categories: [3], frequency: 10 },
+            { word: "molecule", categories: [3], frequency: 8 },
+            { word: "theory", categories: [3], frequency: 11 },
+            
+            // Category 4 only (Art)
+            { word: "canvas", categories: [4], frequency: 10 },
+            { word: "aesthetic", categories: [4], frequency: 9 },
+            { word: "sculpture", categories: [4], frequency: 7 },
+            { word: "gallery", categories: [4], frequency: 8 },
+            
+            // Categories 1 & 2
+            { word: "innovation", categories: [1, 2], frequency: 16 },
+            { word: "digital", categories: [1, 2], frequency: 14 },
+            { word: "platform", categories: [1, 2], frequency: 12 },
+            
+            // Categories 2 & 3
+            { word: "research", categories: [2, 3], frequency: 15 },
+            { word: "analysis", categories: [2, 3], frequency: 13 },
+            
+            // Categories 3 & 4
+            { word: "design", categories: [3, 4], frequency: 14 },
+            { word: "pattern", categories: [3, 4], frequency: 11 },
+            
+            // Categories 1 & 4
+            { word: "creative", categories: [1, 4], frequency: 13 },
+            { word: "interface", categories: [1, 4], frequency: 10 },
+            
+            // All categories
+            { word: "project", categories: [1, 2, 3, 4], frequency: 20 },
+            { word: "process", categories: [1, 2, 3, 4], frequency: 18 },
+            { word: "development", categories: [1, 2, 3, 4], frequency: 17 },
+            { word: "quality", categories: [1, 2, 3, 4], frequency: 15 },
+            
+            // Three categories
+            { word: "methodology", categories: [1, 2, 3], frequency: 14 },
+            { word: "framework", categories: [1, 2, 4], frequency: 12 },
+            { word: "concept", categories: [2, 3, 4], frequency: 13 },
+        ]; */
+
+        const sampleWords = d3.json('word_cloud_data.json')
+
+        const width = 1200;
+        const height = 700;
+        
+        const svg = d3.select("#viz")
+            .attr("width", width)
+            .attr("height", height);
+
+        // Category positions (corners and center)
+        const categoryPositions = {
+            1: { x: width * 0.2, y: height * 0.2 },   // Top-left
+            2: { x: width * 0.8, y: height * 0.2 },   // Top-right
+            3: { x: width * 0.2, y: height * 0.8 },   // Bottom-left
+            4: { x: width * 0.8, y: height * 0.8 }    // Bottom-right
+        };
+
+        const categoryColors = {
+            1: "#ff6b6b",
+            2: "#4ecdc4",
+            3: "#ffe66d",
+            4: "#a8dadc"
+        };
+
+        // Calculate target position for each word based on category membership
+        function calculateTarget(categories) {
+            let x = 0, y = 0;
+            categories.forEach(cat => {
+                x += categoryPositions[cat].x;
+                y += categoryPositions[cat].y;
+            });
+            return {
+                x: x / categories.length,
+                y: y / categories.length
+            };
+        }
+
+        // Determine color based on categories
+        function getColor(categories) {
+            if (categories.length === 1) {
+                return categoryColors[categories[0]];
+            }
+            return "#b8b8b8"; // Gray for multiple categories
+        }
+
+        // Prepare nodes
+        const nodes = sampleWords.map(d => ({
+            ...d,
+            target: calculateTarget(d.categories),
+            color: getColor(d.categories),
+            radius: Math.sqrt(d.frequency) * 3
+        }));
+
+        let simulation;
+
+        function initSimulation() {
+            // Clear existing elements
+            svg.selectAll("*").remove();
+
+            // Create force simulation
+            simulation = d3.forceSimulation(nodes)
+                .force("charge", d3.forceManyBody().strength(-100))
+                .force("collision", d3.forceCollide().radius(d => d.radius + 2))
+                .force("x", d3.forceX(d => d.target.x).strength(0.3))
+                .force("y", d3.forceY(d => d.target.y).strength(0.3));
+
+            // Draw category indicators
+            const categoryGroup = svg.append("g").attr("class", "categories");
+            
+            Object.entries(categoryPositions).forEach(([cat, pos]) => {
+                categoryGroup.append("circle")
+                    .attr("cx", pos.x)
+                    .attr("cy", pos.y)
+                    .attr("r", 8)
+                    .attr("fill", categoryColors[cat])
+                    .attr("opacity", 0.3);
+            });
+
+            // Create word elements
+            const node = svg.append("g")
+                .selectAll("g")
+                .data(nodes)
+                .join("g")
+                .attr("cursor", "pointer");
+
+            node.append("circle")
+                .attr("r", d => d.radius)
+                .attr("fill", d => d.color)
+                .attr("opacity", 0.7);
+
+            node.append("text")
+                .text(d => d.word)
+                .attr("text-anchor", "middle")
+                .attr("dy", "0.3em")
+                .attr("font-size", d => Math.max(10, d.radius * 0.8))
+                .attr("fill", "#fff")
+                .attr("pointer-events", "none");
+
+            // Tooltip
+            const tooltip = d3.select("body").append("div")
+                .style("position", "absolute")
+                .style("background", "rgba(0,0,0,0.8)")
+                .style("color", "#fff")
+                .style("padding", "8px 12px")
+                .style("border-radius", "4px")
+                .style("font-size", "12px")
+                .style("pointer-events", "none")
+                .style("opacity", 0);
+
+            node.on("mouseover", function(event, d) {
+                const cats = d.categories.map(c => `Category ${c}`).join(", ");
+                tooltip
+                    .style("opacity", 1)
+                    .html(`<strong>${d.word}</strong><br>Categories: ${cats}<br>Frequency: ${d.frequency}`);
+            })
+            .on("mousemove", function(event) {
+                tooltip
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            })
+            .on("mouseout", function() {
+                tooltip.style("opacity", 0);
+            });
+
+            simulation.on("tick", () => {
+                node.attr("transform", d => `translate(${d.x},${d.y})`);
+            });
+        }
+
+        function restartSimulation() {
+            if (simulation) simulation.stop();
+            initSimulation();
+        }
+
+        // Initialize
+        initSimulation();
+    </script>
+</body>
+</html>

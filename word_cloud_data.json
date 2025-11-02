@@ -1,0 +1,1210 @@
+[
+  {
+    "word": "hello",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 63,
+    "category_frequencies": {
+      "1": 7,
+      "2": 36,
+      "3": 8,
+      "4": 12
+    }
+  },
+  {
+    "word": "know",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 24,
+    "category_frequencies": {
+      "1": 8,
+      "2": 7,
+      "3": 4,
+      "4": 5
+    }
+  },
+  {
+    "word": "meow",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 24,
+    "category_frequencies": {
+      "3": 14,
+      "4": 10
+    }
+  },
+  {
+    "word": "dont",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 19,
+    "category_frequencies": {
+      "1": 2,
+      "2": 9,
+      "3": 4,
+      "4": 4
+    }
+  },
+  {
+    "word": "just",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 19,
+    "category_frequencies": {
+      "1": 3,
+      "2": 6,
+      "3": 6,
+      "4": 4
+    }
+  },
+  {
+    "word": "really",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 18,
+    "category_frequencies": {
+      "1": 3,
+      "2": 5,
+      "3": 3,
+      "4": 7
+    }
+  },
+  {
+    "word": "like",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 18,
+    "category_frequencies": {
+      "2": 6,
+      "3": 8,
+      "4": 4
+    }
+  },
+  {
+    "word": "love",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 15,
+    "category_frequencies": {
+      "1": 4,
+      "2": 4,
+      "3": 4,
+      "4": 3
+    }
+  },
+  {
+    "word": "triangle",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 15,
+    "category_frequencies": {
+      "1": 3,
+      "2": 5,
+      "3": 4,
+      "4": 3
+    }
+  },
+  {
+    "word": "things",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 13,
+    "category_frequencies": {
+      "1": 5,
+      "2": 2,
+      "3": 3,
+      "4": 3
+    }
+  },
+  {
+    "word": "release",
+    "categories": [
+      "2"
+    ],
+    "frequency": 13,
+    "category_frequencies": {
+      "2": 13
+    }
+  },
+  {
+    "word": "right",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 12,
+    "category_frequencies": {
+      "1": 3,
+      "2": 2,
+      "3": 5,
+      "4": 2
+    }
+  },
+  {
+    "word": "thats",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 12,
+    "category_frequencies": {
+      "1": 4,
+      "2": 2,
+      "3": 3,
+      "4": 3
+    }
+  },
+  {
+    "word": "time",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 12,
+    "category_frequencies": {
+      "1": 3,
+      "3": 4,
+      "4": 5
+    }
+  },
+  {
+    "word": "testing",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 11,
+    "category_frequencies": {
+      "1": 8,
+      "2": 3
+    }
+  },
+  {
+    "word": "youre",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 10,
+    "category_frequencies": {
+      "1": 3,
+      "3": 5,
+      "4": 2
+    }
+  },
+  {
+    "word": "think",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 10,
+    "category_frequencies": {
+      "2": 4,
+      "3": 3,
+      "4": 3
+    }
+  },
+  {
+    "word": "people",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 9,
+    "category_frequencies": {
+      "1": 7,
+      "4": 2
+    }
+  },
+  {
+    "word": "priceless",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 9,
+    "category_frequencies": {
+      "1": 1,
+      "2": 6,
+      "3": 2
+    }
+  },
+  {
+    "word": "secret",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 9,
+    "category_frequencies": {
+      "1": 3,
+      "2": 3,
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "going",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 4,
+      "3": 2,
+      "4": 2
+    }
+  },
+  {
+    "word": "lawrence",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 6,
+      "2": 2
+    }
+  },
+  {
+    "word": "recording",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 3,
+      "2": 2,
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "wish",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2,
+      "4": 5
+    }
+  },
+  {
+    "word": "boop",
+    "categories": [
+      "3"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "3": 8
+    }
+  },
+  {
+    "word": "got",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 2,
+      "2": 2,
+      "3": 3
+    }
+  },
+  {
+    "word": "hear",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 3,
+      "3": 4
+    }
+  },
+  {
+    "word": "lot",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 5,
+      "4": 2
+    }
+  },
+  {
+    "word": "reclaim",
+    "categories": [
+      "1"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 7
+    }
+  },
+  {
+    "word": "record",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 1,
+      "2": 3,
+      "3": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "want",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 3,
+      "3": 2,
+      "4": 2
+    }
+  },
+  {
+    "word": "yeah",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 2,
+      "2": 3,
+      "3": 2
+    }
+  },
+  {
+    "word": "say",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "2": 2,
+      "4": 5
+    }
+  },
+  {
+    "word": "theres",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "2": 5,
+      "4": 2
+    }
+  },
+  {
+    "word": "beep",
+    "categories": [
+      "1"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "1": 6
+    }
+  },
+  {
+    "word": "good",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "1": 2,
+      "3": 4
+    }
+  },
+  {
+    "word": "okay",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2,
+      "4": 3
+    }
+  },
+  {
+    "word": "path",
+    "categories": [
+      "1"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "1": 6
+    }
+  },
+  {
+    "word": "pole",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "3": 2,
+      "4": 4
+    }
+  },
+  {
+    "word": "friends",
+    "categories": [
+      "4"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "4": 6
+    }
+  },
+  {
+    "word": "ive",
+    "categories": [
+      "1"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 5
+    }
+  },
+  {
+    "word": "pants",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 1,
+      "4": 4
+    }
+  },
+  {
+    "word": "body",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "2": 2,
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "inside",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "2": 2,
+      "4": 3
+    }
+  },
+  {
+    "word": "let",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "2": 2,
+      "4": 3
+    }
+  },
+  {
+    "word": "life",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "2": 3,
+      "3": 2
+    }
+  },
+  {
+    "word": "little",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "3": 3,
+      "4": 2
+    }
+  },
+  {
+    "word": "stop",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "3": 2,
+      "4": 3
+    }
+  },
+  {
+    "word": "reveal",
+    "categories": [
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "4": 5
+    }
+  },
+  {
+    "word": "beautiful",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "3": 2
+    }
+  },
+  {
+    "word": "choose",
+    "categories": [
+      "1"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 4
+    }
+  },
+  {
+    "word": "come",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "3": 2
+    }
+  },
+  {
+    "word": "does",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "4": 2
+    }
+  },
+  {
+    "word": "fart",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "2": 2
+    }
+  },
+  {
+    "word": "ill",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "2": 2
+    }
+  },
+  {
+    "word": "poop",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 3,
+      "2": 1
+    }
+  },
+  {
+    "word": "tell",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "4": 2
+    }
+  },
+  {
+    "word": "way",
+    "categories": [
+      "1"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 4
+    }
+  },
+  {
+    "word": "went",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 3,
+      "3": 1
+    }
+  },
+  {
+    "word": "best",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "2": 3,
+      "4": 1
+    }
+  },
+  {
+    "word": "hey",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "2": 2,
+      "3": 2
+    }
+  },
+  {
+    "word": "phone",
+    "categories": [
+      "2"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "2": 4
+    }
+  },
+  {
+    "word": "used",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "2": 1,
+      "4": 3
+    }
+  },
+  {
+    "word": "watch",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "2": 3,
+      "3": 1
+    }
+  },
+  {
+    "word": "blah",
+    "categories": [
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "3": 4
+    }
+  },
+  {
+    "word": "horse",
+    "categories": [
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "3": 4
+    }
+  },
+  {
+    "word": "look",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "3": 2,
+      "4": 2
+    }
+  },
+  {
+    "word": "feel",
+    "categories": [
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "4": 4
+    }
+  },
+  {
+    "word": "hmm",
+    "categories": [
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "4": 4
+    }
+  },
+  {
+    "word": "parents",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "party",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "power",
+    "categories": [
+      "1"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 3
+    }
+  },
+  {
+    "word": "bark",
+    "categories": [
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 3
+    }
+  },
+  {
+    "word": "doot",
+    "categories": [
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 3
+    }
+  },
+  {
+    "word": "gotta",
+    "categories": [
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 3
+    }
+  },
+  {
+    "word": "moment",
+    "categories": [
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 3
+    }
+  },
+  {
+    "word": "partner",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "person",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "sex",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "welcome",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "3": 1
+    }
+  },
+  {
+    "word": "work",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "3": 1
+    }
+  },
+  {
+    "word": "looking",
+    "categories": [
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "3": 3
+    }
+  },
+  {
+    "word": "perfect",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "reflection",
+    "categories": [
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "3": 3
+    }
+  },
+  {
+    "word": "uhhuh",
+    "categories": [
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "3": 3
+    }
+  },
+  {
+    "word": "answer",
+    "categories": [
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "4": 3
+    }
+  },
+  {
+    "word": "secrets",
+    "categories": [
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "4": 3
+    }
+  },
+  {
+    "word": "busy",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "claim",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "close",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "dad",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "did",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "friend",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "fucking",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "happened",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "longer",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "manifest",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "paper",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "pretty",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "ran",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  }
+]
