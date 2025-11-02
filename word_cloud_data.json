@@ -16,6 +16,20 @@
     }
   },
   {
+    "word": "meow",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 25,
+    "category_frequencies": {
+      "2": 1,
+      "3": 14,
+      "4": 10
+    }
+  },
+  {
     "word": "know",
     "categories": [
       "1",
@@ -29,18 +43,6 @@
       "2": 7,
       "3": 4,
       "4": 5
-    }
-  },
-  {
-    "word": "meow",
-    "categories": [
-      "3",
-      "4"
-    ],
-    "frequency": 24,
-    "category_frequencies": {
-      "3": 14,
-      "4": 10
     }
   },
   {
@@ -222,43 +224,63 @@
     }
   },
   {
-    "word": "youre",
-    "categories": [
-      "1",
-      "3",
-      "4"
-    ],
-    "frequency": 10,
-    "category_frequencies": {
-      "1": 3,
-      "3": 5,
-      "4": 2
-    }
-  },
-  {
     "word": "think",
     "categories": [
+      "1",
       "2",
       "3",
       "4"
     ],
-    "frequency": 10,
+    "frequency": 11,
     "category_frequencies": {
+      "1": 1,
       "2": 4,
       "3": 3,
       "4": 3
     }
   },
   {
+    "word": "youre",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 11,
+    "category_frequencies": {
+      "1": 3,
+      "2": 1,
+      "3": 5,
+      "4": 2
+    }
+  },
+  {
     "word": "people",
     "categories": [
       "1",
+      "2",
+      "4"
+    ],
+    "frequency": 10,
+    "category_frequencies": {
+      "1": 7,
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "lawrence",
+    "categories": [
+      "1",
+      "2",
       "4"
     ],
     "frequency": 9,
     "category_frequencies": {
-      "1": 7,
-      "4": 2
+      "1": 6,
+      "2": 2,
+      "4": 1
     }
   },
   {
@@ -306,15 +328,63 @@
     }
   },
   {
-    "word": "lawrence",
+    "word": "good",
     "categories": [
       "1",
-      "2"
+      "2",
+      "3",
+      "4"
     ],
     "frequency": 8,
     "category_frequencies": {
-      "1": 6,
-      "2": 2
+      "1": 2,
+      "2": 1,
+      "3": 4,
+      "4": 1
+    }
+  },
+  {
+    "word": "got",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 2,
+      "2": 2,
+      "3": 3,
+      "4": 1
+    }
+  },
+  {
+    "word": "hear",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 3,
+      "3": 4,
+      "4": 1
+    }
+  },
+  {
+    "word": "lot",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 5,
+      "2": 1,
+      "4": 2
     }
   },
   {
@@ -334,6 +404,22 @@
     }
   },
   {
+    "word": "want",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 3,
+      "2": 1,
+      "3": 2,
+      "4": 2
+    }
+  },
+  {
     "word": "wish",
     "categories": [
       "1",
@@ -348,6 +434,36 @@
     }
   },
   {
+    "word": "yeah",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "1": 2,
+      "2": 3,
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "theres",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 8,
+    "category_frequencies": {
+      "2": 5,
+      "3": 1,
+      "4": 2
+    }
+  },
+  {
     "word": "boop",
     "categories": [
       "3"
@@ -358,41 +474,51 @@
     }
   },
   {
-    "word": "got",
+    "word": "let",
     "categories": [
       "1",
       "2",
-      "3"
-    ],
-    "frequency": 7,
-    "category_frequencies": {
-      "1": 2,
-      "2": 2,
-      "3": 3
-    }
-  },
-  {
-    "word": "hear",
-    "categories": [
-      "1",
-      "3"
-    ],
-    "frequency": 7,
-    "category_frequencies": {
-      "1": 3,
-      "3": 4
-    }
-  },
-  {
-    "word": "lot",
-    "categories": [
-      "1",
+      "3",
       "4"
     ],
     "frequency": 7,
     "category_frequencies": {
-      "1": 5,
+      "1": 1,
+      "2": 2,
+      "3": 1,
+      "4": 3
+    }
+  },
+  {
+    "word": "little",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 3,
       "4": 2
+    }
+  },
+  {
+    "word": "okay",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 7,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2,
+      "3": 1,
+      "4": 3
     }
   },
   {
@@ -422,34 +548,6 @@
     }
   },
   {
-    "word": "want",
-    "categories": [
-      "1",
-      "3",
-      "4"
-    ],
-    "frequency": 7,
-    "category_frequencies": {
-      "1": 3,
-      "3": 2,
-      "4": 2
-    }
-  },
-  {
-    "word": "yeah",
-    "categories": [
-      "1",
-      "2",
-      "3"
-    ],
-    "frequency": 7,
-    "category_frequencies": {
-      "1": 2,
-      "2": 3,
-      "3": 2
-    }
-  },
-  {
     "word": "say",
     "categories": [
       "2",
@@ -462,15 +560,15 @@
     }
   },
   {
-    "word": "theres",
+    "word": "friends",
     "categories": [
-      "2",
+      "3",
       "4"
     ],
     "frequency": 7,
     "category_frequencies": {
-      "2": 5,
-      "4": 2
+      "3": 1,
+      "4": 6
     }
   },
   {
@@ -484,29 +582,47 @@
     }
   },
   {
-    "word": "good",
-    "categories": [
-      "1",
-      "3"
-    ],
-    "frequency": 6,
-    "category_frequencies": {
-      "1": 2,
-      "3": 4
-    }
-  },
-  {
-    "word": "okay",
+    "word": "body",
     "categories": [
       "1",
       "2",
+      "3",
       "4"
     ],
     "frequency": 6,
     "category_frequencies": {
       "1": 1,
       "2": 2,
-      "4": 3
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "ive",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "1": 5,
+      "3": 1
+    }
+  },
+  {
+    "word": "look",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 2,
+      "4": 2
     }
   },
   {
@@ -517,6 +633,34 @@
     "frequency": 6,
     "category_frequencies": {
       "1": 6
+    }
+  },
+  {
+    "word": "inside",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "2": 2,
+      "3": 1,
+      "4": 3
+    }
+  },
+  {
+    "word": "life",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 6,
+    "category_frequencies": {
+      "2": 3,
+      "3": 2,
+      "4": 1
     }
   },
   {
@@ -532,23 +676,87 @@
     }
   },
   {
-    "word": "friends",
+    "word": "beautiful",
     "categories": [
-      "4"
-    ],
-    "frequency": 6,
-    "category_frequencies": {
-      "4": 6
-    }
-  },
-  {
-    "word": "ive",
-    "categories": [
-      "1"
+      "1",
+      "2",
+      "3"
     ],
     "frequency": 5,
     "category_frequencies": {
-      "1": 5
+      "1": 2,
+      "2": 1,
+      "3": 2
+    }
+  },
+  {
+    "word": "come",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 2,
+      "3": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "didnt",
+    "categories": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "does",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 2,
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "fart",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 2,
+      "2": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "feel",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 5,
+    "category_frequencies": {
+      "1": 1,
+      "4": 4
     }
   },
   {
@@ -564,65 +772,43 @@
     }
   },
   {
-    "word": "body",
+    "word": "poop",
     "categories": [
+      "1",
       "2",
-      "3",
       "4"
     ],
     "frequency": 5,
     "category_frequencies": {
-      "2": 2,
-      "3": 2,
+      "1": 3,
+      "2": 1,
       "4": 1
     }
   },
   {
-    "word": "inside",
+    "word": "way",
     "categories": [
-      "2",
+      "1",
       "4"
     ],
     "frequency": 5,
     "category_frequencies": {
-      "2": 2,
-      "4": 3
+      "1": 4,
+      "4": 1
     }
   },
   {
-    "word": "let",
+    "word": "best",
     "categories": [
       "2",
-      "4"
-    ],
-    "frequency": 5,
-    "category_frequencies": {
-      "2": 2,
-      "4": 3
-    }
-  },
-  {
-    "word": "life",
-    "categories": [
-      "2",
-      "3"
-    ],
-    "frequency": 5,
-    "category_frequencies": {
-      "2": 3,
-      "3": 2
-    }
-  },
-  {
-    "word": "little",
-    "categories": [
       "3",
       "4"
     ],
     "frequency": 5,
     "category_frequencies": {
-      "3": 3,
-      "4": 2
+      "2": 3,
+      "3": 1,
+      "4": 1
     }
   },
   {
@@ -648,15 +834,33 @@
     }
   },
   {
-    "word": "beautiful",
+    "word": "art",
     "categories": [
       "1",
-      "3"
+      "2",
+      "3",
+      "4"
     ],
     "frequency": 4,
     "category_frequencies": {
-      "1": 2,
-      "3": 2
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "bit",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "4": 2
     }
   },
   {
@@ -670,39 +874,33 @@
     }
   },
   {
-    "word": "come",
+    "word": "dance",
     "categories": [
       "1",
-      "3"
-    ],
-    "frequency": 4,
-    "category_frequencies": {
-      "1": 2,
-      "3": 2
-    }
-  },
-  {
-    "word": "does",
-    "categories": [
-      "1",
+      "2",
+      "3",
       "4"
     ],
     "frequency": 4,
     "category_frequencies": {
-      "1": 2,
-      "4": 2
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
     }
   },
   {
-    "word": "fart",
+    "word": "doing",
     "categories": [
       "1",
-      "2"
+      "2",
+      "3"
     ],
     "frequency": 4,
     "category_frequencies": {
-      "1": 2,
-      "2": 2
+      "1": 1,
+      "2": 2,
+      "3": 1
     }
   },
   {
@@ -718,15 +916,59 @@
     }
   },
   {
-    "word": "poop",
+    "word": "make",
     "categories": [
       "1",
-      "2"
+      "2",
+      "3",
+      "4"
     ],
     "frequency": 4,
     "category_frequencies": {
-      "1": 3,
-      "2": 1
+      "1": 1,
+      "2": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "secrets",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 1,
+      "4": 3
+    }
+  },
+  {
+    "word": "sex",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "teacher",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "1": 2,
+      "2": 1,
+      "3": 1
     }
   },
   {
@@ -742,16 +984,6 @@
     }
   },
   {
-    "word": "way",
-    "categories": [
-      "1"
-    ],
-    "frequency": 4,
-    "category_frequencies": {
-      "1": 4
-    }
-  },
-  {
     "word": "went",
     "categories": [
       "1",
@@ -761,18 +993,6 @@
     "category_frequencies": {
       "1": 3,
       "3": 1
-    }
-  },
-  {
-    "word": "best",
-    "categories": [
-      "2",
-      "4"
-    ],
-    "frequency": 4,
-    "category_frequencies": {
-      "2": 3,
-      "4": 1
     }
   },
   {
@@ -795,6 +1015,20 @@
     "frequency": 4,
     "category_frequencies": {
       "2": 4
+    }
+  },
+  {
+    "word": "thing",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 4,
+    "category_frequencies": {
+      "2": 2,
+      "3": 1,
+      "4": 1
     }
   },
   {
@@ -842,28 +1076,6 @@
     }
   },
   {
-    "word": "look",
-    "categories": [
-      "3",
-      "4"
-    ],
-    "frequency": 4,
-    "category_frequencies": {
-      "3": 2,
-      "4": 2
-    }
-  },
-  {
-    "word": "feel",
-    "categories": [
-      "4"
-    ],
-    "frequency": 4,
-    "category_frequencies": {
-      "4": 4
-    }
-  },
-  {
     "word": "hmm",
     "categories": [
       "4"
@@ -871,6 +1083,190 @@
     "frequency": 4,
     "category_frequencies": {
       "4": 4
+    }
+  },
+  {
+    "word": "amazing",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 2
+    }
+  },
+  {
+    "word": "better",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "bought",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "deeply",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 2
+    }
+  },
+  {
+    "word": "experience",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 2
+    }
+  },
+  {
+    "word": "feeling",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "friend",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 2,
+      "3": 1
+    }
+  },
+  {
+    "word": "fucking",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 2,
+      "2": 1
+    }
+  },
+  {
+    "word": "gonna",
+    "categories": [
+      "1",
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "hope",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "left",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "limitations",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2
+    }
+  },
+  {
+    "word": "octopus",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "paper",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
     }
   },
   {
@@ -910,6 +1306,124 @@
     }
   },
   {
+    "word": "scared",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2
+    }
+  },
+  {
+    "word": "stuff",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "toilet",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "took",
+    "categories": [
+      "1",
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "wasnt",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "2": 2
+    }
+  },
+  {
+    "word": "wet",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "yes",
+    "categories": [
+      "1",
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "anger",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "4": 1
+    }
+  },
+  {
+    "word": "ass",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "4": 1
+    }
+  },
+  {
     "word": "bark",
     "categories": [
       "2"
@@ -917,6 +1431,56 @@
     "frequency": 3,
     "category_frequencies": {
       "2": 3
+    }
+  },
+  {
+    "word": "big",
+    "categories": [
+      "2",
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "boy",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "bright",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "3": 1
+    }
+  },
+  {
+    "word": "dog",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "4": 2
     }
   },
   {
@@ -940,6 +1504,30 @@
     }
   },
   {
+    "word": "hard",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
+    "word": "man",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "4": 2
+    }
+  },
+  {
     "word": "moment",
     "categories": [
       "2"
@@ -947,6 +1535,18 @@
     "frequency": 3,
     "category_frequencies": {
       "2": 3
+    }
+  },
+  {
+    "word": "mushrooms",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 1,
+      "3": 2
     }
   },
   {
@@ -974,15 +1574,17 @@
     }
   },
   {
-    "word": "sex",
+    "word": "wearing",
     "categories": [
       "2",
+      "3",
       "4"
     ],
     "frequency": 3,
     "category_frequencies": {
       "2": 1,
-      "4": 2
+      "3": 1,
+      "4": 1
     }
   },
   {
@@ -995,6 +1597,18 @@
     "category_frequencies": {
       "2": 2,
       "3": 1
+    }
+  },
+  {
+    "word": "whisper",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "2": 2,
+      "4": 1
     }
   },
   {
@@ -1017,6 +1631,18 @@
     "frequency": 3,
     "category_frequencies": {
       "3": 3
+    }
+  },
+  {
+    "word": "mirror",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 3,
+    "category_frequencies": {
+      "3": 2,
+      "4": 1
     }
   },
   {
@@ -1062,13 +1688,51 @@
     }
   },
   {
-    "word": "secrets",
+    "word": "actually",
     "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  {
+    "word": "beginning",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "believe",
+    "categories": [
+      "1",
       "4"
     ],
-    "frequency": 3,
+    "frequency": 2,
     "category_frequencies": {
-      "4": 3
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "bodies",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
     }
   },
   {
@@ -1122,23 +1786,39 @@
     }
   },
   {
-    "word": "friend",
+    "word": "different",
     "categories": [
-      "1"
+      "1",
+      "2"
     ],
     "frequency": 2,
     "category_frequencies": {
-      "1": 2
+      "1": 1,
+      "2": 1
     }
   },
   {
-    "word": "fucking",
+    "word": "feels",
     "categories": [
-      "1"
+      "1",
+      "3"
     ],
     "frequency": 2,
     "category_frequencies": {
-      "1": 2
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "getting",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
     }
   },
   {
@@ -1152,6 +1832,30 @@
     }
   },
   {
+    "word": "having",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "kind",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
     "word": "longer",
     "categories": [
       "1"
@@ -1159,6 +1863,30 @@
     "frequency": 2,
     "category_frequencies": {
       "1": 2
+    }
+  },
+  {
+    "word": "looked",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "lydia",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
     }
   },
   {
@@ -1172,7 +1900,7 @@
     }
   },
   {
-    "word": "paper",
+    "word": "met",
     "categories": [
       "1",
       "3"
@@ -1181,6 +1909,54 @@
     "category_frequencies": {
       "1": 1,
       "3": 1
+    }
+  },
+  {
+    "word": "new",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  {
+    "word": "number",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "pandemic",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "pooped",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
     }
   },
   {
@@ -1205,6 +1981,6122 @@
     "category_frequencies": {
       "1": 1,
       "3": 1
+    }
+  },
+  {
+    "word": "reclaiming",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "river",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "school",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "security",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "seymour",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "social",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "taught",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  {
+    "word": "times",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "told",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  {
+    "word": "true",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  {
+    "word": "try",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "understand",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "wonder",
+    "categories": [
+      "1",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "working",
+    "categories": [
+      "1",
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "2": 1
+    }
+  },
+  {
+    "word": "world",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "writing",
+    "categories": [
+      "1"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 2
+    }
+  },
+  {
+    "word": "youll",
+    "categories": [
+      "1",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "1": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "afraid",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "broken",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "check",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "cock",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "coming",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "day",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "death",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "deserve",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "die",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "dream",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "drugs",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "eat",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "eyes",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "fault",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "fear",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "floor",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "god",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "head",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "jingles",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "kid",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "lalalalalala",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "legs",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "living",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "maybe",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "motherfucking",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "need",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "pools",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "pussy",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "ready",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "ring",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "shake",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "shower",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "sleep",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "slightly",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "spit",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "thinking",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "universe",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "walk",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "wants",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "watching",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "ways",
+    "categories": [
+      "2",
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "3": 1
+    }
+  },
+  {
+    "word": "week",
+    "categories": [
+      "2",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "whisperer",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "whispering",
+    "categories": [
+      "2"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "2": 2
+    }
+  },
+  {
+    "word": "alive",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "artwork",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "bats",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "clue",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "course",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "daddy",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "date",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "dbaby",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "family",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "great",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "happy",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "heart",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "hold",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "key",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "live",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "makes",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "popsicle",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "reflect",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "reflecting",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "start",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "thoughts",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "today",
+    "categories": [
+      "3",
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 1,
+      "4": 1
+    }
+  },
+  {
+    "word": "tonight",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "wanna",
+    "categories": [
+      "3"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "3": 2
+    }
+  },
+  {
+    "word": "acid",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "asked",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "create",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "gift",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "hide",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "hot",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "keccao",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "lets",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "making",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "muse",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "older",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "piece",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "sexual",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "shadow",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "teamwork",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "use",
+    "categories": [
+      "4"
+    ],
+    "frequency": 2,
+    "category_frequencies": {
+      "4": 2
+    }
+  },
+  {
+    "word": "able",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "andperfect",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "anymore",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "away",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "bad",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "band",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "bar",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "belden",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "believes",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "blessed",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "borrowed",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "brake",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "brakes",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "butt",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "camry",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "changed",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "chose",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "climb",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "concerned",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "continue",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "cultural",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "dancing",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "delighted",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "desires",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "dreams",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "drove",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "eages",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "easy",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "emergency",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "end",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "event",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fantasized",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "far",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "farting",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fears",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "feed",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fergal",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fifth",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "flff",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "flirted",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "float",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "focus",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "francisco",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fuck",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fucker",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "fun",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "giant",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "greatest",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "grow",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "half",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "hell",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "high",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "highway",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "hole",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "hours",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "human",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "humility",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "irish",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "jersey",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "journey",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "leader",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "lineage",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "listen",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "married",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "mercury",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "messages",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "microdosed",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "middle",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "mind",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "mom",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "month",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "motherfucker",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "nature",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "nice",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "outnor",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "past",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "peoples",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "pink",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "played",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "pleased",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "pleasing",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "practices",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "pride",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "prove",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "public",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "queer",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "raised",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "raw",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "reinterpret",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "remember",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "restrooms",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "reused",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "roll",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "sacred",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "san",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "saw",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "shitting",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "soul",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "sovereignty",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "state",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "states",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "staying",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "struggling",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "summer",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "surprised",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "symbol",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "taking",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "thought",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "throw",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "truck",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "trying",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "uncomfortable",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "united",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "voice",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "white",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "witch",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "woman",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "words",
+    "categories": [
+      "1"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "1": 1
+    }
+  },
+  {
+    "word": "aaaaaaaaahhhhhhh",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "ago",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "agreement",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "aint",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "alien",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "arms",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "ayy",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "babies",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "bat",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "bidet",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "bitations",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "bitches",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "blahbiddybluhbiddyblah",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "bloody",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "broke",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "butterfly",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "bye",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "canada",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "cheated",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "committed",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "connor",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "crush",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "cut",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "dark",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "darkly",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "demon",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "dew",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "directed",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "doin",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "dropping",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "dry",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "dudes",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "easier",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "enemies",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "events",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "expectations",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "expecting",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "fee",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "flow",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "forest",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "forever",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "forming",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "freestyle",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "fucked",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "goddamn",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "goodbye",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "guess",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "hair",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "heat",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "heritage",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "holding",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "impacts",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "insecurity",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "interesting",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "intimacy",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "joy",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "july",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "knees",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "lidded",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "longing",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "loose",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "magical",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "messy",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "microphone",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "mountain",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "orange",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "pay",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "pleasure",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "pockets",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "poison",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "polly",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "porn",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "portapotty",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "prerecorded",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "pretend",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "rally",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "random",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "related",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "relationship",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "resentments",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "rude",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "sadness",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "serve",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "sheen",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "sit",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "snot",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "somebody",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "souls",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "street",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "submit",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "super",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "sustainability",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "swallowing",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "sweet",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "swim",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "taken",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "talk",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "thee",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "theyre",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "tired",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "trade",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "trunks",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "turn",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "turns",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "unprotected",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "unrespected",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "view",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "waaaaah",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "weekend",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "wholl",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "whyd",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "wink",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "wipe",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "wombats",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "works",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "worry",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "wow",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "year",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "yoho",
+    "categories": [
+      "2"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "2": 1
+    }
+  },
+  {
+    "word": "andre",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "ask",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "banged",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "beauty",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "bing",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "bisa",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "bong",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "booty",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "bossy",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "brightly",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "brought",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "carla",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "ceiling",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "charging",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "closer",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "colours",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "concept",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "consciousness",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "cool",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "crazy",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "ddddbaby",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "ddddddddbaby",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "dead",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "dee",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "despite",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "energy",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "evening",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "exquisite",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "face",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "foot",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "fractal",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "fuller",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "funny",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "gas",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "glad",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "hands",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "hardly",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "heather",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "helium",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "hopefully",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "hugs",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "hunt",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "important",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "instructions",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "job",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "jungle",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "lady",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "lake",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "laurence",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "light",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "literally",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "located",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "lovers",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "magic",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "magnificent",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "maintain",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "mama",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "mistakes",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "mothers",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "notice",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "noticing",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "old",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "pain",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "paul",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "peeing",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "place",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "play",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "pocket",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "poetry",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "point",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "poll",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "projection",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "raccoon",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "ratchet",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "recognize",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "reflections",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "resuscitate",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "rewarding",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "roger",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "said",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "scavenger",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "searching",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "select",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "sense",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "seven",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "shine",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "shining",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "soon",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "stole",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "store",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "stronger",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "strove",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "sublime",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "supposed",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "surround",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "talking",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "theater",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "tingles",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "toes",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "tramalama",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "turned",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "unique",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "vibe",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "wonderful",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "wrong",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "yay",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "years",
+    "categories": [
+      "3"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "3": 1
+    }
+  },
+  {
+    "word": "aaron",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "accept",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "anal",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "anybody",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "arsvio",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "astro",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "ate",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "awakenings",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "baby",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "baller",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "bathroom",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "beads",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "breathe",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "bring",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "bugs",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "bunch",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "buried",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "burning",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "bushes",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "camping",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "car",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "catch",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "cause",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "chair",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "child",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "church",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "clarice",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "clothes",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "clothing",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "collar",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "collected",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "connect",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "cord",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "cream",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "cult",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "cute",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "danger",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "dangerous",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "deepest",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "demisexual",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "diarrhea",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "doors",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "drive",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "drivers",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "eenie",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "embrace",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "everybody",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "excuse",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "exhibitionist",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "experiences",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "fanaticized",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "fantasize",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "festival",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "finally",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "followers",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "food",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "froggy",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "fry",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "gaff",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "gage",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "genie",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "genius",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "girl",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "given",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "gras",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "happiness",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "hateful",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "hiding",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "home",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "hoop",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "hudson",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "ibex",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "ice",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "imperfection",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "independent",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "insecure",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "join",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "kinda",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "kissed",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "later",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "learned",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "letting",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "license",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "lifting",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "lmiope",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "mardi",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "mask",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "meenie",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "mic",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "minie",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "moe",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "monogamous",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "murder",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "mystery",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "naughty",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "nick",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "nose",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "onesies",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "onlyfans",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "oops",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "open",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "orientation",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "perfection",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "pick",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "pictures",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "pluto",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "poles",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "poopy",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "porta",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "potty",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "preteen",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "price",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "quarters",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "quest",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "question",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "quite",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "raspberries",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "real",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "realize",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "relationships",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "remembering",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "rendivity",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "revealed",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "run",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "running",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "salesman",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "says",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "secretly",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "seek",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "shit",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "short",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "shorts",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "shy",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "sitting",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "socialize",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "spend",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "story",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "stove",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "straight",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "swallow",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "tables",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "taller",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "teenager",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "thank",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "therapist",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "thinks",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "toe",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "traded",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "tried",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "truth",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "vocal",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "voyeur",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "watched",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "wear",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "weve",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "willing",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "wood",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
+    }
+  },
+  {
+    "word": "younger",
+    "categories": [
+      "4"
+    ],
+    "frequency": 1,
+    "category_frequencies": {
+      "4": 1
     }
   }
 ]
