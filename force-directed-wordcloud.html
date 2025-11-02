@@ -216,7 +216,7 @@
             // Create force simulation - remove bounds force to allow natural spread
             simulation = d3.forceSimulation(nodes)
                 .force("charge", d3.forceManyBody().strength(-100))
-                .force("collision", d3.forceCollide().radius(d => d.radius + 1))
+                .force("collision", d3.forceCollide().radius(d => d.radius + 3))
                 .force("x", d3.forceX(d => d.target.x).strength(0.1))
                 .force("y", d3.forceY(d => d.target.y).strength(0.1));
 
