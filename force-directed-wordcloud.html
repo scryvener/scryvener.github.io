@@ -79,7 +79,7 @@
 </head>
 <body>
     <div class="controls">
-        <h2>Multi-Category Force-Directed Word Cloud</h2>
+        <h2>Whispers, Force-Directed Word Cloud</h2>
         <p>Words are attracted to category positions based on their membership. Hover over words to see details. Use mouse wheel to zoom, click and drag to pan.</p>
         <button onclick="restartSimulation()" id="restartBtn" disabled>Restart Animation</button>
         <button onclick="resetZoom()" id="resetZoomBtn" disabled>Reset Zoom</button>
@@ -175,7 +175,18 @@
             if (categories.length === 1) {
                 return categoryColors[categories[0]];
             }
-            return "#b8b8b8"; // Gray for multiple categories
+
+            let r = 0, g = 0, b = 0;
+            categories.forEach(cat => {
+                const color = d3.color(categoryColors[cat]);
+                r += color.r;
+                g += color.g;
+                b += color.b;
+            });
+            const count = categories.length;
+            return d3.rgb(r / count, g / count, b / count).toString();
+
+            // return "#b8b8b8"; // Gray for multiple categories
         }
 
         function updateStatus(message, type = 'loading') {
