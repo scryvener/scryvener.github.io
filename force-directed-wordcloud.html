@@ -143,6 +143,13 @@
             4: "#ffff00"
         };
 
+        const catNames={
+            1:"Reclaim",
+            2:"Release",
+            3:"Reflect",
+            4:"Reveal"
+        }
+
         // Global variables
         let nodes = [];
         let simulation;
@@ -270,7 +277,9 @@
             }
 
             node.on("mouseover", function(event, d) {
-                const cats = d.categories.map(c => `Category ${c}`).join(", ");
+                const cats = d.categories.map(c => `${catNames[c]}}`).join(", ");
+                
+
                 tooltip
                     .style("opacity", 1)
                     .html(`<strong>${d.word}</strong><br>Categories: ${cats}<br>Frequency: ${d.frequency}`);
