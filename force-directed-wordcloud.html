@@ -220,9 +220,9 @@
             // Create force simulation - remove bounds force to allow natural spread
             simulation = d3.forceSimulation(nodes)
                 .force("charge", d3.forceManyBody().strength(-100))
-                .force("collision", d3.forceCollide().radius(d => d.radius *1.25))
-                .force("x", d3.forceX(d => d.target.x).strength(0.2))
-                .force("y", d3.forceY(d => d.target.y).strength(0.2));
+                .force("collision", d3.forceCollide().radius(d => d.radius *1.5))
+                .force("x", d3.forceX(d => d.target.x).strength(0.225))
+                .force("y", d3.forceY(d => d.target.y).strength(0.225));
 
             // Draw category indicators
             const categoryGroup = g.append("g").attr("class", "categories");
