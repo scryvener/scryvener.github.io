@@ -277,12 +277,12 @@
             }
 
             node.on("mouseover", function(event, d) {
-                const cats = d.categories.map(c => `${catNames[c]}}`).join(", ");
+                const cats = d.categories.map(c => `${catNames[c]}`).join(", ");
                 
 
                 tooltip
                     .style("opacity", 1)
-                    .html(`<strong>${d.word}</strong><br>Categories: ${cats}<br>Frequency: ${d.frequency}`);
+                    .html(`<strong>${d.word}</strong><br>Stations: ${cats}<br>Frequency: ${d.frequency}`);
             })
             .on("mousemove", function(event) {
                 tooltip
