@@ -175,6 +175,7 @@
             if (categories.length === 1) {
                 return categoryColors[categories[0]];
             }
+            
 
             // let r = 0, g = 0, b = 0;
             // categories.forEach(cat => {
@@ -226,6 +227,33 @@
 
             // Create a group for zoom/pan
             g = svg.append("g");
+
+            const defs = svg.append("defs");
+            
+            // Find all unique category combinations
+            const categoryCombos = new Set();
+            nodes.forEach(node => {
+                if (node.categories.length > 1) {
+                    categoryCombos.add(node.categories.sort().join('-'));
+                }
+            });
+            
+            // Create a gradient for each combination
+            categoryCombos.forEach(combo => {
+                const cats = combo.split('-').map(Number);
+                const gradient = defs.append("linearGradient")
+                    .attr("id", `gradient-${combo}`)
+                    .attr("x1", "0%")
+                    .attr("y1", "0%")
+                    .attr("x2", "100%")
+                    .attr("y2", "100%");
+                
+                cats.forEach((cat, i) => {
+                    gradient.append("stop")
+                        .attr("offset", `${(i / (cats.length - 1)) * 100}%`)
+                        .attr("stop-color", categoryColors[cat]);
+                });
+            });
 
             // Set up zoom behavior
             zoom = d3.zoom()
