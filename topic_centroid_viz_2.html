@@ -487,12 +487,22 @@
         }
 
         function drawTrajectories(categories, colorScale) {
-            const trajData = categories.map(catId => {
-                const points = filterDataByGranularity(csvData, currentGranularity)
-                    .filter(d => d.category_id === catId && d.Date <= dates[currentDate])
-                    .sort((a, b) => a.Date - b.Date);
-                return {category_id: catId, points};
-            }).filter(d => d.points.length > 1);
+            // Only show trajectories if a topic is focused
+            if (focusedCategory === null) {
+                g.selectAll('.trajectory').remove();
+                g.selectAll('.arrow').remove();
+                return;
+            }
+
+            const trajData = categories
+                .filter(catId => catId === focusedCategory)
+                .map(catId => {
+                    const points = filterDataByGranularity(csvData, currentGranularity)
+                        .filter(d => d.category_id === catId && d.Date <= dates[currentDate])
+                        .sort((a, b) => a.Date - b.Date);
+                    return {category_id: catId, points};
+                })
+                .filter(d => d.points.length > 1);
 
             const line = d3.line()
                 .x(d => xScale(d.x))
@@ -510,10 +520,7 @@
                 .merge(trajectories)
                 .attr('d', d => line(d.points))
                 .attr('stroke', d => colorScale(d.category_id))
-                .attr('opacity', d => {
-                    if (focusedCategory === null) return 0.6;
-                    return focusedCategory === d.category_id ? 0.8 : 0;
-                });
+                .attr('opacity', 0.8);
 
             const arrows = g.selectAll('.arrow').data([]);
             arrows.exit().remove();
@@ -541,7 +548,7 @@
                         .attr('d', `M 0 0 L ${-size} ${-size/2} L ${-size} ${size/2} Z`)
                         .attr('transform', `translate(${x2},${y2}) rotate(${angle * 180 / Math.PI})`)
                         .attr('fill', colorScale(traj.category_id))
-                        .attr('opacity', focusedCategory === null || focusedCategory === traj.category_id ? 0.7 : 0);
+                        .attr('opacity', 0.7);
                 }
             });
         }
@@ -588,26 +595,16 @@
                 .classed('dimmed', d => categoryId !== null && d.category_id !== categoryId)
                 .attr('opacity', d => categoryId === null || d.category_id === categoryId ? 1 : 0.15);
 
-            g.selectAll('.trajectory')
-                .classed('dimmed', d => categoryId !== null && d.category_id !== categoryId)
-                .attr('opacity', d => {
-                    if (categoryId === null) return 0.6;
-                    return d.category_id === categoryId ? 0.8 : 0;
-                });
-
-            g.selectAll('.arrow')
-                .attr('opacity', function() {
-                    const traj = d3.select(this.parentNode).selectAll('.trajectory').data()[0];
-                    if (!traj) return 0;
-                    if (categoryId === null) return 0.7;
-                    return categoryId === traj.category_id ? 0.7 : 0;
-                });
-
             legendGroup.selectAll('.legend-item')
                 .classed('dimmed', function() {
                     const catId = +d3.select(this).attr('data-category');
                     return categoryId !== null && catId !== categoryId;
                 });
+
+            // Redraw trajectories based on new focus
+            const colorScale = getColorScale(currentGranularity);
+            const categories = [...new Set(filterDataByGranularity(csvData, currentGranularity).map(d => d.category_id))].sort((a, b) => a - b);
+            drawTrajectories(categories, colorScale);
         }
 
         function showSidebar(categoryId) {
