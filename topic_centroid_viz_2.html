@@ -414,9 +414,9 @@
         function filterDataByGranularity(data, granularity) {
             const field = getGranularityField(granularity);
             if (granularity === 'BroadTopic') {
-                return data.filter(d => d.BroadTopic !== '' && d.Topic === '' && d.SubTopic === '');
+                return data.filter(d => d.Topic === '' && d.SubTopic === '');
             } else if (granularity === 'Topic') {
-                return data.filter(d => d.Topic !== '' && d.SubTopic === '');
+                return data.filter(d => d.SubTopic === '');
             } else {
                 return data.filter(d => d.SubTopic !== '');
             }
