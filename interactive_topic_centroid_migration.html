@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Topic Centroid Migration</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js" integrity="sha512-yGSjx1m6M3wdrqMDlQeNH8n0HP2Cq1Gk30C/E4ftxpJCv2lJwBGL5UqQ0QjXtEp6L3CBbM+K4LQ5YI2dX4kCaw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <style>
+    :root {
+      --bg: #0b0e12;
+      --panel: #12161c;
+      --ink: #e7edf6;
+      --muted: #9fb0c3;
+      --accent: #5ab0ff;
+      --dim: rgba(231, 237, 246, 0.15);
+      --border: #223040;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--ink);
+      background: radial-gradient(1200px 600px at 30% -10%, #1b2230 0%, #0b0e12 55%);
+      overflow: hidden;
+    }
+    .app {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      grid-template-rows: 64px 1fr 44px;
+      grid-template-areas: "toolbar sidebar" "viz sidebar" "footer sidebar";
+      height: 100vh;
+      gap: 0;
+    }
+    header.toolbar { grid-area: toolbar; display: flex; align-items: center; gap: 12px; padding: 10px 14px; background: var(--panel); border-bottom: 1px solid var(--border); }
+    header.toolbar h1 { font-size: 16px; font-weight: 600; margin: 0 8px 0 0; color: var(--ink); letter-spacing: 0.2px; }
+    .control { display: inline-flex; align-items: center; gap: 8px; margin-right: 16px; }
+    .control label { font-size: 12px; color: var(--muted); }
+    select, input[type="range"] { background: #0f141b; color: var(--ink); border: 1px solid var(--border); border-radius: 8px; padding: 8px 10px; font-size: 13px; }
+    input[type="range"] { width: 280px; height: 6px; accent-color: var(--accent); }
+    .range-value { min-width: 56px; text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); font-weight: 600; }
+
+    .viz { grid-area: viz; position: relative; }
+    svg { width: 100%; height: 100%; display: block; }
+    .plot-area { cursor: crosshair; }
+
+    aside.sidebar { grid-area: sidebar; border-left: 1px solid var(--border); background: var(--panel); display: flex; flex-direction: column; }
+    .sidebar .side-head { padding: 12px 14px; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+    .sidebar .side-head h2 { font-size: 14px; margin: 0; color: var(--muted); font-weight: 600; letter-spacing: 0.2px; }
+    .sidebar .content { padding: 14px; overflow: auto; }
+    .kv { margin: 8px 0 10px; }
+    .kv .k { color: var(--muted); font-size: 12px; }
+    .kv .v { color: var(--ink); font-size: 13px; white-space: pre-wrap; }
+    .docs { margin-top: 4px; padding-left: 14px; }
+
+    footer.footer { grid-area: footer; padding: 8px 12px; border-top: 1px solid var(--border); background: #0c1117; color: var(--muted); font-size: 12px; display: flex; align-items: center; justify-content: space-between; }
+
+    .legend { position: absolute; top: 16px; right: 344px; max-height: 70%; width: 240px; overflow: auto; background: rgba(15, 20, 27, 0.84); border: 1px solid var(--border); box-shadow: 0 6px 30px rgba(0,0,0,0.35); border-radius: 12px; backdrop-filter: blur(4px); }
+    .legend-header { position: sticky; top: 0; background: rgba(18,22,28,0.95); padding: 8px 10px; border-bottom: 1px solid var(--border); font-size: 12px; color: var(--muted); }
+    .legend-item { display: flex; align-items: center; gap: 8px; padding: 8px 10px; cursor: pointer; border-bottom: 1px dashed rgba(255,255,255,0.06); }
+    .legend-item:hover { background: rgba(255,255,255,0.04); }
+    .swatch { width: 12px; height: 12px; border-radius: 50%; border: 1px solid rgba(0,0,0,0.4); flex: none; }
+    .legend-name { font-size: 12px; color: var(--ink); flex: 1; }
+
+    .tooltip { position: fixed; pointer-events: none; padding: 8px 10px; font-size: 12px; background: rgba(20,25,33,0.94); color: var(--ink); border: 1px solid var(--border); border-radius: 8px; box-shadow: 0 8px 28px rgba(0,0,0,0.45); opacity: 0; transition: opacity 120ms ease; max-width: 340px; }
+
+    .dimmed { opacity: 0.15; }
+    .hidden { display: none; }
+    .pill { font-size: 11px; border: 1px solid var(--border); padding: 2px 8px; border-radius: 999px; color: var(--muted); }
+
+    .btn { background: #0f141b; color: var(--ink); border: 1px solid var(--border); border-radius: 8px; padding: 6px 10px; font-size: 12px; cursor: pointer; }
+    .btn:hover { border-color: #2b3d50; }
+
+    /* Prevent label selection while dragging */
+    *::selection { background: rgba(90, 176, 255, 0.25); }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="toolbar">
+      <h1>Topic Centroid Migration</h1>
+      <div class="control">
+        <label for="granularity">Granularity</label>
+        <select id="granularity">
+          <option value="Topic" selected>Topic (default)</option>
+          <option value="BroadTopic">Broad Topic</option>
+          <option value="SubTopic">Subtopic</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="dateSlider">Year</label>
+        <input id="dateSlider" type="range" min="0" max="0" step="1" value="0" />
+        <div id="dateValue" class="range-value">—</div>
+      </div>
+      <div class="control">
+        <button id="resetView" class="btn" title="Reset zoom/pan">Reset View</button>
+      </div>
+      <div style="margin-left:auto;" class="control">
+        <span class="pill" id="legendHint">Click a legend item to focus</span>
+      </div>
+    </header>
+
+    <div class="viz">
+      <svg id="chart" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="legend hidden" id="legend">
+        <div class="legend-header">Legend (click to focus)</div>
+        <div id="legendItems"></div>
+      </div>
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="side-head">
+        <h2>Topic details</h2>
+        <button id="clearFocus" class="btn">Clear</button>
+      </div>
+      <div class="content" id="sideContent">
+        <p class="muted">Click a centroid to see details here.</p>
+      </div>
+    </aside>
+
+    <footer class="footer">
+      <div>
+        Axis scale stays constant across years. Use mouse wheel / drag to zoom & pan. Points animate between years; trajectories show direction.
+      </div>
+      <div>
+        Data files loaded from: <code>topics.csv</code> and <code>topics.ndjson</code>
+      </div>
+    </footer>
+  </div>
+
+<script>
+(async function() {
+  // ====== CONFIG ======
+  const csvPath = 'date_centroid_viz.csv';           // CSV file path
+  const ndjsonPath = 'centroid_info.json';     // NDJSON file path
+
+  // Color schemes per granularity
+  const colorFor = {
+    Topic: d3.scaleOrdinal(d3.schemeTableau10),
+    BroadTopic: d3.scaleOrdinal(d3.schemeSet2),
+    SubTopic: d3.scaleOrdinal(d3.schemePaired)
+  };
+
+  const width = () => document.querySelector('.viz').clientWidth - 2;
+  const height = () => document.querySelector('.viz').clientHeight - 2;
+  const margins = { top: 18, right: 12, bottom: 42, left: 48 };
+
+  // ====== LOAD DATA ======
+  const [rawCsv, ndjText] = await Promise.all([
+    d3.csv(csvPath, d3.autoType),
+    d3.text(ndjsonPath)
+  ]);
+
+  // Clean CSV keys (trim accidental spaces) and normalize rows
+  const rows = rawCsv.map(r => {
+    const keys = Object.keys(r);
+    const catKey = keys.find(k => k.trim().toLowerCase() === 'category_id');
+    const out = {
+      Date: +r['Date'],
+      x: +r['x'],
+      y: +r['y'],
+      BroadTopic: r['BroadTopic'] ?? null,
+      Topic: r['Topic'] ?? null,
+      SubTopic: r['SubTopic'] ?? null,
+      category_id: String(r[catKey]).trim()
+    };
+    return out;
+  });
+
+  // Parse NDJSON (ignore blank lines)
+  const metaByCategory = new Map();
+  ndjText.split(/\r?\n/).forEach(line => {
+    const t = line.trim();
+    if (!t) return;
+    try {
+      const obj = JSON.parse(t);
+      const id = String(obj.category_id).trim();
+      metaByCategory.set(id, {
+        Name: obj.Name ?? id,
+        Count: +obj.Count || null,
+        Representation: obj.Representation ?? '',
+        Representative_Docs: obj.Representative_Docs ?? []
+      });
+    } catch (e) {
+      console.warn('Bad NDJSON line skipped:', line);
+    }
+  });
+
+  // Build helper: group subtopic rows to aggregated levels using weighted average by Count
+  // If Count is missing for a category in NDJSON, weight=1
+  const weightFor = (cat) => (metaByCategory.get(cat)?.Count ?? 1);
+
+  const allYears = Array.from(new Set(rows.map(d => d.Date))).sort((a,b)=>a-b);
+  const earliestYear = allYears[0];
+  const latestYear = allYears[allYears.length-1];
+
+  // Compute global axis domains across all rows
+  const xExtent = d3.extent(rows, d => d.x);
+  const yExtent = d3.extent(rows, d => d.y);
+  const pad = 0.06; // padding around extents
+  const xDomain = expand(xExtent, pad);
+  const yDomain = expand(yExtent, pad);
+
+  function expand([mn, mx], p) {
+    const k = (mx - mn) * p;
+    return [mn - k, mx + k];
+  }
+
+  // Pre-index: for SubTopic we use rows as-is keyed by category_id
+  // For Topic and BroadTopic we aggregate by (Date, name)
+  const byYear = d3.group(rows, d => d.Date);
+
+  function aggregateLevel(level) {
+    if (level === 'SubTopic') {
+      // return map: year -> array of {id,label,x,y,count, members:[id]}
+      const out = new Map();
+      for (const [yr, arr] of byYear) {
+        out.set(yr, arr.map(d => ({
+          id: d.category_id,
+          label: d.SubTopic ?? d.Topic ?? d.BroadTopic ?? d.category_id,
+          x: d.x, y: d.y,
+          year: yr,
+          level: 'SubTopic',
+          count: weightFor(d.category_id),
+          members: [d.category_id]
+        })));
+      }
+      return out;
+    }
+    // Aggregate subtopic rows into Topics or BroadTopics
+    const keyer = (d) => level === 'Topic' ? d.Topic : d.BroadTopic;
+    const out = new Map();
+    for (const [yr, arr] of byYear) {
+      // group by chosen label, only keep rows that actually have the label
+      const groups = d3.group(arr.filter(d => keyer(d) != null && keyer(d) !== ''), keyer);
+      const vals = [];
+      for (const [label, members] of groups) {
+        let wx = 0, wy = 0, wsum = 0;
+        const memberIds = [];
+        for (const d of members) {
+          const w = weightFor(d.category_id);
+          wx += d.x * w; wy += d.y * w; wsum += w;
+          memberIds.push(d.category_id);
+        }
+        if (wsum === 0) continue;
+        vals.push({
+          id: `${level}::${label}`,
+          label,
+          x: wx/wsum,
+          y: wy/wsum,
+          year: yr,
+          level,
+          count: wsum,
+          members: memberIds
+        });
+      }
+      out.set(yr, vals);
+    }
+    return out;
+  }
+
+  const dataByLevel = {
+    Topic: aggregateLevel('Topic'),
+    BroadTopic: aggregateLevel('BroadTopic'),
+    SubTopic: aggregateLevel('SubTopic')
+  };
+
+  // Build trajectories per level: for each entity (id), a polyline across years (sorted)
+  function trajectories(level) {
+    const yearMap = dataByLevel[level];
+    const byId = new Map();
+    for (const [yr, arr] of yearMap) {
+      for (const d of arr) {
+        if (!byId.has(d.id)) byId.set(d.id, []);
+        byId.get(d.id).push(d);
+      }
+    }
+    // sort each by year
+    for (const arr of byId.values()) arr.sort((a,b)=>a.year-b.year);
+    return byId; // Map id -> [{x,y,year,label,...}]
+  }
+
+  const trajByLevel = {
+    Topic: trajectories('Topic'),
+    BroadTopic: trajectories('BroadTopic'),
+    SubTopic: trajectories('SubTopic')
+  };
+
+  // ====== SCALES & SVG ======
+  const svg = d3.select('#chart');
+  const gRoot = svg.append('g'); // will be zoomed
+
+  // defs: arrow markers
+  const defs = svg.append('defs');
+  defs.append('marker')
+    .attr('id','arrow-mid')
+    .attr('viewBox','0 -4 8 8')
+    .attr('refX', 0)
+    .attr('refY', 0)
+    .attr('markerWidth', 6)
+    .attr('markerHeight', 6)
+    .attr('orient','auto')
+    .append('path')
+    .attr('d','M0,-4L8,0L0,4Z')
+    .attr('fill','currentColor');
+
+  const xScale = d3.scaleLinear().domain(xDomain);
+  const yScale = d3.scaleLinear().domain(yDomain);
+
+  const xAxisG = gRoot.append('g').attr('class','x-axis');
+  const yAxisG = gRoot.append('g').attr('class','y-axis');
+
+  const gridG = gRoot.append('g').attr('class','grid');
+  const trajG = gRoot.append('g').attr('class','trajectories');
+  const pointG = gRoot.append('g').attr('class','points');
+
+  // Clip path for plot area
+  const clipId = 'clip-plot';
+  svg.append('clipPath').attr('id', clipId).append('rect');
+  [gridG, trajG, pointG].forEach(g => g.attr('clip-path', `url(#${clipId})`));
+
+  gRoot.append('rect').attr('class','plot-area').attr('fill','transparent');
+
+  const tooltip = d3.select('#tooltip');
+
+  // Zoom & pan
+  const zoom = d3.zoom().scaleExtent([0.6, 12]).on('zoom', (ev) => {
+    gRoot.attr('transform', ev.transform);
+  });
+  svg.call(zoom);
+
+  // ====== RENDERING ======
+  let currentLevel = 'Topic';
+  let currentYear = earliestYear;
+  let focusedId = null; // when clicking a point
+  let legendFocusedId = null; // when clicking legend; overrides and hides others (no sidebar)
+
+  // UI refs
+  const sel = document.getElementById('granularity');
+  const slider = document.getElementById('dateSlider');
+  const dateVal = document.getElementById('dateValue');
+  const legend = document.getElementById('legend');
+  const legendItems = document.getElementById('legendItems');
+  const sideContent = document.getElementById('sideContent');
+
+  // Initialize slider
+  slider.min = 0;
+  slider.max = allYears.length - 1;
+  slider.value = 0;
+  dateVal.textContent = String(earliestYear);
+
+  // Resize handler
+  function resize() {
+    const w = width(), h = height();
+    svg.attr('viewBox', `0 0 ${w} ${h}`);
+    svg.select(`#${clipId} > rect`).attr('x', margins.left).attr('y', margins.top).attr('width', w - margins.left - margins.right).attr('height', h - margins.top - margins.bottom);
+    gRoot.select('.plot-area').attr('x', margins.left).attr('y', margins.top).attr('width', w - margins.left - margins.right).attr('height', h - margins.top - margins.bottom);
+    xScale.range([margins.left, w - margins.right]);
+    yScale.range([h - margins.bottom, margins.top]);
+    drawAxes();
+    render();
+  }
+  window.addEventListener('resize', resize);
+
+  function drawAxes() {
+    const w = width(), h = height();
+    const xAxis = d3.axisBottom(xScale).ticks(8).tickSizeOuter(0);
+    const yAxis = d3.axisLeft(yScale).ticks(8).tickSizeOuter(0);
+
+    xAxisG.attr('transform', `translate(0, ${h - margins.bottom})`).call(xAxis);
+    yAxisG.attr('transform', `translate(${margins.left}, 0)`).call(yAxis);
+
+    // grid
+    const xGrid = d3.axisBottom(xScale).ticks(8).tickSize(-(h - margins.top - margins.bottom)).tickFormat('');
+    const yGrid = d3.axisLeft(yScale).ticks(8).tickSize(-(w - margins.left - margins.right)).tickFormat('');
+    gridG.selectAll('.x-grid').data([0]).join('g').attr('class','x-grid').attr('transform', `translate(0, ${h - margins.bottom})`).call(xGrid);
+    gridG.selectAll('.y-grid').data([0]).join('g').attr('class','y-grid').attr('transform', `translate(${margins.left}, 0)`).call(yGrid);
+
+    gridG.selectAll('line').attr('stroke', '#203142');
+    xAxisG.selectAll('path, line').attr('stroke', '#294055');
+    yAxisG.selectAll('path, line').attr('stroke', '#294055');
+    xAxisG.selectAll('text').attr('fill', '#b8c7d8');
+    yAxisG.selectAll('text').attr('fill', '#b8c7d8');
+  }
+
+  function currentData() {
+    const yearMap = dataByLevel[currentLevel];
+    return yearMap.get(currentYear) ?? [];
+  }
+
+  function buildLegend(items) {
+    legend.classList.toggle('hidden', items.length === 0);
+    legendItems.innerHTML = '';
+    const col = colorFor[currentLevel].domain(items.map(d => d.id));
+    for (const it of items) {
+      const div = document.createElement('div');
+      div.className = 'legend-item';
+      div.dataset.id = it.id;
+      const sw = document.createElement('div');
+      sw.className = 'swatch';
+      sw.style.background = col(it.id);
+      const name = document.createElement('div');
+      name.className = 'legend-name';
+      name.textContent = it.label ?? (metaByCategory.get(it.id)?.Name ?? it.id);
+      div.appendChild(sw); div.appendChild(name);
+      div.addEventListener('click', () => {
+        if (legendFocusedId === it.id) {
+          legendFocusedId = null;
+        } else {
+          legendFocusedId = it.id;
+          focusedId = null; // legend focus should not show sidebar info
+          sideContent.innerHTML = '<p class="muted">Legend focus active. Click Clear or the legend again to reset.</p>';
+        }
+        render();
+      });
+      legendItems.appendChild(div);
+    }
+  }
+
+  function renderTrajectories() {
+    const byId = trajByLevel[currentLevel];
+    const ids = Array.from(byId.keys());
+    const col = colorFor[currentLevel].domain(ids);
+
+    const t = trajG.selectAll('path.traj').data(ids, d => d);
+    t.join(
+      enter => enter.append('path')
+        .attr('class','traj')
+        .attr('fill','none')
+        .attr('stroke', d => col(d))
+        .attr('stroke-width', 1.6)
+        .attr('opacity', 0.5)
+        .attr('marker-mid','url(#arrow-mid)')
+        .attr('d', id => lineFor(byId.get(id)))
+    ,
+      update => update
+        .attr('stroke', d => col(d))
+        .attr('d', id => lineFor(byId.get(id)))
+    ,
+      exit => exit.remove()
+    );
+
+    // dim if focused
+    trajG.selectAll('path.traj').classed('dimmed', function() {
+      if (legendFocusedId) return this.__data__ !== legendFocusedId;
+      if (focusedId) return this.__data__ !== focusedId;
+      return false;
+    });
+
+    function lineFor(points) {
+      const l = d3.line().x(d => xScale(d.x)).y(d => yScale(d.y));
+      return l(points);
+    }
+  }
+
+  function renderPoints(animate=true) {
+    const data = currentData();
+    const ids = data.map(d => d.id);
+    const col = colorFor[currentLevel].domain(ids);
+
+    const sel = pointG.selectAll('g.pt').data(data, d => d.id);
+
+    const selEnter = sel.enter().append('g').attr('class','pt');
+
+    selEnter.append('circle')
+      .attr('r', 4)
+      .attr('stroke', '#0b0e12')
+      .attr('stroke-width', 1)
+      .attr('fill', d => col(d.id))
+      .on('mouseenter', (ev, d) => {
+        if (legendFocusedId) return; // no tooltip during legend focus per spec (no topic info)
+        const meta = aggregateMeta(d);
+        tooltip.style('opacity', 1).html(`<div><strong>${escapeHtml(meta.Name)}</strong></div><div>Count: ${fmt(meta.Count)}</div>`);
+      })
+      .on('mousemove', (ev) => {
+        const {clientX, clientY} = ev;
+        tooltip.style('left', (clientX + 14) + 'px').style('top', (clientY + 14) + 'px');
+      })
+      .on('mouseleave', () => tooltip.style('opacity', 0))
+      .on('click', (ev, d) => {
+        legendFocusedId = null; // clicking a point exits legend-only focus
+        focusedId = d.id;
+        renderSidebar(d);
+        render();
+      });
+
+    // Labels optional (could be many)
+    selEnter.append('text')
+      .attr('text-anchor','start')
+      .attr('dx', 6)
+      .attr('dy', 3)
+      .attr('font-size', 10)
+      .attr('fill', '#cfe0f1')
+      .text(d => (metaByCategory.get(d.id)?.Name || d.label || d.id))
+      .style('opacity', 0.8);
+
+    const merged = selEnter.merge(sel);
+
+    const tr = animate ? d3.transition().duration(650).ease(d3.easeCubicInOut) : null;
+
+    merged.select('circle')
+      .transition(tr)
+      .attr('cx', d => xScale(d.x))
+      .attr('cy', d => yScale(d.y));
+
+    merged.select('text')
+      .transition(tr)
+      .attr('x', d => xScale(d.x))
+      .attr('y', d => yScale(d.y));
+
+    sel.exit().remove();
+
+    // dimming logic
+    pointG.selectAll('g.pt').classed('dimmed', function(d) {
+      if (legendFocusedId) return d.id !== legendFocusedId;
+      if (focusedId) return d.id !== focusedId;
+      return false;
+    });
+  }
+
+  function renderSidebar(d) {
+    const m = aggregateMeta(d);
+    const docs = Array.isArray(m.Representative_Docs) ? m.Representative_Docs : [];
+    const docHtml = docs.length ? `<ol class="docs">${docs.slice(0,6).map(s => `<li>${escapeHtml(String(s))}</li>`).join('')}</ol>` : '<div class="v">—</div>';
+
+    sideContent.innerHTML = `
+      <div class="kv"><div class="k">Name</div><div class="v">${escapeHtml(m.Name ?? (d.label || d.id))}</div></div>
+      <div class="kv"><div class="k">Year</div><div class="v">${d.year}</div></div>
+      <div class="kv"><div class="k">Count</div><div class="v">${fmt(m.Count)}</div></div>
+      <div class="kv"><div class="k">Representation</div><div class="v">${escapeHtml(m.Representation || '—')}</div></div>
+      <div class="kv"><div class="k">Representative Docs</div>${docHtml}</div>
+    `;
+  }
+
+  // For aggregated Topic/BroadTopic, combine metadata from member subtopics
+  function aggregateMeta(d) {
+    if (d.level === 'SubTopic' && metaByCategory.has(d.id)) return metaByCategory.get(d.id);
+    // Combine
+    const items = (d.members || []).map(id => metaByCategory.get(id)).filter(Boolean);
+    if (!items.length) return { Name: d.label || d.id, Count: d.count || null, Representation: '', Representative_Docs: [] };
+    const name = d.label || d.id;
+    const count = items.reduce((a,b)=> a + (+b.Count||0), 0) || d.count || null;
+    // Representation: top words merged (simple join of first few)
+    const reps = items.map(m => m.Representation).filter(Boolean).join('; ');
+    // Docs: take up to 6 across items
+    const docs = items.flatMap(m => Array.isArray(m.Representative_Docs) ? m.Representative_Docs : []).slice(0, 6);
+    return { Name: name, Count: count, Representation: reps, Representative_Docs: docs };
+  }
+
+  function render(animate=true) {
+    // Legend items are the entities visible in the current year
+    const items = currentData();
+    buildLegend(items);
+    renderTrajectories();
+    renderPoints(animate);
+  }
+
+  // ====== UI EVENTS ======
+  sel.addEventListener('change', () => {
+    currentLevel = sel.value;
+    // Reset focus on level change
+    focusedId = null; legendFocusedId = null;
+    render(false);
+  });
+
+  slider.addEventListener('input', () => {
+    const idx = +slider.value;
+    currentYear = allYears[idx];
+    dateVal.textContent = String(currentYear);
+    render(true);
+  });
+
+  document.getElementById('clearFocus').addEventListener('click', () => {
+    focusedId = null; legendFocusedId = null;
+    sideContent.innerHTML = '<p class="muted">Click a centroid to see details here.</p>';
+    render();
+  });
+
+  document.getElementById('resetView').addEventListener('click', () => {
+    svg.transition().duration(500).call(zoom.transform, d3.zoomIdentity);
+  });
+
+  // Initial draw
+  resize();
+
+  // ====== UTILS ======
+  function fmt(v) { return (v==null || Number.isNaN(v)) ? '—' : d3.format(',')(v); }
+  function escapeHtml(str) {
+    return String(str).replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[m]));
+  }
+
+})();
+</script>
+
+<!--
+HOW TO USE
+---------
+1) Place this HTML file in the same directory as your data files:
+   - topics.csv
+   - topics.ndjson (NDJSON: one JSON object per line)
+
+2) Serve the folder with a local static server (fetch() requires http(s), not file://). Examples:
+   - Python:   python3 -m http.server 8080
+   - Node:     npx http-server -p 8080
+   - Bun:      bunx serve .
+
+3) Open http://localhost:8080/ in your browser. The chart initializes at the earliest year and Topic level.
+
+DATA EXPECTATIONS
+-----------------
+CSV columns: Date, x, y, BroadTopic, Topic, SubTopic, category_id (header can include stray spaces; script trims automatically)
+NDJSON fields per line: Name, Count, Representation, Representative_Docs (array), category_id
+
+BEHAVIOR NOTES
+--------------
+- Axis domains are computed across the entire dataset and remain constant.
+- Zoom and pan: mouse wheel to zoom; drag to pan; Reset View to reset.
+- Hover: shows Name + Count (disabled during legend focus per your spec #4).
+- Click point: opens sidebar and dims all non-focused points & paths.
+- Click legend: hides/dims non-selected and does NOT show topic info.
+- Granularity:
+    * SubTopic: uses rows directly.
+    * Topic/BroadTopic: weighted aggregate of member SubTopics per year using Count from NDJSON. If metadata for an aggregate is not present, the sidebar synthesizes it (merged representations & docs).
+- Slider: animates points to new positions and trajectories are always shown with arrowheads (marker-mid).
+-->
+</body>
+</html>
