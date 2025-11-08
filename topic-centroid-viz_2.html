@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Centroid Visualization</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        #container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 24px;
+        }
+        
+        #controls {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        
+        label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+        }
+        
+        select, input[type="range"] {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        #date-slider {
+            width: 300px;
+        }
+        
+        #viz-container {
+            display: flex;
+            gap: 20px;
+            position: relative;
+        }
+        
+        #chart {
+            flex: 1;
+            position: relative;
+            min-height: 600px;
+        }
+        
+        svg {
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+        }
+        
+        .centroid {
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+        
+        .centroid.dimmed {
+            opacity: 0.1;
+        }
+        
+        .centroid.focused {
+            opacity: 1;
+            stroke: #333;
+            stroke-width: 2px;
+        }
+        
+        .trajectory {
+            fill: none;
+            stroke-width: 2;
+            opacity: 0.6;
+            transition: opacity 0.3s;
+        }
+        
+        .trajectory.dimmed {
+            opacity: 0;
+        }
+        
+        .trajectory.focused {
+            opacity: 0.9;
+            stroke-width: 3;
+        }
+        
+        .arrow {
+            fill: currentColor;
+            opacity: 0.7;
+        }
+        
+        .tooltip {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            pointer-events: none;
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        
+        .tooltip.visible {
+            opacity: 1;
+        }
+        
+        #sidebar {
+            width: 350px;
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 20px;
+            position: relative;
+            max-height: 600px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        #sidebar.visible {
+            display: block;
+        }
+        
+        #sidebar h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+            padding-right: 30px;
+        }
+        
+        #close-sidebar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #close-sidebar:hover {
+            color: #333;
+        }
+        
+        .info-section {
+            margin-bottom: 15px;
+        }
+        
+        .info-label {
+            font-weight: 600;
+            color: #666;
+            font-size: 11px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        
+        .info-content {
+            color: #333;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .representation-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+        
+        .tag {
+            background: #e3f2fd;
+            color: #1976d2;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+        }
+        
+        .doc {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            border-left: 3px solid #1976d2;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        
+        #legend {
+            margin-top: 20px;
+            padding: 15px;
+            background: #fafafa;
+            border-radius: 4px;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+        
+        .legend-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+        
+        .legend-item:hover {
+            background: #f0f0f0;
+        }
+        
+        .legend-item.dimmed {
+            opacity: 0.3;
+        }
+        
+        .legend-color {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+        }
+        
+        .legend-label {
+            font-size: 12px;
+            color: #333;
+        }
+        
+        #current-date {
+            font-weight: 600;
+            color: #1976d2;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Topic Centroid Migration Over Time</h1>
+        
+        <div id="controls">
+            <div class="control-group">
+                <label for="granularity">Granularity Level</label>
+                <select id="granularity">
+                    <option value="BroadTopic">Broad Topic</option>
+                    <option value="Topic" selected>Topic</option>
+                    <option value="SubTopic">Sub Topic</option>
+                </select>
+            </div>
+            
+            <div class="control-group" style="flex: 1;">
+                <label for="date-slider">Time Period: <span id="current-date"></span></label>
+                <input type="range" id="date-slider" min="0" max="0" value="0" step="1">
+            </div>
+        </div>
+        
+        <div id="viz-container">
+            <div id="chart">
+                <svg id="main-svg"></svg>
+                <div class="tooltip"></div>
+            </div>
+            
+            <div id="sidebar">
+                <button id="close-sidebar">×</button>
+                <h2 id="topic-name"></h2>
+                <div class="info-section">
+                    <div class="info-label">Document Count</div>
+                    <div class="info-content" id="topic-count"></div>
+                </div>
+                <div class="info-section">
+                    <div class="info-label">Key Terms</div>
+                    <div class="representation-tags" id="topic-representation"></div>
+                </div>
+                <div class="info-section">
+                    <div class="info-label">Representative Documents</div>
+                    <div id="topic-docs"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="legend">
+            <div class="legend-title">Topics (click to focus)</div>
+            <div id="legend-items"></div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const CONFIG = {
+            csvFile: 'date_centroid_viz.csv',
+            jsonFile: 'centroid_info.json',
+            width: 900,
+            height: 600,
+            margin: { top: 40, right: 40, bottom: 60, left: 60 },
+            pointRadius: 6,
+            transitionDuration: 800
+        };
+
+        // State
+        let state = {
+            csvData: [],
+            topicInfo: {},
+            currentGranularity: 'Topic',
+            currentDateIndex: 0,
+            dates: [],
+            focusedTopic: null,
+            focusMode: null // 'click' or 'legend'
+        };
+
+        // Color scales for each granularity level
+        const colorScales = {
+            BroadTopic: d3.scaleOrdinal(d3.schemeCategory10),
+            Topic: d3.scaleOrdinal(d3.schemePaired),
+            SubTopic: d3.scaleOrdinal(d3.schemeSet3)
+        };
+
+        // Initialize
+        async function init() {
+            try {
+                // Load data
+                const [csv, json] = await Promise.all([
+                    d3.csv(CONFIG.csvFile),
+                    d3.text(CONFIG.jsonFile)
+                ]);
+
+                // Parse CSV
+                state.csvData = csv.map(d => ({
+                    Date: +d.Date,
+                    x: +d.x,
+                    y: +d.y,
+                    BroadTopic: d.BroadTopic,
+                    Topic: d.Topic,
+                    SubTopic: d.SubTopic,
+                    category_id: +d.category_id
+                }));
+
+                // Parse NDJSON
+                json.split('\n').filter(line => line.trim()).forEach(line => {
+                    const obj = JSON.parse(line);
+                    state.topicInfo[obj.category_id] = obj;
+                });
+
+                // Get unique dates
+                state.dates = [...new Set(state.csvData.map(d => d.Date))].sort((a, b) => a - b);
+
+                // Setup UI
+                setupControls();
+                setupChart();
+                updateVisualization();
+            } catch (error) {
+                console.error('Error loading data:', error);
+                alert('Error loading data files. Please ensure the CSV and JSON files are in the same directory.');
+            }
+        }
+
+        function setupControls() {
+            const slider = document.getElementById('date-slider');
+            slider.max = state.dates.length - 1;
+            slider.value = 0;
+            updateDateDisplay();
+
+            slider.addEventListener('input', (e) => {
+                state.currentDateIndex = +e.target.value;
+                updateDateDisplay();
+                updateVisualization();
+            });
+
+            document.getElementById('granularity').addEventListener('change', (e) => {
+                state.currentGranularity = e.target.value;
+                state.focusedTopic = null;
+                state.focusMode = null;
+                closeSidebar();
+                updateVisualization();
+            });
+
+            document.getElementById('close-sidebar').addEventListener('click', closeSidebar);
+        }
+
+        function updateDateDisplay() {
+            document.getElementById('current-date').textContent = state.dates[state.currentDateIndex];
+        }
+
+        function setupChart() {
+            const svg = d3.select('#main-svg')
+                .attr('width', CONFIG.width)
+                .attr('height', CONFIG.height);
+
+            // Add zoom
+            const zoom = d3.zoom()
+                .scaleExtent([0.5, 5])
+                .on('zoom', (event) => {
+                    svg.select('.chart-group').attr('transform', event.transform);
+                });
+
+            svg.call(zoom);
+
+            // Create main group
+            svg.append('g')
+                .attr('class', 'chart-group')
+                .attr('transform', `translate(${CONFIG.margin.left},${CONFIG.margin.top})`);
+        }
+
+        function updateVisualization() {
+            const currentDate = state.dates[state.currentDateIndex];
+            const granularity = state.currentGranularity;
+
+            // Filter data for current date and granularity
+            let currentData = state.csvData.filter(d => 
+                d.Date === currentDate && d[granularity] !== ''
+            );
+
+            // Get unique topics
+            const topics = [...new Set(currentData.map(d => d.category_id))];
+
+            // Setup scales
+            const xExtent = d3.extent(state.csvData, d => d.x);
+            const yExtent = d3.extent(state.csvData, d => d.y);
+
+            const xScale = d3.scaleLinear()
+                .domain(xExtent)
+                .range([0, CONFIG.width - CONFIG.margin.left - CONFIG.margin.right]);
+
+            const yScale = d3.scaleLinear()
+                .domain(yExtent)
+                .range([CONFIG.height - CONFIG.margin.top - CONFIG.margin.bottom, 0]);
+
+            const chartGroup = d3.select('.chart-group');
+
+            // Clear previous content
+            chartGroup.selectAll('.axis').remove();
+            chartGroup.selectAll('.trajectory-group').remove();
+
+            // Add axes
+            chartGroup.append('g')
+                .attr('class', 'axis')
+                .attr('transform', `translate(0,${CONFIG.height - CONFIG.margin.top - CONFIG.margin.bottom})`)
+                .call(d3.axisBottom(xScale));
+
+            chartGroup.append('g')
+                .attr('class', 'axis')
+                .call(d3.axisLeft(yScale));
+
+            // Draw trajectories
+            const trajectoryGroup = chartGroup.append('g').attr('class', 'trajectory-group');
+            
+            topics.forEach(categoryId => {
+                const topicData = state.csvData
+                    .filter(d => d.category_id === categoryId && d[granularity] !== '')
+                    .sort((a, b) => a.Date - b.Date);
+
+                if (topicData.length > 1) {
+                    const line = d3.line()
+                        .x(d => xScale(d.x))
+                        .y(d => yScale(d.y))
+                        .curve(d3.curveCardinal);
+
+                    const path = trajectoryGroup.append('path')
+                        .datum(topicData)
+                        .attr('class', 'trajectory')
+                        .attr('d', line)
+                        .attr('stroke', colorScales[granularity](categoryId))
+                        .classed('dimmed', state.focusedTopic !== null && state.focusedTopic !== categoryId)
+                        .classed('focused', state.focusedTopic === categoryId);
+
+                    // Add arrows
+                    if (state.focusedTopic === categoryId || state.focusedTopic === null) {
+                        for (let i = 0; i < topicData.length - 1; i++) {
+                            const start = topicData[i];
+                            const end = topicData[i + 1];
+                            const midX = (xScale(start.x) + xScale(end.x)) / 2;
+                            const midY = (yScale(start.y) + yScale(end.y)) / 2;
+                            const angle = Math.atan2(
+                                yScale(end.y) - yScale(start.y),
+                                xScale(end.x) - xScale(start.x)
+                            );
+
+                            trajectoryGroup.append('path')
+                                .attr('class', 'arrow')
+                                .attr('d', 'M 0,-3 L 6,0 L 0,3 Z')
+                                .attr('transform', `translate(${midX},${midY}) rotate(${angle * 180 / Math.PI})`)
+                                .style('color', colorScales[granularity](categoryId))
+                                .classed('dimmed', state.focusedTopic !== null && state.focusedTopic !== categoryId);
+                        }
+                    }
+                }
+            });
+
+            // Draw centroids
+            const centroids = chartGroup.selectAll('.centroid')
+                .data(currentData, d => d.category_id);
+
+            centroids.exit().remove();
+
+            const centroidsEnter = centroids.enter()
+                .append('circle')
+                .attr('class', 'centroid')
+                .attr('r', CONFIG.pointRadius)
+                .attr('cx', d => xScale(d.x))
+                .attr('cy', d => yScale(d.y))
+                .attr('fill', d => colorScales[granularity](d.category_id))
+                .on('mouseenter', handleMouseEnter)
+                .on('mouseleave', handleMouseLeave)
+                .on('click', handleClick);
+
+            centroids.merge(centroidsEnter)
+                .transition()
+                .duration(CONFIG.transitionDuration)
+                .attr('cx', d => xScale(d.x))
+                .attr('cy', d => yScale(d.y))
+                .attr('fill', d => colorScales[granularity](d.category_id))
+                .attr('r', CONFIG.pointRadius)
+                .end()
+                .then(() => {
+                    d3.selectAll('.centroid')
+                        .classed('dimmed', d => state.focusedTopic !== null && d.category_id !== state.focusedTopic)
+                        .classed('focused', d => state.focusedTopic === d.category_id);
+                });
+
+            // Update legend
+            updateLegend(topics, granularity);
+        }
+
+        function updateLegend(topics, granularity) {
+            const legendItems = d3.select('#legend-items')
+                .selectAll('.legend-item')
+                .data(topics);
+
+            legendItems.exit().remove();
+
+            const itemsEnter = legendItems.enter()
+                .append('div')
+                .attr('class', 'legend-item')
+                .on('click', handleLegendClick);
+
+            itemsEnter.append('div')
+                .attr('class', 'legend-color');
+
+            itemsEnter.append('div')
+                .attr('class', 'legend-label');
+
+            const allItems = legendItems.merge(itemsEnter);
+
+            allItems.select('.legend-color')
+                .style('background-color', d => colorScales[granularity](d));
+
+            allItems.select('.legend-label')
+                .text(d => state.topicInfo[d]?.Name || `Topic ${d}`);
+
+            allItems
+                .classed('dimmed', d => state.focusMode === 'legend' && state.focusedTopic !== null && d !== state.focusedTopic);
+        }
+
+        function handleMouseEnter(event, d) {
+            if (state.focusMode === 'legend') return;
+
+            const tooltip = d3.select('.tooltip');
+            const topicData = state.topicInfo[d.category_id];
+
+            tooltip
+                .html(`
+                    <strong>${topicData?.Name || `Topic ${d.category_id}`}</strong><br>
+                    Count: ${topicData?.Count || 'N/A'}
+                `)
+                .style('left', (event.pageX + 10) + 'px')
+                .style('top', (event.pageY - 10) + 'px')
+                .classed('visible', true);
+        }
+
+        function handleMouseLeave() {
+            d3.select('.tooltip').classed('visible', false);
+        }
+
+        function handleClick(event, d) {
+            event.stopPropagation();
+
+            if (state.focusMode === 'legend') {
+                state.focusMode = null;
+                state.focusedTopic = null;
+            }
+
+            if (state.focusedTopic === d.category_id) {
+                state.focusedTopic = null;
+                state.focusMode = null;
+                closeSidebar();
+            } else {
+                state.focusedTopic = d.category_id;
+                state.focusMode = 'click';
+                showSidebar(d.category_id);
+            }
+
+            updateVisualization();
+        }
+
+        function handleLegendClick(event, categoryId) {
+            if (state.focusedTopic === categoryId && state.focusMode === 'legend') {
+                state.focusedTopic = null;
+                state.focusMode = null;
+            } else {
+                state.focusedTopic = categoryId;
+                state.focusMode = 'legend';
+                closeSidebar();
+            }
+
+            updateVisualization();
+        }
+
+        function showSidebar(categoryId) {
+            const topicData = state.topicInfo[categoryId];
+            if (!topicData) return;
+
+            document.getElementById('topic-name').textContent = topicData.Name;
+            document.getElementById('topic-count').textContent = topicData.Count.toLocaleString();
+
+            const repContainer = document.getElementById('topic-representation');
+            repContainer.innerHTML = '';
+            topicData.Representation.forEach(term => {
+                const tag = document.createElement('span');
+                tag.className = 'tag';
+                tag.textContent = term;
+                repContainer.appendChild(tag);
+            });
+
+            const docsContainer = document.getElementById('topic-docs');
+            docsContainer.innerHTML = '';
+            topicData.Representative_Docs.forEach(doc => {
+                const docDiv = document.createElement('div');
+                docDiv.className = 'doc';
+                docDiv.textContent = doc;
+                docsContainer.appendChild(docDiv);
+            });
+
+            document.getElementById('sidebar').classList.add('visible');
+        }
+
+        function closeSidebar() {
+            document.getElementById('sidebar').classList.remove('visible');
+            if (state.focusMode === 'click') {
+                state.focusedTopic = null;
+                state.focusMode = null;
+                updateVisualization();
+            }
+        }
+
+        // Start the application
+        init();
+    </script>
+</body>
+</html>
