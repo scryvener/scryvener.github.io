@@ -271,6 +271,8 @@
             csvData.forEach(d => {
                 d.x = +d.x;
                 d.y = +d.y;
+                d.granularity=d.granularity;
+                console.log(d.granularity)
                 const info = jsonLookup[d.category_id];
                 if (info) {
                     d.Name = info.Name;
