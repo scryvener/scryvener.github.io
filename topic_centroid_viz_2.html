@@ -376,8 +376,8 @@
             .attr('transform', `translate(${width + 20}, 0)`);
 
         async function loadData() {
-            const csv = await d3.csv('date_centroid_viz_sample.csv');
-            const text = await d3.text('centroid_info_sample.json');
+            const csv = await d3.csv('date_centroid_viz.csv');
+            const text = await d3.text('centroid_info.json');
             const json = text.trim().split('\n').map(line => JSON.parse(line));
 
             csvData = csv.map(d => ({
