@@ -250,6 +250,12 @@
             opacity: 0.15;
         }
 
+        .centroid.interpolated {
+            stroke-dasharray: 3, 3;
+            stroke-width: 2;
+            fill-opacity: 0.4;
+        }
+
         .trajectory {
             fill: none;
             stroke-width: 2;
@@ -259,6 +265,14 @@
 
         .trajectory.dimmed {
             opacity: 0;
+        }
+
+        .trajectory-solid {
+            stroke-dasharray: none;
+        }
+
+        .trajectory-dashed {
+            stroke-dasharray: 5, 5;
         }
 
         .arrow {
@@ -414,9 +428,9 @@
         function filterDataByGranularity(data, granularity) {
             const field = getGranularityField(granularity);
             if (granularity === 'BroadTopic') {
-                return data.filter(d => d.Topic === '' && d.SubTopic === '');
+                return data.filter(d => d.BroadTopic !== '' && d.Topic === '' && d.SubTopic === '');
             } else if (granularity === 'Topic') {
-                return data.filter(d => d.SubTopic === '');
+                return data.filter(d => d.Topic !== '' && d.SubTopic === '');
             } else {
                 return data.filter(d => d.SubTopic !== '');
             }
@@ -434,11 +448,22 @@
 
         function updateVisualization() {
             const date = dates[currentDate];
-            const filtered = filterDataByGranularity(csvData, currentGranularity)
+            let filtered = filterDataByGranularity(csvData, currentGranularity)
                 .filter(d => d.Date === date);
 
+            // Add interpolated data for focused category if missing
+            if (focusedCategory !== null) {
+                const focusedExists = filtered.some(d => d.category_id === focusedCategory);
+                if (!focusedExists) {
+                    const interpolated = interpolateCentroid(focusedCategory, date);
+                    if (interpolated) {
+                        filtered = [...filtered, interpolated];
+                    }
+                }
+            }
+
             const colorScale = getColorScale(currentGranularity);
-            const categories = [...new Set(filtered.map(d => d.category_id))].sort((a, b) => a - b);
+            const categories = [...new Set(filterDataByGranularity(csvData, currentGranularity).map(d => d.category_id))].sort((a, b) => a - b);
 
             drawTrajectories(categories, colorScale);
             
@@ -460,14 +485,20 @@
                 .attr('cx', d => xScale(d.x))
                 .attr('cy', d => yScale(d.y))
                 .attr('fill', d => colorScale(d.category_id))
-                .attr('opacity', d => focusedCategory === null || focusedCategory === d.category_id ? 1 : 0.15);
+                .attr('opacity', d => focusedCategory === null || focusedCategory === d.category_id ? 1 : 0.15)
+                .attr('stroke', d => d.interpolated ? colorScale(d.category_id) : 'none')
+                .attr('stroke-width', d => d.interpolated ? 2 : 0)
+                .attr('stroke-dasharray', d => d.interpolated ? '3, 3' : 'none')
+                .attr('fill-opacity', d => d.interpolated ? 0.4 : 1);
 
             g.selectAll('.centroid')
+                .classed('interpolated', d => d.interpolated)
                 .on('mouseenter', function(event, d) {
                     if (!focusedCategory || focusedCategory === d.category_id) {
                         d3.select(this).attr('r', 12);
                         const info = topicInfo[d.category_id];
-                        tooltip.html(`<strong>${info.Name}</strong><br>Count: ${info.Count}`)
+                        const interpolatedLabel = d.interpolated ? '<br><em style="color: #f59e0b;">Interpolated Position</em>' : '';
+                        tooltip.html(`<strong>${info.Name}</strong><br>Count: ${info.Count}${interpolatedLabel}`)
                             .style('left', (event.pageX + 10) + 'px')
                             .style('top', (event.pageY - 10) + 'px')
                             .classed('visible', true);
@@ -486,6 +517,45 @@
             updateLegend(categories, colorScale);
         }
 
+        function interpolateCentroid(categoryId, targetDate) {
+            const allPoints = filterDataByGranularity(csvData, currentGranularity)
+                .filter(d => d.category_id === categoryId)
+                .sort((a, b) => a.Date - b.Date);
+
+            if (allPoints.length === 0) return null;
+
+            // Find the points before and after the target date
+            let before = null, after = null;
+            for (let i = 0; i < allPoints.length; i++) {
+                if (allPoints[i].Date < targetDate) {
+                    before = allPoints[i];
+                } else if (allPoints[i].Date > targetDate) {
+                    after = allPoints[i];
+                    break;
+                }
+            }
+
+            // If we have both before and after, interpolate
+            if (before && after) {
+                const ratio = (targetDate - before.Date) / (after.Date - before.Date);
+                const x = before.x + ratio * (after.x - before.x);
+                const y = before.y + ratio * (after.y - before.y);
+                
+                return {
+                    Date: targetDate,
+                    x: x,
+                    y: y,
+                    BroadTopic: before.BroadTopic,
+                    Topic: before.Topic,
+                    SubTopic: before.SubTopic,
+                    category_id: categoryId,
+                    interpolated: true
+                };
+            }
+
+            return null;
+        }
+
         function drawTrajectories(categories, colorScale) {
             // Only show trajectories if a topic is focused
             if (focusedCategory === null) {
@@ -497,34 +567,51 @@
             const trajData = categories
                 .filter(catId => catId === focusedCategory)
                 .map(catId => {
-                    const points = filterDataByGranularity(csvData, currentGranularity)
+                    let points = filterDataByGranularity(csvData, currentGranularity)
                         .filter(d => d.category_id === catId && d.Date <= dates[currentDate])
                         .sort((a, b) => a.Date - b.Date);
-                    return {category_id: catId, points};
+                    
+                    // Add interpolated points for missing dates
+                    const allDatesUpToCurrent = dates.filter(d => d <= dates[currentDate]);
+                    const existingDates = new Set(points.map(p => p.Date));
+                    const completePoints = [];
+                    
+                    for (const date of allDatesUpToCurrent) {
+                        if (existingDates.has(date)) {
+                            const point = points.find(p => p.Date === date);
+                            completePoints.push({...point, interpolated: false});
+                        } else {
+                            const interpolated = interpolateCentroid(catId, date);
+                            if (interpolated) {
+                                completePoints.push(interpolated);
+                            }
+                        }
+                    }
+                    
+                    return {category_id: catId, points: completePoints};
                 })
                 .filter(d => d.points.length > 1);
 
-            const line = d3.line()
-                .x(d => xScale(d.x))
-                .y(d => yScale(d.y))
-                .curve(d3.curveMonotoneX);
+            // Draw trajectory segments with different styles for interpolated sections
+            trajData.forEach(traj => {
+                if (traj.points.length < 2) return;
+                
+                for (let i = 0; i < traj.points.length - 1; i++) {
+                    const p1 = traj.points[i];
+                    const p2 = traj.points[i + 1];
+                    const isInterpolated = p1.interpolated || p2.interpolated;
+                    
+                    g.append('path')
+                        .attr('class', 'trajectory')
+                        .attr('d', `M ${xScale(p1.x)},${yScale(p1.y)} L ${xScale(p2.x)},${yScale(p2.y)}`)
+                        .attr('stroke', colorScale(traj.category_id))
+                        .attr('stroke-width', 2)
+                        .attr('stroke-dasharray', isInterpolated ? '5, 5' : 'none')
+                        .attr('opacity', isInterpolated ? 0.5 : 0.8);
+                }
+            });
 
-            const trajectories = g.selectAll('.trajectory')
-                .data(trajData, d => d.category_id);
-
-            trajectories.exit().remove();
-
-            trajectories.enter()
-                .append('path')
-                .attr('class', 'trajectory')
-                .merge(trajectories)
-                .attr('d', d => line(d.points))
-                .attr('stroke', d => colorScale(d.category_id))
-                .attr('opacity', 0.8);
-
-            const arrows = g.selectAll('.arrow').data([]);
-            arrows.exit().remove();
-
+            // Add arrows
             trajData.forEach(traj => {
                 if (traj.points.length < 2) return;
                 
@@ -543,12 +630,14 @@
                     const angle = Math.atan2(y2 - y1, x2 - x1);
                     const size = 6;
                     
+                    const isInterpolated = p1.interpolated || p2.interpolated;
+                    
                     g.append('path')
                         .attr('class', 'arrow')
                         .attr('d', `M 0 0 L ${-size} ${-size/2} L ${-size} ${size/2} Z`)
                         .attr('transform', `translate(${x2},${y2}) rotate(${angle * 180 / Math.PI})`)
                         .attr('fill', colorScale(traj.category_id))
-                        .attr('opacity', 0.7);
+                        .attr('opacity', isInterpolated ? 0.4 : 0.7);
                 }
             });
         }
