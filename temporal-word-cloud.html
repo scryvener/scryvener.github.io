@@ -192,14 +192,15 @@
             // Create scales
             const minYear = Math.min(...timePoints);
             const maxYear = Math.max(...timePoints);
+            const yearRange = maxYear - minYear;
             
             xScale = d3.scaleLinear()
-                .domain([minYear, maxYear])
-                .range([margin.left + 50, width - margin.right - 50]);
+                .domain([minYear - yearRange * 0.05, maxYear + yearRange * 0.05])
+                .range([margin.left + 80, width - margin.right - 80]);
             
             yScale = d3.scaleLinear()
-                .domain([0, 1])
-                .range([height - margin.bottom - 50, margin.top + 50]);
+                .domain([-0.1, 1.1])  // Extended domain for padding
+                .range([height - margin.bottom - 80, margin.top + 80]);
             
             // Recalculate targets with new scales
             nodes.forEach(node => {
@@ -223,7 +224,7 @@
             // Draw axes
             const axisGroup = g.append("g").attr("class", "axes");
             
-            // X axis (timeline)
+            // X axis (timeline) - clip to visible range
             const xAxis = d3.axisBottom(xScale)
                 .tickValues(timePoints)
                 .tickFormat(d3.format("d"));
@@ -247,9 +248,9 @@
                 .attr("fill", "#eee")
                 .text("Time Period");
             
-            // Y axis (specificity)
+            // Y axis (specificity) - only show labels at extremes
             const yAxis = d3.axisLeft(yScale)
-                .ticks(5)
+                .tickValues([0, 1])
                 .tickFormat(d => d === 1 ? "Specific" : d === 0 ? "Common" : "");
             
             axisGroup.append("g")
@@ -272,18 +273,22 @@
                 .attr("fill", "#eee")
                 .text("Commonality");
             
-            // Draw timeline markers
+            // Draw timeline markers only for actual data points
             const markerGroup = g.append("g").attr("class", "markers");
             
             timePoints.forEach(year => {
-                markerGroup.append("line")
-                    .attr("x1", xScale(year))
-                    .attr("x2", xScale(year))
-                    .attr("y1", margin.top)
-                    .attr("y2", height - margin.bottom)
-                    .attr("stroke", "#333")
-                    .attr("stroke-width", 1)
-                    .attr("stroke-dasharray", "2,2");
+                const xPos = xScale(year);
+                // Only draw if within visible range
+                if (xPos >= margin.left && xPos <= width - margin.right) {
+                    markerGroup.append("line")
+                        .attr("x1", xPos)
+                        .attr("x2", xPos)
+                        .attr("y1", yScale(1))
+                        .attr("y2", yScale(0))
+                        .attr("stroke", "#333")
+                        .attr("stroke-width", 1)
+                        .attr("stroke-dasharray", "2,2");
+                }
             });
             
             // Create force simulation
@@ -296,6 +301,19 @@
                     .strength(0.9))
                 .force("x", d3.forceX(d => d.target.x).strength(forceStrength))
                 .force("y", d3.forceY(d => d.target.y).strength(forceStrength))
+                .force("bounds", () => {
+                    // Constrain nodes to stay within the plot area
+                    nodes.forEach(d => {
+                        const padding = d.radius + 5;
+                        const minX = margin.left + padding;
+                        const maxX = width - margin.right - padding;
+                        const minY = margin.top + padding;
+                        const maxY = height - margin.bottom - padding;
+                        
+                        d.x = Math.max(minX, Math.min(maxX, d.x));
+                        d.y = Math.max(minY, Math.min(maxY, d.y));
+                    });
+                })
                 .alphaDecay(0.02);
             
             // Create word elements
