@@ -1,12 +1,5 @@
 [
   {
-    "word": "abroad",
-    "periods": {
-      "1960": 1,
-      "1988": 1
-    }
-  },
-  {
     "word": "agricultural",
     "periods": {
       "1960": 3,
@@ -32,18 +25,6 @@
     }
   },
   {
-    "word": "allowance",
-    "periods": {
-      "1960": 2
-    }
-  },
-  {
-    "word": "allowances",
-    "periods": {
-      "1960": 2
-    }
-  },
-  {
     "word": "america",
     "periods": {
       "1960": 1,
@@ -58,29 +39,11 @@
     }
   },
   {
-    "word": "appropriate",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "appropriates",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "area",
     "periods": {
       "1960": 1,
       "1988": 1,
       "2000": 1
-    }
-  },
-  {
-    "word": "attempt",
-    "periods": {
-      "1960": 2
     }
   },
   {
@@ -112,25 +75,6 @@
     }
   },
   {
-    "word": "bargain",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "basic",
-    "periods": {
-      "1960": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "basis",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "better",
     "periods": {
       "1960": 1,
@@ -140,12 +84,6 @@
       "2000": 4,
       "2004": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "bread",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -178,27 +116,9 @@
     }
   },
   {
-    "word": "cases",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "cent",
     "periods": {
       "1960": 3
-    }
-  },
-  {
-    "word": "cents",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "close",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -206,24 +126,6 @@
     "periods": {
       "1960": 1,
       "2012": 2
-    }
-  },
-  {
-    "word": "collapses",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "commodities",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "commodity",
-    "periods": {
-      "1960": 2
     }
   },
   {
@@ -246,24 +148,12 @@
     }
   },
   {
-    "word": "continues",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "controls",
     "periods": {
       "1960": 2,
       "1976": 1,
       "1988": 1,
       "2000": 1
-    }
-  },
-  {
-    "word": "correct",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -290,12 +180,6 @@
     }
   },
   {
-    "word": "cotton",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "country",
     "periods": {
       "1960": 2,
@@ -318,26 +202,6 @@
       "1960": 1,
       "2008": 2,
       "2012": 2
-    }
-  },
-  {
-    "word": "crops",
-    "periods": {
-      "1960": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "dairy",
-    "periods": {
-      "1960": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "decline",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -373,12 +237,6 @@
       "1976": 4,
       "1988": 1,
       "2000": 5
-    }
-  },
-  {
-    "word": "differently",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -428,12 +286,6 @@
     }
   },
   {
-    "word": "economize",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "economy",
     "periods": {
       "1960": 3,
@@ -465,26 +317,6 @@
     }
   },
   {
-    "word": "effectively",
-    "periods": {
-      "1960": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "eighty",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "election",
-    "periods": {
-      "1960": 1,
-      "1996": 1
-    }
-  },
-  {
     "word": "electric",
     "periods": {
       "1960": 1,
@@ -496,31 +328,6 @@
     }
   },
   {
-    "word": "endorsement",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "eventually",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "experience",
-    "periods": {
-      "1960": 1,
-      "1992": 1
-    }
-  },
-  {
-    "word": "experts",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "explore",
     "periods": {
       "1960": 1,
@@ -528,25 +335,6 @@
       "2000": 2,
       "2004": 1,
       "2008": 1
-    }
-  },
-  {
-    "word": "failed",
-    "periods": {
-      "1960": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "fall",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "fantastic",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -604,49 +392,11 @@
     }
   },
   {
-    "word": "feels",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "field",
-    "periods": {
-      "1960": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "fields",
-    "periods": {
-      "1960": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "finance",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "foisted",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "food",
     "periods": {
       "1960": 1,
       "1988": 1,
       "2008": 1
-    }
-  },
-  {
-    "word": "forces",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -657,13 +407,6 @@
       "2004": 1,
       "2008": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "georgia",
-    "periods": {
-      "1960": 1,
-      "2008": 1
     }
   },
   {
@@ -703,12 +446,6 @@
     }
   },
   {
-    "word": "governmental",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "governor",
     "periods": {
       "1960": 1,
@@ -721,12 +458,6 @@
     }
   },
   {
-    "word": "grows",
-    "periods": {
-      "1960": 2
-    }
-  },
-  {
     "word": "half",
     "periods": {
       "1960": 2,
@@ -736,12 +467,6 @@
       "2012": 2,
       "2016": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "harvests",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -758,31 +483,12 @@
     }
   },
   {
-    "word": "hogs",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "home",
     "periods": {
       "1960": 1,
       "2000": 7,
       "2008": 3,
       "2016": 1
-    }
-  },
-  {
-    "word": "hope",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "hydroelectric",
-    "periods": {
-      "1960": 1,
-      "2000": 1
     }
   },
   {
@@ -793,39 +499,6 @@
       "2000": 2,
       "2008": 7,
       "2012": 3
-    }
-  },
-  {
-    "word": "incentive",
-    "periods": {
-      "1960": 1,
-      "1988": 1
-    }
-  },
-  {
-    "word": "incidentally",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "indicate",
-    "periods": {
-      "1960": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "indicated",
-    "periods": {
-      "1960": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "indicates",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -841,18 +514,6 @@
       "2008": 1,
       "2012": 6,
       "2020": 6
-    }
-  },
-  {
-    "word": "inequities",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "insofar",
-    "periods": {
-      "1960": 2
     }
   },
   {
@@ -873,43 +534,11 @@
     }
   },
   {
-    "word": "june",
-    "periods": {
-      "1960": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "label",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "large",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "largest",
     "periods": {
       "1960": 1,
       "2008": 1,
       "2012": 1
-    }
-  },
-  {
-    "word": "later",
-    "periods": {
-      "1960": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "leaves",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -931,30 +560,6 @@
       "1996": 4,
       "2000": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "livestock",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "loaf",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "loophole",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "maintain",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1017,12 +622,6 @@
     }
   },
   {
-    "word": "milk",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "million",
     "periods": {
       "1960": 1,
@@ -1034,12 +633,6 @@
       "2008": 5,
       "2012": 2,
       "2020": 4
-    }
-  },
-  {
-    "word": "minnesota",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1087,12 +680,6 @@
     }
   },
   {
-    "word": "objection",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "oil",
     "periods": {
       "1960": 5,
@@ -1134,18 +721,6 @@
       "2000": 1,
       "2008": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "payasyougo",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "peanut",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1207,13 +782,6 @@
       "1980": 1,
       "2008": 5,
       "2020": 1
-    }
-  },
-  {
-    "word": "points",
-    "periods": {
-      "1960": 1,
-      "1988": 1
     }
   },
   {
@@ -1313,13 +881,6 @@
     }
   },
   {
-    "word": "programs",
-    "periods": {
-      "1960": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "projects",
     "periods": {
       "1960": 2,
@@ -1337,19 +898,6 @@
     }
   },
   {
-    "word": "provides",
-    "periods": {
-      "1960": 1,
-      "1988": 1
-    }
-  },
-  {
-    "word": "purchasers",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "question",
     "periods": {
       "1960": 1,
@@ -1361,20 +909,6 @@
       "2000": 2,
       "2008": 2,
       "2016": 1
-    }
-  },
-  {
-    "word": "recent",
-    "periods": {
-      "1960": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "recession",
-    "periods": {
-      "1960": 1,
-      "2020": 1
     }
   },
   {
@@ -1408,81 +942,12 @@
     }
   },
   {
-    "word": "revenue",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "revenues",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "rockefeller",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "sea",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "secondly",
-    "periods": {
-      "1960": 1,
-      "1980": 1
-    }
-  },
-  {
     "word": "sense",
     "periods": {
       "1960": 1,
       "1988": 1,
       "1996": 2,
       "2012": 1
-    }
-  },
-  {
-    "word": "sharply",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "shown",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "smaller",
-    "periods": {
-      "1960": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "sooner",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "spring",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "statement",
-    "periods": {
-      "1960": 1,
-      "2020": 1
     }
   },
   {
@@ -1497,30 +962,6 @@
       "2008": 8,
       "2012": 2,
       "2020": 4
-    }
-  },
-  {
-    "word": "steel",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "stimulation",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "studied",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "sufficient",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1550,25 +991,6 @@
       "2000": 1,
       "2008": 3,
       "2020": 1
-    }
-  },
-  {
-    "word": "supported",
-    "periods": {
-      "1960": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "surplus",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "tennessee",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1607,18 +1029,6 @@
     }
   },
   {
-    "word": "tomatoes",
-    "periods": {
-      "1960": 2
-    }
-  },
-  {
-    "word": "treated",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
     "word": "true",
     "periods": {
       "1960": 1,
@@ -1626,30 +1036,6 @@
       "1988": 1,
       "2000": 1,
       "2012": 1
-    }
-  },
-  {
-    "word": "twenties",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "twentyfive",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "twentyfivecent",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "twentyseven",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1664,24 +1050,6 @@
       "2008": 7,
       "2012": 2,
       "2020": 3
-    }
-  },
-  {
-    "word": "unless",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "valley",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "vote",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1706,18 +1074,6 @@
       "2012": 4,
       "2016": 1,
       "2020": 3
-    }
-  },
-  {
-    "word": "wheat",
-    "periods": {
-      "1960": 1
-    }
-  },
-  {
-    "word": "wisconsin",
-    "periods": {
-      "1960": 1
     }
   },
   {
@@ -1839,13 +1195,6 @@
     }
   },
   {
-    "word": "adequate",
-    "periods": {
-      "1976": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "administration",
     "periods": {
       "1976": 4,
@@ -1856,19 +1205,6 @@
       "2012": 2,
       "2016": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "administrations",
-    "periods": {
-      "1976": 1,
-      "2004": 1
-    }
-  },
-  {
-    "word": "advocated",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -1909,24 +1245,6 @@
     }
   },
   {
-    "word": "appalachian",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "approved",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
-    "word": "arab",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
     "word": "areas",
     "periods": {
       "1976": 3,
@@ -1935,31 +1253,11 @@
     }
   },
   {
-    "word": "atomic",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
     "word": "automobiles",
     "periods": {
       "1976": 1,
       "1996": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "bad",
-    "periods": {
-      "1976": 1,
-      "1992": 1
-    }
-  },
-  {
-    "word": "benefit",
-    "periods": {
-      "1976": 1,
-      "1980": 1
     }
   },
   {
@@ -1985,18 +1283,6 @@
     }
   },
   {
-    "word": "bought",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "brief",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "burning",
     "periods": {
       "1976": 3,
@@ -2015,19 +1301,6 @@
       "2008": 1,
       "2016": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "carter",
-    "periods": {
-      "1976": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "case",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2096,18 +1369,6 @@
     }
   },
   {
-    "word": "concentrate",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "concentrated",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "congress",
     "periods": {
       "1976": 1,
@@ -2134,24 +1395,6 @@
       "1976": 1,
       "1980": 1,
       "2000": 2
-    }
-  },
-  {
-    "word": "consistent",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "consolidation",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "contribution",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2183,18 +1426,6 @@
     }
   },
   {
-    "word": "delay",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "described",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "developed",
     "periods": {
       "1976": 2,
@@ -2211,12 +1442,6 @@
       "1992": 2,
       "2000": 2,
       "2012": 1
-    }
-  },
-  {
-    "word": "discuss",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2271,29 +1496,10 @@
     }
   },
   {
-    "word": "emphasize",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "employment",
-    "periods": {
-      "1976": 1,
-      "2012": 1
-    }
-  },
-  {
     "word": "encourage",
     "periods": {
       "1976": 1,
       "2000": 2
-    }
-  },
-  {
-    "word": "encouragement",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2321,12 +1527,6 @@
     }
   },
   {
-    "word": "enrichment",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "environment",
     "periods": {
       "1976": 1,
@@ -2350,12 +1550,6 @@
       "2000": 5,
       "2004": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "established",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2401,12 +1595,6 @@
     }
   },
   {
-    "word": "extraction",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
     "word": "fact",
     "periods": {
       "1976": 1,
@@ -2432,42 +1620,11 @@
     }
   },
   {
-    "word": "final",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "firm",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "ford",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "forms",
     "periods": {
       "1976": 1,
       "1980": 1,
       "2016": 2
-    }
-  },
-  {
-    "word": "fully",
-    "periods": {
-      "1976": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "funded",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2535,39 +1692,6 @@
     }
   },
   {
-    "word": "greater",
-    "periods": {
-      "1976": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "ground",
-    "periods": {
-      "1976": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "groups",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "handle",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "helped",
-    "periods": {
-      "1976": 1,
-      "2004": 1
-    }
-  },
-  {
     "word": "high",
     "periods": {
       "1976": 1,
@@ -2610,13 +1734,6 @@
     "periods": {
       "1976": 2,
       "1992": 2
-    }
-  },
-  {
-    "word": "include",
-    "periods": {
-      "1976": 1,
-      "2016": 1
     }
   },
   {
@@ -2668,18 +1785,6 @@
     }
   },
   {
-    "word": "insisted",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "insulation",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "iran",
     "periods": {
       "1976": 1,
@@ -2714,12 +1819,6 @@
     }
   },
   {
-    "word": "judgment",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "just",
     "periods": {
       "1976": 2,
@@ -2746,19 +1845,6 @@
     }
   },
   {
-    "word": "league",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "left",
-    "periods": {
-      "1976": 1,
-      "2004": 1
-    }
-  },
-  {
     "word": "like",
     "periods": {
       "1976": 1,
@@ -2771,30 +1857,6 @@
       "2012": 7,
       "2016": 4,
       "2020": 1
-    }
-  },
-  {
-    "word": "likewise",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "load",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "lobby",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "located",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2811,31 +1873,12 @@
     }
   },
   {
-    "word": "lowcarbon",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "lower",
-    "periods": {
-      "1976": 1,
-      "2012": 1
-    }
-  },
-  {
     "word": "lowest",
     "periods": {
       "1976": 1,
       "2000": 1,
       "2012": 2,
       "2020": 2
-    }
-  },
-  {
-    "word": "lowsulfur",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2850,25 +1893,6 @@
     "periods": {
       "1976": 3,
       "2000": 1
-    }
-  },
-  {
-    "word": "meeting",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "mines",
-    "periods": {
-      "1976": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "month",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -2902,18 +1926,6 @@
     }
   },
   {
-    "word": "needed",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "nonproliferation",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "nuclear",
     "periods": {
       "1976": 2,
@@ -2941,12 +1953,6 @@
     }
   },
   {
-    "word": "orderly",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "ought",
     "periods": {
       "1976": 1,
@@ -2954,38 +1960,6 @@
       "1992": 2,
       "1996": 1,
       "2000": 8
-    }
-  },
-  {
-    "word": "overall",
-    "periods": {
-      "1976": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "overseas",
-    "periods": {
-      "1976": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "parks",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "peak",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "permit",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3013,19 +1987,6 @@
     }
   },
   {
-    "word": "possible",
-    "periods": {
-      "1976": 1,
-      "1980": 1
-    }
-  },
-  {
-    "word": "precautions",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "president",
     "periods": {
       "1976": 5,
@@ -3038,18 +1999,6 @@
       "2004": 6,
       "2012": 9,
       "2020": 4
-    }
-  },
-  {
-    "word": "pressure",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
-    "word": "primary",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3082,31 +2031,6 @@
     }
   },
   {
-    "word": "rate",
-    "periods": {
-      "1976": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "rates",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "realization",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "recommended",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "record",
     "periods": {
       "1976": 1,
@@ -3120,34 +2044,10 @@
     }
   },
   {
-    "word": "reen",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "regions",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "repeatedly",
     "periods": {
       "1976": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "reprocessing",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "requirement",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3169,25 +2069,6 @@
     }
   },
   {
-    "word": "resort",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "resource",
-    "periods": {
-      "1976": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "responsibilities",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "right",
     "periods": {
       "1976": 1,
@@ -3200,30 +2081,10 @@
     }
   },
   {
-    "word": "river",
-    "periods": {
-      "1976": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "rivers",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "run",
     "periods": {
       "1976": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "safer",
-    "periods": {
-      "1976": 1,
-      "2020": 1
     }
   },
   {
@@ -3274,18 +2135,6 @@
     }
   },
   {
-    "word": "scarce",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "scenic",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
     "word": "sector",
     "periods": {
       "1976": 1,
@@ -3294,29 +2143,9 @@
     }
   },
   {
-    "word": "set",
-    "periods": {
-      "1976": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "severely",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "shift",
     "periods": {
       "1976": 4
-    }
-  },
-  {
-    "word": "signed",
-    "periods": {
-      "1976": 1,
-      "2000": 1
     }
   },
   {
@@ -3328,18 +2157,6 @@
       "2012": 5,
       "2016": 4,
       "2020": 5
-    }
-  },
-  {
-    "word": "soviet",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "special",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3356,22 +2173,10 @@
     }
   },
   {
-    "word": "strict",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "strictest",
     "periods": {
       "1976": 1,
       "1980": 3
-    }
-  },
-  {
-    "word": "stripmining",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3381,19 +2186,6 @@
       "1988": 1,
       "2000": 2,
       "2008": 1
-    }
-  },
-  {
-    "word": "structure",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "substantially",
-    "periods": {
-      "1976": 1,
-      "1988": 1
     }
   },
   {
@@ -3451,12 +2243,6 @@
     }
   },
   {
-    "word": "thirtyfive",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "today",
     "periods": {
       "1976": 1,
@@ -3467,31 +2253,6 @@
       "2004": 1,
       "2012": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "treatment",
-    "periods": {
-      "1976": 1,
-      "1996": 1
-    }
-  },
-  {
-    "word": "tremendously",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "union",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "urban",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3515,30 +2276,6 @@
       "1976": 1,
       "1980": 2,
       "1988": 1
-    }
-  },
-  {
-    "word": "users",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "utilization",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "voluntarily",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
-    "word": "voters",
-    "periods": {
-      "1976": 1
     }
   },
   {
@@ -3599,12 +2336,6 @@
     }
   },
   {
-    "word": "wild",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "wilderness",
     "periods": {
       "1976": 2,
@@ -3620,12 +2351,6 @@
     }
   },
   {
-    "word": "wouldve",
-    "periods": {
-      "1976": 2
-    }
-  },
-  {
     "word": "yes",
     "periods": {
       "1976": 2,
@@ -3637,37 +2362,11 @@
     }
   },
   {
-    "word": "yield",
-    "periods": {
-      "1976": 1
-    }
-  },
-  {
     "word": "ability",
     "periods": {
       "1980": 1,
       "2000": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "according",
-    "periods": {
-      "1980": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "achieve",
-    "periods": {
-      "1980": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "achievement",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -3690,52 +2389,12 @@
     }
   },
   {
-    "word": "adding",
-    "periods": {
-      "1980": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "adopted",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "affect",
-    "periods": {
-      "1980": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "agree",
-    "periods": {
-      "1980": 1,
-      "2008": 1
-    }
-  },
-  {
     "word": "alaska",
     "periods": {
       "1980": 4,
       "2000": 2,
       "2008": 3,
       "2012": 1
-    }
-  },
-  {
-    "word": "allowed",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "americans",
-    "periods": {
-      "1980": 1,
-      "2008": 1
     }
   },
   {
@@ -3750,38 +2409,12 @@
     }
   },
   {
-    "word": "applied",
-    "periods": {
-      "1980": 1,
-      "1988": 1
-    }
-  },
-  {
-    "word": "associated",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "available",
-    "periods": {
-      "1980": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "away",
     "periods": {
       "1980": 1,
       "1996": 1,
       "2008": 2,
       "2012": 1
-    }
-  },
-  {
-    "word": "badly",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -3798,19 +2431,6 @@
       "1980": 1,
       "1988": 1,
       "2000": 1
-    }
-  },
-  {
-    "word": "begin",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "begun",
-    "periods": {
-      "1980": 1,
-      "2008": 1
     }
   },
   {
@@ -3849,30 +2469,12 @@
     }
   },
   {
-    "word": "blames",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "bright",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "burn",
     "periods": {
       "1980": 1,
       "2000": 1,
       "2008": 1,
       "2012": 1
-    }
-  },
-  {
-    "word": "buses",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -3894,18 +2496,6 @@
     }
   },
   {
-    "word": "capita",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "carload",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "cars",
     "periods": {
       "1980": 1,
@@ -3923,47 +2513,10 @@
     }
   },
   {
-    "word": "centuries",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "chance",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "changed",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "charge",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "circulation",
-    "periods": {
-      "1980": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "city",
     "periods": {
       "1980": 2,
       "2000": 1
-    }
-  },
-  {
-    "word": "clearly",
-    "periods": {
-      "1980": 2
     }
   },
   {
@@ -3976,25 +2529,6 @@
       "2008": 4,
       "2012": 4,
       "2020": 1
-    }
-  },
-  {
-    "word": "commercial",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "commitment",
-    "periods": {
-      "1980": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "community",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4012,12 +2546,6 @@
     }
   },
   {
-    "word": "consuming",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
     "word": "consumption",
     "periods": {
       "1980": 2,
@@ -4026,30 +2554,11 @@
     }
   },
   {
-    "word": "contain",
-    "periods": {
-      "1980": 1,
-      "2004": 1
-    }
-  },
-  {
-    "word": "continental",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
     "word": "control",
     "periods": {
       "1980": 1,
       "2000": 1,
       "2012": 4
-    }
-  },
-  {
-    "word": "couple",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4083,18 +2592,6 @@
     }
   },
   {
-    "word": "dangerous",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "date",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "day",
     "periods": {
       "1980": 2,
@@ -4117,18 +2614,6 @@
     }
   },
   {
-    "word": "deeper",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "degree",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "doing",
     "periods": {
       "1980": 2,
@@ -4138,13 +2623,6 @@
       "2008": 1,
       "2012": 1,
       "2016": 1
-    }
-  },
-  {
-    "word": "doubt",
-    "periods": {
-      "1980": 1,
-      "2012": 1
     }
   },
   {
@@ -4180,12 +2658,6 @@
     }
   },
   {
-    "word": "dynamic",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "earth",
     "periods": {
       "1980": 2,
@@ -4210,12 +2682,6 @@
     }
   },
   {
-    "word": "emergency",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "end",
     "periods": {
       "1980": 3,
@@ -4224,128 +2690,10 @@
     }
   },
   {
-    "word": "enemy",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "energyefficient",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "energypoor",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "energyrich",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "equal",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "ethic",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "exceed",
-    "periods": {
-      "1980": 1,
-      "1996": 1
-    }
-  },
-  {
-    "word": "excise",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "exciting",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "exhaustible",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "exploration",
     "periods": {
       "1980": 2,
       "2000": 2
-    }
-  },
-  {
-    "word": "exploring",
-    "periods": {
-      "1980": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "exporting",
-    "periods": {
-      "1980": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "extraordinary",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "facilities",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "factor",
-    "periods": {
-      "1980": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "factors",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "familiar",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "fine",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "fiveyear",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4429,18 +2777,6 @@
     }
   },
   {
-    "word": "geologists",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "germany",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "gone",
     "periods": {
       "1980": 1,
@@ -4461,12 +2797,6 @@
     }
   },
   {
-    "word": "grant",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "great",
     "periods": {
       "1980": 1,
@@ -4476,12 +2806,6 @@
       "2008": 1,
       "2016": 3,
       "2020": 2
-    }
-  },
-  {
-    "word": "harvard",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4499,36 +2823,6 @@
       "1984": 2,
       "1992": 1,
       "2008": 1
-    }
-  },
-  {
-    "word": "hidden",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "higher",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "houses",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "housing",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "ignore",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4555,18 +2849,6 @@
     }
   },
   {
-    "word": "impossible",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "improved",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
     "word": "income",
     "periods": {
       "1980": 1,
@@ -4574,37 +2856,6 @@
       "1988": 2,
       "2000": 1,
       "2004": 1
-    }
-  },
-  {
-    "word": "inherit",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "insisting",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "institute",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "interfere",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "international",
-    "periods": {
-      "1980": 1,
-      "1988": 1
     }
   },
   {
@@ -4676,30 +2927,12 @@
     }
   },
   {
-    "word": "leasing",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "legislation",
     "periods": {
       "1980": 1,
       "1988": 3,
       "1992": 1,
       "1996": 1
-    }
-  },
-  {
-    "word": "life",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "lifestyles",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4710,28 +2943,10 @@
     }
   },
   {
-    "word": "limited",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "limits",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
     "word": "line",
     "periods": {
       "1980": 2,
       "2008": 1
-    }
-  },
-  {
-    "word": "loading",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4740,12 +2955,6 @@
       "1980": 1,
       "1984": 1,
       "1992": 1
-    }
-  },
-  {
-    "word": "lump",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4789,13 +2998,6 @@
     }
   },
   {
-    "word": "meet",
-    "periods": {
-      "1980": 1,
-      "2012": 1
-    }
-  },
-  {
     "word": "millions",
     "periods": {
       "1980": 2,
@@ -4804,12 +3006,6 @@
       "2008": 3,
       "2012": 1,
       "2020": 4
-    }
-  },
-  {
-    "word": "minds",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4824,12 +3020,6 @@
       "1980": 1,
       "1992": 1,
       "2016": 3
-    }
-  },
-  {
-    "word": "mining",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4848,12 +3038,6 @@
       "2000": 2,
       "2012": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "motorists",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -4906,24 +3090,6 @@
     }
   },
   {
-    "word": "oiling",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "oneeighth",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "onethird",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
     "word": "opec",
     "periods": {
       "1980": 3,
@@ -4947,13 +3113,6 @@
     }
   },
   {
-    "word": "opening",
-    "periods": {
-      "1980": 1,
-      "1992": 1
-    }
-  },
-  {
     "word": "opportunities",
     "periods": {
       "1980": 1,
@@ -4967,25 +3126,6 @@
     "periods": {
       "1980": 1,
       "2008": 3
-    }
-  },
-  {
-    "word": "outer",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "passing",
-    "periods": {
-      "1980": 1,
-      "1988": 1
-    }
-  },
-  {
-    "word": "pertain",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5005,74 +3145,10 @@
     }
   },
   {
-    "word": "pockets",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "portrayed",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "ports",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "possibility",
     "periods": {
       "1980": 1,
       "2000": 2
-    }
-  },
-  {
-    "word": "possibly",
-    "periods": {
-      "1980": 1,
-      "1992": 1
-    }
-  },
-  {
-    "word": "posterity",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "potential",
-    "periods": {
-      "1980": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "potentials",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "predicated",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "premise",
-    "periods": {
-      "1980": 1,
-      "1988": 1
-    }
-  },
-  {
-    "word": "preserve",
-    "periods": {
-      "1980": 1,
-      "2000": 1
     }
   },
   {
@@ -5081,13 +3157,6 @@
       "1980": 1,
       "1988": 1,
       "1992": 1
-    }
-  },
-  {
-    "word": "prevent",
-    "periods": {
-      "1980": 1,
-      "2008": 1
     }
   },
   {
@@ -5158,83 +3227,11 @@
     }
   },
   {
-    "word": "prospect",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "proving",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "public",
     "periods": {
       "1980": 2,
       "1984": 1,
       "2012": 4
-    }
-  },
-  {
-    "word": "published",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "purity",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "quart",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "rail",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "railroad",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "raised",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "rapidly",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "reagan",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "realize",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "redesign",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5271,42 +3268,10 @@
     }
   },
   {
-    "word": "repeat",
-    "periods": {
-      "1980": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "replace",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "republic",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "reputable",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "require",
     "periods": {
       "1980": 1,
       "1988": 2
-    }
-  },
-  {
-    "word": "requires",
-    "periods": {
-      "1980": 1,
-      "2008": 1
     }
   },
   {
@@ -5324,36 +3289,6 @@
       "1988": 1,
       "2000": 1,
       "2012": 1
-    }
-  },
-  {
-    "word": "restraints",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "restrictions",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "retrofitting",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "rich",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "sacrifice",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5381,19 +3316,6 @@
     }
   },
   {
-    "word": "scarcity",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "school",
-    "periods": {
-      "1980": 1,
-      "1996": 1
-    }
-  },
-  {
     "word": "secondary",
     "periods": {
       "1980": 1,
@@ -5409,48 +3331,10 @@
     }
   },
   {
-    "word": "send",
-    "periods": {
-      "1980": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "shelf",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "shock",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "short",
-    "periods": {
-      "1980": 2
-    }
-  },
-  {
-    "word": "shut",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "simply",
     "periods": {
       "1980": 2,
       "2008": 1
-    }
-  },
-  {
-    "word": "sir",
-    "periods": {
-      "1980": 1,
-      "2020": 1
     }
   },
   {
@@ -5498,47 +3382,11 @@
     }
   },
   {
-    "word": "staving",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "steadily",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "stop",
     "periods": {
       "1980": 3,
       "2008": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "stretching",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "stringent",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "structures",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "studies",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5549,13 +3397,6 @@
       "1992": 1,
       "2000": 1,
       "2008": 1
-    }
-  },
-  {
-    "word": "subject",
-    "periods": {
-      "1980": 1,
-      "1988": 1
     }
   },
   {
@@ -5587,30 +3428,6 @@
       "2008": 8,
       "2012": 8,
       "2020": 7
-    }
-  },
-  {
-    "word": "surely",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "suspected",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "synthetic",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "systems",
-    "periods": {
-      "1980": 2
     }
   },
   {
@@ -5671,13 +3488,6 @@
     }
   },
   {
-    "word": "told",
-    "periods": {
-      "1980": 1,
-      "1992": 1
-    }
-  },
-  {
     "word": "tons",
     "periods": {
       "1980": 2,
@@ -5701,43 +3511,10 @@
     }
   },
   {
-    "word": "traditional",
-    "periods": {
-      "1980": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "trainload",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "transportation",
     "periods": {
       "1980": 2,
       "2008": 1
-    }
-  },
-  {
-    "word": "tried",
-    "periods": {
-      "1980": 1,
-      "1996": 1
-    }
-  },
-  {
-    "word": "triple",
-    "periods": {
-      "1980": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "unequaled",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5750,22 +3527,10 @@
     }
   },
   {
-    "word": "utilized",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "vast",
     "periods": {
       "1980": 2,
       "1992": 1
-    }
-  },
-  {
-    "word": "vista",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5795,23 +3560,11 @@
     }
   },
   {
-    "word": "wellknown",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
     "word": "western",
     "periods": {
       "1980": 1,
       "2000": 1,
       "2004": 1
-    }
-  },
-  {
-    "word": "windfall",
-    "periods": {
-      "1980": 1
     }
   },
   {
@@ -5833,18 +3586,6 @@
     }
   },
   {
-    "word": "worthy",
-    "periods": {
-      "1980": 1
-    }
-  },
-  {
-    "word": "allen",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
     "word": "came",
     "periods": {
       "1984": 1,
@@ -5860,76 +3601,11 @@
     }
   },
   {
-    "word": "cheap",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "cleaned",
-    "periods": {
-      "1984": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "continued",
-    "periods": {
-      "1984": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "contrary",
-    "periods": {
-      "1984": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "dayton",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "devastation",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "door",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "drink",
-    "periods": {
-      "1984": 1,
-      "1996": 1
-    }
-  },
-  {
     "word": "drop",
     "periods": {
       "1984": 1,
       "2008": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "dump",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "dumps",
-    "periods": {
-      "1984": 1,
-      "1996": 1
     }
   },
   {
@@ -5943,12 +3619,6 @@
     }
   },
   {
-    "word": "enforced",
-    "periods": {
-      "1984": 2
-    }
-  },
-  {
     "word": "exports",
     "periods": {
       "1984": 1,
@@ -5957,32 +3627,11 @@
     }
   },
   {
-    "word": "facing",
-    "periods": {
-      "1984": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "family",
     "periods": {
       "1984": 1,
       "1988": 1,
       "2000": 2
-    }
-  },
-  {
-    "word": "flow",
-    "periods": {
-      "1984": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "friends",
-    "periods": {
-      "1984": 1,
-      "2000": 1
     }
   },
   {
@@ -6013,24 +3662,6 @@
     }
   },
   {
-    "word": "inexcusable",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "influx",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "insensitive",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
     "word": "know",
     "periods": {
       "1984": 2,
@@ -6040,18 +3671,6 @@
       "2008": 6,
       "2016": 3,
       "2020": 4
-    }
-  },
-  {
-    "word": "knows",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "lives",
-    "periods": {
-      "1984": 1
     }
   },
   {
@@ -6068,20 +3687,6 @@
       "1984": 1,
       "2012": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "minute",
-    "periods": {
-      "1984": 1,
-      "1992": 1
-    }
-  },
-  {
-    "word": "neighbors",
-    "periods": {
-      "1984": 1,
-      "2016": 1
     }
   },
   {
@@ -6108,12 +3713,6 @@
       "2012": 1,
       "2016": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "peoples",
-    "periods": {
-      "1984": 1
     }
   },
   {
@@ -6151,47 +3750,11 @@
     }
   },
   {
-    "word": "risked",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
     "word": "rural",
     "periods": {
       "1984": 1,
       "1988": 3,
       "2000": 1
-    }
-  },
-  {
-    "word": "sat",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "seeping",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "shameful",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "swamping",
-    "periods": {
-      "1984": 2
-    }
-  },
-  {
-    "word": "theory",
-    "periods": {
-      "1984": 1
     }
   },
   {
@@ -6208,35 +3771,10 @@
     }
   },
   {
-    "word": "totally",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
     "word": "toxic",
     "periods": {
       "1984": 2,
       "1996": 4
-    }
-  },
-  {
-    "word": "toxics",
-    "periods": {
-      "1984": 1
-    }
-  },
-  {
-    "word": "tremendous",
-    "periods": {
-      "1984": 1,
-      "1988": 1
-    }
-  },
-  {
-    "word": "wrong",
-    "periods": {
-      "1984": 1
     }
   },
   {
@@ -6247,25 +3785,6 @@
       "2000": 1,
       "2008": 2,
       "2020": 1
-    }
-  },
-  {
-    "word": "acid",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "advertising",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "agency",
-    "periods": {
-      "1988": 1,
-      "1996": 1
     }
   },
   {
@@ -6285,78 +3804,11 @@
     }
   },
   {
-    "word": "alternatives",
-    "periods": {
-      "1988": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "ann",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "appropriations",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "assisting",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "authors",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "award",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "bays",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "bentsen",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "bet",
     "periods": {
       "1988": 1,
       "2000": 1,
       "2012": 1
-    }
-  },
-  {
-    "word": "bigger",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "biodegradable",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "bonnie",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6395,13 +3847,6 @@
     }
   },
   {
-    "word": "burns",
-    "periods": {
-      "1988": 1,
-      "2020": 1
-    }
-  },
-  {
     "word": "bush",
     "periods": {
       "1988": 5,
@@ -6418,40 +3863,10 @@
     }
   },
   {
-    "word": "carried",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "chaired",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "charter",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "clyde",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "coast",
     "periods": {
       "1988": 1,
       "2008": 2
-    }
-  },
-  {
-    "word": "combination",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6474,35 +3889,11 @@
     }
   },
   {
-    "word": "commit",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "committed",
     "periods": {
       "1988": 5,
       "2000": 4,
       "2020": 1
-    }
-  },
-  {
-    "word": "communities",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "content",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "contradictory",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6520,42 +3911,11 @@
     }
   },
   {
-    "word": "costing",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "credit",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "crew",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "customers",
-    "periods": {
-      "1988": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "cuts",
     "periods": {
       "1988": 1,
       "2000": 1,
       "2008": 1
-    }
-  },
-  {
-    "word": "data",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6568,30 +3928,10 @@
     }
   },
   {
-    "word": "debt",
-    "periods": {
-      "1988": 1,
-      "2016": 1
-    }
-  },
-  {
     "word": "decent",
     "periods": {
       "1988": 3,
       "1992": 1
-    }
-  },
-  {
-    "word": "deficit",
-    "periods": {
-      "1988": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "deicers",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6602,98 +3942,9 @@
     }
   },
   {
-    "word": "democrats",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "denies",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "department",
-    "periods": {
-      "1988": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "destroy",
-    "periods": {
-      "1988": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "direction",
-    "periods": {
-      "1988": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "dirtiest",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "drought",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "dukakis",
     "periods": {
       "1988": 3
-    }
-  },
-  {
-    "word": "dukakisbentsen",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "early",
-    "periods": {
-      "1988": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "economically",
-    "periods": {
-      "1988": 1,
-      "2000": 1
-    }
-  },
-  {
-    "word": "encouraged",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "engine",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "enormous",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "environmentalist",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6706,36 +3957,11 @@
     }
   },
   {
-    "word": "erode",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "ethanol",
     "periods": {
       "1988": 2,
       "2004": 1,
       "2012": 1
-    }
-  },
-  {
-    "word": "exclusive",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "express",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "fair",
-    "periods": {
-      "1988": 1,
-      "2000": 1
     }
   },
   {
@@ -6747,24 +3973,6 @@
     }
   },
   {
-    "word": "farms",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "favors",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "feel",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "fight",
     "periods": {
       "1988": 1,
@@ -6772,12 +3980,6 @@
       "2004": 1,
       "2012": 2,
       "2016": 1
-    }
-  },
-  {
-    "word": "fish",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6797,42 +3999,10 @@
     }
   },
   {
-    "word": "gasohol",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "generates",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "george",
     "periods": {
       "1988": 7,
       "1992": 1
-    }
-  },
-  {
-    "word": "gives",
-    "periods": {
-      "1988": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "gorsuch",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "greenhouse",
-    "periods": {
-      "1988": 1,
-      "2008": 1
     }
   },
   {
@@ -6849,12 +4019,6 @@
     }
   },
   {
-    "word": "hard",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "heat",
     "periods": {
       "1988": 1,
@@ -6864,35 +4028,11 @@
     }
   },
   {
-    "word": "hell",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "helpful",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "helping",
     "periods": {
       "1988": 1,
       "2008": 1,
       "2012": 2
-    }
-  },
-  {
-    "word": "highlighted",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "ideas",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6913,35 +4053,11 @@
     }
   },
   {
-    "word": "improving",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "incentives",
     "periods": {
       "1988": 1,
       "2000": 2,
       "2008": 2
-    }
-  },
-  {
-    "word": "inflation",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "interested",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "james",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -6961,56 +4077,10 @@
     }
   },
   {
-    "word": "join",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "kill",
-    "periods": {
-      "1988": 1,
-      "2020": 1
-    }
-  },
-  {
     "word": "killing",
     "periods": {
       "1988": 2,
       "2016": 1
-    }
-  },
-  {
-    "word": "lakes",
-    "periods": {
-      "1988": 1,
-      "1996": 1
-    }
-  },
-  {
-    "word": "lax",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "layer",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "lead",
-    "periods": {
-      "1988": 1,
-      "1996": 1
-    }
-  },
-  {
-    "word": "leadership",
-    "periods": {
-      "1988": 1,
-      "1992": 1
     }
   },
   {
@@ -7020,12 +4090,6 @@
       "1996": 1,
       "2008": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "listening",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7050,30 +4114,12 @@
     }
   },
   {
-    "word": "maintenance",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "management",
     "periods": {
       "1988": 3,
       "1992": 1,
       "2000": 1,
       "2020": 6
-    }
-  },
-  {
-    "word": "massachusetts",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "member",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7084,103 +4130,10 @@
     }
   },
   {
-    "word": "mike",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "militarily",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "moved",
-    "periods": {
-      "1988": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "mutually",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "neglect",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "network",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "newspaper",
-    "periods": {
-      "1988": 1,
-      "2020": 1
-    }
-  },
-  {
     "word": "northeast",
     "periods": {
       "1988": 1,
       "2000": 2
-    }
-  },
-  {
-    "word": "objective",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "oppose",
-    "periods": {
-      "1988": 1,
-      "2020": 1
-    }
-  },
-  {
-    "word": "optimistic",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "osha",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "ozone",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "party",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "passage",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "payments",
-    "periods": {
-      "1988": 2
     }
   },
   {
@@ -7196,43 +4149,6 @@
     }
   },
   {
-    "word": "plasticsplasticgasohol",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "platform",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "played",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "political",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "polluted",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "product",
-    "periods": {
-      "1988": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "progress",
     "periods": {
       "1988": 1,
@@ -7240,12 +4156,6 @@
       "1996": 2,
       "2000": 1,
       "2020": 1
-    }
-  },
-  {
-    "word": "proper",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7261,38 +4171,6 @@
     "periods": {
       "1988": 1,
       "2008": 2
-    }
-  },
-  {
-    "word": "push",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "pushing",
-    "periods": {
-      "1988": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "rain",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "rant",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "raw",
-    "periods": {
-      "1988": 1,
-      "2000": 1
     }
   },
   {
@@ -7315,90 +4193,10 @@
     }
   },
   {
-    "word": "reasonable",
-    "periods": {
-      "1988": 1,
-      "2004": 1
-    }
-  },
-  {
-    "word": "rebuild",
-    "periods": {
-      "1988": 1,
-      "2012": 1
-    }
-  },
-  {
-    "word": "recapture",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "received",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "redevelopment",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "reductions",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "regulation",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "regulatory",
     "periods": {
       "1988": 3,
       "1996": 1
-    }
-  },
-  {
-    "word": "reject",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "rightfully",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "road",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "roadblocks",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "role",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "seeing",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7411,28 +4209,10 @@
     }
   },
   {
-    "word": "sewage",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "situation",
     "periods": {
       "1988": 2,
       "1992": 1
-    }
-  },
-  {
-    "word": "solve",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "soybeans",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7444,30 +4224,11 @@
     }
   },
   {
-    "word": "spent",
-    "periods": {
-      "1988": 1,
-      "2008": 1
-    }
-  },
-  {
     "word": "stand",
     "periods": {
       "1988": 2,
       "1992": 2,
       "2008": 1
-    }
-  },
-  {
-    "word": "standpoint",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "sterilizing",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7496,37 +4257,6 @@
     }
   },
   {
-    "word": "subsidy",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "summit",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "superfund",
-    "periods": {
-      "1988": 2
-    }
-  },
-  {
-    "word": "supports",
-    "periods": {
-      "1988": 1,
-      "2008": 1
-    }
-  },
-  {
-    "word": "swiftly",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "talking",
     "periods": {
       "1988": 1,
@@ -7541,13 +4271,6 @@
     "periods": {
       "1988": 2,
       "2008": 1
-    }
-  },
-  {
-    "word": "task",
-    "periods": {
-      "1988": 1,
-      "1992": 1
     }
   },
   {
@@ -7577,32 +4300,6 @@
     }
   },
   {
-    "word": "thanks",
-    "periods": {
-      "1988": 1,
-      "1996": 1
-    }
-  },
-  {
-    "word": "thatll",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "thousand",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "threat",
-    "periods": {
-      "1988": 1,
-      "2020": 1
-    }
-  },
-  {
     "word": "throw",
     "periods": {
       "1988": 1,
@@ -7611,22 +4308,10 @@
     }
   },
   {
-    "word": "throwing",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
     "word": "times",
     "periods": {
       "1988": 1,
       "2008": 4
-    }
-  },
-  {
-    "word": "track",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7668,23 +4353,10 @@
     }
   },
   {
-    "word": "values",
-    "periods": {
-      "1988": 1,
-      "1996": 1
-    }
-  },
-  {
     "word": "vice",
     "periods": {
       "1988": 2,
       "2000": 4
-    }
-  },
-  {
-    "word": "views",
-    "periods": {
-      "1988": 1
     }
   },
   {
@@ -7696,31 +4368,6 @@
     }
   },
   {
-    "word": "waterway",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "watt",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "weapon",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "wed",
-    "periods": {
-      "1988": 1,
-      "2000": 1
-    }
-  },
-  {
     "word": "went",
     "periods": {
       "1988": 1,
@@ -7728,19 +4375,6 @@
       "2012": 2,
       "2016": 1,
       "2020": 2
-    }
-  },
-  {
-    "word": "wholesome",
-    "periods": {
-      "1988": 1
-    }
-  },
-  {
-    "word": "whos",
-    "periods": {
-      "1988": 1,
-      "2012": 1
     }
   },
   {
@@ -7756,9 +4390,1266 @@
     }
   },
   {
-    "word": "wrecking",
+    "word": "allow",
     "periods": {
-      "1988": 1
+      "1992": 1,
+      "2004": 1,
+      "2008": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "auto",
+    "periods": {
+      "1992": 5,
+      "2008": 1,
+      "2012": 6,
+      "2020": 2
+    }
+  },
+  {
+    "word": "cafe",
+    "periods": {
+      "1992": 3
+    }
+  },
+  {
+    "word": "car",
+    "periods": {
+      "1992": 1,
+      "2008": 4,
+      "2012": 2,
+      "2020": 5
+    }
+  },
+  {
+    "word": "care",
+    "periods": {
+      "1992": 2,
+      "2000": 4,
+      "2008": 2,
+      "2016": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "cleaning",
+    "periods": {
+      "1992": 1,
+      "1996": 3,
+      "2000": 1
+    }
+  },
+  {
+    "word": "climate",
+    "periods": {
+      "1992": 1,
+      "2008": 9,
+      "2016": 3,
+      "2020": 11
+    }
+  },
+  {
+    "word": "clinton",
+    "periods": {
+      "1992": 2,
+      "1996": 1
+    }
+  },
+  {
+    "word": "company",
+    "periods": {
+      "1992": 1,
+      "2008": 1,
+      "2016": 1
+    }
+  },
+  {
+    "word": "credits",
+    "periods": {
+      "1992": 2,
+      "2000": 1
+    }
+  },
+  {
+    "word": "engines",
+    "periods": {
+      "1992": 1,
+      "2004": 2
+    }
+  },
+  {
+    "word": "europe",
+    "periods": {
+      "1992": 2,
+      "2008": 1
+    }
+  },
+  {
+    "word": "expensive",
+    "periods": {
+      "1992": 1,
+      "2008": 1,
+      "2020": 3
+    }
+  },
+  {
+    "word": "face",
+    "periods": {
+      "1992": 4
+    }
+  },
+  {
+    "word": "fleet",
+    "periods": {
+      "1992": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "general",
+    "periods": {
+      "1992": 4,
+      "1996": 1,
+      "2012": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "global",
+    "periods": {
+      "1992": 1,
+      "2000": 5,
+      "2004": 1,
+      "2008": 2,
+      "2020": 2
+    }
+  },
+  {
+    "word": "gore",
+    "periods": {
+      "1992": 1,
+      "2000": 9
+    }
+  },
+  {
+    "word": "hes",
+    "periods": {
+      "1992": 1,
+      "2000": 1,
+      "2004": 1,
+      "2012": 1,
+      "2020": 3
+    }
+  },
+  {
+    "word": "hour",
+    "periods": {
+      "1992": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "hurting",
+    "periods": {
+      "1992": 2,
+      "2008": 1
+    }
+  },
+  {
+    "word": "industries",
+    "periods": {
+      "1992": 1,
+      "2004": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "infrastructure",
+    "periods": {
+      "1992": 1,
+      "2008": 3,
+      "2016": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "making",
+    "periods": {
+      "1992": 1,
+      "2000": 1,
+      "2008": 3,
+      "2012": 3,
+      "2020": 1
+    }
+  },
+  {
+    "word": "motors",
+    "periods": {
+      "1992": 4,
+      "1996": 1,
+      "2012": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "planet",
+    "periods": {
+      "1992": 1,
+      "2008": 4
+    }
+  },
+  {
+    "word": "pollute",
+    "periods": {
+      "1992": 1,
+      "1996": 1,
+      "2008": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "presidents",
+    "periods": {
+      "1992": 1,
+      "2012": 2
+    }
+  },
+  {
+    "word": "science",
+    "periods": {
+      "1992": 1,
+      "2004": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "senator",
+    "periods": {
+      "1992": 3,
+      "1996": 1,
+      "2008": 7,
+      "2020": 1
+    }
+  },
+  {
+    "word": "talk",
+    "periods": {
+      "1992": 4,
+      "2008": 6
+    }
+  },
+  {
+    "word": "talked",
+    "periods": {
+      "1992": 1,
+      "2000": 1,
+      "2008": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "taxes",
+    "periods": {
+      "1992": 2,
+      "2000": 2
+    }
+  },
+  {
+    "word": "technologies",
+    "periods": {
+      "1992": 1,
+      "2000": 7,
+      "2008": 1,
+      "2012": 1
+    }
+  },
+  {
+    "word": "thought",
+    "periods": {
+      "1992": 1,
+      "1996": 1,
+      "2000": 1
+    }
+  },
+  {
+    "word": "vehicles",
+    "periods": {
+      "1992": 1,
+      "2000": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "wind",
+    "periods": {
+      "1992": 1,
+      "2008": 11,
+      "2012": 6,
+      "2016": 2,
+      "2020": 3
+    }
+  },
+  {
+    "word": "actually",
+    "periods": {
+      "1996": 2,
+      "2012": 4,
+      "2020": 3
+    }
+  },
+  {
+    "word": "approach",
+    "periods": {
+      "1996": 2,
+      "2000": 2,
+      "2008": 3
+    }
+  },
+  {
+    "word": "big",
+    "periods": {
+      "1996": 1,
+      "2000": 5,
+      "2004": 1,
+      "2008": 3,
+      "2012": 1,
+      "2016": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "budget",
+    "periods": {
+      "1996": 1,
+      "2000": 1,
+      "2004": 1,
+      "2008": 1
+    }
+  },
+  {
+    "word": "built",
+    "periods": {
+      "1996": 1,
+      "2000": 1,
+      "2008": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "businesses",
+    "periods": {
+      "1996": 1,
+      "2000": 1,
+      "2008": 1,
+      "2012": 1,
+      "2016": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "changes",
+    "periods": {
+      "1996": 1,
+      "2008": 3
+    }
+  },
+  {
+    "word": "children",
+    "periods": {
+      "1996": 3,
+      "2000": 1,
+      "2004": 1,
+      "2008": 1
+    }
+  },
+  {
+    "word": "emissions",
+    "periods": {
+      "1996": 3,
+      "2008": 2,
+      "2020": 6
+    }
+  },
+  {
+    "word": "getting",
+    "periods": {
+      "1996": 1,
+      "2000": 1,
+      "2008": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "hand",
+    "periods": {
+      "1996": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "importance",
+    "periods": {
+      "1996": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "investing",
+    "periods": {
+      "1996": 1,
+      "2008": 3,
+      "2012": 3,
+      "2020": 1
+    }
+  },
+  {
+    "word": "manufacturing",
+    "periods": {
+      "1996": 1,
+      "2012": 1,
+      "2016": 2,
+      "2020": 3
+    }
+  },
+  {
+    "word": "recognize",
+    "periods": {
+      "1996": 2,
+      "2000": 1
+    }
+  },
+  {
+    "word": "sites",
+    "periods": {
+      "1996": 3
+    }
+  },
+  {
+    "word": "takes",
+    "periods": {
+      "1996": 2,
+      "2000": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "taking",
+    "periods": {
+      "1996": 1,
+      "2000": 1,
+      "2012": 4
+    }
+  },
+  {
+    "word": "walk",
+    "periods": {
+      "1996": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "warm",
+    "periods": {
+      "1996": 1,
+      "2012": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "wasnt",
+    "periods": {
+      "1996": 2,
+      "2008": 1,
+      "2012": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "abundant",
+    "periods": {
+      "2000": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "americas",
+    "periods": {
+      "2000": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "barrel",
+    "periods": {
+      "2000": 1,
+      "2008": 3
+    }
+  },
+  {
+    "word": "canada",
+    "periods": {
+      "2000": 1,
+      "2012": 2
+    }
+  },
+  {
+    "word": "carbon",
+    "periods": {
+      "2000": 1,
+      "2008": 1,
+      "2020": 8
+    }
+  },
+  {
+    "word": "century",
+    "periods": {
+      "2000": 1,
+      "2008": 1,
+      "2016": 1
+    }
+  },
+  {
+    "word": "changing",
+    "periods": {
+      "2000": 1,
+      "2008": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "cleanest",
+    "periods": {
+      "2000": 1,
+      "2020": 5
+    }
+  },
+  {
+    "word": "crude",
+    "periods": {
+      "2000": 4
+    }
+  },
+  {
+    "word": "dependence",
+    "periods": {
+      "2000": 2,
+      "2008": 3
+    }
+  },
+  {
+    "word": "dependency",
+    "periods": {
+      "2000": 2,
+      "2004": 1
+    }
+  },
+  {
+    "word": "dependent",
+    "periods": {
+      "2000": 4
+    }
+  },
+  {
+    "word": "developing",
+    "periods": {
+      "2000": 2,
+      "2008": 1,
+      "2012": 1
+    }
+  },
+  {
+    "word": "east",
+    "periods": {
+      "2000": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "emission",
+    "periods": {
+      "2000": 1,
+      "2020": 3
+    }
+  },
+  {
+    "word": "environmentally",
+    "periods": {
+      "2000": 2,
+      "2004": 1,
+      "2012": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "figure",
+    "periods": {
+      "2000": 1,
+      "2008": 1,
+      "2012": 1
+    }
+  },
+  {
+    "word": "fund",
+    "periods": {
+      "2000": 2,
+      "2008": 1
+    }
+  },
+  {
+    "word": "gap",
+    "periods": {
+      "2000": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "goes",
+    "periods": {
+      "2000": 1,
+      "2012": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "growing",
+    "periods": {
+      "2000": 2,
+      "2008": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "guess",
+    "periods": {
+      "2000": 1,
+      "2004": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "happening",
+    "periods": {
+      "2000": 1,
+      "2020": 4
+    }
+  },
+  {
+    "word": "hear",
+    "periods": {
+      "2000": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "heating",
+    "periods": {
+      "2000": 5,
+      "2008": 1
+    }
+  },
+  {
+    "word": "including",
+    "periods": {
+      "2000": 1,
+      "2008": 2,
+      "2016": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "invest",
+    "periods": {
+      "2000": 1,
+      "2008": 2,
+      "2012": 1,
+      "2016": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "investments",
+    "periods": {
+      "2000": 1,
+      "2008": 2,
+      "2012": 2
+    }
+  },
+  {
+    "word": "level",
+    "periods": {
+      "2000": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "little",
+    "periods": {
+      "2000": 2,
+      "2008": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "longterm",
+    "periods": {
+      "2000": 3
+    }
+  },
+  {
+    "word": "middle",
+    "periods": {
+      "2000": 1,
+      "2008": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "north",
+    "periods": {
+      "2000": 1,
+      "2008": 1,
+      "2012": 9
+    }
+  },
+  {
+    "word": "old",
+    "periods": {
+      "2000": 3,
+      "2004": 1
+    }
+  },
+  {
+    "word": "pipeline",
+    "periods": {
+      "2000": 1,
+      "2008": 1,
+      "2012": 2
+    }
+  },
+  {
+    "word": "pointed",
+    "periods": {
+      "2000": 1,
+      "2012": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "real",
+    "periods": {
+      "2000": 1,
+      "2008": 2,
+      "2020": 2
+    }
+  },
+  {
+    "word": "reason",
+    "periods": {
+      "2000": 1,
+      "2008": 2
+    }
+  },
+  {
+    "word": "reserve",
+    "periods": {
+      "2000": 4
+    }
+  },
+  {
+    "word": "significantly",
+    "periods": {
+      "2000": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "start",
+    "periods": {
+      "2000": 2,
+      "2008": 4
+    }
+  },
+  {
+    "word": "storms",
+    "periods": {
+      "2000": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "strategy",
+    "periods": {
+      "2000": 3,
+      "2012": 2
+    }
+  },
+  {
+    "word": "warming",
+    "periods": {
+      "2000": 5,
+      "2004": 1,
+      "2008": 2,
+      "2020": 3
+    }
+  },
+  {
+    "word": "weather",
+    "periods": {
+      "2000": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "whats",
+    "periods": {
+      "2000": 2,
+      "2012": 1,
+      "2020": 3
+    }
+  },
+  {
+    "word": "winter",
+    "periods": {
+      "2000": 3,
+      "2008": 1,
+      "2012": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "wouldnt",
+    "periods": {
+      "2000": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "biodiesel",
+    "periods": {
+      "2004": 1,
+      "2008": 4
+    }
+  },
+  {
+    "word": "chemical",
+    "periods": {
+      "2004": 2,
+      "2020": 2
+    }
+  },
+  {
+    "word": "clear",
+    "periods": {
+      "2004": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "didnt",
+    "periods": {
+      "2004": 2,
+      "2008": 1,
+      "2012": 2,
+      "2020": 2
+    }
+  },
+  {
+    "word": "encourages",
+    "periods": {
+      "2004": 3
+    }
+  },
+  {
+    "word": "forest",
+    "periods": {
+      "2004": 2,
+      "2020": 6
+    }
+  },
+  {
+    "word": "forests",
+    "periods": {
+      "2004": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "renewables",
+    "periods": {
+      "2004": 1,
+      "2012": 2
+    }
+  },
+  {
+    "word": "skies",
+    "periods": {
+      "2004": 3
+    }
+  },
+  {
+    "word": "west",
+    "periods": {
+      "2004": 1,
+      "2008": 1,
+      "2016": 1
+    }
+  },
+  {
+    "word": "afford",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "barack",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "biofuels",
+    "periods": {
+      "2008": 1,
+      "2012": 3
+    }
+  },
+  {
+    "word": "bridge",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "buildings",
+    "periods": {
+      "2008": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "china",
+    "periods": {
+      "2008": 4,
+      "2020": 1
+    }
+  },
+  {
+    "word": "different",
+    "periods": {
+      "2008": 1,
+      "2016": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "dirty",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "emit",
+    "periods": {
+      "2008": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "exxon",
+    "periods": {
+      "2008": 3,
+      "2012": 1
+    }
+  },
+  {
+    "word": "fuelefficient",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "green",
+    "periods": {
+      "2008": 1,
+      "2012": 6,
+      "2020": 14
+    }
+  },
+  {
+    "word": "grid",
+    "periods": {
+      "2008": 1,
+      "2016": 2
+    }
+  },
+  {
+    "word": "heres",
+    "periods": {
+      "2008": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "highest",
+    "periods": {
+      "2008": 1,
+      "2012": 2
+    }
+  },
+  {
+    "word": "hold",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "hungry",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "innovation",
+    "periods": {
+      "2008": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "instead",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "japan",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "korea",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "lose",
+    "periods": {
+      "2008": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "mccain",
+    "periods": {
+      "2008": 8
+    }
+  },
+  {
+    "word": "mobil",
+    "periods": {
+      "2008": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "obama",
+    "periods": {
+      "2008": 5,
+      "2016": 1,
+      "2020": 1
+    }
+  },
+  {
+    "word": "putting",
+    "periods": {
+      "2008": 1,
+      "2016": 2
+    }
+  },
+  {
+    "word": "saying",
+    "periods": {
+      "2008": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "senate",
+    "periods": {
+      "2008": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "south",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "tapped",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "thinking",
+    "periods": {
+      "2008": 2,
+      "2012": 1
+    }
+  },
+  {
+    "word": "thousands",
+    "periods": {
+      "2008": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "tide",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "trade",
+    "periods": {
+      "2008": 1,
+      "2016": 2,
+      "2020": 1
+    }
+  },
+  {
+    "word": "vital",
+    "periods": {
+      "2008": 3
+    }
+  },
+  {
+    "word": "advantage",
+    "periods": {
+      "2012": 5
+    }
+  },
+  {
+    "word": "bankrupt",
+    "periods": {
+      "2012": 4
+    }
+  },
+  {
+    "word": "brought",
+    "periods": {
+      "2012": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "continue",
+    "periods": {
+      "2012": 4
+    }
+  },
+  {
+    "word": "detroit",
+    "periods": {
+      "2012": 3
+    }
+  },
+  {
+    "word": "doubled",
+    "periods": {
+      "2012": 3
+    }
+  },
+  {
+    "word": "saved",
+    "periods": {
+      "2012": 1,
+      "2020": 2
+    }
+  },
+  {
+    "word": "secure",
+    "periods": {
+      "2012": 3
+    }
+  },
+  {
+    "word": "pennsylvania",
+    "periods": {
+      "2016": 1,
+      "2020": 3
+    }
+  },
+  {
+    "word": "ban",
+    "periods": {
+      "2020": 4
+    }
+  },
+  {
+    "word": "banning",
+    "periods": {
+      "2020": 3
+    }
+  },
+  {
+    "word": "biden",
+    "periods": {
+      "2020": 9
+    }
+  },
+  {
+    "word": "excuse",
+    "periods": {
+      "2020": 3
+    }
+  },
+  {
+    "word": "fracking",
+    "periods": {
+      "2020": 20
+    }
+  },
+  {
+    "word": "hurricanes",
+    "periods": {
+      "2020": 3
+    }
+  },
+  {
+    "word": "joe",
+    "periods": {
+      "2020": 12
+    }
+  },
+  {
+    "word": "susan",
+    "periods": {
+      "2020": 3
+    }
+  },
+  {
+    "word": "trillion",
+    "periods": {
+      "2020": 4
+    }
+  },
+  {
+    "word": "trump",
+    "periods": {
+      "2020": 3
+    }
+  },
+  {
+    "word": "zero",
+    "periods": {
+      "2020": 4
     }
   }
 ]
