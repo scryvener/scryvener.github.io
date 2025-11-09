@@ -470,8 +470,8 @@
                     const ratio = (targetDate - p1.Date) / (p2.Date - p1.Date);
                     return {
                         Date: targetDate,
-                        x: p1.x + (p2.x - p1.x) * ratio,
-                        y: p1.y + (p2.y - p1.y) * ratio,
+                        x: p1.x, //+ (p2.x - p1.x) * ratio,
+                        y: p1.y, //+ (p2.y - p1.y) * ratio,
                         category_id: category_id,
                         interpolated: true
                     };
@@ -487,8 +487,8 @@
                     const ratio = (targetDate - p2.Date) / (p2.Date - p1.Date);
                     return {
                         Date: targetDate,
-                        x: p2.x + (p2.x - p1.x) * ratio,
-                        y: p2.y + (p2.y - p1.y) * ratio,
+                        x: p2.x, //+ (p2.x - p1.x) * ratio,
+                        y: p2.y, // + (p2.y - p1.y) * ratio,
                         category_id: category_id,
                         interpolated: true
                     };
