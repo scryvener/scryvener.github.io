@@ -94,41 +94,41 @@
     <script>
         // Sample temporal data structure
         // Each word has frequencies across different time periods
-        const sampleTemporalData = [
-            // Technology terms - evolving over time
-            { word: "computer", periods: {1960: 5, 1968: 8, 1976: 12, 1984: 18, 1992: 15, 2000: 10, 2008: 8, 2016: 5, 2024: 3} },
-            { word: "internet", periods: {1992: 2, 2000: 25, 2008: 20, 2016: 15, 2024: 10} },
-            { word: "smartphone", periods: {2008: 5, 2016: 30, 2024: 25} },
-            { word: "AI", periods: {1960: 3, 1968: 2, 2016: 8, 2024: 35} },
-            { word: "cloud", periods: {2008: 10, 2016: 20, 2024: 18} },
-            { word: "data", periods: {1960: 8, 1976: 10, 1992: 12, 2008: 18, 2024: 22} },
+        // const sampleTemporalData = [
+        //     // Technology terms - evolving over time
+        //     { word: "computer", periods: {1960: 5, 1968: 8, 1976: 12, 1984: 18, 1992: 15, 2000: 10, 2008: 8, 2016: 5, 2024: 3} },
+        //     { word: "internet", periods: {1992: 2, 2000: 25, 2008: 20, 2016: 15, 2024: 10} },
+        //     { word: "smartphone", periods: {2008: 5, 2016: 30, 2024: 25} },
+        //     { word: "AI", periods: {1960: 3, 1968: 2, 2016: 8, 2024: 35} },
+        //     { word: "cloud", periods: {2008: 10, 2016: 20, 2024: 18} },
+        //     { word: "data", periods: {1960: 8, 1976: 10, 1992: 12, 2008: 18, 2024: 22} },
             
-            // Social/cultural terms
-            { word: "social", periods: {1960: 10, 1976: 12, 1992: 15, 2008: 20, 2016: 18, 2024: 16} },
-            { word: "media", periods: {1960: 8, 1976: 10, 2000: 15, 2016: 25, 2024: 20} },
-            { word: "digital", periods: {1992: 5, 2000: 15, 2008: 20, 2016: 22, 2024: 18} },
-            { word: "virtual", periods: {2000: 8, 2008: 10, 2016: 15, 2024: 25} },
+        //     // Social/cultural terms
+        //     { word: "social", periods: {1960: 10, 1976: 12, 1992: 15, 2008: 20, 2016: 18, 2024: 16} },
+        //     { word: "media", periods: {1960: 8, 1976: 10, 2000: 15, 2016: 25, 2024: 20} },
+        //     { word: "digital", periods: {1992: 5, 2000: 15, 2008: 20, 2016: 22, 2024: 18} },
+        //     { word: "virtual", periods: {2000: 8, 2008: 10, 2016: 15, 2024: 25} },
             
-            // Consistent terms across time
-            { word: "communication", periods: {1960: 12, 1968: 13, 1976: 14, 1984: 15, 1992: 14, 2000: 13, 2008: 15, 2016: 14, 2024: 13} },
-            { word: "information", periods: {1960: 10, 1968: 11, 1976: 12, 1984: 13, 1992: 14, 2000: 15, 2008: 14, 2016: 13, 2024: 12} },
-            { word: "technology", periods: {1960: 8, 1968: 10, 1976: 12, 1984: 14, 1992: 16, 2000: 18, 2008: 17, 2016: 16, 2024: 15} },
+        //     // Consistent terms across time
+        //     { word: "communication", periods: {1960: 12, 1968: 13, 1976: 14, 1984: 15, 1992: 14, 2000: 13, 2008: 15, 2016: 14, 2024: 13} },
+        //     { word: "information", periods: {1960: 10, 1968: 11, 1976: 12, 1984: 13, 1992: 14, 2000: 15, 2008: 14, 2016: 13, 2024: 12} },
+        //     { word: "technology", periods: {1960: 8, 1968: 10, 1976: 12, 1984: 14, 1992: 16, 2000: 18, 2008: 17, 2016: 16, 2024: 15} },
             
-            // Period-specific terms
-            { word: "mainframe", periods: {1960: 15, 1968: 18, 1976: 12, 1984: 8} },
-            { word: "telegram", periods: {1960: 20, 1968: 12} },
-            { word: "podcast", periods: {2008: 12, 2016: 20, 2024: 18} },
-            { word: "blockchain", periods: {2016: 15, 2024: 12} },
-            { word: "metaverse", periods: {2024: 20} },
-            { word: "streaming", periods: {2008: 8, 2016: 18, 2024: 22} },
-        ];
+        //     // Period-specific terms
+        //     { word: "mainframe", periods: {1960: 15, 1968: 18, 1976: 12, 1984: 8} },
+        //     { word: "telegram", periods: {1960: 20, 1968: 12} },
+        //     { word: "podcast", periods: {2008: 12, 2016: 20, 2024: 18} },
+        //     { word: "blockchain", periods: {2016: 15, 2024: 12} },
+        //     { word: "metaverse", periods: {2024: 20} },
+        //     { word: "streaming", periods: {2008: 8, 2016: 18, 2024: 22} },
+        // ];
 
         function getDimensions() {
             const container = document.querySelector('.controls');
             const containerHeight = container ? container.offsetHeight : 150;
             return {
-                width: Math.max(1000, window.innerWidth - 40),
-                height: Math.max(600, window.innerHeight - containerHeight - 60)
+                width: Math.max(1600, window.innerWidth - 40),
+                height: Math.max(900, window.innerHeight - containerHeight - 60)
             };
         }
         
