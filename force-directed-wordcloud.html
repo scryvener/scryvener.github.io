@@ -267,10 +267,10 @@
             svg.attr("width", width).attr("height", height);
             
             // Recalculate category positions with new dimensions
-            categoryPositions[1] = { x: width * cornermin, y: height * cornermin };
-            categoryPositions[2] = { x: width * cornermax, y: height * cornermin };
-            categoryPositions[3] = { x: width * cornermin, y: height * cornermax };
-            categoryPositions[4] = { x: width * cornermax, y: height * cornermax };
+            categoryPositions[1] = { x: width * cornermin, y: height * 0 };
+            categoryPositions[2] = { x: width * 0, y: height * cornermin };
+            categoryPositions[3] = { x: width * -cornermin, y: height * 0 };
+            categoryPositions[4] = { x: width * 0, y: height * -cornermax };
             
             // Recalculate targets for all nodes
             nodes.forEach(node => {
