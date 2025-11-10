@@ -130,10 +130,10 @@
 
         // Category positions (corners and center)
         const categoryPositions = {
-            1: { x: width * cornermin, y: height * cornermin },   // Top-left
-            2: { x: width * cornermax, y: height * cornermin },   // Top-right
-            3: { x: width * cornermin, y: height * cornermax },   // Bottom-left
-            4: { x: width * cornermax, y: height * cornermax }    // Bottom-right
+            1: { x: width * cornermin, y: height * 0 },   // Top-left
+            2: { x: width * 0, y: height * cornermin },   // Top-right
+            3: { x: width * -cornermin, y: height * 0 },   // Bottom-left
+            4: { x: width * 0, y: height * -cornermax }    // Bottom-right
         };
 
         const categoryColors = {
