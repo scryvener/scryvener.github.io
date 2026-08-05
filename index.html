@@ -1,147 +1,1187 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="/assets/img/favicon_io/favicon.ico">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenneth Chang - Product Engineer</title>
+<meta name="description" content="Mechanical engineer building innovative products.">
 
-    <title>Kenneth Chang | Home </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
+<style>
+/* ---------- tokens ---------- */
+:root{
+  --paper:#E6E8E3;
+  --panel:#EFF1ED;
+  --ink:#111614;
+  --ink-2:#4E5A55;
+  --ink-3:#626D67;
+  --rule:#C7CCC4;
+  --rule-2:#D8DCD5;
+  --pine:#25574A;
+  --brass:#8C6A16;
+
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Public Sans',system-ui,sans-serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+
+  --rail:150px;
+  --gut:clamp(1.25rem,4vw,3.5rem);
+  --max:1180px;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:16px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+body.is-locked{overflow:hidden}
+
+h1,h2,h3,h4{
+  font-family:var(--display);
+  font-variation-settings:'wdth' 118;
+  font-weight:700;
+  line-height:1.05;
+  letter-spacing:-0.015em;
+  margin:0;
+}
+p{margin:0 0 1em}
+ul{margin:0;padding:0;list-style:none}
+a{color:inherit}
+
+:focus-visible{
+  outline:2px solid var(--pine);
+  outline-offset:3px;
+  border-radius:2px;
+}
+
+/* ---------- layout shell ---------- */
+.sheet{
+  max-width:var(--max);
+  margin:0 auto;
+  padding:0 var(--gut) 0 var(--gut);
+}
+@media(min-width:1100px){
+  .sheet{padding-left:var(--rail)}
+}
+
+/* ---------- left rail ---------- */
+.rail{
+  display:none;
+  position:fixed;
+  top:0;left:0;bottom:0;
+  width:var(--rail);
+  padding:2.25rem 0 2rem 1.75rem;
+  border-right:1px solid var(--rule);
+  z-index:20;
+}
+@media(min-width:1100px){.rail{display:flex;flex-direction:column;justify-content:space-between}}
+.rail-mark{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+.rail-nav{display:flex;flex-direction:column;gap:.55rem}
+.rail-link{
+  font-family:var(--mono);
+  font-size:.75rem;
+  letter-spacing:.06em;
+  text-decoration:none;
+  color:var(--ink-3);
+  padding-left:1rem;
+  position:relative;
+  transition:color .18s ease;
+}
+.rail-link::before{
+  content:"";
+  position:absolute;left:0;top:.62em;
+  width:7px;height:1px;
+  background:var(--rule);
+  transition:width .18s ease,background .18s ease;
+}
+.rail-link:hover{color:var(--ink)}
+.rail-link.is-active{color:var(--pine);font-weight:500}
+.rail-link.is-active::before{width:11px;background:var(--pine)}
+
+/* ---------- hero ---------- */
+.hero{padding:clamp(3.5rem,10vw,7rem) 0 clamp(2.5rem,6vw,4rem)}
+.hero-name{
+  font-size:clamp(2.75rem,9vw,5.75rem);
+  font-variation-settings:'wdth' 122;
+  letter-spacing:-0.03em;
+  margin-bottom:.55rem;
+}
+.hero-role{
+  font-family:var(--mono);
+  font-size:clamp(.8125rem,2vw,.9375rem);
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--pine);
+  margin-bottom:1.75rem;
+}
+.hero-lede{
+  font-size:clamp(1.0625rem,2.4vw,1.3125rem);
+  line-height:1.5;
+  max-width:34ch;
+  color:var(--ink-2);
+}
+.hero-lede strong{color:var(--ink);font-weight:600}
+
+.hero-grid{
+  display:grid;
+  gap:clamp(2rem,5vw,3.5rem);
+  align-items:start;
+}
+@media(min-width:820px){
+  .hero-grid{grid-template-columns:1fr minmax(280px,340px)}
+}
+
+/* title block — the signature element */
+.block{
+  position:relative;
+  background:var(--panel);
+  border:1px solid var(--rule);
+  padding:1.5rem 1.375rem 1.25rem;
+}
+.block::before,.block::after{
+  content:"";position:absolute;width:9px;height:9px;
+  border:1px solid var(--brass);
+}
+.block::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.block::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.block-title{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-bottom:.75rem;
+  margin-bottom:.75rem;
+  border-bottom:1px solid var(--rule);
+}
+.field{
+  display:grid;
+  grid-template-columns:5.5rem 1fr;
+  gap:.75rem;
+  padding:.4375rem 0;
+  font-size:.875rem;
+  border-bottom:1px dotted var(--rule);
+}
+.field:last-of-type{border-bottom:0}
+.field-k{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-top:.15em;
+}
+.field-v{font-weight:500}
+.field-v a{color:var(--pine);text-decoration:none;border-bottom:1px solid var(--rule)}
+.field-v a:hover{border-bottom-color:var(--pine)}
+
+/* ---------- sections ---------- */
+.section{
+  padding:clamp(3rem,7vw,5rem) 0;
+  border-top:1px solid var(--rule);
+}
+.section-head{
+  display:flex;
+  align-items:baseline;
+  gap:1rem;
+  margin-bottom:2.25rem;
+  flex-wrap:wrap;
+}
+.section-tag{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:var(--brass);
+}
+.section-title{font-size:clamp(1.5rem,4vw,2.125rem)}
+.section-note{
+  font-size:.875rem;
+  color:var(--ink-3);
+  margin-left:auto;
+  max-width:30ch;
+}
+
+/* ---------- skills ---------- */
+.spec{border-top:1px solid var(--rule-2)}
+.spec-row{
+  display:grid;
+  gap:.25rem 1.5rem;
+  padding:.9375rem 0;
+  border-bottom:1px solid var(--rule-2);
+}
+@media(min-width:700px){
+  .spec-row{grid-template-columns:13rem 1fr;align-items:baseline}
+}
+.spec-k{
+  font-family:var(--mono);
+  font-size:.75rem;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+}
+.spec-v{font-size:.9375rem;color:var(--ink)}
+.spec-v span{color:var(--rule)}
+
+/* ---------- experience rows ---------- */
+.rows{border-top:1px solid var(--rule)}
+.row{
+  position:relative;
+  display:grid;
+  gap:.75rem 1.5rem;
+  padding:1.75rem 0;
+  border-bottom:1px solid var(--rule);
+  cursor:pointer;
+  transition:background .2s ease;
+}
+@media(min-width:760px){
+  .row{grid-template-columns:9rem 1fr auto;align-items:start}
+  .row::after{
+    content:"";position:absolute;left:-1.25rem;top:0;bottom:0;width:2px;
+    background:var(--pine);transform:scaleY(0);transform-origin:top;
+    transition:transform .22s ease;
+  }
+  .row:hover::after{transform:scaleY(1)}
+}
+.row:hover{background:rgba(255,255,255,.42)}
+.row-when{
+  font-family:var(--mono);
+  font-size:.8125rem;
+  color:var(--ink-3);
+  letter-spacing:.02em;
+  padding-top:.25rem;
+}
+.row-title{
+  font-family:var(--display);
+  font-variation-settings:'wdth' 112;
+  font-weight:600;
+  font-size:1.1875rem;
+  letter-spacing:-.01em;
+  line-height:1.25;
+}
+.row-org{
+  font-size:.9375rem;
+  color:var(--pine);
+  font-weight:500;
+  margin:.1875rem 0 .75rem;
+}
+.row-notes li{
+  position:relative;
+  padding-left:1.125rem;
+  font-size:.9375rem;
+  color:var(--ink-2);
+  margin-bottom:.3125rem;
+  max-width:62ch;
+}
+.row-notes li::before{
+  content:"";position:absolute;left:0;top:.7em;
+  width:6px;height:1px;background:var(--brass);
+}
+.cue{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  background:none;
+  border:1px solid var(--rule);
+  padding:.5rem .75rem;
+  cursor:pointer;
+  white-space:nowrap;
+  align-self:center;
+  justify-self:start;
+  transition:border-color .2s ease,color .2s ease,background .2s ease;
+}
+.row:hover .cue,.card:hover .cue{border-color:var(--pine);color:var(--pine);background:#fff}
+
+/* ---------- projects ---------- */
+.cards{
+  display:grid;
+  gap:1px;
+  background:var(--rule);
+  border:1px solid var(--rule);
+}
+@media(min-width:720px){.cards{grid-template-columns:1fr 1fr}}
+.card{
+  background:var(--paper);
+  padding:1.625rem 1.5rem 1.375rem;
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  transition:background .2s ease;
+}
+.card:hover{background:var(--panel)}
+.card-kind{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--brass);
+}
+.card-title{
+  font-family:var(--display);
+  font-variation-settings:'wdth' 112;
+  font-weight:600;
+  font-size:1.125rem;
+  line-height:1.25;
+}
+.card-sum{font-size:.9375rem;color:var(--ink-2);margin:0}
+.card-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:1rem;margin-top:auto;padding-top:.5rem;
+}
+.tags{display:flex;flex-wrap:wrap;gap:.375rem}
+.tag{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  color:var(--ink-3);
+  border:1px solid var(--rule);
+  padding:.1875rem .4375rem;
+}
+
+/* ---------- misc ---------- */
+.misc{display:grid;gap:2.5rem}
+@media(min-width:760px){.misc{grid-template-columns:1fr 1fr;gap:2.5rem 3rem}}
+.misc-h{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--ink-3);
+  padding-bottom:.625rem;
+  margin-bottom:1rem;
+  border-bottom:1px solid var(--rule);
+}
+.misc-item{margin-bottom:1.125rem}
+.misc-item:last-child{margin-bottom:0}
+.misc-t{font-weight:600;font-size:.9375rem;line-height:1.4}
+.misc-d{font-size:.875rem;color:var(--ink-2);margin:.125rem 0 0}
+.misc-n{font-family:var(--mono);font-size:.75rem;color:var(--brass)}
+.misc-p{font-size:.9375rem;color:var(--ink-2);margin:0}
+
+/* ---------- footer ---------- */
+.foot{
+  border-top:1px solid var(--rule);
+  padding:2.5rem 0 3rem;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1rem 2rem;
+  align-items:baseline;
+  justify-content:space-between;
+}
+.foot-links{display:flex;flex-wrap:wrap;gap:1.25rem}
+.foot-links a{
+  font-family:var(--mono);
+  font-size:.8125rem;
+  text-decoration:none;
+  color:var(--ink);
+  border-bottom:1px solid var(--rule);
+  padding-bottom:2px;
+}
+.foot-links a:hover{border-bottom-color:var(--pine);color:var(--pine)}
+.foot-note{font-family:var(--mono);font-size:.75rem;color:var(--ink-3)}
+
+/* ---------- modal ---------- */
+.scrim{
+  position:fixed;inset:0;
+  background:rgba(17,22,20,.55);
+  opacity:0;pointer-events:none;
+  transition:opacity .24s ease;
+  z-index:50;
+}
+.scrim.is-open{opacity:1;pointer-events:auto}
+
+.modal{
+  position:fixed;
+  z-index:60;
+  inset:auto 0 0 0;
+  max-height:90vh;
+  background:var(--paper);
+  border-top:1px solid var(--ink);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  transform:translateY(101%);
+  transition:transform .34s cubic-bezier(.22,.75,.3,1);
+}
+.modal.is-open{transform:translateY(0)}
+@media(min-width:820px){
+  .modal{
+    inset:auto;
+    top:50%;left:50%;
+    width:min(760px,92vw);
+    max-height:86vh;
+    transform:translate(-50%,-46%) scale(.985);
+    opacity:0;
+    border:1px solid var(--ink);
+    transition:transform .28s cubic-bezier(.22,.75,.3,1),opacity .22s ease;
+  }
+  .modal.is-open{transform:translate(-50%,-50%) scale(1);opacity:1}
+}
+
+.modal-bar{
+  position:sticky;top:0;
+  display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:.75rem 1.25rem;
+  background:var(--ink);
+  color:var(--paper);
+}
+.modal-kind{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:#9BA8A2;
+}
+.modal-x{
+  background:none;border:1px solid #3A423F;color:var(--paper);
+  font-family:var(--mono);font-size:.6875rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.375rem .625rem;cursor:pointer;
+  transition:background .18s ease,border-color .18s ease;
+}
+.modal-x:hover{background:#252C29;border-color:#5A625F}
+.modal-x:focus-visible{outline-color:var(--paper)}
+
+.modal-body{padding:1.75rem clamp(1.25rem,4vw,2.25rem) 2.25rem}
+.modal-title{
+  font-size:clamp(1.375rem,3.5vw,1.875rem);
+  font-variation-settings:'wdth' 116;
+  margin-bottom:.375rem;
+}
+.modal-org{
+  font-family:var(--mono);
+  font-size:.875rem;
+  color:var(--pine);
+  margin-bottom:1.5rem;
+}
+.modal-meta{
+  display:grid;gap:0;
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  margin-bottom:1.75rem;
+}
+@media(min-width:620px){.modal-meta{grid-template-columns:1fr 1fr;column-gap:2rem}}
+.modal-meta .field:last-of-type{border-bottom:1px dotted var(--rule)}
+.modal-sec{margin-bottom:1.625rem}
+.modal-sec:last-child{margin-bottom:0}
+.modal-h{
+  font-family:var(--mono);
+  font-size:.6875rem;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  color:var(--brass);
+  margin-bottom:.625rem;
+}
+.modal-sec p{font-size:.9375rem;color:var(--ink-2);max-width:66ch}
+.modal-list li{
+  position:relative;padding-left:1.25rem;
+  font-size:.9375rem;color:var(--ink-2);
+  margin-bottom:.5rem;max-width:66ch;
+}
+.modal-list li::before{
+  content:"";position:absolute;left:0;top:.72em;
+  width:8px;height:1px;background:var(--pine);
+}
+.modal-list strong{color:var(--ink);font-weight:600}
+
+/* ---------- reveal ---------- */
+.rise{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
+.rise.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
+  .rise{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<nav class="rail" aria-label="Sections">
+  <div class="rail-mark">K. Chang<br>Rev 2026.07</div>
+  <div class="rail-nav">
+    <a class="rail-link" href="#skills">Skills</a>
+    <a class="rail-link" href="#experience">Experience</a>
+    <a class="rail-link" href="#projects">Projects</a>
+    <a class="rail-link" href="#more">More</a>
+    <a class="rail-link" href="#contact">Contact</a>
+  </div>
+
+</nav>
+
+<main class="sheet">
+
+  <header class="hero">
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-name">Kenneth<br>Chang</h1>
+        <p class="hero-role">Product Engineer</p>
+        <p class="hero-lede">I build innovative products, from first sketches through proof of concepts, verification testing through initial use, prototypes through scale up. </p>
+      </div>
+
+      <div class="block">
+        <div class="block-title">Engineer / Record</div>
+        <div class="field"><span class="field-k">Focus</span><span class="field-v">Rapid Prototyping and Concept Development, Mechanical Design, Cross Functional Collaboration</span></div>
+        <div class="field"><span class="field-k">Based</span><span class="field-v">Fremont, California</span></div>
+        <div class="field"><span class="field-k">Exp.</span><span class="field-v">10 years</span></div>
+        <div class="field"><span class="field-k">Status</span><span class="field-v">Open to new roles in R&D </span></div>
+        <div class="field"><span class="field-k">Contact</span><span class="field-v"><a href="kenneth.chang94@gmail.com">Email</a></span></div>
+      </div>
+    </div>
+  </header>
 
 
-    <!-- Custom styles for this template -->
-    <link href="/assets/css/main.css" rel="stylesheet">
+  <section class="section rise" id="experience">
+    <div class="section-head">
+      <span class="section-tag">01 / Record</span>
+      <h2 class="section-title">Professional experience</h2>
+      <p class="section-note">Click a section for more details</p>
+    </div>
 
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="/assets/js/hover.zoom.js"></script>
-    <script src="/assets/js/hover.zoom.conf.js"></script>
-	<!--headerfooterscript-->
-    <script src="/assets/js/HeaderFooterLoad.js"></script>
+    <div class="rows">
 
-	
-
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-	<a title="Privacy-friendly Web Analytics" href="https://clicky.com/101380509"><img alt="Clicky" src="//static.getclicky.com/media/links/badge.gif" border="0" /></a>
-	<script async src="//static.getclicky.com/101380509.js"></script>
-
-    <!-- Static navbar -->
-    <div class="navbar navbar-inverse navbar-static-top" >
-		<div class="container">
-		  <div class="navbar-header">
-		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <a class="navbar-brand" href="/index.html">Kenneth Chang</a>
-		  </div>
-		  <div class="navbar-collapse collapse">
-		  <ul id="headernavbar" class="nav navbar-nav navbar-right"></ul>
-		  </div><!--/.nav-collapse -->
-		</div>
-	  </div>
-
-	<!-- +++++ Welcome Section +++++ -->
-	<div id="ww" >
-
-	    <div class="container">
-			
-			<div class="row">
-				
-				<div class="col-lg-8 col-lg-offset-2 centered" >
-					<h1>Hello there!</h1>
-					<br>
-					<p>Welcome to my personal website, blog, and depository of random thoughts. </p>
-					<p>I am a biomedical engineer by training from <a href="https://bme.ucdavis.edu/">UC Davis</a> and currently working in R&D at <a href="https://prodeonmedical.com/">Prodeon Medical</a>. </p>
-					<p>But my brain likes exploring and I wanted a way to document and share my journeys. And so this website was born.</p>
-					<P>It's still under construction, but feel free to take a look around. You can contact me on Linkedin <a href="https://www.linkedin.com/in/kennethcchang/">here</a> if you want to chat. </P>
-					<br>
-
-					<!-- <p>Contact me <a href="https://www.linkedin.com/in/kennethcchang/">here</a> if you want to chat.</p> -->
-
-					<!-- <p>I am a biomedical engineer currently currently working at <a href="https://prodeonmedical.com/">Prodeon Medical</a>, a medical device startup, as an Research and Development Engineer. My work is focused on designing and developing nitinol implants, associated catheter systems, and test methods.</p>
-					<P>In my spare time, I am an amateur data analyst/scientist, with my current interest in researching how ideas spread, how those ideas might influence behavior, and the practical applications of such models in fields such as marketing. My other interests include machine learning, investing, video games, and tinkering to create artsy projects.</P> -->
-					<!-- <p>Feel free to take a look around, contact me <a href="https://www.linkedin.com/in/kennethcchang/">here</a> if you want to chat!</p> -->
-					<!-- <img src="assets/img/home_profile.jpg" title="Thats me, attempting to look cool." style="max-width: 300px; max-height: 300px;"> -->
-				</div><!-- /col-lg-8 -->
-			</div><!-- /row -->
-	    </div> <!-- /container -->
-	</div><!-- /ww -->
-
-	<!-- style="background-image: url('assets/img/Banner_Test.jpg');"-->
-	
-	
-	<!-- +++++ Projects Section +++++ -->
-	<!-- 
-	<div class="container pt">
-
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port01.jpg" alt="" /></a>
-				<p>APE</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port02.jpg" alt="" /></a>
-				<p>RAIDERS</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port03.jpg" alt="" /></a>
-				<p>VIKINGS</p>
-			</div>
-		</div>
-		<div class="row mt centered">	
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port04.jpg" alt="" /></a>
-				<p>YODA</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port05.jpg" alt="" /></a>
-				<p>EMPERORS</p>
-			</div>
-			<div class="col-lg-4">
-				<a class="zoom green" href="work01.html"><img class="img-responsive" src="assets/img/portfolio/port06.jpg" alt="" /></a>
-				<p>CHIEFS</p>
-			</div>
-		</div>
-	</div> -->
-	
-	
-	<!-- +++++ Footer Section +++++ -->
-	
-
-	<div id="footer">
-		<div class="container">
-			<div class="row">
-				<div id="addressLine" class="col-lg-4">
-					<h4>Living at</h4>
-				</div><!-- /col-lg-4 -->
-				
-				<div  class="col-lg-4">
-					<h4>My Links</h4>
-					<ul id="footerLinks">
+      <article class="row" data-detail="exp-npi">
+        <div class="row-when">FEB 2026 -<br>Present</div>
+        <div>
+          <h3 class="row-title">Product and Process Industrialization Engineer</h3>
+          <p class="row-org">Nova Pneuma Incorporated - Fremont, CA</p>
+          <ul class="row-notes">
+            <li>Technical Subject Matter Expert for commercial scale up and capacity expansion activities such as high volume tooling, automated assembly lines, etc.</li>
+            <li>Collaborate with suppliers to define validation strategy, identify process improvement initiatives, and execute qualification activities.</li>
           </ul>
-				</div><!-- /col-lg-4 -->
-			</div>
-		</div>
-	</div>
-	
+        </div>
+        <button class="cue" type="button">Detail sheet</button>
+      </article>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/assets/js/bootstrap.min.js"></script>
-  </body>
+      <article class="row" data-detail="exp-alexza">
+        <div class="row-when">FEB 2023 -<br> FEB 2026</div>
+        <div>
+          <h3 class="row-title">Mechanical Engineer III, IV</h3>
+          <p class="row-org">Alexza Pharmaceuticals - Fremont, CA</p>
+          <ul class="row-notes">
+            <li>Lead engineer in the design, prototyping, and testing of aerosol drug delivery system components.</li>
+            <li>Designed, built, and troubleshot in-house test fixtures and tools to ensure rapid concept iteration.</li>
+          </ul>
+        </div>
+        <button class="cue" type="button">Detail sheet</button>
+      </article>
+
+      <article class="row" data-detail="exp-prodeon">
+        <div class="row-when">JUL 2016 -<br> FEB 2023</div>
+        <div>
+          <h3 class="row-title">Research and Development Engineer</h3>
+          <p class="row-org">Prodeon Medical/MedeonBio - Sunnyvale, CA</p>
+          <ul class="row-notes">
+            <li>Drove design and development for 3 generations of Nitinol implants, catheter delivery systems, and accessories.</li>
+            <li>Key R&D lead across all development phases, including Design Verification, Cadaver, Preclinical Animal, and First-in-Human Clinical Trials</li>
+          </ul>
+        </div>
+        <button class="cue" type="button">Detail sheet</button>
+      </article>
+
+      <article class="row" data-detail="exp-sage">
+        <div class="row-when">NOV 2021 -<br> MAY 2022</div>
+        <div>
+          <h3 class="row-title">Chief Technology Officer</h3>
+          <p class="row-org">Sage - San Francisco, CA</p>
+          <ul class="row-notes">
+            <li>Led technology related initiatives for e-sports start-up focused on community building through competitive tournaments.</li>
+            <li>Company successfully organized 8+ events with monetary prize pools with a peak of 450+ participants, over 150k video views on YouTube, and 5k followers on Twitch.</li>
+          </ul>
+        </div>
+        <button class="cue" type="button">Detail sheet</button>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section rise" id="projects">
+    <div class="section-head">
+      <span class="section-tag">03 / Build log</span>
+      <h2 class="section-title">Selected projects</h2>
+      <p class="section-note">Various Personal Projects outside of the day job.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card" data-detail="proj-pumpkin">
+        <div class="card-kind">Electronics &amp; Mechanical &amp; Software</div>
+        <h3 class="card-title">Porch Pumpkin</h3>
+        <p class="card-sum">Leverage Computer vision based motion tracking to create a Jack-o-Lantern decoration that keeps its attention on you when you walk by. For scaring the Trick-or-Treaters.</p>
+        <div class="card-foot">
+          <div class="tags"><span class="tag">Raspberry Pi and Arduino</span><span class="tag">Python</span><span class="tag">Computer Vision</span><span class="tag">Motion Control</span><span class="tag">3D Printing and CAD</span></div>
+          <button class="cue" type="button">Detail</button>
+        </div>
+      </article>
+
+      <article class="card" data-detail="proj-whispers">
+        <div class="card-kind">Electronics &amp; Mechanical &amp; Software</div>
+        <h3 class="card-title">Whispers</h3>
+        <p class="card-sum">Interactive art installation centered around users whispering and listening to secrets, culminating in a climactic chorus effect made by mixing all the collected whispers.</p>
+        <div class="card-foot">
+          <div class="tags"><span class="tag">Raspberry Pi</span><span class="tag">Python</span><span class="tag">3D Printing and CAD</span><span class="tag">Wireless Networking</span><span class="tag">Audio</span></div>
+          <button class="cue" type="button">Detail</button>
+        </div>
+      </article>
+
+      <article class="card" data-detail="proj-snowman">
+        <div class="card-kind">Electronics &amp; Mechanical &amp; Software</div>
+        <h3 class="card-title">Haunted Snowman</h3>
+        <p class="card-sum">Halloween in Christmas. A snowman animatronic, with an attempt to incorporate basic tracking using ToF sensors to create an uncanny twist.</p>
+        <div class="card-foot">
+          <div class="tags"><span class="tag">Arduino</span><span class="tag">Sensors</span><span class="tag">3D Printing and CAD</span><span class="tag">Motors</span></div>
+          <button class="cue" type="button">Detail</button>
+        </div>
+      </article>
+
+      <article class="card" data-detail="proj-etsy">
+        <div class="card-kind">Mechanical</div>
+        <h3 class="card-title">Etsy Store</h3>
+        <p class="card-sum">Started an Etsy Store with a friend to sell fun objects.</p>
+        <div class="card-foot">
+          <div class="tags"><span class="tag">3D printing and CAD</span><span class="tag">Entrepreneurship</span></div>
+          <button class="cue" type="button">Detail</button>
+        </div>
+      </article>
+
+      <article class="card" data-detail="proj-book">
+        <div class="card-kind">Mechanical</div>
+        <h3 class="card-title">Bookbinding</h3>
+        <p class="card-sum">Self made sketchbook featuring etched plastic to create a cracked glass effect for the cover.</p>
+        <div class="card-foot">
+          <div class="tags"><span class="tag">Inkscape</span><span class="tag">Laser Etching</span></div>
+          <button class="cue" type="button">Detail</button>
+        </div>
+      </article>
+
+      <article class="card" data-detail="proj-graph">
+        <div class="card-kind">Software</div>
+        <h3 class="card-title">KOL mapping with Graph Databases</h3>
+        <p class="card-sum">Graph database project focused on "mapping" influence among physician Key Opinion Leaders.</p>
+        <div class="card-foot">
+          <div class="tags"><span class="tag">Neo4j</span><span class="tag">Python</span></div>
+          <button class="cue" type="button">Detail</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== skills ===== -->
+  <section class="section rise" id="skills">
+    <div class="section-head">
+      <span class="section-tag">03 / Skills</span>
+      <h2 class="section-title">What I can do</h2>
+    </div>
+
+    <div class="spec">
+      <div class="spec-row">
+        <div class="spec-k">Software</div>
+        <div class="spec-v">SolidWorks <span>/</span> Python (NumPy, SciPy, pandas) <span>/</span> MATLAB <span>/</span> C for embedded systems </div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-k">Simulation and Analysis</div>
+        <div class="spec-v">CFD with Solidworks Flow Simulation <span>/</span> FEA with Solidworks Simulation <span>/</span> JMP and Minitab for Statistics</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-k">Prototyping and Manufacturing</div>
+        <div class="spec-v">Machining <span>/</span> 3D Printing (FDM/SLA) <span>/</span> Injection Molding <span>/</span> Soldering <span>/</span> Laser Cutting <span>/</span>Design for Manufacturing</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-k">Testing</div>
+        <div class="spec-v">Design Cycle Testing <span>/</span> Packaging and Transit <span>/</span> Corrosion, MRI, and Biocompatibility <span>/</span> Accelerated Aging <span>/</span> Imaging (SEM, EDX, Auger, FLIR) <span>/</span>Ergonomics and User Testing <span>/</span>IOPQ <span>/</span>Gauge R&R</div>
+      </div>
+      <div class="spec-row">
+        <div class="spec-k">Design Controls and Documentation</div>
+        <div class="spec-v">User Requirements and Product Specifications<span>/</span> Risk Management (Hazard Analysis, dFMEA, uFMEA, pFMEA) <span>/</span> Design Reviews <span>/</span> Verification and Validation <span>/</span> Test Protocols and Reports</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section rise" id="more">
+    <div class="section-head">
+      <span class="section-tag">04 / Appendix</span>
+      <h2 class="section-title">Patents &amp; other things</h2>
+    </div>
+
+    <div class="misc">
+
+      <div>
+        <h3 class="misc-h">Patents</h3>
+        <div class="misc-item">
+          <p class="misc-t"> Implantable devices and methods to treat benign prostate hyperplasia (BPH) and associated lower urinary tract symptoms (luts)</p>
+          <p class="misc-d"><span class="misc-n">US 11497637B2</span> - granted 2022 - co-inventor</p>
+        </div>
+        <div class="misc-item">
+          <p class="misc-t">Devices for the treatment of benign prostatic hyperplasia and related lower urinary tract symptoms</p>
+          <p class="misc-d"><span class="misc-n">US 11812930B2</span> - granted 2023 - co-inventor</p>
+        </div>
+        <div class="misc-item">
+          <p class="misc-t"> Self-actuating grasping device</p>
+          <p class="misc-d"><span class="misc-n">US 12383288B2</span> - granted 2025 - co-inventor</p>
+        </div>
+        <div class="misc-item">
+          <p class="misc-t"> Delivery systems and devices for the treatment of benign prostatic hyperplasia and related lower urinary tract symptoms</p>
+          <p class="misc-d"><span class="misc-n">US 20210022594A1</span> - pending - co-inventor</p>
+        </div>
+        <div class="misc-item">
+          <p class="misc-t"> Aerosol-generating device with improved airflow</p>
+          <p class="misc-d"><span class="misc-n">EP4727627A1</span> - pending - co-inventor</p>
+        </div>
+      </div>
+
+      <div>
+        <h3 class="misc-h">Education</h3>
+        <div class="misc-item">
+          <p class="misc-t">Bachelor of Science, Biomedical Engineering</p>
+          <p class="misc-d">University of California, Davis</p>
+        </div>
+        <div class="misc-item">
+          <p class="misc-t">Additional Coursework</p>
+          <p class="misc-d">Sensors and Sensor Circuit Design, Coursera, 2024</p>
+          <p class="misc-d">The Complete LabView Essentials, Udemy, 2024</p>
+          <p class="misc-d">Graph Analytics for Big Data, Coursera, 2021</p>
+          <p class="misc-d">Deep Learning Specialization, Coursera, 2018</p>
+          <p class="misc-d">Solidworks Advanced, GoEngineer Solidworks VAR, 2017</p>
+        </div>
+
+      </div>
+
+      <div>
+        <h3 class="misc-h">Languages</h3>
+        <div class="misc-item">
+          <!-- <p class="misc-t">I can speak Mandarin conversationally</p> -->
+          <p class="misc-d">Native English speaker. I can speak Mandarin conversationally.</p>
+        </div>
+
+      </div>
+
+      <div>
+        <h3 class="misc-h">Away from the desk</h3>
+
+        <ul class="row-notes">
+            <li><p class="misc-p">Escape Room and Puzzle Game fan. Anything that scratches the "I solved it" itch.</p></li>
+            <li><p class="misc-p">Amateur Runner. Recently hit 10km distances and have somehow got it into my head to shoot for a Half Marathon. Big step up from being peer pressured into the corporate run club.</p></li>
+            <li><p class="misc-p">Tinkering and creating artistic projects. Always on the lookout to learn something new and build something cool.</p></li>
+          </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="foot" id="contact">
+    <div class="foot-links">
+      <a href="kenneth.chang94@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/kennethcchang/">LinkedIn</a>
+      <a href="https://github.com/scryvener">GitHub</a>
+      <a href="Resume_Kenneth_Chang_04.08.2026.pdf">Resume (PDF)</a>
+    </div>
+    <p class="foot-note">Last revised July 2026 - Fremont, CA</p>
+  </footer>
+
+</main>
+
+
+<div class="scrim" id="scrim" hidden></div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+  <div class="modal-bar">
+    <span class="modal-kind" id="modalKind">Detail sheet</span>
+    <button class="modal-x" id="modalClose" type="button">Close - Esc</button>
+  </div>
+  <div class="modal-body" id="modalBody"></div>
+</div>
+
+<script>
+
+const DETAILS = {
+
+  "exp-npi": {
+    kind: "Experience - 01",
+    title: "Product and Process Industrialization Engineer",
+    org: "Nova Pneuma Incorporated - Fremont, CA",
+    meta: [
+      ["Dates", "February 2026 - Present"],
+      ["Product Life Cycle", "New Product Introduction, Commercialization"],
+      ["Product Type", "Aerosol Drug Delivery Systems"],
+      ["Reports to", "Vice President of Operations/Director of Supply Chain"]
+    ],
+    sections: [
+      { h: "Context", p: "Nova Pneuma Incorporated (NPI) was a spin off out of the previous company, Alexza, as part of an acquisition. As part of the transition I was tasked with supporting capacity expansion activity to meet projected commercial volumes." },
+      { h: "What I did", list: [
+        "<strong>Technical Subject Matter Expert for commercial scale up and capacity expansion activities, such as automated assembly lines and high volume tooling</strong>. Responsible for evaluating technical readiness, developing process improvement initiatives and troubleshooting supplier challenges including defects, low yields, and scrapped units.",
+        "Project manage critical initiatives, such as multi-cavity injection molds, new equipment qualifications, and procuring tooling at suppliers.",
+        "Lead various engineering studies as part of ongoing manufacturing support and sustaining, such as qualifying like-for-like replacements."
+      ]},
+      { h: "Results so far", list: [
+        "Replacement PCBA parts successfully qualified.",
+        "Introduced manufacturing aids to ease operational burden, including writing test protocol, report, and technical drawings.",
+        "Authored engineering reports evaluating parts from suppliers."
+      ]},
+      { h: "Skills", p: "JMP - Solidworks - Python for data analysis - IOPQ - " }
+    ]
+  },
+
+  "exp-alexza": {
+    kind: "Experience - 02",
+    title: "Mechanical Engineer III/IV",
+    org: "Alexza Pharmaceuticals - Fremont, CA",
+    meta: [
+      ["Dates", "February 2023 - February 2025 (III), February 2025-February 2026 (IV)"],
+      ["Product Life Cycle", "Research and Development"],
+      ["Product Type", "Aerosol Drug Delivery Systems"],
+      ["Reports to", "Vice President of Device Development"]
+    ],
+    sections: [
+      { h: "Context", p: "Joined Alexza looking for a new challenge to work on and to broaden my horizons in terms of engineering, in an application that could have truly life-changing effects." },
+      { h: "What I did", list: [
+        "<strong>Lead design, prototyping, and testing of core aerosol drug delivery system components.</strong> Leverage Computational Fluid Dynamics(CFD), 3D printing, and bench testing to rapidly iterate design features. Managed testing and evaluation of designs under development, including functional testing, SW/FW debugging, and aerodynamics optimization. Closely collaborate with Pharmaceutical Development group to evaluate new drug candidates and incorporate diverse drug needs into component designs.",
+        "Designed, maintained, and executed tests with in-house fixtures and equipment, such as for thermal imaging and use life simulation testing. Prepared test protocols, reports, and engineering memos. Perform data analysis to drive design decisions and improvements to manufacturing process.",
+        "Prepared engineering documentation including component drawings and specification documents."
+      ]},
+      { h: "Results", list: [
+        "Setup in-house prototyping capability, allowing for concept evaluation turnaround as fast as one week.",
+        "<strong>Learned and integrated CFD into design and iteration process within one month</strong>, allowing for rapid and structured iteration of air flow concepts. This also allowed development and testing of new proposed design variants that would save on COGS or allow for unique performance.",
+        "Supported Pharmaceutical Research and Development group to successfully screen candidate compounds for further development.",
+        "Devised more robust process for characterizing metal substrates, reducing lot-to-lot heating variability.",
+        "<strong>Designed fixture for in-house testing of device use life and executed testing protocol</strong>, saving significant time and money compared to an outside vendor.",
+        "Authored technical specifications, such as User Requirements and Functional Requirements specifications for new fixtures. Successfully identified and troubleshooted bugs in the fixture's break beam sensors.",
+        "Successfully supported ongoing studies and tests, such as IEC60601 and human factors studies."
+      ]},
+      { h: "Tools", p: "SolidWorks - Solidworks Flow Simulation - Python - 3D Printing - DFM for Injection Molding" }
+    ]
+  },
+
+  "exp-prodeon": {
+    kind: "Experience - 03",
+    title: "Research and Development Engineer",
+    org: "Prodeon Medical - Sunnyvale, CA",
+    meta: [
+      ["Dates", "July 2016 - February 2023"],
+      ["Product Life Cycle", "Research and Development, Pre-Clinical and Clinical Trials"],
+      ["Product Type", "Nitinol Implants and Delivery Systems"],
+      ["Reports to", "R&D Manager"]
+    ],
+    sections: [
+      { h: "Context", p: "My first full time engineering job, working on a nitinol implant for the urology space." },
+      { h: "What I did", list: [
+        "<strong>Drove design and development for 3 generations of Nitinol implants, catheter delivery systems, and retrieval accessories </strong> such as an auto-locking grasper and access sheaths.",
+        "Closely collaborated with cross-functional team and suppliers to achieve accelerated development and iteration timelines. Successfully implemented design improvements in time for use in clinical trials, such as expanded implant sizing, broader hospital equipment compatibility, increased sheath flexibility, and controlled delivery features.",
+        "R & D Lead for Design Verification, post-retrieval data analysis, cadaver, and characterization studies. Physician training and R&D lead for animal and First in Human clinical studies. Authored component and product specifications, FMEAs, and process instructions to support design reviews and regulatory submissions. Responsible for authoring Test Protocols and Reports, including for Design Verification, Implant Testing, and Adverse Event investigations.",
+        "Collaborated with Manufacturing and Operations to support ongoing builds and resolve process observations. Successfully closed multiple critical Non-Conformance Reports, resolving manufacturing, design, and supplier related challenges. These included optimizing catheter features for manufacturability and implementing improved manufacturing tolerances for the implant."
+      ]},
+      { h: "Results", list: [
+        "<strong>Product successfully used in FIH and pivotal trials while at the company</strong>. Product recently received FDA 510k clearance.",
+        "Implant size variations, delivery system, and additional accessories successfully developed and used in Pre-clinical cadaver, animal, and clinical trials.",
+        "<strong>3rd generation delivery system concept prototyped and tested, featuring integration with actual cystoscope.</strong>"
+      ]},
+      { h: "Tools", p: "SolidWorks - 3D Printing - V&V Testing - Pre-clinical and Clinical Trial Support - Design Controls - Manufacturing" }
+    ]
+  },
+
+  "exp-sage": {
+    kind: "Experience - 04",
+    title: "Chief Technology Officer",
+    org: "Sage - San Francisco, CA",
+    meta: [
+      ["Dates", "November 2021 - May 2022"],
+      ["Product Type", "Esports and Entertainment"],
+
+    ],
+    sections: [
+      { h: "Context", p: "" },
+      { h: "What I did", list: [
+        "<strong>Lead for all things technology at an esports start-up </strong>, whether that be simply crunching numbers, or coming up with new ideas to improve the viewer and player experience ",
+        "Developed custom Twitch Extension for use with tournament streams to enhance viewer experience. Self-taught HTML, JavaScript, and CSS in under 1 month and wrote Python scripts to scrape game information from the web.",
+        "Programmed machine learning and analysis scripts in Python to streamline competitive metagame analysis. Trained image classifier using Keras and leveraged Tesseract OCR library to pull match data from game screenshots and output into usable format.",
+        "Leveraged various data sources to collect feedback and continually improve tournament experience. Performed analysis on historical game times using Start.GG API in order to effectively schedule match times.",
+        "Led SEO efforts to improve brand recognition, pushing website search ranking to 1-2 position from 6+."
+      ]},
+      { h: "Results", list: [
+        "Company successfully organized 8+ events with monetary prize pools with a peak of 450+ participants, received over 150k video views on YouTube, and had 5k followers on Twitch.",
+        "Developed Twitch Extension used for 3k+ viewer tournament stream with positive feedback.",
+        "Unfortunately didn't work out. The game we were trying to work with didn't prioritize competitive play and we could never get enough viewer numbers to convince bigger sponsors."
+      ]},
+      { h: "Tools", p: "HTML/JS/CSS - Python - SEO - Inkscape" }
+    ]
+  },
+
+  "proj-pumpkin": {
+    kind: "Project - Animatronics",
+    title: "Porch Pumpkin - A Haunted Jack-o-Lantern Decoration",
+    org: "Personal Project",
+    meta: [
+      ["Time", "June 2026 - Present"],
+      ["Field", "Mechanical Design, Electronics, 3D Printing, Computer Vision, Motion Control"],
+    ],
+    sections: [
+      { h: "The Project", p: "My second iteration on the &quotcreepy decoration is watching you as you move around&quot idea, currently in progress. To improve tracking resolution, this version incorporates computer vision and direction cueing with PIRS. A second goal is to incorporate more sophisticated motion controls for a more uncanny and eerie effect. Finally, given the form factor is also a jack-o-lantern, it will also include LED lighting as well." },
+      { h: "What it does", list: [
+        "Programmed and tested the basic motion tracking functionality. I wanted to be as lightweight as possible, so using a standard preprocess and frame differencing pipeline. In order to smoooth out some of the jitteriness, I incorporated an EMA style difference vs comparing against just the previous frame.",
+        "Designing the mechanical assembly, including a new turntable arrangement with better axial and rotational positioning.",
+        "Programmed actual acceleration control vs simply commanding the servo motor to move to allow for a smoother tracking effect.",
+        "In order to maximize the creepiness, the pumpkin is being designed to operate in low-light/night conditions. This means a light sensor to idle it as a run of the mill pumpkin during the day, and then a NOIR camera module and IR illuminator that is enabled when dark enough conditions are detected.",
+        "Planning out a basic behaviour tree for an added layer of intelligence and to handle things like multi-object track situations. The intent is for the pumpkin to not just naively tract whatever is the strongest motion signal, but also to shift its attention when it feels like it."
+      ]},
+      { h: "The Goal", p: "Have prototypes ready for friends and family this Halloween. Scare at least one trick-or-treater." }
+    ]
+  },
+
+  "proj-whispers": {
+    kind: "Project - Engineering Art",
+    title: "Whispers - Interactive Audio Based Art Installation",
+    org: "Collaboration with friend",
+    meta: [
+      ["Time", "MAY 2025 - July 2025"],
+      ["Field", "Mechanical Design, Electronics, 3D Printing, Wireless Networking, LEDs, Audio"],
+    ],
+    sections: [
+      { h: "The project", p: "Help my friend bring their artistic vision to life, all with limited time and budget. The idea consisted of five different stations. Four would be user interaction stations, each with a different artistic theme, allowing users to whisper in a secret or hear an anonymous one. Once a certain number of people interacted with those stations, the fifth station, the central node, would then activate and play a chorus of the whispered secrets, emulating a crowd din or waterfall of sound effect." },
+      { h: "What I did", list: [
+        "Responsible for all the programming and electronics. All stations utilized a Raspberry Pi SBC, with usb mic and speakers to make it easier on our setup",
+        "Handled all aspects of the audio mixing, which included two distinct issues. The first being that we needed to anonymize the secrets people would speak into it, so I setup a basic randomized pitch shift function to mask voices. The second would be to create the chorus effect, which involved mixing the available audio tracts with a library of seeded tracks. We found during testing that we needed additional background and white noise to get a good chorus, so rather than more exotic mixing, we just recorded some of out own.",
+        "We wanted to avoid any wired connections but the installation was also destined for an outdoor environment with no wifi, so for connectivity, I set up the central node station to be a Wireless AP and then had all the other stations connect to it, and then even performed signal integrity tests to see how far each station could get from each other. On the Python side, each station ran a Flask server, which allowed them to send messages and processed audio files back and forth.",
+        "Designed in Solidworks a low profile button interface for user's to interact with.",
+        "Managed the wiring, soldering, power considerations. Given the aforementioned outdoor environment, this meant lots of battery packs",
+        "Wrote the python functions that would manage the WS2812 LED animations. Each station had a unique LED animation, one for idle, one for recording, and one for playback. The main challenge was that the physical wiring arrangement and number of LEDs changed with each station, requiring me to write variants for each to accomodate."
+      ]},
+      { h: "Where it landed", list: [
+        "Successfully finished with hours to spare, installation was exhibited to very positive feedback.",
+        "Planning a second generation piece with additional refinementss."
+      ]}
+    ]
+  },
+
+  "proj-snowman": {
+    kind: "Project - Animatronics",
+    title: "Haunted Snowman",
+    org: "Personal Project",
+    meta: [
+      ["Time", "DEC 2025 - July 2025"],
+      ["Field", "Mechanical Design, Electronics, Sensors and Motors, 3D Printing"]
+    ],
+    sections: [
+      { h: "The project", p: "My first attempt into trying to create a new style of reactive decoration. And given I had missed the Halloween timing I figured I could incorporate sensing and basic motor control to make a snowman feel a little more uncanny, like a doll that turns its head to follow you as you move across the room. The eventual idea I settled on would be twofold motion. The snowman would turn its body to match as an object moved across its tracking FOV. Then if it detected an object had stopped for a certain amount of time, it would trigger a second action, a 'wave hello', as if it acknowledges its following you." },
+      { h: "The work", list: [
+        "Wrote Arduino code to manage the ToF sensor array that acted as motion tracking, along with some basic tuning, filtering, and hysteresis to get consistent signal. Then incorporated code to control the two motors, a servo that would handle the body turning based on sensor input, and a BLDC motor that would drive the arm waving motion if an object was detected to be stationary for more than a few seconds.",
+        "Designed in SolidWorks all the mechanical parts, including a turntable arrangement to mount the head and body on, the linkage arm mechanism that created the 'waving arm' effect, and the internal structural elements, such as motor mountings and an internal PVC frame with 3D printed joints.",
+        "Woldered and wired up everything, including the Arduino headers, motor driver board, and power distribution.",
+        "Designed and iterated the outside appearence. I had originally wanted to use carved foam, but that turned into a massive mistake given I only had hand tools and was trying to make curved shapes. After a month of trying I eventually settled on simply 3D printing the rest of the Snowman shape instead, sectioning the spheres to fit into my home 3D printer volume."
+      ]},
+      { h: "The Result", list:[
+        "Finished, but unsatisfied with the result.",
+        "The ToF style sensing combined with basic hobbyist servo meant the movements felt more reactive than the 'uncanny and creepy' feeling I had been going for. The ToF range was also much less than I had hoped for. I also treated the outside mounting as an afterthought much to my annoyance later, being difficult to disassemble to upload updates to the Arduino.",
+        "I eventually decided to call it and incorporate learnings into a newer version of this idea, which would eventually become the Porch Pumpkin project."
+      ]}
+    ]
+  },
+
+  "proj-etsy": {
+    kind: "Project - Entrepeneurship",
+    title: "Planter Stands for Sale",
+    org: "Collaboration with friend",
+    meta: [
+      ["Year", "2025"],
+      ["Role", "Design and Manufacturing"],
+      ["Budget", "Minimal"],
+      ["Field", "3D Printing, Crafts"]
+    ],
+    sections: [
+      { h: "The goal", p: "Create fun objects for sale on Etsy with my friend using my at-home 3D printer. Maybe make some side money" },
+      { h: "The work", list: [
+        "Performed a rapid concept iteration state testing out various designs for what to sell, such as pot decorations and wine glass markers. Eventually settled on propogation tube holders.",
+        "Leveraged Solidworks skills to create two designs, a unique double helix style holder, along with a more basic tube stand version.",
+        "Troubleshooted enourmous amounts of manufacturing issues. The simple stand worked best with a Marble PLA that suffered from heat creep issues and as I learned later, major humidity sensitivity. Meanwhile the double helix design meant constant overhang, so any small print issues would compound to create warping, zitting, poor surfaces, etc. Was able to eventually iron out a solid set of parameters for both, but at significant cost to print speed",
+        "Prototyped next generation designs using lessons learned, including self-teaching myself some Blender to create terrain effects."
+      ]},
+      { h: "Outcome", p: "We have technically made a profit, though its on hold now."},
+      { h: "Lessons Learned", p: "3D printing consistently and repeatability is an entirely different animal compared to what I had been used to in R&D, where one-offs were common and appearence a distant consideration to function. Learned newfound respect for high volume manufacturers of anything, along with better DFM and material knowledge for future fun builds."}
+    ]
+  },
+  "proj-book": {
+    kind: "Project - Gifts",
+    title: "Self Made Book",
+    org: "Personal Project",
+    meta: [
+      ["Year", "2023"],
+      ["Field", "Crafts"],
+    ],
+    sections: [
+      { h: "The idea", p: "A friend had introduced the idea of binding my own books. For their going-away present, I thought it would be cool to build something inspired by what they had showed me, but putting my own twist on it."},
+      { h: "The design", list: [
+        "Created a cracked-glass effect for the covers by using laser etched acrylic instead of traditional boards. This involved sourcing appropriate stock images, cleaning them in Inkscape to be etchable, and then selecting the appropriate color material to create a glass like effect.",
+        "Experimented with multiple glue and paper thicknessess to see how well the pages could flip. The goal was to create a sketchbook, so an excessively thick spine wouldn't have been usable.",
+        "Sourced different material to use for the spine, eventually settling on a thick, decorative paper that could hold up to the glue I was planning on using",
+        "Performed various test builds of the entire process, given I realized halfway through I didn't have any of the proper equipment like heavy paper cutters for certain ideas I had."
+      ]},
+      { h: "Outcome", p: "Present successsfully delivered." }
+    ]
+  },
+  "proj-graph": {
+    kind: "Project - Research",
+    title: "Cartographer - Network Graphs to Map Influence",
+    org: "Personal Project",
+    meta: [
+      ["Year", "2021"],
+      ["Field", "Marketing, Data Science"],
+    ],
+    sections: [
+      { h: "The idea", p: "Became fascinated by the idea of using graph networks to map 'influence' networks within a professional field and wanted to try it out, focusing on a market intelligence and Key-Opinion Leader identification angle. The hope was to see not only 'who was important', but in granular detail as well, such as 'who is important when it comes to minimally invasive laser procedures." },
+      { h: "The work", list: [
+        "Wrote Python scripts to pull publication details and citation relationship data from PubMed and CrossRef API's and import into Neo4j graph database.",
+        "Wrote Cypher queries to perform granular analysis on topics such as physician research interests, dominant influences, common collaborators, etc.",
+        "Created a sample 'Market Research Report' to demonstrate potential value and also to test how feasible my original idea even was in practice."
+      ]},
+      { h: "Outcome", p: "Successfully constructed graph database focusesd on the urology field. Pitched the idea to business development and leadership at Prodeon Medical for use, but was explained that the idea was interesting it was mismatched to what was often needed, especially at a smaller startup." }
+    ]
+  }
+
+};
+
+
+(function(){
+  const scrim  = document.getElementById('scrim');
+  const modal  = document.getElementById('modal');
+  const body   = document.getElementById('modalBody');
+  const kindEl = document.getElementById('modalKind');
+  const closeBtn = document.getElementById('modalClose');
+  const FOCUSABLE = 'a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])';
+  let lastFocus = null;
+
+  function render(d){
+    let html = '<h2 class="modal-title" id="modalTitle">' + d.title + '</h2>';
+    if (d.org) html += '<p class="modal-org">' + d.org + '</p>';
+
+    if (d.meta && d.meta.length){
+      html += '<div class="modal-meta">';
+      d.meta.forEach(function(pair){
+        html += '<div class="field"><span class="field-k">' + pair[0] +
+                '</span><span class="field-v">' + pair[1] + '</span></div>';
+      });
+      html += '</div>';
+    }
+
+    (d.sections || []).forEach(function(s){
+      html += '<section class="modal-sec"><h3 class="modal-h">' + s.h + '</h3>';
+      if (s.p) html += '<p>' + s.p + '</p>';
+      if (s.list){
+        html += '<ul class="modal-list">';
+        s.list.forEach(function(li){ html += '<li>' + li + '</li>'; });
+        html += '</ul>';
+      }
+      html += '</section>';
+    });
+
+    body.innerHTML = html;
+    kindEl.textContent = d.kind || 'Detail sheet';
+  }
+
+  function open(key, trigger){
+    const d = DETAILS[key];
+    if (!d) return;
+    lastFocus = trigger || document.activeElement;
+    render(d);
+    scrim.hidden = false;
+    modal.hidden = false;
+    document.body.classList.add('is-locked');
+    requestAnimationFrame(function(){
+      scrim.classList.add('is-open');
+      modal.classList.add('is-open');
+    });
+    modal.scrollTop = 0;
+    closeBtn.focus();
+  }
+
+  function close(){
+    scrim.classList.remove('is-open');
+    modal.classList.remove('is-open');
+    document.body.classList.remove('is-locked');
+    const done = function(){
+      scrim.hidden = true;
+      modal.hidden = true;
+      modal.removeEventListener('transitionend', done);
+    };
+    modal.addEventListener('transitionend', done);
+    setTimeout(done, 400); 
+    if (lastFocus) lastFocus.focus();
+  }
+
+  document.querySelectorAll('[data-detail]').forEach(function(el){
+    el.addEventListener('click', function(){ open(el.dataset.detail, el.querySelector('.cue')); });
+    el.addEventListener('keydown', function(e){
+      if (e.target.classList.contains('cue')) return;
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(el.dataset.detail); }
+    });
+  });
+
+  closeBtn.addEventListener('click', close);
+  scrim.addEventListener('click', close);
+
+  document.addEventListener('keydown', function(e){
+    if (modal.hidden) return;
+    if (e.key === 'Escape'){ close(); return; }
+    if (e.key === 'Tab'){
+      const items = Array.prototype.slice.call(modal.querySelectorAll(FOCUSABLE));
+      if (!items.length) return;
+      const first = items[0], last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
+    }
+  });
+})();
+
+/* ---------- scroll reveal ---------- */
+(function(){
+  const items = document.querySelectorAll('.rise');
+  if (!('IntersectionObserver' in window) ||
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(function(el){ el.classList.add('in'); });
+    return;
+  }
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { rootMargin: '0px 0px -12% 0px' });
+  items.forEach(function(el){ io.observe(el); });
+})();
+
+
+(function(){
+  const links = document.querySelectorAll('.rail-link');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  const map = {};
+  links.forEach(function(l){ map[l.getAttribute('href').slice(1)] = l; });
+  const io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){
+        links.forEach(function(l){ l.classList.remove('is-active'); });
+        if (map[en.target.id]) map[en.target.id].classList.add('is-active');
+      }
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  Object.keys(map).forEach(function(id){
+    const sec = document.getElementById(id);
+    if (sec) io.observe(sec);
+  });
+})();
+</script>
+
+</body>
 </html>
